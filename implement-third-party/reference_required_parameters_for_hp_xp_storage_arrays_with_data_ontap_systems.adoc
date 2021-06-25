@@ -1,0 +1,46 @@
+---
+permalink: implement-third-party/reference_required_parameters_for_hp_xp_storage_arrays_with_data_ontap_systems.html
+sidebar: sidebar
+keywords: 
+summary: 'Certain parameter settings are required on the storage array for this storage array to work successfully with ONTAP systems.'
+---
+= Required parameters for HP XP storage arrays with ONTAP
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Certain parameter settings are required on the storage array for this storage array to work successfully with ONTAP systems.
+
+== Required system parameters for HP XP storage arrays
+
+The required parameter settings are shown in the following table:
+
+|===
+| Parameter| Setting
+a|
+Host mode
+a|
+Standard or 00
+a|
+Port security
+a|
+Enabled
+a|
+
+[NOTE]
+====
+A host group that is separate from the default host groups should be created for each initiator-target port pair.
+====
+
+|===
+The storage array parameters should be set and LUNs should be mapped to the host groups before the switch is zoned to connect the ONTAP system to an HP XP storage array.
+
+If ONTAP FC initiator ports are zoned with HP XP array target ports before the storage array parameters are set and the LUNs are mapped to the host groups, you might not be able to see any LUNs presented to the ONTAP interface.
+
+In this situation, ONTAP generates one of the following EMS messages: [fci.device.login.reject:info] The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x9 'Invalid R_CTL Field', explanation code 0x29 'Insufficient Resources to Support Login'[fci.device.login.reject:info]: The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x3 'Nx_Port Not Available, Temporary', explanation code 0x29 'Insufficient Resources to Support Login'
+
+== Workaround
+
+If zoning was configured prior to setting the parameters and mapping the LUNs to the host groups, you can resolve the problem of LUNs not being visible by performing a path re-initialization to force a rediscovery of the array LUNs that are mapped from the HP XP storage array.
+
+xref:reference_workaround_when_luns_are_not_visible_with_hp_xp_storage_arrays.adoc[Workaround when LUNs are not visible with HP XP storage arrays]

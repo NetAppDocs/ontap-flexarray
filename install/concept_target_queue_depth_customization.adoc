@@ -1,0 +1,24 @@
+---
+permalink: install/concept_target_queue_depth_customization.html
+sidebar: sidebar
+keywords: 
+summary: 'The target queue depth defines the number of ONTAP commands that can be queued \(outstanding\) on a storage array target port. ONTAP supplies a default value. For most deployments, the default target queue depth is appropriate; however, you can change it to correct performance issues.'
+---
+= Target queue depth customization
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The target queue depth defines the number of ONTAP commands that can be queued (outstanding) on a storage array target port. ONTAP supplies a default value. For most deployments, the default target queue depth is appropriate; however, you can change it to correct performance issues.
+
+The default target queue depth differs with different releases of ONTAP:
+
+* For ONTAP, the default is 512.
+* For all releases prior to Data ONTAP 8.2, the default is 256.
+
+When a storage array is configured with multiple initiators sharing target ports, you do not want the outstanding commands in the queue buffer from all initiators together to exceed what the storage array can handle. Otherwise, the performance of all hosts can suffer. Storage arrays differ in the number of commands they can handle in the queue buffer.
+
+[NOTE]
+====
+Target queue depth might also be referred to as "`target queue length,`""`Q-Depth,`" or "`Max Throttle.`"
+====

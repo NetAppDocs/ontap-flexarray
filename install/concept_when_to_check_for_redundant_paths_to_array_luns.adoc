@@ -1,0 +1,25 @@
+---
+permalink: install/concept_when_to_check_for_redundant_paths_to_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'You need to check for redundant paths to an array LUN after installation and during fabric maintenance activities.'
+---
+= When to check for redundant paths to array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You need to check for redundant paths to an array LUN after installation and during fabric maintenance activities.
+
+You should recheck for path redundancy when performing the following activities:
+
+* Initial installation
+* Fabric maintenance, for example:
+ ** Before, during, and after an infrastructure upgrade
+ ** Before and after taking a switch out of service for maintenance
++
+Be sure that the paths were configured as redundant paths before you remove a switch between the ONTAP systems and the storage array so that access to the array LUNs is not interrupted.
+
+ ** Before and after maintaining hardware on a storage array
++
+For example, you should recheck for path redundancy when maintaining the hardware component on which host adapters and ports are located. (The name of this component varies on different storage array models).

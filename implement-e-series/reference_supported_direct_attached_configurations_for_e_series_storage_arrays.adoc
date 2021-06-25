@@ -1,0 +1,56 @@
+---
+permalink: implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'You can connect ONTAP systems in direct-attached configurations with E-Series storage arrays. You must verify redundancy in connections between the ONTAP systems and the storage arrays to avoid the possibility of a single point of failure. FlexArray Stretch MetroCluster supports direct-attached configurations with E-Series storage arrays. For more information see, Interoperability Matrix and Stretch MetroCluster Installation and Configuration Guide'
+---
+= Supported direct-attached configurations with E-Series storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can connect ONTAP systems in direct-attached configurations with E-Series storage arrays. You must verify redundancy in connections between the ONTAP systems and the storage arrays to avoid the possibility of a single point of failure. FlexArray Stretch MetroCluster supports direct-attached configurations with E-Series storage arrays. For more information see, Interoperability Matrix and _Stretch MetroCluster Installation and Configuration Guide_
+
+The Interoperability Matrix contains information about the specific E-Series array models that are supported in direct-attached configurations with ONTAP system.
+
+ONTAP supports the following direct-attached configurations with E-Series storage arrays:
+
+* <<SECTION_7D27402B12454EDCB5721EBC5142A862,Stand-alone basic configuration>>
+* <<SECTION_08E8366D37E24374A79D906BBB2279F3,Four-port array LUN group>>
+* <<SECTION_3C4BFEB3D0514B59B554DE1CEB74BB6B,Eight-port array LUN group>>
+
+== Stand-alone basic configuration
+
+In a stand-alone basic configuration, two FC initiator ports from the ONTAP system access the ports of a two-port array LUN group.
+
+The following illustration shows a direct-attached configuration where the ONTAP FC initiator ports 0a and 0h access the target ports of a two-port array LUN group:
+
+image::../media/da_2port_standalone.gif[]
+
+== Four-port array LUN group
+
+Two FC initiator ports from each ONTAP system in an HA pair access different storage array ports in a four-port array LUN group for redundancy in connections.
+
+The following illustration shows a direct-attached configuration where the ONTAP FC initiator ports access the target ports of a four-port array LUN group.
+
+image::../media/da_4port_hapair.gif[]
+
+You can also connect four FC initiator ports from each ONTAP system in the HA pair to two different four-port array LUN groups such that each FC initiator port in a port pair accesses the alternate LUN group.
+
+The following illustration shows a direct-attached configuration where the ONTAP FC initiator ports access the target ports of two four-port array LUN groups:
+
+image::../media/direct_attached_configuration_with_two_four_port_array_lun_groups.gif[]
+
+== Eight-port array LUN group
+
+Four FC initiator ports from each ONTAP system in an HA pair access different storage array ports in an eight-port array LUN group for redundancy in connections.
+
+The following illustration shows a direct-attached configuration where the ONTAP FC initiator ports access the target ports of an eight-port array LUN group:
+
+image::../media/eight_port_direct_attached_ha_pair_configuration.gif[]
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+
+link:Stretch MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html[Stretch MetroCluster installation and configuration]

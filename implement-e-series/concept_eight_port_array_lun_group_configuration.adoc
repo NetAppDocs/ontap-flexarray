@@ -1,0 +1,36 @@
+---
+permalink: implement-e-series/concept_eight_port_array_lun_group_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'An eight-port LUN group configuration is supported on clustered V-Series systems and on ONTAP systems that can use array LUNs.'
+---
+= Eight-port array LUN group configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+An eight-port LUN group configuration is supported on clustered V-Series systems and on ONTAP systems that can use array LUNs.
+
+This configuration is supported for use with all storage arrays listed in the Interoperability Matrix as supported for the release of ONTAP running on your system.
+
+There are two ways of deploying this configuration: crossed and uncrossed back-end connections.
+
+== Crossed back-end connections
+
+In this configuration with the back-end connections crossed, the FC connections from the same storage array controller go to both fabric switches (redundant).
+
+In this illustration of crossed back-end connections, note how the nodes are attached to the switches and to the storage array. Vs1 uses switch 1 when attaching to the storage array Controller 1 port 1A and Controller 2 port 2C, and uses switch 2 when attaching to storage array Controller 2 ports 2A and Controller 1 port 1C. This optimizes the use of switch ports and array ports, which reduces the impact of a switch or storage array controller failure.
+
+image::../media/eight_port_array_lun_group_configuration_crossed.gif[]
+
+== Back-end connections are not crossed
+
+In this configuration in which the back-end connections are not crossed, the FC connections from the same storage array controller go to only one fabric switch.
+
+The following illustration shows this configuration when the back-end connections are not crossed.
+
+image::../media/eight_port_array_lun_group_configuration.gif[]
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

@@ -1,0 +1,155 @@
+---
+permalink: install/concept_example_configuration_shared_fc_initiator_ports.html
+sidebar: sidebar
+keywords: 
+summary: 'One FC initiator port on an ONTAP system can be connected to up to four target ports on separate storage arrays or, for some storage arrays, to four target ports on the same storage arrays.'
+---
+= Example configuration: shared FC initiator ports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+One FC initiator port on an ONTAP system can be connected to up to four target ports on separate storage arrays or, for some storage arrays, to four target ports on the same storage arrays.
+
+The best practice zoning recommendation is to have each FC initiator-target port pair in a separate zone (1:1), even if the same FC initiator is talking to multiple target ports.
+
+== Shared FC initiator port attached to multiple targets ports on _separate_ storage arrays
+
+The following illustration shows connections and zoning for sharing an FC initiator port with target ports on _different_ storage arrays.
+
+The solid lines in the following illustration show the connections from the FC initiator ports on system vs1 and the dashed lines show the connections from the FC initiator ports on system vs2.
+
+image::../media/shared_initiator_ports_different_arrays.gif[]
+
+The following table shows the 1:1 zoning definitions for the example of one FC initiator port sharing multiple target ports on different storage arrays.
+
+|===
+| Zone| ONTAP system and FC initiator port| Storage array
+a|
+*Switch 1*
+a|
+z1
+a|
+vs1:0a
+a|
+Storage array 1: Controller 1 Port 1A
+a|
+z2
+a|
+vs1:0a
+a|
+Storage array 2: Controller 1 Port 1A
+a|
+z3
+a|
+vs2:0a
+a|
+Storage array 1: Controller 1 Port 1B
+a|
+z4
+a|
+vs2:0a
+a|
+Storage array 2: Controller 1 Port 1B
+a|
+*Switch 2*
+a|
+z5
+a|
+vs1:0c
+a|
+Storage array 1: Controller 2 Port 2A
+a|
+z6
+a|
+vs1:0c
+a|
+Storage array 2: Controller 2 Port 2A
+a|
+z7
+a|
+vs2:0c
+a|
+Storage array 1: Controller 2 Port 2B
+a|
+z8
+a|
+vs2:0c
+a|
+Storage array 2: Controller 2 Port 2B
+|===
+
+== Shared FC initiator port attached to multiple targets ports on the _same_ storage array
+
+This configuration can be used only with storage arrays whose LUN masking, presentation, or host group capability allows for different LUN group presentations to the same FC initiator based on the target port being accessed.
+
+Some storage arrays can present different sets of logical devices to an FC initiator based on the target port being accessed. These types of storage arrays allow the same FC initiator to be in multiple host groups. On storage arrays with this capability, it is possible for each FC initiator to access multiple array target ports on the same storage array, with each target port presenting a different LUN group to the FC initiator. Check your storage array documentation to determine whether your storage array allows the same FC initiator to be in multiple host groups.
+
+The following illustration shows connections and zoning for sharing an FC initiator port with multiple target ports on the _same_ storage array. In this example, zoning definitions are configured as 1:1, that is, one FC initiator to one target port.
+
+The solid lines in the following illustration show the connections from the FC initiator ports on system vs1 and the dashed lines show the connections from the FC initiator ports on system vs2. Two LUN groups are required for this configuration.
+
+image::../media/shared_initiator_ports_same_array.gif[The connections and zoning are described in the surrounding text.]
+
+The following table shows the 1:1 zoning definitions for the example of one FC initiator port sharing multiple target ports on the same storage array.
+
+|===
+| Zone| ONTAP system and FC initiator port| Storage array and port
+a|
+Switch 1
+a|
+z1
+a|
+vs1:0a
+a|
+Controller 1 Port 1A
+a|
+z2
+a|
+vs1:0a
+a|
+Controller 1 Port 1C
+a|
+z3
+a|
+vs2:0a
+a|
+Controller 1 Port 1B
+a|
+z4
+a|
+vs2:0a
+a|
+Controller 1 Port 1D
+a|
+Switch 2
+a|
+z5
+a|
+vs1:0c
+a|
+Controller 2 Port 2A
+a|
+z6
+a|
+vs1:0c
+a|
+Controller 2 Port 2C
+a|
+z7
+a|
+vs2:0c
+a|
+Controller 2 Port 2B
+a|
+z8
+a|
+vs2:0c
+a|
+Controller 2 Port 2D
+|===
+*Related information*
+
+xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
+
+xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]

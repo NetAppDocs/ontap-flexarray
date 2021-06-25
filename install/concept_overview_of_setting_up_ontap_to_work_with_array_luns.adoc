@@ -1,0 +1,16 @@
+---
+permalink: install/concept_overview_of_setting_up_ontap_to_work_with_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'The process of setting up an ONTAP system to work with array LUNs differs on the basis of whether ONTAP systems are ordered with or without disks.'
+---
+= Setting up ONTAP to work with array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The process of setting up an ONTAP system to work with array LUNs differs on the basis of whether ONTAP systems are ordered with or without disks.
+
+If an ONTAP system is ordered with disk shelves, ONTAP software is installed by the factory. In such a configuration, you do not need to create the root volume and install licenses and ONTAP software.
+
+You can install ONTAP software on systems ordered without disk shelves. On these systems, you must first install ONTAP and then set up a cluster.

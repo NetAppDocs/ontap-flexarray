@@ -1,0 +1,12 @@
+---
+permalink: implement-third-party/concept_general_configuration_guidelines_for_all_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'There are certain configuration guidelines that you must follow for any of the storage arrays supported by ONTAP.'
+---
+= General configuration guidelines for all storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+There are certain configuration guidelines that you must follow for any of the storage arrays supported by ONTAP.

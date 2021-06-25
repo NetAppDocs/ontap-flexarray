@@ -1,0 +1,41 @@
+---
+permalink: install/concept_aggregate_rules_when_the_storage_arrays_are_from_different_vendor_or_family.html
+sidebar: sidebar
+keywords: 
+summary: 'Specific rules apply to how you can lay out array LUNs in aggregates when the storage arrays are from different vendors or from different storage array families from the same vendor.'
+---
+= Aggregate rules when the storage arrays are from different vendors or families
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Specific rules apply to how you can lay out array LUNs in aggregates when the storage arrays are from different vendors or from different storage array families from the same vendor.
+
+The following rules apply if your storage arrays are from different vendors or different families from the same vendor:
+
+* You cannot mix array LUNs from storage arrays from different vendors, or from different families of the same vendor, in the same aggregate.
+* You can associate the aggregate containing the root volume with any of the storage arrays, regardless of the family type of the storage array.
+[NOTE]
+====
+When you create your aggregate, be sure that you explicitly specify the IDs of the array LUNs that you want to add to the aggregate. Do not use the parameters for specifying the number and size of array LUNs to be picked up because the system might automatically pick up LUNs from a different family or from a different vendor's storage array. After array LUNs from different families or vendors are in the same aggregate, the only way to fix the problem of mixed array LUNs in an aggregate is to destroy the aggregate and re-create it.
+====
+
+The following examples show options for how to lay out array LUNs in aggregates when the storage arrays are from _different vendors or from different families from the same vendor_.
+
+== Example 1: LUNs from the two storage arrays are in different aggregates
+
+In this example, some LUNs for ONTAP are from Storage array 1, Family A, while the other LUNs for ONTAP are from Storage array 2, Family B. The LUNs from the two storage arrays cannot be added to the same aggregate because the two storage arrays are from different families from the same vendor. The same would be true if the two storage arrays were from different vendors.
+
+image::../media/luns_assigned_to_multiple_aggrs_dif_family.gif[This graphic is described by the surrounding text.]
+
+== Example 2: Some LUNs can be mixed in the same aggregate and some cannot
+
+In this example, one storage array is from Family A and the other two storage arrays are from Family B. The LUNs from the Family A storage array cannot be added to the same aggregate as the LUNs from a Family B storage array because the storage arrays are from different families. However, LUN 1 of storage array 3 can be assigned to aggregate 2, which also contains LUNs from storage array 2, because the two storage arrays are in the same family.
+
+image::../media/luns_assigned_to_multiple_aggrs_dif_and_same_family.gif[This graphic is described by the surrounding text.]
+
+*Related information*
+
+xref:concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.adoc[Rules for mixing storage in array LUN aggregates]
+
+xref:concept_aggregate_rules_when_the_storage_arrays_are_from_the_same_family.adoc[Aggregate rules when the storage arrays are from the same family]

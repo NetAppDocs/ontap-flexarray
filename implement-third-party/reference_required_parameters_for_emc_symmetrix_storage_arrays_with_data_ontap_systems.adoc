@@ -1,0 +1,49 @@
+---
+permalink: implement-third-party/reference_required_parameters_for_emc_symmetrix_storage_arrays_with_data_ontap_systems.html
+sidebar: sidebar
+keywords: 
+summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+---
+= Required Parameter settings on the storage array for ONTAP systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.
+
+== Required host channel director port configuration parameters
+
+The host channel director port configuration parameters that must be set on the storage array are shown in the following table:
+
+|===
+| Parameter (names might differ between GUI and CLI)| Setting
+a|
+Common SN (Common Serial Number or C-bit parameter)
+a|
+Enable
+a|
+PP (Point-to-Point parameter)
+a|
+Enable
+a|
+SC3 (SCSI-3)
+a|
+Enable
+a|
+SPC-2 (SCS2_Protocol_version, SCSI Primary Command 2 parameter, or Allow inquiry data to be compiled to the standard)
+a|
+Enable
+a|
+UWN (Unique Worldwide Name)
+a|
+Enable
+a|
+Volume Set Addressing
+a|
+Disable
+|===
+The Volume Set Addressing parameter must be set the same way on all channel director ports to which the LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in storage errors show output and in an EMS message.
+
+*Related information*
+
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-irrg/home.html[FlexArray virtualization installation requirements and reference]

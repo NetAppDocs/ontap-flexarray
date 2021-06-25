@@ -1,0 +1,44 @@
+---
+permalink: install/concept_minimum_and_maximum_array_lun_sizes_supported_by_ontap.html
+sidebar: sidebar
+keywords: 
+summary: 'The array LUNs presented from the storage arrays must fall within the minimum and maximum size requirements for an ONTAP configuration with array LUNs. ONTAP issues an error message identifying an array LUN that does not adhere to the minimum or maximum size requirements.'
+---
+= Minimum and maximum array LUN sizes supported for ONTAP configurations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The array LUNs presented from the storage arrays must fall within the minimum and maximum size requirements for an ONTAP configuration with array LUNs. ONTAP issues an error message identifying an array LUN that does not adhere to the minimum or maximum size requirements.
+
+The minimum and maximum array LUN sizes are calculated according to the way that ONTAP defines units of measure. The ONTAP definition of a GB and TB is as follows:
+
+|===
+| One...| Equals...
+a|
+GB
+a|
+1000 x 1024 x 1024 bytes (1000 MB)
+a|
+TB
+a|
+1000 x 1000 x 1024 x 1024 bytes (1000 GB)
+|===
+Different storage array vendors use different formulas for calculating units of measurement. You must use your vendor's units of measure to calculate the array LUN sizes equivalent to the minimum and maximum sizes supported with an ONTAP configuration.
+
+The maximum LUN size that ONTAP supports differs with ONTAP releases. For information about the minimum and maximum array LUN sizes, see the _Hardware Universe_.
+
+[NOTE]
+====
+The minimum array LUN size for a data (storage) LUN is different from the minimum array LUN size for the root volume.
+====
+
+*Related information*
+
+xref:concept_limits_information_for_a_configuration_with_storage_arrays.adoc[Limit types for configurations with storage arrays]
+
+xref:reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.adoc[Array LUN size is either smaller or larger than the supported values]
+
+xref:concept_minimum_array_lun_size_for_the_root_volume.adoc[Array LUN size required for the root volume]
+
+https://hwu.netapp.com[NetApp Hardware Universe]

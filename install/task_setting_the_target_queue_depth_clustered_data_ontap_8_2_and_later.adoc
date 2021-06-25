@@ -1,0 +1,35 @@
+---
+permalink: install/task_setting_the_target_queue_depth_clustered_data_ontap_8_2_and_later.html
+sidebar: sidebar
+keywords: 
+summary: 'The default target queue depth is acceptable for most implementations, but can be changed if performance issues are encountered.'
+---
+= Setting the target queue depth
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The default target queue depth is acceptable for most implementations, but can be changed if performance issues are encountered.
+
+You can set the target queue depth by storage array or on a per-target port basis.
+
+. Use one of the following commands to set the target port queue depth on all target ports or on a specific target port of a storage array.
++
+|===
+| If you want to...| Use this command sequence...
+a|
+Set the target port queue depth on all target ports for a storage array
+a|
+`set advanced` `storage array port modify -name array_name -max-queue-depth value`
+a|
+Set the target port queue depth on a specific target port on a storage array
+a|
+`set advanced` `storage array port modify -name array_name -wwnn value -wwpn value -max-queue-depth value`
+|===
+For more information about these commands, see the man pages.
+
+*Related information*
+
+xref:concept_guidelines_for_specifying_the_appropriate_target_queue_depth.adoc[Guidelines for specifying the appropriate target queue depth]
+
+xref:task_displaying_target_port_queue_depth_statistics_clustered_data_ontap_8_2_and_later.adoc[Displaying target queue depth statistics]

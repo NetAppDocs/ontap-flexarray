@@ -1,0 +1,20 @@
+---
+permalink: install/reference_relationship_between_zoning_and_host_group_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'When you fix zoning configuration errors you sometimes have to change host group configuration also, and the reverse.'
+---
+= Relationship between zoning and host group configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you fix zoning configuration errors you sometimes have to change host group configuration also, and the reverse.
+
+*Related information*
+
+xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
+
+xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
+
+xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]

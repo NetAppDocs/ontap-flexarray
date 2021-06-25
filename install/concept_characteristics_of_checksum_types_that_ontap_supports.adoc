@@ -1,0 +1,38 @@
+---
+permalink: install/concept_characteristics_of_checksum_types_that_ontap_supports.html
+sidebar: sidebar
+keywords: 
+summary: 'ONTAP supports block checksum type \(BCS\) and advanced zoned checksum type \(AZCS\) for array LUNs, disks, and aggregates.'
+---
+= Characteristics of checksum types that ONTAP supports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP supports block checksum type (BCS) and advanced zoned checksum type (AZCS) for array LUNs, disks, and aggregates.
+
+The type of checksum assigned to an array LUN in ONTAP can impact performance or the usable space of an array LUN. Therefore, the number and size of array LUNs you need can be impacted depending on the checksum type you assign to array LUNs.
+
+== Block checksum (BCS)
+
+BCS is the default and recommended checksum type for array LUNs. BCS provides better performance for array LUNs than AZCS.
+
+BCS has a greater impact on the usable space in an array LUN than AZCS. BCS uses 12.5 percent of the usable space in an array LUN.
+
+== Advanced zoned checksum (AZCS)
+
+AZCS is an alternative to BCS. The impact of AZCS on usable space in an array LUN is less than with BCS; AZCS uses 1.56 percent of the device capacity. However, you must weigh the need for more usable space against performance. AZCS can sometimes cause performance problems for array LUNs.
+
+AZCS is not recommended for array LUNs for high-performance random workloads. However, you can use AZCS with array LUNs for DR, archive, or similar workloads.
+
+There is no AZCS performance impact on native disks.
+
+The guidelines for checksum types differ according to disk size and type. See _TR3838 Storage Subsystem Configuration Guide_ for more information.
+
+*Related information*
+
+xref:concept_elements_that_reduce_the_usable_space_in_an_array_lun.adoc[Elements that reduce the usable space in an array LUN]
+
+xref:concept_formulas_for_calculating_array_lun_size_considering_checksum_type.adoc[Formulas for calculating array LUN size based on checksum type]
+
+http://www.netapp.com/us/media/tr-3838.pdf[NetApp Technical Report 3838: Storage Subsystem Configuration Guide]

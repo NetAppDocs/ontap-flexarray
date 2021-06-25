@@ -1,0 +1,24 @@
+---
+permalink: install/concept_minimum_array_lun_size_for_the_root_volume.html
+sidebar: sidebar
+keywords: 
+summary: 'You must set the size of the root volume to be greater than the supported minimum array LUN size, to ensure that there is sufficient space in the root volume for system files, log files, and core files. You must provide these files to technical support if a system issue occurs.'
+---
+= Array LUN size required for the root volume
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must set the size of the root volume to be greater than the supported minimum array LUN size, to ensure that there is sufficient space in the root volume for system files, log files, and core files. You must provide these files to technical support if a system issue occurs.
+
+The _Hardware Universe_ lists the minimum array LUN size for a root volume.
+
+*Related information*
+
+https://hwu.netapp.com[NetApp Hardware Universe]
+
+xref:concept_limits_information_for_a_configuration_with_storage_arrays.adoc[Limit types for configurations with storage arrays]
+
+xref:concept_minimum_and_maximum_array_lun_sizes_supported_by_ontap.adoc[Minimum and maximum array LUN sizes supported for ONTAP configurations]
+
+xref:concept_location_of_the_root_volume.adoc[Location of the root volume]

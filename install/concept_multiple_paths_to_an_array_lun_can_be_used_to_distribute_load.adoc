@@ -1,0 +1,27 @@
+---
+permalink: install/concept_multiple_paths_to_an_array_lun_can_be_used_to_distribute_load.html
+sidebar: sidebar
+keywords: 
+summary: 'I/O requests for a given LUN can be distributed over all the available optimized paths to the LUN. This is unlike in previous releases, where in spite of multiple paths being available, I/O requests for a given LUN were sent over a single active optimized path only.'
+---
+= Multiple paths to an array LUN can be used to distribute load
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+I/O requests for a given LUN can be distributed over all the available optimized paths to the LUN. This is unlike in previous releases, where in spite of multiple paths being available, I/O requests for a given LUN were sent over a single active optimized path only.
+
+Distribution of I/O requests for a given LUN over multiple paths results in the following benefits:
+
+* Improved efficiency due to maximum utilization of all available and optimized paths
+* Improved performance due to load balancing over multiple paths
+
+For example, on an active-active array, I/O requests for a given LUN can be distributed over all the four target ports available for that LUN. For an asymmetric active-active array LUN, I/O requests can be distributed over all the optimized paths for a given LUN.
+
+== Commands to view load balancing over multiple paths for a given LUN
+
+You can run the following commands to view the distribution of load for a given LUN across multiple paths:
+
+* storage disk show -disk <LUN name> displays the distribution of I/O load across the available paths for a given array LUN.
+* storage path show-by-initiator -array-name <array name> displays the distribution of I/O load across all the initiator ports on the ONTAP system that is connected to a given storage array.
+* storage path show -by-target -array-name <array name> displays the distribution of I/O load across all the target ports on a given storage array.

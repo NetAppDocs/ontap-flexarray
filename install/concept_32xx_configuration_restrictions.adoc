@@ -1,0 +1,14 @@
+---
+permalink: install/concept_32xx_configuration_restrictions.html
+sidebar: sidebar
+keywords: 
+summary: 'There are some restrictions for 32xx systems that do not apply to other models. You must be aware of these while configuring the systems.'
+---
+= 32xx system configuration restrictions
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+There are some restrictions for 32xx systems that do not apply to other models. You must be aware of these while configuring the systems.
+
+The two onboard FC ports labeled 0c and 0d, are not on independent busses. Therefore, they do not provide storage redundancy. Some port failures can cause the system to panic. To configure redundant port pairs, you need to use an FC HBA in an available expansion slot.

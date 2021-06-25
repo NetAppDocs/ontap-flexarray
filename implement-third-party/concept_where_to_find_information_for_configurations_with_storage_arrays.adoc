@@ -1,0 +1,18 @@
+---
+permalink: implement-third-party/concept_where_to_find_information_for_configurations_with_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'When planning your configuration for using ONTAP systems with storage arrays, you should check various sources for information about array LUN configuration in addition to the product documentation.'
+---
+= Where to find information for configurations with storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning your configuration for using ONTAP systems with storage arrays, you should check various sources for information about array LUN configuration in addition to the product documentation.
+
+Tools available on the NetApp Support Site provide, in a central location, specific information about which features, configurations, and storage array models are supported in particular releases.
+
+*Related information*
+
+https://mysupport.netapp.com/site/global/dashboard[NetApp Support]

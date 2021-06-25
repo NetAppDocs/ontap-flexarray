@@ -1,0 +1,12 @@
+---
+permalink: install/concept_factors_that_impact_the_number_and_size_of_array_luns_you_need.html
+sidebar: sidebar
+keywords: 
+summary: 'You must consider a number of factors, including usable space in a LUN, when determining how many array LUNs you need and their size.'
+---
+= Factors that impact the number and size of array LUNs you need
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must consider a number of factors, including usable space in a LUN, when determining how many array LUNs you need and their size.
