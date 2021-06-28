@@ -1,0 +1,67 @@
+---
+permalink: install/concept_where_to_find_information_about_support_for_storage_arrays.html
+sidebar: sidebar
+keywords: non-ONTAP storage,third-party storage,E-Series
+summary: 'Not all ONTAP releases support the same features, configurations, system models, and storage array models. During your deployment planning, you must check ONTAP support information to verify that your deployment conforms to ONTAP hardware and software requirements for all systems in the deployment.'
+---
+= Where to find information about ONTAP support for storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Not all ONTAP releases support the same features, configurations, system models, and storage array models. During your deployment planning, you must check ONTAP support information to verify that your deployment conforms to ONTAP hardware and software requirements for all systems in the deployment.
+
+The following table lists the information sources that contain the details of the hardware and software requirements associated with ONTAP systems:
+
+|===
+| For information about...| You should look here...
+a|
+ONTAP working with devices, including the following:
+
+* Supported storage arrays and storage array firmware
+* Supported switches and switch firmware
+* Whether your storage array supports nondisruptive (live) upgrade of the storage array firmware
+* Whether a MetroCluster configuration is supported with your storage array
+
+a|
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+a|
+ONTAP limits for releases and platforms, including the following:
+
+* Minimum and maximum array LUN sizes, including the minimum array LUN size for the root volume and spare core array LUNs
+* Minimum aggregate size for aggregates with array LUNs
+* Supported block size
+* Minimum and maximum capacity
+* Neighborhood limits
+
+a|
+https://hwu.netapp.com[NetApp Hardware Universe]
+a|
+Setting up E-Series storage arrays, including the following:
+
+* Site preparation requirements
+* Cabling instructions
+* SANtricity software installation and configuration instructions
+
+a|
+The following E-Series documentation:
+
+* _E-Series Storage Systems Site Preparation Guide_
+* _E-Series Storage Systems Hardware Cabling Guide_
+* _SANtricity ES Storage Manager documentation_
+
+You can access these documents from the NetApp Support site.
+
+https://mysupport.netapp.com/site/global/dashboard[NetApp Support]
+
+a|
+What is supported for specific storage arrays, including supported configurations
+a|
+
+* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+
+|===
+*Related information*
+
+xref:concept_limits_information_for_a_configuration_with_storage_arrays.adoc[Limit types for configurations with storage arrays]

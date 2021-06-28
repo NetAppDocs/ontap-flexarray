@@ -1,0 +1,75 @@
+---
+permalink: install/concept_dependency_between_zone_and_host_group_definitions.html
+sidebar: sidebar
+keywords: 
+summary: 'Errors made in zone definitions can require reconfiguration of host group definitions and the reverse.'
+---
+= Dependency between zone and host group definitions
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Errors made in zone definitions can require reconfiguration of host group definitions and the reverse.
+
+When a zone definition is constructed, two ports are specified: the WWPN of the FC initiator port on the ONTAP system and the storage array port WWPN or WWNN for that zone. Likewise, when the host group for the ONTAP system is configured on the storage array, the WWPNs of the FC initiator ports that you want to be members of the host group are specified.
+
+The typical ordering of configuration is as follows:
+
+. Construct a zone definition.
+. Construct the host group on the storage array (by picking the WWPN of the FC initiator port on the ONTAP system from the picklist).
+. Present array LUNs to the ports.
+
+However, host groups are sometimes configured before zone definitions, which requires manually entering WWPNs in the host group configuration on the storage array.
+
+== Common errors
+
+In ONTAP output, the FC initiator ports on the ONTAP system are identified by adapter number--for example, 0a, 0b, 0c, 0d, and so on for models with onboard ports. WWPNs are shown in the switch GUI and the storage array GUI. Because WWPNs are long and in hexadecimal format, the following errors are common:
+
+|===
+| How WWPNs are specified| Common error
+a|
+The administrator types in WWPNs
+a|
+A typing mistake is made.
+a|
+WWPNs are automatically discovered by the switch
+a|
+The wrong FC initiator port WWPN is selected from the picklist.
+|===
+
+[NOTE]
+====
+When the ONTAP systems, switches, and storage array are cabled together, the switch automatically discovers the WWPNs of the ONTAP systems and storage array ports. The WWPNs are then available in picklists in the switch GUI, enabling selection of the WWPN of each zone member rather than typing it. To eliminate the possibility of typing errors, it is recommended that the switch discover WWPNs.
+====
+
+== Cascading effect of errors
+
+An obvious first step when troubleshooting problems with a fabric-attached configuration is to check whether zoning was configured correctly. Considering the relationship between the host group and zone definitions is also important. Fixing a problem might require reconfiguring both the zone definition and the host group definition, depending on where the error was made during the configuration process.
+
+If the switch is automatically discovering WWPNs and zone definitions are configured first, the WWPNs of the FC initiator ports that will be used to access LUNs on the storage array are automatically propagated to the host group configuration picklists in the storage array GUI. Therefore, any zoning errors are also propagated to the storage array host group picklists. The picklists show the long, hexadecimal WWPNs instead of the short FC initiator port labels that are visible on the ONTAP system (for example, 0a, 0b, and so on). Therefore, it is not easy to see that the WWPN you expected to be listed is not there.
+
+The following table shows the effects of certain errors:
+
+|===
+| Zone definition on the switch| Host group configuration on the storage array| Symptom in ONTAP output
+a|
+The FC initiator port in the zone definition is incorrect.This caused the incorrect FC initiator port WWPN to be propagated to the host group configuration.
+
+a|
+The WWPN of the FC initiator port shown in the picklist was selected, not the WWPN you intended.
+a|
+Array LUNs are not visible over the FC initiator port on which the expected LUNs would be visible.
+a|
+The zone definition includes the correct FC initiator port.
+a|
+The WWPN in the host group definition is incorrect because of either of the following:
+
+* The wrong WWPN was selected.
+* Host groups were configured manually before the zone definition was configured and a typing error was made when typing in the WWPN of the FC initiator port.
+
+|===
+*Related information*
+
+xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
+
+xref:concept_zoning_for_a_configuration_with_storage_arrays.adoc[Zoning in a configuration with storage arrays]

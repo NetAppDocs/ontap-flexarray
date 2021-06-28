@@ -1,0 +1,18 @@
+---
+permalink: implement-third-party/concept_requirement_for_8_gb_array_port_initialization.html
+sidebar: sidebar
+keywords: 
+summary: 'In a typical Fibre Channel \(FC\) fabric, storage array ports initialize as N-Ports \(node ports\) and their corresponding switch ports initialize as F-Ports \(fabric ports\). In some cases, these F-ports might go offline and resume operation as L-Ports \(loop ports\), resulting in fabric errors.'
+---
+= Requirement for 8-Gb array port initialization
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In a typical Fibre Channel (FC) fabric, storage array ports initialize as N-Ports (node ports) and their corresponding switch ports initialize as F-Ports (fabric ports). In some cases, these F-ports might go offline and resume operation as L-Ports (loop ports), resulting in fabric errors.
+
+This behavior is caused by topology auto-negotiation issues in the Brocade switch.
+
+To ensure that switch ports always initialize as F-ports, you must run the portcfggport <portnumber> 1 command on Brocade switch ports that are connected to storage arrays. You must run this command when you start configuring the system to avoid this problem, and you must fix the problem if it occurs.
+
+To promote efficiency on the fabric as a whole, you can also use this workaround on any Brocade ports attached to ONTAP initiator ports.

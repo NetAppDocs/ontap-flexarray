@@ -1,0 +1,22 @@
+---
+permalink: install/concept_advantages_of_four_paths_to_an_array_lun_clustered_data_ontap_8_1_and_later.html
+sidebar: sidebar
+keywords: 
+summary: 'When planning the number of paths to an array LUN for ONTAP, you need to consider whether you want to set up two or four paths.'
+---
+= Advantages of four paths to an array LUN
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning the number of paths to an array LUN for ONTAP, you need to consider whether you want to set up two or four paths.
+
+The advantages of setting up four paths to an array LUN include the following:
+
+* If a switch fails, both storage array controllers are still available.
+* If a storage array controller fails, both switches are still available.
+* Performance can be improved because load balancing is over four paths instead of two.
+
+*Related information*
+
+xref:concept_required_number_of_paths_to_an_array_lun.adoc[Required number of paths to an array LUN]

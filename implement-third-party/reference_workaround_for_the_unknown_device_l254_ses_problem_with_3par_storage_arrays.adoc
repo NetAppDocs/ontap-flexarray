@@ -1,0 +1,74 @@
+---
+permalink: implement-third-party/reference_workaround_for_the_unknown_device_l254_ses_problem_with_3par_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'The host definition, with the host persona specified in the required parameters for 3PAR arrays with ONTAP systems section, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR array LUN as LUN 254 and product type SES, which ONTAP cannot use.'
+---
+= Workaround for the unknown device (L254/SES) problem with 3PAR storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The host definition, with the host persona specified in the required parameters for 3PAR arrays with ONTAP systems section, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR array LUN as LUN 254 and product type SES, which ONTAP cannot use.
+
+xref:reference_required_parameters_for_3par_arrays_with_data_ontap_systems.adoc[Required parameters for 3PAR arrays with ONTAP systems]
+
+When ONTAP discovers 3PAR array LUNs as LUN 254 and product type SES, newly mapped 3PAR LUNs cannot be assigned to ONTAP systems and some 3PAR LUNs that might have already been added to an aggregate cannot be used because ONTAP sees a LUN 254. ONTAP generates EMS messages for the LUN it discovered as LUN 254 and product type SES, reporting some LUNs as unknown devices.
+
+If zoning was configured before the host definition, you can resolve the LUN 254/SES unknown device problem by forcing a rediscovery of the array LUNs that are mapped from the 3PAR storage array. The procedure you use depends on whether aggregates with 3PAR array LUNs have already been configured on the ONTAP system. (In the following procedures, assume that Node-1 and Node-2 are the names of the ONTAP nodes.)
+
+== If aggregates with 3PAR array LUNs were already created on an ONTAP system
+
+. Run the following command to ensure that an HA configuration is enabled on your ONTAP systems: `cluster ha show`
++
+The following output is displayed:
++
+----
+
+High Availability Configured: true
+----
+
+. Run the following command to ensure that storage failover is configured on your ONTAP systems: `storage failover show`
++
+The following output is displayed:
++
+----
+          Takeover
+Node           Partner        Possible State Description
+-------------- -------------- -------- -------------------------------------
+Node-1    Node-2    true     Connected to Node-2
+Node-2    Node-1    true     Connected to Node-1
+2 entries were displayed.
+----
+
+. Perform a takeover operation on Node-1 by running the following command: `storage failover takeover -ofnode Node-1`
+. Run the following command again to verify that Node-2 is ready for a giveback operation: `storage failover show`
++
+The following output is displayed:
++
+----
+          Takeover
+Node           Partner        Possible State Description
+-------------- -------------- -------- -------------------------------------
+Node-2    Node-1    false    In takeover, Auto giveback will be
+                                      initiated in 348 seconds
+Node-1    Node-2    -        Waiting for giveback (HA mailboxes)
+2 entries were displayed.
+----
+
+. Perform a giveback operation on Node-1 by running the following command: `storage failover giveback -ofnode Node-1 -require-partner-waiting true`
+. From other nodes in the cluster, repeat Step 3 through Step 5.
+
+== If aggregates with 3PAR array LUNs have not been created on an ONTAP system
+
+. Run the following command to list all of the ONTAP FC initiator ports that are connected to the 3PAR storage array: `system node run -node <node name> -command "sysconfig -v"`
++
+The following example shows the command with a specific node name included: `system node run -node Node-1 -command "sysconfig -v"`
+
+. Run the following command to take all of the listed ports offline: `system node run -node <node name> -command "priv set advanced;fcadmin offline <adapter>"`
++
+The following example shows the command with a specific node name and adapter included: `system node run -node Node-1 -command "priv set advanced;fcadmin offline 0a"`
+
+. Run the following command to bring all of the listed ports online: `system node run -node <node name> -command "priv set advanced;fcadmin online <adapter>"`
++
+The following example shows the command with a specific node name and adapter included: `system node run -node Node-1 -command "priv set advanced;fcadmin online 0a"`

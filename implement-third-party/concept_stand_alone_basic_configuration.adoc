@@ -1,0 +1,22 @@
+---
+permalink: implement-third-party/concept_stand_alone_basic_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'The stand-alone basic configuration of an ONTAP system that uses array LUNs is a simple, fabric-attached configuration with a single FC initiator port pair accessing a single LUN group.'
+---
+= Stand-alone basic configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The stand-alone basic configuration of an ONTAP system that uses array LUNs is a simple, fabric-attached configuration with a single FC initiator port pair accessing a single LUN group.
+
+This configuration is supported for use with all storage arrays listed in the Interoperability Matrix as supported for the release of ONTAP running on your system.
+
+The following illustration shows this configuration:
+
+image::../media/one_standalone_2_port_array_lun_group_array_port_labels.gif[In a single 2-port array LUN group configuration with a stand-alone system, a path goes to a port on each storage array controller.]
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

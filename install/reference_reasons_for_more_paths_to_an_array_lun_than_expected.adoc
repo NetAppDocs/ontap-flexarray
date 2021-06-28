@@ -1,0 +1,50 @@
+---
+permalink: install/reference_reasons_for_more_paths_to_an_array_lun_than_expected.html
+sidebar: sidebar
+keywords: 
+summary: 'The primary reasons for an unexpected additional path to an array LUN are zoning issues and too many cables. Three paths to an array LUN is not best practice, but you are not required to fix this issue.'
+---
+= Reasons for more paths to an array LUN than expected
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The primary reasons for an unexpected additional path to an array LUN are zoning issues and too many cables. Three paths to an array LUN is not best practice, but you are not required to fix this issue.
+
+== Example of storage array config show output
+
+The FC initiator port pair on the ONTAP system is 0a and 0c. The following example shows an extra path, 0b, in the storage array config show output:
+
+----
+
+mysystem1::> storage array config show
+             LUN   LUN
+Node         Group Count   Array Name       Array Target Port   Initiator
+----------   ----- -----  ----------------  ------------------  ----------
+mysystem1a    1     3     HITACHI_DF600F_1  50060e80004291c0    0a
+                                            50060e80004291c1    0b
+                                                                0c
+
+3 entries were displayed.
+----
+
+[NOTE]
+====
+If an initiator in the storage array config show output is not preceded by an array target port, the initiator is connecting to the same array target port as the initiator above it.
+====
+
+== Explanation
+
+Three paths within a LUN group indicates that there is an extra path. For ONTAP configurations, the best practice is two or four paths.
+
+Reasons there could be more paths than expected include the following:
+
+* More cables were connected than are needed.
+* A zoning configuration error caused an extra path.
+
+== Resolving the issue
+
+Having an extra path is not a best practice, but it is not incorrect from the system perspective. You do not have to fix this issue. If you want to fix the issue to align with your intended configuration, complete the following steps:
+
+. Check your cabling and the zoning configuration for the cause, and then fix the issue that is causing the extra path.
+. After the issue is fixed, run storage array config show again to confirm that the extra path is gone.

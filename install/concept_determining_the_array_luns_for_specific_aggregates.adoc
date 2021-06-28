@@ -1,0 +1,12 @@
+---
+permalink: install/concept_determining_the_array_luns_for_specific_aggregates.html
+sidebar: sidebar
+keywords: 
+summary: 'There are a number of rules about mixing different types of storage in aggregates that are unique to ONTAP systems that use array LUNs. You must understand these rules when planning which array LUNs and disks to add to which aggregates.'
+---
+= Determining the array LUNs for specific aggregates
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+There are a number of rules about mixing different types of storage in aggregates that are unique to ONTAP systems that use array LUNs. You must understand these rules when planning which array LUNs and disks to add to which aggregates.

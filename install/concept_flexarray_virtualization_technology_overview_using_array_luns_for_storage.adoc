@@ -1,0 +1,22 @@
+---
+permalink: install/concept_flexarray_virtualization_technology_overview_using_array_luns_for_storage.html
+sidebar: sidebar
+keywords: 
+summary: 'The ONTAP software provides a unified storage software platform that simplifies managing both native disk shelves and LUNs on storage arrays. You can add storage when and where you require it, without disruption. This functionality is provided by FlexArray Virtualization Software, formerly known as V-Series.'
+---
+= FlexArray Virtualization technology overview--using array LUNs for storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The ONTAP software provides a unified storage software platform that simplifies managing both native disk shelves and LUNs on storage arrays. You can add storage when and where you require it, without disruption. This functionality is provided by FlexArray Virtualization Software, formerly known as V-Series.
+
+The following illustration shows a configuration in which ONTAP systems that are licensed to attach to storage arrays are pooling LUNs from the storage arrays and presenting that storage to clients.
+
+image::../media/how_v_series_uses_storage.gif[This graphic is described by the surrounding text.]
+
+An ONTAP system presents storage to clients either in the form of ONTAP file system volumes, which you manage on the system by using ONTAP management features, or as a SCSI target that creates LUNs for use by clients. In both cases (file system clients and LUN clients), on the systems that can use array LUNs, you combine the array LUNs into one or more array LUN aggregates. In an ONTAP environment, you can associate these array LUN aggregates with storage virtual machines (SVMs), and create ONTAP volumes for presentation to the clients as files or as LUNs served by ONTAP.
+
+*Related information*
+
+xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]

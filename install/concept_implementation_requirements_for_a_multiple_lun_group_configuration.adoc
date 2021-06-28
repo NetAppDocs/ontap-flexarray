@@ -1,0 +1,43 @@
+---
+permalink: install/concept_implementation_requirements_for_a_multiple_lun_group_configuration.html
+sidebar: sidebar
+keywords: 
+summary: 'You can improve the system performance by implementing a multiple LUN group configuration in your storage environment. Certain setup tasks must be performed on the ONTAP systems and the storage arrays for implementing this configuration.'
+---
+= Implementation requirements for a multiple LUN group configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can improve the system performance by implementing a multiple LUN group configuration in your storage environment. Certain setup tasks must be performed on the ONTAP systems and the storage arrays for implementing this configuration.
+
+A multiple LUN group configuration is supported for most storage arrays. See the _Interoperability Matrix_ to confirm that this configuration is supported with your particular storage array.
+
+You must work with the storage array administrator to set up the following on the _storage array_ for a multiple LUN group configuration:
+
+* Use as many ports as possible, to provide access to the array LUNs allocated for the ONTAP system.
+* Use host groups (or your vendor's equivalent) to define which array LUN groups are presented to each FC initiator port on an ONTAP system.
+
+You can set up the following on the ONTAP system** to implement a multiple LUN group configuration:
+
+* Use one FC initiator port pair for each array LUN group.
++
+Each FC initiator port pair accesses a different LUN group on the storage array through redundant paths.
+
+* Create a large aggregate in the ONTAP configuration, and add array LUNs from multiple RAID groups (parity groups) to the aggregate.
++
+By doing so, the I/O is spread across more disks. The combination of spreading I/O across the RAID groups and creating one large aggregate results in a significant performance boost.
+
+You must set up the following on the _switch_ to implement a multiple LUN group configuration:
+
+* Configure switch zoning to define which target ports the FC initiator ports on the ONTAP system should use to access each array LUN group.
+
+*Related information*
+
+xref:concept_example_of_a_configuration_with_multiple_lun_groups.adoc[Example of a configuration with multiple LUN groups]
+
+xref:reference_reasons_for_fewer_array_lun_groups_than_expected.adoc[Reasons for fewer array LUN groups than expected]
+
+xref:reference_reasons_for_more_array_lun_groups_than_expected.adoc[Reasons for more array LUN groups than expected]
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

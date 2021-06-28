@@ -1,0 +1,82 @@
+---
+permalink: install/concept_example_of_cascading_zoning_and_host_group_configuration_errors.html
+sidebar: sidebar
+keywords: 
+summary: 'Errors made in zone definitions can impact host group definitions, and vice versa. When LUNs are not visible over a path, you need to check for both zoning and host group configuration errors.'
+---
+= Example of cascading zoning and host group configuration errors
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Errors made in zone definitions can impact host group definitions, and vice versa. When LUNs are not visible over a path, you need to check for both zoning and host group configuration errors.
+
+Assume that your configuration sequence is as follows:
+
+. The zone definition was created on the switch.
++
+The WWPN for FC initiator port 0a of the ONTAP system was put in the zone definition. However, the intention was that the WWPN for FC initiator port 0c was to be put into the zone definition.
+
+. The host group was created on the storage array.
++
+The WWPN for FC initiator port 0a was selected (because that was the only WWPN available and it was not obvious that it was the WWPN for 0a and not 0c).
+
+. In ONTAP, you looked at array LUNs over the FC initiator ports, expecting to see array LUNs over 0c.
++
+However, there were no array LUNs over 0c because both the zone definition and the host group definition incorrectly include the WWPN for FC initiator port 0a.
+
+ [NOTE]
+ ====
+ You used the storage array config show command to view the array LUN information.
+ ====
+
+. You start troubleshooting because you cannot see LUNs over the initiator over which you expected to see them.
+
+You need to check both the zoning and host group configuration but it does not matter which of the following procedures you start with first. You might see different messages, depending on whether you start fixing things from the host group first or the zoning first.
+
+== Troubleshooting by checking the zoning first
+
+. Check the zone definitions for the ONTAP system.
++
+You realize that you have two zones with the WWPN for FC initiator port 0a in it and no zones with the WWPN for 0c in it.
+
+. Fix the incorrect zone definitions and activate them.
+[NOTE]
+====
+You would not be able to see the array LUNs over the initiator ports when running storage array config show.
+====
+. Go to the array and reconfigure the host group to include the WWPN for FC initiator port 0c.
++
+Now that the WWPN for 0c is in a zone definition that has been activated, the WWPN for 0c shows up in the picklist in the host group configuration on the storage array.
+
+. On the ONTAP system, run storage array config show to check the array LUNs over the FC initiator ports to confirm that array LUNs are shown over 0c.
+
+== Troubleshooting by checking the host group first
+
+. From the console of the ONTAP system, run storage show adapteradapter#, then write down the WWPN of the adapter that is missing--0c in this example.
+. Go to the storage array and compare the WWPN you wrote down to the WWPNs shown in the host group picklist to see whether the WWPN of the FC initiator port you expected is listed.
++
+If the WWPN you expected does not appear, then the initiator you intended is not in the zone definition.
+
+. If the storage array allows you to modify WWPNs in the host group, you could modify the WWPN shown to be the WWPN that you wrote down.
+[NOTE]
+====
+If the storage array does not let you modify WWPNs in the host group, you need to modify the host group definition after modifying the zone definition.
+====
++
+You still cannot see LUNs over the initiator you were intending because the zoning has not been fixed yet.
+
+. Go to the switch and replace the incorrect WWPN with the correct FC port initiator, and then activate the zone definition.
+. If you could not correct the WWPN in the host group definition earlier in the process, go to the storage array and reconfigure the host group to include the WWPN for FC initiator port 0c.
++
+Now that the WWPN for 0c is in a zone definition that has been activated, the WWPN for 0c shows up in the picklist in the host group configuration on the storage array.
+
+. On the ONTAP system, run storage array config show to check the array LUNs over the FC initiator ports to confirm that array LUNs are shown over 0c.
++
+You should now see access to the LUNs over the FC initiator port.
+
+*Related information*
+
+xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
+
+xref:concept_zoning_for_a_configuration_with_storage_arrays.adoc[Zoning in a configuration with storage arrays]

@@ -1,0 +1,33 @@
+---
+permalink: implement-third-party/concept_configuring_fill_word_settings_for_8_gb_brocade_switch_ports_concept.html
+sidebar: sidebar
+keywords: 
+summary: 'If you are using 8 Gb Brocade switches running firmware version FOS 6.3.1 or later in your storage environment, you must verify that appropriate fill word settings are configured on the switch ports connected to ONTAP systems and that the switch ports are connected to storage arrays. Providing incorrect fill words might lead to link initialization failures in the switch ports.'
+---
+= Required fill word settings for 8 Gb Brocade switch ports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you are using 8 Gb Brocade switches running firmware version FOS 6.3.1 or later in your storage environment, you must verify that appropriate fill word settings are configured on the switch ports connected to ONTAP systems and that the switch ports are connected to storage arrays. Providing incorrect fill words might lead to link initialization failures in the switch ports.
+
+For ONTAP systems, you must set the fill word on the corresponding switch ports to 3.
+
+For storage arrays, you must set the fill word according to the following recommended values, using the Brocade switch documentation for instructions:
+
+|===
+| Storage array| Fill word value on the Brocade switch ports
+a|
+Hitachi
+a|
+2
+a|
+HP XP
+a|
+All other storage arrays supported with Data ONTAP systems
+a|
+3
+|===
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

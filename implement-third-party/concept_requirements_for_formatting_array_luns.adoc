@@ -1,0 +1,32 @@
+---
+permalink: implement-third-party/concept_requirements_for_formatting_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'You can perform different types of array LUN formatting. Each type has an impact on the availability of LUNs or the entire storage array.'
+---
+= Requirements for formatting array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can perform different types of array LUN formatting. Each type has an impact on the availability of LUNs or the entire storage array.
+
+If you must present a new LUN to the ONTAP system immediately, you should use quick formatting. If you plan to present LUNs to the ONTAP system in the future, quick formatting is recommended but Online formatting is acceptable.
+
+Quick formatting is recommended because both Online and Offline formatting delay disk discovery until after the LUN formatting is complete, as described in the following list:
+
+* Online formatting takes the array LUN that is being formatted completely offline, and the array LUN does not respond to any SCSI commands.
++
+Formatting is performed on one array LUN at a time until all array LUNs are formatted.
+
+* Offline formatting takes the entire storage array offline and the storage array does not respond to any SCSI commands.
++
+The array LUNs are formatted six at a time per controller until the formatting is complete.
++
+The storage array does not respond until all formatting is complete.
+
+* If you are creating array LUNs (for any host) after initial setup of the ONTAP system and you are using Offline formatting, the system panics.
++
+Any array LUNs that are mapped to the ONTAP system, including array LUNs in the root volume, become unavailable until formatting is complete.
+
+* Online and quick formatting of LUNs for other hosts do not impact the ONTAP system.

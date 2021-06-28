@@ -1,0 +1,35 @@
+---
+permalink: install/concept_example_of_non_optimized_usage_of_a_storage_array_target_port.html
+sidebar: sidebar
+keywords: 
+summary: 'When the number of I/O requests queued on a given storage array target port exceeds the number of requests that the port can handle, it results in non-optimized usage of the target port.'
+---
+= Example of non-optimized usage of a storage array target port
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When the number of I/O requests queued on a given storage array target port exceeds the number of requests that the port can handle, it results in non-optimized usage of the target port.
+
+You can detect such non-optimized usage of a given target port in the output display of the storage array show command.
+
+== Output example displaying errors on detecting non-optimized usage of a target port
+
+The following example shows the error returned by the storage array show command on detecting non-optimized usage of a given target port:
+
+----
+vgv3070f50ab::> storage array show -name HP_HSV450_2
+
+                Name: HP_HSV450_2
+              Prefix:
+              Vendor: HP
+               Model: HSV450
+             options:
+       Serial Number: 50014380025d1500
+ Optimization Policy: iALUA
+            Affinity: AAA
+
+
+Errors:
+Warning: HP_HSV450_2 Detected non optimized usage of a target port. WWPN: 2703750270235, average service time: 215ms, average latency: 30ms
+----

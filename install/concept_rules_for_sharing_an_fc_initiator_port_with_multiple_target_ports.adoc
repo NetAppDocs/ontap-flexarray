@@ -1,0 +1,52 @@
+---
+permalink: install/concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.html
+sidebar: sidebar
+keywords: 
+summary: 'You can connect an FC initiator port on an ONTAP system to a maximum of four target ports on separate storage arrays. Sharing an FC initiator port with multiple targets is useful when you want to minimize the number of FC initiator ports used.'
+---
+= Rules for sharing an FC initiator port with multiple target ports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can connect an FC initiator port on an ONTAP system to a maximum of four target ports on _separate_ storage arrays. Sharing an FC initiator port with multiple targets is useful when you want to minimize the number of FC initiator ports used.
+
+You can also connect an FC initiator port to a maximum of four target ports on the _same_ storage array if the array can present different sets of logical devices to the FC initiator based on the target port being accessed.
+
+There are limits on how many array LUNs can be visible over an FC initiator port. These limits vary according to release.
+
+== Rules when the FC initiator port is connected to multiple target ports on _separate_ storage arrays
+
+The rules for this configuration are as follows:
+
+* All storage arrays must be from the same vendor model family.
++
+Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
+
+* Connecting a single FC initiator port to multiple target ports is supported for MetroCluster configurations.
+* A single FC initiator port can connect to a maximum of four target ports on multiple storage arrays.
+* You must have each FC initiator-target port pair in a separate zone (1:1), even if the same FC initiator port is accessing multiple target ports.
+
+== Rules when the FC initiator port is connected to multiple targets ports on the _same_ storage array
+
+This configuration can be used only with storage arrays whose LUN masking, presentation, or host group capability allows for different LUN group presentations to the same FC initiator based on the target port being accessed.
+
+Some storage arrays can present different sets of logical devices to an FC initiator based on the target port being accessed. These types of storage arrays allow the same FC initiator to be in multiple host groups. On storage arrays with this capability, it is possible for each FC initiator port to access multiple array target ports on the same storage array, with each target port presenting a different LUN group to the FC initiator. See your storage array documentation to determine whether your storage array allows the same FC initiator to be in multiple host groups.
+
+The following are the rules for this configuration:
+
+* A single FC initiator port can connect to up to four target ports on a storage array.
+* Connecting a single FC initiator port to multiple target ports is supported for MetroCluster configurations.
+* You must have each FC initiator-target port pair in a separate zone (1:1), even if the same FC initiator is accessing multiple target ports.
+
+*Related information*
+
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+
+xref:concept_example_configuration_shared_fc_initiator_ports.adoc[Example configuration: shared FC initiator ports]
+
+xref:task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.adoc[Checking the number of array LUNs visible on an FC initiator port]
+
+link:Fabric-attached MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

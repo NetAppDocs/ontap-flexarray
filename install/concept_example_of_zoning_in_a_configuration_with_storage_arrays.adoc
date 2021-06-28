@@ -1,0 +1,73 @@
+---
+permalink: install/concept_example_of_zoning_in_a_configuration_with_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'Using LUN security when configuring the switches for zoning ensures that different hosts do not see LUNs mapped to another host.'
+---
+= Example of zoning in a configuration with storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Using LUN security when configuring the switches for zoning ensures that different hosts do not see LUNs mapped to another host.
+
+== Zoning in a single 4-port LUN group configuration
+
+image::../media/one_4_port_array_lun_gp.gif[This graphic is described by the surrounding text.]
+
+The following table shows zoning for this example configuration of ONTAP systems in an HA pair. Single-initiator zoning is the recommended zoning strategy.
+
+|===
+| Zone| ONTAP system| Storage array
+a|
+Switch 1
+a|
+z1
+a|
+vs1
+a|
+Port 0a
+a|
+Controller 1
+a|
+Port 1A
+a|
+z2
+a|
+vs2
+a|
+Port 0a
+a|
+Controller 1
+a|
+Port 1B
+a|
+Switch 2
+a|
+z3
+a|
+vs1
+a|
+Port 0c
+a|
+Controller 2
+a|
+Port 2A
+a|
+z4
+a|
+vs2
+a|
+Port 0c
+a|
+Controller 2
+a|
+Port 2B
+|===
+*Related information*
+
+xref:concept_zoning_recommendation_for_a_configuration_with_storage_arrays.adoc[Zoning recommendation for a configuration with storage arrays]
+
+xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
+
+xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]

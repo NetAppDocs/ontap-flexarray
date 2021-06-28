@@ -1,0 +1,17 @@
+---
+permalink: implement-third-party/concept_guidelines_for_configuring_ports_on_hitachi_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'You should follow certain guidelines when configuring ports on Hitachi storage arrays.'
+---
+= Guidelines for configuring ports on Hitachi storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You should follow certain guidelines when configuring ports on Hitachi storage arrays.
+
+The guidelines for configuring ports on Hitachi storage arrays are as follows:
+
+* You should add only one host group per port.
+* You should ensure that a host group includes all the FC initiator ports of the V-Series systems in an array LUN neighborhood.

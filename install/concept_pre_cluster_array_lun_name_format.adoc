@@ -1,0 +1,53 @@
+---
+permalink: install/concept_pre_cluster_array_lun_name_format.html
+sidebar: sidebar
+keywords: 
+summary: 'Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the pre-cluster format.'
+---
+= Pre-cluster array LUN name format
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the pre-cluster format.
+
+In this format, the array LUN name is a path-based name that includes the devices in the path between the ONTAP system and the storage array, ports used, and the SCSI LUN ID on the path that the storage array presents externally for mapping to hosts.
+
+On an ONTAP system that supports array LUNs, each array LUN can have multiple names because there are multiple paths to each LUN.
+
+== Array LUN name format for ONTAP systems
+
+|===
+| Configuration| Array LUN name format| Component descriptions
+a|
+Direct-attached
+a|
+node-name.adapter.idlun-id
+a|
+node-name is the name of the clustered node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. adapter is the adapter number on the ONTAP system.
+
+id is the channel adapter port on the storage array.
+
+lun-id is the array LUN number that the storage array presents to hosts.
+
+Example: node1.0a.0L1
+
+a|
+Fabric-attached
+a|
+node-name:switch-name:port.idlun-id
+a|
+node-name is the name of the node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. switch-name is the name of the switch.
+
+port is the switch port that is connected to the target port (the end point).
+
+id is the device ID.
+
+lun-id is the array LUN number that the storage array presents to hosts.
+
+Example: node1:brocade3:6.126L1
+
+|===
+*Related information*
+
+xref:concept_how_the_array_lun_name_is_displayed_in_ontap.adoc[How the array LUN name is displayed in ONTAP]

@@ -1,0 +1,28 @@
+---
+permalink: install/concept_prerequisites_to_reconfiguring_an_array_lun_on_the_storage_array.html
+sidebar: sidebar
+keywords: 
+summary: 'If an array LUN has already been assigned \(through ONTAP\) to a particular ONTAP system, the information that ONTAP wrote to the array LUN must be removed before the storage administrator attempts to reconfigure the array LUN on the storage array.'
+---
+= Prerequisites to reconfiguring an array LUN on the storage array
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If an array LUN has already been assigned (through ONTAP) to a particular ONTAP system, the information that ONTAP wrote to the array LUN must be removed before the storage administrator attempts to reconfigure the array LUN on the storage array.
+
+When the storage array presents an array LUN to ONTAP, ONTAP collects information about the array LUN (for example, its size) and writes that information to the array LUN. ONTAP cannot dynamically update information that it wrote to an array LUN. Therefore, before the storage array administrator reconfigures an array LUN, you must use ONTAP to change the state of the array LUN to _unused_. The array LUN is unused from the perspective of ONTAP.
+
+While changing the state of the array LUN to unused, ONTAP does the following:
+
+* Terminates I/O operations to the array LUN
+* Removes the label for RAID configuration information and the persistent reservations from the array LUN, which makes the array LUN unowned by any ONTAP system
+
+After this process finishes, no ONTAP information remains in the array LUN.
+
+You can do the following after the array LUN's state is changed to unused:
+
+* Remove the mapping of the array LUN to ONTAP and make the array LUN available to other hosts.
+* Resize the array LUN or change its composition.
+
+If you want ONTAP to resume using the array LUN after its size or composition is changed, you must present the array LUN to ONTAP again, and assign the array LUN to an ONTAP system again. ONTAP is aware of the new array LUN size or composition.
