@@ -1,0 +1,24 @@
+---
+permalink: install/concept_spare_core_array_lun_requirement_for_core_dumps.html
+sidebar: sidebar
+keywords: 
+summary: 'For both stand-alone ONTAP systems and nodes in HA pairs, you must create a spare array LUN of adequate size to hold core dumps if no spare disk is available.'
+---
+= Spare array LUN requirement for core dumps
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+For both stand-alone ONTAP systems and nodes in HA pairs, you must create a spare array LUN of adequate size to hold core dumps if no spare disk is available.
+
+On a system that uses both disks and array LUNs, a spare array LUN is not required for a core dump if a spare disk is available. If neither a spare array LUN nor a spare disk is available, there is no place for the core to be dumped.
+
+A core dump contains the contents of memory and NVRAM. During a system panic, ONTAP dumps core to a spare array LUN or spare disk, if a spare exists. Upon reboot, the core is read from the spare and saved to a core dump on the root filesystem. Technical support can then use the core dump to help troubleshoot the problem.
+
+The _Hardware Universe_ contains the minimum spare core array LUN size for each platform.
+
+*Related information*
+
+xref:concept_limits_information_for_a_configuration_with_storage_arrays.adoc[Limit types for configurations with storage arrays]
+
+https://hwu.netapp.com[NetApp Hardware Universe]

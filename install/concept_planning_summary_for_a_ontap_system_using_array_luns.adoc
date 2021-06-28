@@ -1,0 +1,55 @@
+---
+permalink: install/concept_planning_summary_for_a_ontap_system_using_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.'
+---
+= Planning summary for ONTAP systems using array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.
+
+The following table summarizes the major planning tasks and the location of information to help you with each task.
+
+|===
+| Planning task| Where to find information
+a|
+Determining requirements for setting up your storage array to work with ONTAP
+a|
+
+* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+* https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+
+a|
+Guidelines for array LUN use with ONTAP
+a|
+xref:concept_planning_for_ontap_use_of_array_luns.adoc[Planning for ONTAP use of array LUNs]
+a|
+Determining ONTAP limits regarding array LUNs
+a|
+https://hwu.netapp.com[NetApp Hardware Universe]
+a|
+Determining a LUN security scheme, setting access controls on the storage array and, if switches are deployed, setting zoning on switches
+a|
+
+* xref:concept_planning_for_lun_security_on_storage_arrays.adoc[Planning for LUN security on storage arrays]
+* xref:concept_zoning_for_a_configuration_with_storage_arrays.adoc[Zoning requirements]
+
+a|
+Determining a port-to-port connectivity scheme between the ONTAP systems and the storage array
+a|
+
+* xref:concept_planning_a_port_to_port_connectivity_scheme.adoc[Planning a port-to-port connectivity scheme]
+* https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+
+a|
+Determining which ONTAP system is to "`own`" which array LUN (disk ownership)
+a|
+
+* xref:concept_how_array_luns_become_available_for_ontap_storage_use.adoc[How array LUNs become available for ONTAP storage use]
+* xref:task_assigning_ownership_of_array_luns.adoc[Assigning ownership of array LUNs]
+
+|===

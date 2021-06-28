@@ -1,0 +1,52 @@
+---
+permalink: install/reference_volume_set_addressing_is_inconsistent.html
+sidebar: sidebar
+keywords: 
+summary: 'ONTAP can detect inconsistent LUN IDs across a path set for storage arrays. For storage arrays on which Volume Set Addressing is set, a mismatch of the settings on the ports to which the LUN is mapped is one problem that causes a mismatch of LUN IDs.'
+---
+= Volume Set Addressing is inconsistent
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP can detect inconsistent LUN IDs across a path set for storage arrays. For storage arrays on which Volume Set Addressing is set, a mismatch of the settings on the ports to which the LUN is mapped is one problem that causes a mismatch of LUN IDs.
+
+On EMC Symmetrix storage arrays, for example, inconsistent setting of the Volume Set Addressing parameter on the channel director ports to which a LUN is mapped triggers a LUN mismatch error.
+
+== Storage errors show message
+
+----
+
+EMC-1.128 (4849544143484920443630303035323430303132): This Array LUN is using multiple LUN IDs.  Only one LUN ID per serial number is supported.
+----
+
+== Explanation
+
+There are a number of configuration errors that can cause the error message. This explanation is about the display of this message when Volume Set Addressing is set inconsistently.
+
+ONTAP explicitly checks for inconsistent setting of the Volume Set Addressing parameter on ports to which a LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in storage errors show output and in EMS messages.
+
+[NOTE]
+====
+ONTAP does not alert you if Volume Set Addressing is not configured as expected; it alerts you only if the configuration is inconsistent across the channel director ports to which the LUN is mapped.
+====
+
+== Troubleshooting and problem resolution
+
+If the storage errors show command displays the particular error message and your storage array is an EMC Symmetrix, doing one of the following helps you identify whether the problem is due to a Volume Set Addressing inconsistency:
+
+* In ONTAP, run `storage disk show -disk` for the identified array LUN.
++
+This command shows all the paths to the array LUN and the LUN ID assigned to each path.
+
+* On the storage array, check the Volume Set Addressing settings for the channel director ports to which the identified LUN is mapped.
+
+If you determine that the settings are inconsistent, fix the configuration problem on the storage array, making sure that you are setting the parameter on both channel director ports to the setting required by ONTAP.
+
+*Related information*
+
+xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match]
+
+xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
+
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]

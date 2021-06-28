@@ -1,0 +1,19 @@
+---
+permalink: install/concept_planning_for_lun_security_on_storage_arrays.html
+sidebar: sidebar
+keywords: 
+summary: 'If you are using your ONTAP system with storage arrays, you must use a LUN security method to eliminate the possibility of a non-ONTAP system overwriting array LUNs owned by an ONTAP system, or vice versa.'
+---
+= Planning for LUN security on the storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you are using your ONTAP system with storage arrays, you must use a LUN security method to eliminate the possibility of a non-ONTAP system overwriting array LUNs owned by an ONTAP system, or vice versa.
+
+LUN security is a method for isolating the hosts that can access particular array LUNs. LUN security is similar to switch zoning in concept, but it is performed on the storage array. LUN security and LUN masking are equivalent terms to describe this functionality.
+
+[NOTE]
+====
+The ONTAP disk ownership scheme prevents one ONTAP system from overwriting an array LUN owned by another ONTAP system. However, it does not prevent an ONTAP system from overwriting an array LUN accessible by a non-ONTAP host. Likewise, without a method of preventing overwriting, a non-ONTAP host could overwrite an array LUN used by an ONTAP system.
+====

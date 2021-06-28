@@ -1,0 +1,31 @@
+---
+permalink: install/concept_location_of_the_root_volume.html
+sidebar: sidebar
+keywords: 
+summary: 'The location of the root volume depends on whether the ONTAP system is pre-ordered with native disks or whether you are adding disks to an ONTAP system that is configured for array LUNs.'
+---
+= Location of the root volume
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The location of the root volume depends on whether the ONTAP system is pre-ordered with native disks or whether you are adding disks to an ONTAP system that is configured for array LUNs.
+
+Follow these guidelines for determining the location of the root volume on the ONTAP system:
+
+* The root volume can be on a storage array or on a native disk shelf.
++
+However, you should install the root volume on a native disk if the ONTAP system has both native disks and array LUNs.
++
+If you order your storage system with disks, the factory installs the root volume on a native disk.
+
+* In an HA pair, the best practice is for the root volume to be located on the same type of storage for both the nodes--either on a native disk shelf or on a storage array for both the nodes.
+* For MetroCluster configurations with both disks and array LUNs, you should create the root volume on a disk if you are setting up a new configuration.
++
+If you are adding disks to an existing MetroCluster configuration with array LUNs, you can leave the root volume on an array LUN.
+
+*Related information*
+
+xref:concept_minimum_array_lun_size_for_the_root_volume.adoc[Array LUN size required for the root volume]
+
+xref:concept_minimum_number_of_array_luns_required_per_ontap_system.adoc[Minimum number of array LUNs required per ONTAP system]

@@ -1,0 +1,32 @@
+---
+permalink: install/concept_how_the_checksum_type_is_determined_for_aggregates_with_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'Each ONTAP aggregate has a checksum type associated with it. The aggregate checksum type is determined by the checksum type of the array LUNs that are added to it.'
+---
+= How the checksum type is determined for array LUN aggregates
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Each ONTAP aggregate has a checksum type associated with it. The aggregate checksum type is determined by the checksum type of the array LUNs that are added to it.
+
+The checksum type of an aggregate is determined by the checksum type of the first array LUN that is added to the aggregate. The checksum type applies to an entire aggregate (that is, to all volumes in the aggregate). Mixing array LUNs of different checksum types in an aggregate is not supported.
+
+* An array LUN of type block must be used with block checksum type aggregates.
+* An array LUN of type zoned must be used with advanced zoned checksum (AZCS or advanced_zoned) type aggregates.
+
+Before you add array LUNs to an aggregate, you must know the checksum type of the LUNs you want to add, for the following reasons:
+
+* You cannot add array LUNs of different checksum types to the same aggregate.
+* You cannot convert an aggregate from one checksum type to the other.
+
+When you create an aggregate you can specify the number of array LUNs to be added, or you can specify the names of the LUNs to be added. If you want to specify a number of array LUNs to be added to the aggregate, the same number or more array LUNs of that checksum type must be available.
+
+*Related information*
+
+xref:concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.adoc[Rules for mixing storage in array LUN aggregates]
+
+xref:concept_aggregate_rules_when_the_storage_arrays_are_from_the_same_family.adoc[Aggregate rules when the storage arrays are from the same family]
+
+xref:concept_aggregate_rules_when_the_storage_arrays_are_from_different_vendor_or_family.adoc[Aggregate rules when the storage arrays are from different vendors or families]

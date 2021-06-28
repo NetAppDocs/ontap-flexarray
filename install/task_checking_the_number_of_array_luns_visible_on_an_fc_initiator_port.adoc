@@ -1,0 +1,40 @@
+---
+permalink: install/task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.html
+sidebar: sidebar
+keywords: 
+summary: 'You can check the number of visible array LUNs on an FC initiator port. The supported number of array LUNs that can be visible on an FC initiator port varies for different ONTAP releases.'
+---
+= Checking the number of array LUNs visible on an FC initiator port
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can check the number of visible array LUNs on an FC initiator port. The supported number of array LUNs that can be visible on an FC initiator port varies for different ONTAP releases.
+
+. Check the visible number on the FC initiator port: `storage array config show -initiator initiator_number`
++
+`storage array config show -initiator 0a`
+
+. If there is more than one array LUN group for a node, add the number of array LUNs for all the LUN groups for that node to determine the combined total of array LUNs visible to that node's specified FC initiator.
++
+The following example shows the output for FC initiator 0a for all nodes. To determine the number of array LUNs visible over a specific FC initiator for a _particular_ node, you must look at the entries for that node from all the target ports shown for that node. For example, to find the number of array LUNs seen over vgv3070f51-01:0a, you would add the LUN count of 24 for LUN group 1 (HP) to the LUN count of 1 for LUN group 2 (DGC_RAID5_1), for a total of 25 array LUNs visible over vgv3070f51-01:0a.
++
+You would follow the same process to determine the number of array LUNs visible over vgv3070f51-02:0a for LUN group 0 and LUN group 2, which is also 25.
++
+----
+
+vgv3070f51::> storage array config show -initiator 0a
+             LUN   LUN
+Node         Group Count    Array Name     Array Target Port Initiator
+------------ ----- -----    -----------  ------------------  -------
+vgv3070f51-01    1    24             HP    50014380025d1508     0a
+                 2     1    DGC_RAID5_1    200600a0b819e16f     0a
+vgv3070f51-02    0    24             HP    50014380025d1508     0a
+                 2     1    DGC_RAID5_1    200600a0b819e16f     0a
+----
+
+*Related information*
+
+xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]
+
+xref:concept_example_configuration_shared_fc_initiator_ports.adoc[Example configuration: shared FC initiator ports]

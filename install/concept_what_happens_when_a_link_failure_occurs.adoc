@@ -1,0 +1,26 @@
+---
+permalink: install/concept_what_happens_when_a_link_failure_occurs.html
+sidebar: sidebar
+keywords: 
+summary: 'ONTAP monitors a link’s usage periodically. The ONTAP response to a link failure differs depending on where the failure occurs.'
+---
+= What happens when a link failure occurs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP monitors a link's usage periodically. The ONTAP response to a link failure differs depending on where the failure occurs.
+
+The following table shows what occurs if there is a failure in a fabric-attached configuration:
+
+|===
+| If a failure occurs in the link between the...| Then...
+a|
+ONTAP system and the switch
+a|
+ONTAP receives notification immediately and sends traffic to the other path immediately.
+a|
+Switch and the storage array
+a|
+ONTAP is not immediately aware that there is a link failure because the link is still established between the ONTAP system and the switch. ONTAP becomes aware that there is a failure when the I/O times out. ONTAP retries three times to send the traffic on the original path, then it fails over the traffic to the other path.
+|===

@@ -1,0 +1,26 @@
+---
+permalink: install/task_checking_the_checksum_type_of_spare_array_luns.html
+sidebar: sidebar
+keywords: 
+summary: 'If you plan to add a spare array LUN to an aggregate by specifying its name, you need to make sure that the checksum type of the array LUN you want to add is the same as the aggregate checksum type.'
+---
+= Checking the checksum type of spare array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you plan to add a spare array LUN to an aggregate by specifying its name, you need to make sure that the checksum type of the array LUN you want to add is the same as the aggregate checksum type.
+
+You cannot mix array LUNs of different checksum types in an array LUN aggregate. The checksum type of the aggregate and the checksum type of the array LUNs added to it must be the same.
+
+If you specify a number of spare array LUNs to be added to an aggregate, by default ONTAP selects array LUNs of the same checksum type as the aggregate.
+[NOTE]
+====
+The checksum type of all newly created aggregates using zoned checksum array LUNS is advanced zoned checksum (AZCS). Zoned checksum type continues to be supported for existing zoned aggregates. Zoned checksum spare array LUNs added to an existing zoned checksum aggregate continue to be zoned checksum array LUNs. Zoned checksum spare array LUNs added to an AZCS checksum type aggregate use the AZCS checksum scheme for managing checksums.
+====
+
+. Check the checksum type of the spare array LUNs by entering the following command:
++
+`storage disk show -fields checksum-compatibility -container-type spare`
++
+You can add a block checksum array LUN to a block checksum aggregate and a zoned array LUN to an advanced zoned checksum (AZCS) aggregate.
