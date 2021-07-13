@@ -1,10 +1,15 @@
 sidebar:
   entries:
     - title: Home
-      url: "/index.html"  
+      url: "/index.html"
     - section: implement-e-series
     - section: implement-third-party
     - section: install
 
 homepage:
   tiles:
+  - title: This is the title of a tile
+    links:
+    - title: This is the title of a link
+      summary: This is the description of the link target
+      url: install/index.html
