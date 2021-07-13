@@ -1,0 +1,35 @@
+section: implement-e-series
+title: Implementing E-Series storage
+url: "/implement-e-series/index.html"
+entries:
+  - title: Where to find information for configurations with storage arrays
+    url: "/implement-e-series/concept_where_to_find_information_for_configurations_with_storage_arrays.html"
+    entries:
+    - title: Where to find information about ONTAP support for storage arrays
+      url: "/implement-e-series/concept_where_to_find_information_about_support_for_storage_arrays.html"
+  - title: ONTAP systems that can use array LUNs on storage arrays
+    url: "/implement-e-series/concept_systems_that_can_use_array_luns_on_storage_arrays.html"
+  - title: Requirements for configuring E-Series storage arrays
+    url: "/implement-e-series/reference_requirements_for_configuring_e_series_storage_arrays.html"
+    entries:
+    - title: Required host type for E-Series storage arrays
+      url: "/implement-e-series/reference_required_host_type_for_e_series_storage_arrays_reference.html"
+  - title: Supported fabric-attached configurations for E-Series storage arrays
+    url: "/implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html"
+    entries:
+    - title: Stand-alone basic configuration
+      url: "/implement-e-series/concept_stand_alone_basic_configuration.html"
+    - title: Stand-alone system with two 2-port array LUN groups
+      url: "/implement-e-series/concept_stand_alone_system_with_two_2_port_array_lun_groups.html"
+    - title: Single 4-port array LUN group configuration
+      url: "/implement-e-series/concept_single_4_port_array_lun_group_configuration.html"
+    - title: Two 4-port array LUN group configuration
+      url: "/implement-e-series/concept_two_4_port_array_lun_group_configuration.html"
+    - title: Eight-port array LUN group configuration
+      url: "/implement-e-series/concept_eight_port_array_lun_group_configuration.html"
+    - title: Attaching FC initiator port to multiple targets ports
+      url: "/implement-e-series/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html"
+    - title: Sharing a target port with two FC initiator ports
+      url: "/implement-e-series/concept_sharing_a_target_port_with_two_fc_initiator_ports.html"
+  - title: Supported direct-attached configurations with E-Series storage arrays
+    url: "/implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html"
