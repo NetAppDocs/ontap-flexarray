@@ -8,21 +8,4 @@ summary: ''
 :icons: font
 :imagesdir: ../media/
 
-* xref:concept_where_to_find_information_for_configurations_with_storage_arrays.adoc[Where to find information for configurations with storage arrays]
- ** xref:concept_where_to_find_information_about_support_for_storage_arrays.adoc[Where to find information about ONTAP support for storage arrays]
-* xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-* xref:reference_requirements_for_configuring_e_series_storage_arrays.adoc[Requirements for configuring E-Series storage arrays]
- ** xref:reference_required_host_type_for_e_series_storage_arrays_reference.adoc[Required host type for E-Series storage arrays]
-* xref:reference_supported_fabric_attached_configurations_for_storage_arrays.adoc[Supported fabric-attached configurations for E-Series storage arrays]
- ** xref:concept_stand_alone_basic_configuration.adoc[Stand-alone basic configuration]
- ** xref:concept_stand_alone_system_with_two_2_port_array_lun_groups.adoc[Stand-alone system with two 2-port array LUN groups]
- ** xref:concept_single_4_port_array_lun_group_configuration.adoc[Single 4-port array LUN group configuration]
- ** xref:concept_two_4_port_array_lun_group_configuration.adoc[Two 4-port array LUN group configuration]
- ** xref:concept_eight_port_array_lun_group_configuration.adoc[Eight-port array LUN group configuration]
- ** xref:concept_attaching_fc_initiator_port_to_multiple_targets_ports.adoc[Attaching FC initiator port to multiple targets ports]
- ** xref:concept_sharing_a_target_port_with_two_fc_initiator_ports.adoc[Sharing a target port with two FC initiator ports]
-* xref:reference_supported_direct_attached_configurations_for_e_series_storage_arrays.adoc[Supported direct-attached configurations with E-Series storage arrays]
-* xref:reference_copyright_and_trademark.adoc[Copyright, trademark, and machine translation]
- ** xref:reference_copyright.adoc[Copyright]
- ** xref:reference_trademark.adoc[Trademark]
- ** xref:generic_machine_translation_disclaimer.adoc[Machine translation]
+
