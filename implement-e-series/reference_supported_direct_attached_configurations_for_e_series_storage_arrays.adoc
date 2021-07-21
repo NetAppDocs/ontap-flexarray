@@ -1,8 +1,8 @@
 ---
 permalink: implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You can connect ONTAP systems in direct-attached configurations with E-Series storage arrays. You must verify redundancy in connections between the ONTAP systems and the storage arrays to avoid the possibility of a single point of failure. FlexArray Stretch MetroCluster supports direct-attached configurations with E-Series storage arrays. For more information see, Interoperability Matrix and Stretch MetroCluster Installation and Configuration Guide'
+keywords: supported, direct-attached, configurations, e-series, storage, arrays, stand-alone
+summary: "You can connect ONTAP systems in direct-attached configurations with E-Series storage arrays. You must verify redundancy in connections between the ONTAP systems and the storage arrays to avoid the possibility of a single point of failure. FlexArray Stretch MetroCluster supports direct-attached configurations with E-Series storage arrays. For more information see, Interoperability Matrix and Stretch MetroCluster Installation and Configuration Guide."
 ---
 = Supported direct-attached configurations with E-Series storage arrays
 :icons: font
@@ -53,4 +53,4 @@ image::../media/eight_port_direct_attached_ha_pair_configuration.gif[]
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
 
-link:Stretch MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html[Stretch MetroCluster installation and configuration]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html[Stretch MetroCluster installation and configuration]
