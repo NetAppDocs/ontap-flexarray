@@ -1,8 +1,8 @@
 ---
 permalink: implement-e-series/concept_sharing_a_target_port_with_two_fc_initiator_ports.html
 sidebar: sidebar
-keywords: 
-summary: 'A maximum of two ONTAP FC initiator ports across nodes can be attached to a single target port on the storage array. This configuration is supported with MetroCluster configurations in ONTAP.'
+keywords: share, target, port, two, fc initiator, ports
+summary: "A maximum of two ONTAP FC initiator ports across nodes can be attached to a single target port on the storage array. This configuration is supported with MetroCluster configurations in ONTAP."
 ---
 = Sharing a target port with two FC initiator ports
 :icons: font

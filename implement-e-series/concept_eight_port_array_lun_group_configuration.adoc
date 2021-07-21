@@ -1,8 +1,8 @@
 ---
 permalink: implement-e-series/concept_eight_port_array_lun_group_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'An eight-port LUN group configuration is supported on clustered V-Series systems and on ONTAP systems that can use array LUNs.'
+keywords: eight-port, array, lun group, configuration, crossed, back-end, connections, not
+summary: "An eight-port LUN group configuration is supported on clustered V-Series systems and on ONTAP systems that can use array LUNs."
 ---
 = Eight-port array LUN group configuration
 :icons: font

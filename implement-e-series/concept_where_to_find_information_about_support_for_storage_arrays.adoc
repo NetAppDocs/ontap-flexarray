@@ -1,8 +1,8 @@
 ---
 permalink: implement-e-series/concept_where_to_find_information_about_support_for_storage_arrays.html
 sidebar: sidebar
-keywords: non-ONTAP storage,third-party storage,E-Series
-summary: 'Not all ONTAP releases support the same features, configurations, system models, and storage array models. During your deployment planning, you must check ONTAP support information to verify that your deployment conforms to ONTAP hardware and software requirements for all systems in the deployment.'
+keywords: non-ontap storage, third-party storage, e-series, arrays, storage
+summary: "Not all ONTAP releases support the same features, configurations, system models, and storage array models. During your deployment planning, you must check ONTAP support information to verify that your deployment conforms to ONTAP hardware and software requirements for all systems in the deployment."
 ---
 = Where to find information about ONTAP support for storage arrays
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Not all ONTAP releases support the same features, configurations, syst
 Not all ONTAP releases support the same features, configurations, system models, and storage array models. During your deployment planning, you must check ONTAP support information to verify that your deployment conforms to ONTAP hardware and software requirements for all systems in the deployment.
 
 The following table lists the information sources that contain the details of the hardware and software requirements associated with ONTAP systems:
-
+[cols="2*",options="header"]
 |===
 | For information about...| You should look here...
 a|
@@ -33,7 +33,9 @@ ONTAP working with devices, including the following:
 * Whether a MetroCluster configuration is supported with your storage array
 
 a|
-https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool] You can view information about advanced feature support for E-Series storage arrays with FlexArray Virtualization by referring to the appropriate notes on the V-Series and FlexArray Virtualization for Back-end Storage solution page of the Interoperability Matrix
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+
+You can view information about advanced feature support for E-Series storage arrays with FlexArray Virtualization by referring to the appropriate notes on the V-Series and FlexArray Virtualization for Back-end Storage solution page of the Interoperability Matrix
 
 a|
 ONTAP limits for releases and platforms, including the following:
@@ -65,6 +67,3 @@ You can access these documents from the NetApp Support site.
 https://mysupport.netapp.com/site/global/dashboard[NetApp Support]
 
 |===
-*Related information*
-
-xref:reference_required_host_type_for_e_series_storage_arrays_reference.adoc[Required host type for E-Series storage arrays]
