@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_alua_behavior_of_vnx2_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'Although all EMC CLARiiON and VNX arrays use ALUA \(asymmetric active-active\) failover mode, VNX2 storage arrays might differ in their ALUA behavior.'
+keywords: alua, behavior, vnx2, storage, arrays
+summary: "Although all EMC CLARiiON and VNX arrays use ALUA (asymmetric active-active) failover mode, VNX2 storage arrays might differ in their ALUA behavior."
 ---
 = ALUA behavior of VNX2 storage arrays
 :icons: font

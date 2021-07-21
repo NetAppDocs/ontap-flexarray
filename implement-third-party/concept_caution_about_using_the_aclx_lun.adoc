@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_caution_about_using_the_aclx_lun.html
 sidebar: sidebar
-keywords: 
-summary: 'On VMAX arrays, the ACLX \(Access Control Logix\) LUN is created during initialization if the customer requests that ACLX be used. The ACLX LUN is not a storage LUN, so it should not be mapped to ONTAP.'
+keywords: caution, aclx, lun
+summary: "On VMAX arrays, the ACLX (Access Control Logix) LUN is created during initialization if the customer requests that ACLX be used. The ACLX LUN is not a storage LUN, so it should not be mapped to ONTAP."
 ---
 = Caution about using the ACLX LUN
 :icons: font
