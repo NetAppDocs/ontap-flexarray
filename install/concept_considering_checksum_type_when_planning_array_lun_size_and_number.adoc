@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_considering_checksum_type_when_planning_array_lun_size_and_number.html
 sidebar: sidebar
-keywords: 
-summary: 'When planning the number and size of array LUNs that you need for ONTAP, you must consider the impact of the checksum type on the amount of usable space in the array LUN. A checksum type must be specified for each array LUN assigned to an ONTAP system.'
+keywords: consider, checksum, type, plan, array, lun, size, number
+summary: "When planning the number and size of array LUNs that you need for ONTAP, you must consider the impact of the checksum type on the amount of usable space in the array LUN. A checksum type must be specified for each array LUN assigned to an ONTAP system."
 ---
 = Considering checksum type when planning array LUN size and number
 :icons: font
@@ -12,11 +12,3 @@ summary: 'When planning the number and size of array LUNs that you need for ONTA
 When planning the number and size of array LUNs that you need for ONTAP, you must consider the impact of the checksum type on the amount of usable space in the array LUN. A checksum type must be specified for each array LUN assigned to an ONTAP system.
 
 When an array LUN on the storage array is mapped to be used by an ONTAP system , ONTAP treats the array LUN as a raw, unformatted disk. When you assign an array LUN to an ONTAP system you specify the checksum type, which tells ONTAP how to format the raw array LUN. The impact of the checksum type on usable space depends on the checksum type you specify for the LUN.
-
-*Related information*
-
-xref:concept_elements_that_reduce_the_usable_space_in_an_array_lun.adoc[Elements that reduce the usable space in an array LUN]
-
-xref:concept_characteristics_of_checksum_types_that_ontap_supports.adoc[Characteristics of checksum types that ONTAP supports]
-
-xref:concept_formulas_for_calculating_array_lun_size_considering_checksum_type.adoc[Formulas for calculating array LUN size based on checksum type]

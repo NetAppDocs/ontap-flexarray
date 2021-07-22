@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_considerations_for_checking_the_checksum_type_of_spare_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'You must account for certain considerations related to checksum types when adding spare array LUNs to aggregates. For example, if you plan to add a spare array LUN to an aggregate by specifying its name, you must ensure that array LUN and the aggregate have the same checksum type.'
+keywords: checksum, type, considerations, add, spare, array, luns, aggregates
+summary: "You must account for certain considerations related to checksum types when adding spare array LUNs to aggregates. For example, if you plan to add a spare array LUN to an aggregate by specifying its name, you must ensure that array LUN and the aggregate have the same checksum type."
 ---
 = Checksum type considerations for adding spare array LUNs to aggregates
 :icons: font
@@ -20,6 +20,6 @@ The following are some checksum type considerations for adding spare array LUNs 
 
 [NOTE]
 ====
-You can check the checksum type of the spare array LUNs by using the storage disk show command.For more information about the command, see the man pages.
+You can check the checksum type of the spare array LUNs by using the storage disk show command. For more information about the command, see the man pages.
 
 ====

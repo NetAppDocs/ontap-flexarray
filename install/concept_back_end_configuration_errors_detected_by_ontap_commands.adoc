@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_back_end_configuration_errors_detected_by_ontap_commands.html
 sidebar: sidebar
-keywords: 
-summary: 'The storage errors show command provides details, at the array LUN level, about common back-end configuration errors. You can also use the storage disk error show and the storage disk show -errors commands to view the errors.'
+keywords: back-end, configuration, errors, detected, ontap, commands, output, examples
+summary: "The storage errors show command provides details, at the array LUN level, about common back-end configuration errors. You can also use the storage disk error show and the storage disk show -errors commands to view the errors."
 ---
 = Back-end configuration errors detected by ONTAP commands
 :icons: font
@@ -68,17 +68,3 @@ DGC-1.5          onepath           DGC-1.5 (6006016044d03500e4720e22b59fe311): T
 DGC-1.6          onepath           DGC-1.6 (6006016044d03500e5720e22b59fe311): This array LUN is only available on one path. Proper configuration requires two paths.
 DGC-1.7          onepath           DGC-1.7 (6006016044d03500e6720e22b59fe311): This array LUN is only available on one path. Proper configuration requires two paths.
 ----
-
-*Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_situations_not_identified_by_commands_that_check_back_end_configuration.adoc[Situations not identified by commands that check back-end configuration]
-
-xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match]
-
-xref:reference_fewer_than_two_paths_to_an_array_lun.adoc[Fewer than two paths to an array LUN]
-
-xref:concept_required_number_of_paths_to_an_array_lun.adoc[Required number of paths to an array LUN]
-
-xref:task_checking_for_back_end_configuration_errors_preventing_system_operation.adoc[Checking for back-end configuration errors preventing system operation]

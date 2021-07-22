@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_considerations_when_planning_for_disk_ownership.html
 sidebar: sidebar
-keywords: 
-summary: 'If you are deploying multiple ONTAP systems for use with array LUNs, you must determine which system owns which array LUNs. Disk ownership ensures that only the ONTAP system that owns a particular array LUN can read data from and write data to the array LUN.'
+keywords: considerations, plan, disk, ownership
+summary: "If you are deploying multiple ONTAP systems for use with array LUNs, you must determine which system owns which array LUNs. Disk ownership ensures that only the ONTAP system that owns a particular array LUN can read data from and write data to the array LUN."
 ---
 = Considerations when planning for disk ownership
 :icons: font
@@ -22,9 +22,5 @@ The _Hardware Universe_ shows the maximum assigned device limit that is supporte
 Some types of applications are likely to generate a lot of requests, whereas other applications (for example, archival applications) generate fewer requests. You might want to consider weighing ownership assignments based on expected load from specific applications.
 
 *Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_how_array_luns_become_available_for_ontap_storage_use.adoc[How array LUNs become available for ONTAP storage use]
 
 https://hwu.netapp.com[NetApp Hardware Universe]
