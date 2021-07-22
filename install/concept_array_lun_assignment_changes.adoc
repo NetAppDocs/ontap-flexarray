@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_array_lun_assignment_changes.html
 sidebar: sidebar
-keywords: 
-summary: 'You can change assignment of a spare array LUN from one ONTAP system to another. You might want to change ownership for load balancing over nodes.'
+keywords: array, lun, assignment, changes
+summary: "You can change assignment of a spare array LUN from one ONTAP system to another. You might want to change ownership for load balancing over nodes."
 ---
 = Array LUN assignment changes
 :icons: font
@@ -10,7 +10,3 @@ summary: 'You can change assignment of a spare array LUN from one ONTAP system t
 
 [.lead]
 You can change assignment of a spare array LUN from one ONTAP system to another. You might want to change ownership for load balancing over nodes.
-
-*Related information*
-
-xref:task_assigning_ownership_of_array_luns.adoc[Assigning ownership of array LUNs]

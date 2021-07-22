@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_available_lun_security_methods.html
 sidebar: sidebar
-keywords: 
-summary: 'Various LUN security methods help you designate which hosts can access particular array LUNs. You can use port-level security or LUN security products, or dedicate a storage for use by ONTAP systems.'
+keywords: available, lun, security, methods, port-level, storage, array, dedicate, ontap
+summary: "Various LUN security methods help you designate which hosts can access particular array LUNs. You can use port-level security or LUN security products, or dedicate a storage for use by ONTAP systems."
 ---
 = Available LUN security methods
 :icons: font

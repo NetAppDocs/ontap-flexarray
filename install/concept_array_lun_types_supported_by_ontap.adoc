@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_array_lun_types_supported_by_ontap.html
 sidebar: sidebar
-keywords: 
-summary: 'You can map only storage array LUNs to ONTAP. You can map LUN 0 to ONTAP if it is a storage type LUN.'
+keywords: array, lun, type, supported, ontap
+summary: "You can map only storage array LUNs to ONTAP. You can map LUN 0 to ONTAP if it is a storage type LUN."
 ---
 = Array LUN type supported by ONTAP
 :icons: font
