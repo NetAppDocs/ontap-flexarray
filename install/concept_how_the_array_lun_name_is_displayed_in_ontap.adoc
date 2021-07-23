@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_how_the_array_lun_name_is_displayed_in_ontap.html
 sidebar: sidebar
-keywords: 
-summary: 'A cluster-wide unique name is assigned to each array LUN, even though there are multiple paths to the array LUN. This is unlike in earlier releases, where each array LUN had multiple names based on the path accessing the LUN at a given time.'
+keywords:  how, array, lun, name, displayed, ontap, output, example, storage, disk
+summary: "A cluster-wide unique name is assigned to each array LUN, even though there are multiple paths to the array LUN. This is unlike in earlier releases, where each array LUN had multiple names based on the path accessing the LUN at a given time."
 ---
 = How the array LUN name is displayed in ONTAP
 :icons: font
@@ -30,7 +30,3 @@ disk     diskpathnames
 -------- -------------------------------------------------------------------------------------------------------------------------------
 EMC-1.10 vgv3270f47a:vgbr300s181:5.126L9,vgv3270f47a:vgbr300s139:5.126L9,vgv3270f47b:vgbr300s181:5.126L9,vgv3270f47b:vgbr300s139:5.126L9
 ----
-
-*Related information*
-
-xref:concept_pre_cluster_array_lun_name_format.adoc[Pre-cluster array LUN name format]
