@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirement_for_8_gb_array_port_initialization.html
 sidebar: sidebar
-keywords: 
-summary: 'In a typical Fibre Channel \(FC\) fabric, storage array ports initialize as N-Ports \(node ports\) and their corresponding switch ports initialize as F-Ports \(fabric ports\). In some cases, these F-ports might go offline and resume operation as L-Ports \(loop ports\), resulting in fabric errors.'
+keywords: requirement, 8-Gb array, port, initialization
+summary: "In a typical Fibre Channel (FC) fabric, storage array ports initialize as N-Ports (node ports) and their corresponding switch ports initialize as F-Ports (fabric ports). In some cases, these F-ports might go offline and resume operation as L-Ports (loop ports), resulting in fabric errors."
 ---
 = Requirement for 8-Gb array port initialization
 :icons: font
