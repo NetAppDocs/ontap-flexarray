@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_ibm_ds_storage_array_families.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP does not support mixing some types of storage in aggregates. To help you determine the array LUNs that can be mixed in an aggregate, the storage arrays from each vendor are grouped into families. When you create aggregates, you cannot mix array LUNs from different vendors and from different storage array families in the same aggregate.'
+keywords: ibm ds, storage, array, families
+summary: "ONTAP does not support mixing some types of storage in aggregates. To help you determine the array LUNs that can be mixed in an aggregate, the storage arrays from each vendor are grouped into families. When you create aggregates, you cannot mix array LUNs from different vendors and from different storage array families in the same aggregate."
 ---
 = IBM DS storage array families
 :icons: font
