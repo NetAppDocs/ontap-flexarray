@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_a_configuration_with_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'For planning an ONTAP configuration with array LUNs, you must verify if the storage array is supported for a particular ONTAP release. In addition, you must check the interoperability and support information to ensure that all the systems meet the requirements for a configuration with array LUNs.'
+keywords: plan, configuration, array, luns
+summary: "For planning an ONTAP configuration with array LUNs, you must verify if the storage array is supported for a particular ONTAP release. In addition, you must check the interoperability and support information to ensure that all the systems meet the requirements for a configuration with array LUNs."
 ---
 = Planning a configuration with array LUNs
 :icons: font
@@ -16,15 +16,3 @@ For planning an ONTAP configuration with array LUNs, you must verify if the stor
 https://mysupport.netapp.com/site/global/dashboard[NetApp Support]
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
-
-xref:concept_planning_for_ontap_use_of_array_luns.adoc[Planning for ONTAP use of array LUNs]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_planning_for_lun_security_on_storage_arrays.adoc[Planning for LUN security on the storage arrays]
-
-xref:concept_planning_for_paths_to_array_luns.adoc[Planning for paths to array LUNs]
-
-xref:concept_determining_the_array_luns_for_specific_aggregates.adoc[Determining the array LUNs for specific aggregates]
-
-xref:concept_planning_a_port_to_port_connectivity_scheme.adoc[Planning a port-to-port connectivity scheme]

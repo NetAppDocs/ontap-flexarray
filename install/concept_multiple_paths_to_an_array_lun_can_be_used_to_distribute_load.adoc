@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_multiple_paths_to_an_array_lun_can_be_used_to_distribute_load.html
 sidebar: sidebar
-keywords: 
-summary: 'I/O requests for a given LUN can be distributed over all the available optimized paths to the LUN. This is unlike in previous releases, where in spite of multiple paths being available, I/O requests for a given LUN were sent over a single active optimized path only.'
+keywords: multiple, paths, array, lun, used, distribute, load, commands
+summary: "I/O requests for a given LUN can be distributed over all the available optimized paths to the LUN. This is unlike in previous releases, where in spite of multiple paths being available, I/O requests for a given LUN were sent over a single active optimized path only."
 ---
 = Multiple paths to an array LUN can be used to distribute load
 :icons: font
