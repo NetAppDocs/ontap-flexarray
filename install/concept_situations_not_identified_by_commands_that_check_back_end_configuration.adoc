@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_situations_not_identified_by_commands_that_check_back_end_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'There might be situations that you consider to be an issue but are not errors from the perspective of ONTAP because the situation does not prevent the system from operating. The ONTAP commands that check the back-end configuration do not identify configurations that do not prevent system operation.'
+keywords: situations, not, identified, commands, check, back end, configuration
+summary: "There might be situations that you consider to be an issue but are not errors from the perspective of ONTAP because the situation does not prevent the system from operating. The ONTAP commands that check the back-end configuration do not identify configurations that do not prevent system operation."
 ---
 = Situations not identified by commands that check back-end configuration
 :icons: font
@@ -21,7 +21,3 @@ For example, you might see more LUN groups than you intended in storage array co
 * Conditions that do not match the intended configurations
 +
 For example, if you wanted to configure multiple LUN groups and only one was configured, ONTAP does not identify that as an error because a single LUN group is supported.
-
-*Related information*
-
-xref:concept_back_end_configuration_errors_detected_by_ontap_commands.adoc[Back-end configuration errors detected by ONTAP commands]

@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_summary_for_a_ontap_system_using_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.'
+keywords: plan, summary, ontap, systems, array, luns
+summary: "When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems."
 ---
 = Planning summary for ONTAP systems using array LUNs
 :icons: font
@@ -12,7 +12,7 @@ summary: 'When you plan to use array LUNs with ONTAP systems, you must communica
 When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.
 
 The following table summarizes the major planning tasks and the location of information to help you with each task.
-
+[options="header"]
 |===
 | Planning task| Where to find information
 a|

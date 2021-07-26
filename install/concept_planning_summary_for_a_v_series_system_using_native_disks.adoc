@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_summary_for_a_v_series_system_using_native_disks.html
 sidebar: sidebar
-keywords: 
-summary: 'You can install native disk shelves on new or existing V-Series systems. However, you must consider a few additional factors if you plan to install native disk shelves on V-Series systems, compared to installing the disk shelves on FAS systems.'
+keywords: plan, summary, v-series, system, native, disks, additional, considerations, setup, array, luns
+summary: "You can install native disk shelves on new or existing V-Series systems. However, you must consider a few additional factors if you plan to install native disk shelves on V-Series systems, compared to installing the disk shelves on FAS systems."
 ---
 = Planning summary for a V-Series system using native disks
 :icons: font
@@ -22,7 +22,7 @@ You must consider the following when determining basic setup and installation re
 == Additional planning considerations if the V-Series system uses both disks and array LUNs
 
 The following table summarizes additional planning considerations and the location of information to help you with each task.
-
+[options="header"]
 |===
 | Planning consideration| Where to find guidelines
 a|

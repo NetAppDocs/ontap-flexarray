@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_prerequisites_to_reconfiguring_an_array_lun_on_the_storage_array.html
 sidebar: sidebar
-keywords: 
-summary: 'If an array LUN has already been assigned \(through ONTAP\) to a particular ONTAP system, the information that ONTAP wrote to the array LUN must be removed before the storage administrator attempts to reconfigure the array LUN on the storage array.'
+keywords: prerequisites, reconfigure, array. lun, storage, array
+summary: "If an array LUN has already been assigned (through ONTAP) to a particular ONTAP system, the information that ONTAP wrote to the array LUN must be removed before the storage administrator attempts to reconfigure the array LUN on the storage array."
 ---
 = Prerequisites to reconfiguring an array LUN on the storage array
 :icons: font

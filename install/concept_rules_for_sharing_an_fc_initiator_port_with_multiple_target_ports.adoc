@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.html
 sidebar: sidebar
-keywords: 
-summary: 'You can connect an FC initiator port on an ONTAP system to a maximum of four target ports on separate storage arrays. Sharing an FC initiator port with multiple targets is useful when you want to minimize the number of FC initiator ports used.'
+keywords: rules, share, fc initiator, port, multiple, target, connect, storage, arrays
+summary: "You can connect an FC initiator port on an ONTAP system to a maximum of four target ports on separate storage arrays. Sharing an FC initiator port with multiple targets is useful when you want to minimize the number of FC initiator ports used."
 ---
 = Rules for sharing an FC initiator port with multiple target ports
 :icons: font
@@ -45,8 +45,4 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexA
 
 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
 
-xref:concept_example_configuration_shared_fc_initiator_ports.adoc[Example configuration: shared FC initiator ports]
-
-xref:task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.adoc[Checking the number of array LUNs visible on an FC initiator port]
-
-link:Fabric-attached MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

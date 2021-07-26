@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_requirements_for_v_series_fc_initiator_port_usage.html
 sidebar: sidebar
-keywords: 
-summary: 'If you want to use FC initiator ports in an ONTAP configuration with array LUNs, you must follow specific requirements for port pair redundancy, port settings for HBAs, connecting to target ports, array LUN limits, and connecting to different storage and devices.'
+keywords: requirements, use, fc initiator, ports
+summary: "If you want to use FC initiator ports in an ONTAP configuration with array LUNs, you must follow specific requirements for port pair redundancy, port settings for HBAs, connecting to target ports, array LUN limits, and connecting to different storage and devices."
 ---
 = Requirements for using FC initiator ports
 :icons: font
@@ -10,7 +10,7 @@ summary: 'If you want to use FC initiator ports in an ONTAP configuration with a
 
 [.lead]
 If you want to use FC initiator ports in an ONTAP configuration with array LUNs, you must follow specific requirements for port pair redundancy, port settings for HBAs, connecting to target ports, array LUN limits, and connecting to different storage and devices.
-
+[options="header"]
 |===
 | For this feature...| The requirements are...
 a|
@@ -46,14 +46,3 @@ You must use a separate FC initiator port to connect the ONTAP system to each of
 If the ONTAP system does not have enough internal ports for your requirement, you must order an additional HBA.
 
 |===
-*Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_how_fc_initiator_ports_are_labeled.adoc[How FC initiator ports are labeled]
-
-xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]
-
-xref:concept_rules_for_sharing_a_target_port_with_multiple_fc_initiator_ports.adoc[Rules for sharing a target port with multiple FC initiator ports]
-
-xref:task_configuring_fc_ports_as_initiators_clustered_data_ontap.adoc[Configuring FC ports as initiators]

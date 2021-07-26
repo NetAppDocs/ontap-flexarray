@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_rules_for_sharing_a_target_port_with_multiple_fc_initiator_ports.html
 sidebar: sidebar
-keywords: 
-summary: 'Connecting a maximum of two ONTAP FC initiator ports to a single target port on the storage array is supported. Each target port is zoned into two FC initiator ports, one from each cluster node. Sharing a target port connected to ONTAP systems with any other host is not supported.'
+keywords: rules, share, target, port, multiple, fc initiator
+summary: "Connecting a maximum of two ONTAP FC initiator ports to a single target port on the storage array is supported. Each target port is zoned into two FC initiator ports, one from each cluster node. Sharing a target port connected to ONTAP systems with any other host is not supported."
 ---
 = Rules for sharing a target port with multiple FC initiator ports
 :icons: font
@@ -22,4 +22,4 @@ The rules for this configuration are as follows:
 
 *Related information*
 
-link:Fabric-attached MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]
