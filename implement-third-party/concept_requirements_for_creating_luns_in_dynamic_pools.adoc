@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirements_for_creating_luns_in_dynamic_pools.html
 sidebar: sidebar
-keywords: 
-summary: 'When creating LUNs in the dynamic pools, do not over-provision the pool capacity.'
+keywords: requirements, creating, luns, dynamic pools
+summary: "When creating LUNs in the dynamic pools, do not over-provision the pool capacity."
 ---
 = Requirements for creating LUNs in dynamic pools
 :icons: font

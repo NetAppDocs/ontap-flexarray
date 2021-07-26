@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirements_for_formatting_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'You can perform different types of array LUN formatting. Each type has an impact on the availability of LUNs or the entire storage array.'
+keywords: requirements, formatting, array, luns
+summary: "You can perform different types of array LUN formatting. Each type has an impact on the availability of LUNs or the entire storage array."
 ---
 = Requirements for formatting array LUNs
 :icons: font

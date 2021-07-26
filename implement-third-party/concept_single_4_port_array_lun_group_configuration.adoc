@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_single_4_port_array_lun_group_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'This configuration contains a single, 4-port LUN group with each target port accessed by a single ONTAP FC initiator port from the HA pair. Due to zoning, only two paths are allowed to a specific array LUN from each of the ONTAP system.'
+keywords: single, 4-port, array, lun, group, configuration
+summary: "This configuration contains a single, 4-port LUN group with each target port accessed by a single ONTAP FC initiator port from the HA pair. Due to zoning, only two paths are allowed to a specific array LUN from each of the ONTAP system."
 ---
 = Single 4-port array LUN group configuration
 :icons: font

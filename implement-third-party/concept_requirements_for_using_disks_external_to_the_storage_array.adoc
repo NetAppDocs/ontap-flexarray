@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirements_for_using_disks_external_to_the_storage_array.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP supports using the same disks behind the storage arrays that the vendor supports \(that is, disks external to the storage array\). When you are deploying storage arrays that use external disks, ONTAP accepts the configuration between the storage array and the external disks.'
+keywords: requirements, using, disks, external, storage, array
+summary: "ONTAP supports using the same disks behind the storage arrays that the vendor supports (that is, disks external to the storage array). When you are deploying storage arrays that use external disks, ONTAP accepts the configuration between the storage array and the external disks."
 ---
 = Requirements for using disks external to the storage array
 :icons: font
