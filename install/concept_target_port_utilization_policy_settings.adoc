@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_target_port_utilization_policy_settings.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP can detect events of resource contention, such as I/O queue being full, commands being timed out or HBA resource getting exhausted, on a target port.'
+keywords: target, port, utilization, policy, settings, output, examples, array
+summary: "ONTAP can detect events of resource contention, such as I/O queue being full, commands being timed out or HBA resource getting exhausted, on a target port."
 ---
 = Target port utilization policy settings
 :icons: font
@@ -14,7 +14,7 @@ ONTAP can detect events of resource contention, such as I/O queue being full, co
 You can set the target port utilization policies by using the storage array port modify command if you detect such events on a given array target port.
 
 The following table describes the two utilization policies associated with a target port:
-
+[options="header"]
 |===
 | Policy| Description
 a|

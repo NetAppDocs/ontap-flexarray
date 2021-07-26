@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_supported_methods_for_connecting_a_v_series_system_to_a_storage_array.html
 sidebar: sidebar
-keywords: 
-summary: 'You can connect ONTAP system in a fabric-attached configuration with storage arrays. Fabric-attached configurations are supported for both stand-alone systems and HA pairs. Direct-attached configurations are limited to some storage arrays and some ONTAP releases.'
+keywords: supported, methods, connect, ontap, system, storage, array
+summary: "You can connect ONTAP system in a fabric-attached configuration with storage arrays. Fabric-attached configurations are supported for both stand-alone systems and HA pairs. Direct-attached configurations are limited to some storage arrays and some ONTAP releases."
 ---
 = Supported methods for connecting an ONTAP system to a storage array
 :icons: font

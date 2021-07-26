@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_verifying_an_installation_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'It is important to detect and resolve any back-end configuration errors before you deploy your system in a production environment.'
+keywords: verify, installation, storage, arrays
+summary: "It is important to detect and resolve any back-end configuration errors before you deploy your system in a production environment."
 ---
 = Verifying installation with storage arrays
 :icons: font
