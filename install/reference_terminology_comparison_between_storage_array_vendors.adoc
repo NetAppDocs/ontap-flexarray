@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_terminology_comparison_between_storage_array_vendors.html
 sidebar: sidebar
-keywords: 
-summary: 'Different storage array vendors occasionally use different terms to describe similar concepts. Conversely, the meaning of the same term might differ between array vendors.'
+keywords: terminology, comparison, between, storage, array, vendors
+summary: "Different storage array vendors occasionally use different terms to describe similar concepts. Conversely, the meaning of the same term might differ between array vendors."
 ---
 = Terminology comparison between storage array vendors
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Different storage array vendors occasionally use different terms to de
 Different storage array vendors occasionally use different terms to describe similar concepts. Conversely, the meaning of the same term might differ between array vendors.
 
 The following table provides a mapping between some common vendor terms:
-
+[options="header"]
 |===
 | Term| Vendor| Definition
 a|
@@ -21,23 +21,23 @@ a|
 Hitachi
 a|
 A configuration entity that enables you to specify host access to ports on the storage array. You identify the FC initiator port WWNs for the ONTAP system that you want to access the LUNs; the process differs according to vendor and sometimes differs for different storage array models of the same vendor.
-a|
+a||
 HP XP
-a|
+a||
 Storage Group
 a|
 EMC CX, EMC VNX
-a|
+a||
 host definition
 a|
 3PAR
-a|
+a||
 host
 a|
 3PAR, HP EVA, HP XP, Hitachi
 a|
- 
-a|
+
+a||||
 parity group
 a|
 Hitachi, HP XP
@@ -47,7 +47,7 @@ a|
 RAID group
 a|
 ONTAP, EMC CX, EMC VNX
-a|
+a||
 disk group
 a|
 HP EVA
@@ -60,26 +60,26 @@ a|
 a|
 A group of parity-protected chunklets. (A chunklet is a 256-MB block of contiguous space on a physical disk.)
 a|
- 
-a|
+
+a|||
 cluster
 a|
 ONTAP
 a|
 In ONTAP , a grouping of nodes that enables multiple nodes to pool their resources into a large virtual server and to distribute work across the cluster.
-a|
+a||
 Hitachi, HP XP
 a|
 A hardware component on the storage arrays that contains the ports to which hosts attach.
 a|
- 
-a|
+
+a|||
 controller
 a|
 ONTAP
 a|
 The component of a storage system that runs the ONTAP operating system and interacts with back-end storage arrays. Controllers are also sometimes called heads or CPU modules.
-a|
+a||
 Hitachi, HP EVA, HP XP
 a|
 Hardware on the storage array on which the target ports are located.
@@ -93,12 +93,12 @@ a|
 FEBE Board
 a|
 EMC Symmetrix
-a|
+a||
 Storage processor (SP)
 a|
 EMC CX, EMC VNX
 a|
- 
+
 a|
 LUN
 a|
@@ -109,7 +109,7 @@ a|
 LDEV
 a|
 Hitachi, HP XP
-a|
+a||
 LUN
 a|
 ONTAP
@@ -134,8 +134,8 @@ a|
 a|
 (volume-LUN) A pairing between a virtual volume and a logical unit number (LUN). For a host to see a virtual volume, the volume must be exported as a LUN by creating vLUNs on the storage array.
 a|
- 
-a|
+
+a|||
 volume
 a|
 ONTAP
