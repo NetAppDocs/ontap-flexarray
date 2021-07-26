@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_an_access_control_lun_is_presented_to_ontap.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP does not support access control array LUNs. The storage errors show output alerts you if an access control LUN is being presented.'
+keywords: access, control, lun, presented, ontap
+summary: "ONTAP does not support access control array LUNs. The storage errors show output alerts you if an access control LUN is being presented."
 ---
 = An access control LUN is presented to ONTAP
 :icons: font

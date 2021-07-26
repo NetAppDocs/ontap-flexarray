@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_duplicate_lun_ids_on_a_target_port.html
 sidebar: sidebar
-keywords: 
-summary: 'Each array LUN on the same storage array target port must have a unique LUN ID. The storage errors show output identifies the LUNs that are presented with the same LUN ID on the same target port.'
+keywords: duplicate, lun, ids, target, port, storage, errors, problem, resolution, show, message
+summary: "Each array LUN on the same storage array target port must have a unique LUN ID. The storage errors show output identifies the LUNs that are presented with the same LUN ID on the same target port."
 ---
 = Duplicate LUN IDs on a target port
 :icons: font
@@ -34,7 +34,7 @@ For some storage arrays, such as HP EVA, host groups are the same for all target
 ====
 
 The administrator correctly sets up two host groups, as follows, so that there are two LUN groups:
-
+[options="header"]
 |===
 | Host group| FC initiators in the host group| LDEVs and associated LUN IDs
 a|
@@ -62,10 +62,10 @@ The zoning should be set up as follows:
 Notice in the preceding table that LDEV a and LDEV c both have the same LUN ID (L1). Likewise, LDEV b and LDEV d both have the same LUN ID (L2). If the zoning is set up correctly, this duplication of LUN IDs is not a problem because reuse of LUN IDs on different target ports is supported.
 
 The problem in this scenario is that some initiators are placed in the wrong zone when the zoning is configured, as shown in the following table:
-
+[options="header"]
 |===
-| Zone| ONTAP system| Storage array
-a|
+| Zone| ONTAP system|| Storage array|
+5+a|
 Switch vnbr200es25
 a|
 z1
@@ -87,7 +87,7 @@ a|
 Controller 1
 a|
 Port 1A (instead of 1B)
-a|
+5+a|
 Switch vnci9124s53
 a|
 z3
@@ -179,13 +179,3 @@ You are performing this step because initiators in different host groups should 
 
 . Repeat the procedure on controller 2.
 . Enter `storage errors show` in ONTAP and confirm that the error has been fixed. ``
-
-*Related information*
-
-xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
-
-xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]

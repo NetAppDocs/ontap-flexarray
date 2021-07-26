@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_fc_initiator_ports_required_for_connection_with_disks.html
 sidebar: sidebar
-keywords: 
-summary: 'You must connect a V-Series system to native disk shelves through the FC initiator ports. The number of initiator ports required for the connection depends on whether the V-Series system is a stand-alone system or in an HA pair.'
+keywords: fc initiator, ports, required, connection, native, disks
+summary: "You must connect a V-Series system to native disk shelves through the FC initiator ports. The number of initiator ports required for the connection depends on whether the V-Series system is a stand-alone system or in an HA pair."
 ---
 = FC initiator ports required for connection to native disks
 :icons: font
@@ -12,7 +12,7 @@ summary: 'You must connect a V-Series system to native disk shelves through the 
 You must connect a V-Series system to native disk shelves through the FC initiator ports. The number of initiator ports required for the connection depends on whether the V-Series system is a stand-alone system or in an HA pair.
 
 The following table lists the required number of FC initiator ports for connecting a V-Series system to native disk shelves, depending on the system configuration:
-
+[options="header"]
 |===
 | Configuration| Number of FC initiator ports
 a|

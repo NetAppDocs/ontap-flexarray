@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_array_lun_is_marked_foreign_and_has_a_reservation_data_ontap_8_3_and_later.html
 sidebar: sidebar
-keywords: 
-summary: 'You can import data hosted on array LUNs in their native format to ONTAP. The process of importing the contents of such an array LUN that is marked foreign might be impacted if the array LUN has external host reservations during import.'
+keywords: array, lun, marked, foreign, reservation, show, message, troubleshoot, resolution, problem
+summary: "You can import data hosted on array LUNs in their native format to ONTAP. The process of importing the contents of such an array LUN that is marked foreign might be impacted if the array LUN has external host reservations during import."
 ---
 = Array LUN is marked foreign and has a reservation
 :icons: font

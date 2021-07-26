@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_array_luns_are_configured_with_conflicting_failover_modes_clustered_data_ontap_8_2_and_later.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP requires that array LUNs that are visible to a particular ONTAP system be configured with the same failover mode. On some storage arrays, it is possible to configure inconsistent failover modes on different paths to an array LUN.'
+keywords: array, luns, configured, conflict, failover, modes
+summary: "ONTAP requires that array LUNs that are visible to a particular ONTAP system be configured with the same failover mode. On some storage arrays, it is possible to configure inconsistent failover modes on different paths to an array LUN."
 ---
 = Array LUNs are configured with conflicting failover modes
 :icons: font
@@ -48,12 +48,14 @@ UID: 60060160:E1B02200:1C65EB20:BFF7E111:00000000:00000000:00000000:...
 You need to fix the failover mismatch problem on the storage array. However, the entire procedure for fixing the mismatch depends on whether the failover mode that ONTAP detected on the first path is the failover mode that you want to be used for all paths on that ONTAP system to the array LUN.
 
 . Enter storage errors show if you have not done so already as part of your installation verification process.
++
 [NOTE]
 ====
 The storage array config command tells you to run storage error show if there is a problem that you need to fix.
 ====
 . Review the storage errors show output to determine the failover mode setting for the array LUN that is not consistent with the failover mode that ONTAP is expecting.
 +
+[options="header"]
 |===
 | If the failover mode that the system detected on the first path is...| Example| You need to...
 a|
@@ -82,10 +84,11 @@ You would use this step if the failover mode that the system detected on the fir
 +
 You would use one of these methods if the failover mode that the system detected on the first path _is not_ what you want.
 +
+[options="header"]
 |===
 | Method 1: Affected array LUNs are spares (not part of an aggregate)| Method 2: Affected LUNs are in an aggregate
 a|
-    With this method, the ONTAP system does not have to be rebooted.
+With this method, the ONTAP system does not have to be rebooted.
 
  .. In ONTAP, run the following command for each affected spare LUN: `disk remove_ownership LUNfullname`
  .. On the storage array, mask each affected array LUN on all paths to the ONTAP system.
@@ -98,7 +101,7 @@ ONTAP should discover the LUNs when it next runs LUN discovery
  .. Run storage errors show to confirm that there is no longer a failover mode error.
 
 a|
-    With this method, the ONTAP system must be rebooted.
+With this method, the ONTAP system must be rebooted.
 
  .. Reboot the ONTAP system and hold it at the LOADER prompt.
  .. On the storage array, review the failover mode settings on the FC initiators for this system and update them as necessary to the failover mode you want.

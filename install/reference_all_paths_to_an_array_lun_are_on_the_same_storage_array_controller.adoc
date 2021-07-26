@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_all_paths_to_an_array_lun_are_on_the_same_storage_array_controller.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure \(SPOF\). The storage errors show command identifies any array LUN whose paths are set up to go to the same storage array controller.'
+keywords: all, paths, array, lun, same, storage, array, controller, errors, message
+summary: "ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure (SPOF). The storage errors show command identifies any array LUN whose paths are set up to go to the same storage array controller."
 ---
 = All paths to an array LUN are on the same storage array controller
 :icons: font
