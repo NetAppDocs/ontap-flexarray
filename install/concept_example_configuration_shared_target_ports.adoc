@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_example_configuration_shared_target_ports.html
 sidebar: sidebar
-keywords: 
-summary: 'A maximum of two ONTAP FC initiator ports can be connected to a single target port on the storage array.'
+keywords: example, configuration, shared, target, ports, multiple, initiator
+summary: "A maximum of two ONTAP FC initiator ports can be connected to a single target port on the storage array."
 ---
 = Example configuration: shared target ports
 :icons: font
@@ -22,34 +22,19 @@ The solid lines in the following illustration show the connections from the FC i
 image::../media/shared_target_ports.gif[The connections and zoning for the shared target port configuration are described in the surrounding text.]
 
 The following table shows the 1:1 zoning definitions for the example of one target port sharing two FC initiator ports from controllers in an HA pair:
-
+[options="header"]
 |===
 | Zone| ONTAP system and FC initiator port| Storage array
-a|
+3+a|
 *Switch 1*
 a|
-z1
+z1|vs1:0a|Controller 1: Port 1A
 a|
-vs1:0a
-a|
-Controller 1: Port 1A
-a|
-z3
-a|
-vs2:0a
-a|
+z3|vs2:0a|
+3+a|
 *Switch 2*
 a|
-z2
+z2|vs1:0c|Controller 2: Port 2A
 a|
-vs1:0c
-a|
-Controller 2: Port 2A
-a|
-z4
-a|
-vs2:0c
+z4|vs2:0c|
 |===
-*Related information*
-
-xref:concept_rules_for_sharing_a_target_port_with_multiple_fc_initiator_ports.adoc[Rules for sharing a target port with multiple FC initiator ports]
