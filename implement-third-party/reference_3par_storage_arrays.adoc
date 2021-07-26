@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_3par_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You must meet certain requirements when configuring storage arrays to work with ONTAP systems that use array LUNs. These requirements include setting configuration parameters on storage arrays and deploying only supported configurations.'
+keywords: 3par, storage, arrays
+summary: "You must meet certain requirements when configuring storage arrays to work with ONTAP systems that use array LUNs. These requirements include setting configuration parameters on storage arrays and deploying only supported configurations."
 ---
 = 3PAR storage arrays
 :icons: font
