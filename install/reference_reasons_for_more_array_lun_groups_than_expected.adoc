@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_reasons_for_more_array_lun_groups_than_expected.html
 sidebar: sidebar
-keywords: 
-summary: 'When validating your configuration, you should check the storage array config show output to ensure that the number of LUN groups is what you intended. The most common reason for extra array LUN groups is that the LDEV is spanning target port pairs.'
+keywords: reasons, array, lun, groups, expected
+summary: "When validating your configuration, you should check the storage array config show output to ensure that the number of LUN groups is what you intended. The most common reason for extra array LUN groups is that the LDEV is spanning target port pairs."
 ---
 = Reasons for more array LUN groups than expected
 :icons: font
@@ -19,10 +19,10 @@ Common reasons why you would see more LUN groups than expected are as follows:
 +
 The most common cause of an extra LUN group is that the LDEV is spanning path pairs. An LDEV is said to be spanning path pairs if matching LUN IDs for the LDEV are not presented to a redundant target port pair on the storage array.
 
- [NOTE]
- ====
- On many storage arrays, it is not possible to present an LDEV to target ports that are not redundant if you follow the conventional process for creating and mapping LDEVs.
- ====
+[NOTE]
+====
+On many storage arrays, it is not possible to present an LDEV to target ports that are not redundant if you follow the conventional process for creating and mapping LDEVs.
+====
 
 * ONTAP is trying to balance the load over the target ports during migration of array LUNs from one LUN group to another.
 +

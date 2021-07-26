@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_reasons_for_more_paths_to_an_array_lun_than_expected.html
 sidebar: sidebar
-keywords: 
-summary: 'The primary reasons for an unexpected additional path to an array LUN are zoning issues and too many cables. Three paths to an array LUN is not best practice, but you are not required to fix this issue.'
+keywords: reasons, paths, array, lun, expected, output, show, config, issue
+summary: "The primary reasons for an unexpected additional path to an array LUN are zoning issues and too many cables. Three paths to an array LUN is not best practice, but you are not required to fix this issue."
 ---
 = Reasons for more paths to an array LUN than expected
 :icons: font

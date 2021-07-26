@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_reasons_for_no_luns_in_the_array_lun_group.html
 sidebar: sidebar
-keywords: 
-summary: 'When validating the back-end configuration, you should check the storage array config show output to determine whether LUNs are shown in the LUN groups. When the storage array config show output shows no LUNs in an array LUN group, ONTAP can see the target port on the fabric but the target port is not presenting array LUNs to ONTAP.'
+keywords: reasons, luns, array, group, host, ontap, operation, empty
+summary: "When validating the back-end configuration, you should check the storage array config show output to determine whether LUNs are shown in the LUN groups. When the storage array config show output shows no LUNs in an array LUN group, ONTAP can see the target port on the fabric but the target port is not presenting array LUNs to ONTAP."
 ---
 = Reasons for no LUNs in the array LUN group
 :icons: font
@@ -44,7 +44,7 @@ vs1
            2     0     EMC_SYMMETRIX_1  50060480000001b1       0a
 
                  0     EMC_SYMMETRIX_1  50060480000001a1       0d
-			
+
 4 entries were displayed.
 ----
 
@@ -52,11 +52,3 @@ vs1
 ====
 From the output you can determine that the problem is not due to missing FC initiators in the host group. If the FC initiators were missing from the host group, ONTAP would not be able to see the LUN groups having no LUNs.
 ====
-
-*Related information*
-
-xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
-
-xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]

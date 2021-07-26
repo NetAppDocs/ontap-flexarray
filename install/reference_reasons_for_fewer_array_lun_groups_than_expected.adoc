@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_reasons_for_fewer_array_lun_groups_than_expected.html
 sidebar: sidebar
-keywords: 
-summary: 'When validating the back-end configuration, you need to check the storage array config show output to determine whether the number of array LUN groups in the output is what you intended.'
+keywords: reasons, fewer, array, lun, groups, expected, resolve, issue
+summary: "When validating the back-end configuration, you need to check the storage array config show output to determine whether the number of array LUN groups in the output is what you intended."
 ---
 = Reasons for fewer array LUN groups than expected
 :icons: font
