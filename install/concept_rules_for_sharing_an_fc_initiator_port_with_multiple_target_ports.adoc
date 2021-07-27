@@ -41,8 +41,8 @@ The following are the rules for this configuration:
 
 *Related information*
 
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
 
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/index.html[FlexArray virtualization implementation for NetApp E-Series storage]
 
 https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

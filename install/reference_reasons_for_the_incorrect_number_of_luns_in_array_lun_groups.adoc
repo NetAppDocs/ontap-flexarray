@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_reasons_for_the_incorrect_number_of_luns_in_array_lun_groups.html
 sidebar: sidebar
-keywords: reasons, incorrect, number, luns, array, lun, groups, issue, resolve
+keywords: reasons, incorrect, number, luns, array, groups, issue, resolve
 summary: "When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system."
 ---
 = Reasons for the incorrect number of LUNs in array LUN groups

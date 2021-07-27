@@ -50,8 +50,8 @@ If ONTAP detects a back-end configuration error, you must run the storage errors
 
 . If the cause of the issue is still not clear, check the following sources to ensure that your system is compliant with the requirements for working with storage arrays:
  ** xref:concept_verifying_an_installation_with_storage_arrays.adoc[Verifying an installation with storage arrays]
- ** https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
- ** https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+ ** https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
+ ** https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/index.html[FlexArray virtualization implementation for NetApp E-Series storage]
  ** https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
  ** https://hwu.netapp.com[NetApp Hardware Universe]
 . If you still need help resolving the issue, contact technical support.
