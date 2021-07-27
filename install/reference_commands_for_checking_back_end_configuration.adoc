@@ -18,58 +18,58 @@ Commands that are particularly useful for installation verification and troubles
 |===
 | Command| Description
 a|
-storage array config show
+`storage array config show`
 a|
-Provides information, at the storage array level, about the configuration of the back-end devices in a deployment with ONTAP systems using array LUNs. This command shows how storage arrays connect to the cluster. If ONTAP detects an issue that would prevent the ONTAP systems using array LUNs and storage arrays from operating properly together, storage array config show instructs you to run storage errors show to obtain details about the error.
+Provides information, at the storage array level, about the configuration of the back-end devices in a deployment with ONTAP systems using array LUNs. This command shows how storage arrays connect to the cluster. If ONTAP detects an issue that would prevent the ONTAP systems using array LUNs and storage arrays from operating properly together, `storage array config show` instructs you to run `storage errors show` to obtain details about the error.
 
 This command is also useful for verifying that the configuration is set up as you intended. For example, you can look at the output to confirm that the number of array LUN groups that you intended were created.
 
 a|
-storage array show -name array_name
+`storage array show -name array_name`
 a|
 Displays information about all storage arrays visible to the cluster or about the storage array that you specify. If the number of array LUNs presented exceeds the capacity of the system, the Error text field shows you the number of LUNs that ONTAP could not discover. You should watch for this issue on low memory systems in particular.
 
 a|
-storage path quiesce
+`storage path quiesce`
 a|
-Temporarily suspends I/O to a specific array LUN on a specific path. The path becomes active again on reboot or by running storage path resume. Some storage arrays require ceasing I/O for a period of time to remove or move an array LUN.
+Temporarily suspends I/O to a specific array LUN on a specific path. The path becomes active again on reboot or by running `storage path resume`. Some storage arrays require ceasing I/O for a period of time to remove or move an array LUN.
 
 [NOTE]
 ====
-The storage path quiesce command cannot be used with IBM DS storage arrays.
+The `storage path quiesce` command cannot be used with IBM DS storage arrays.
 ====
 
 a|
-storage path resume
+`storage path resume`
 a|
-Allows I/O to start flowing again; this is the inverse of quiesce. The storage path resume command is used primarily for hardware maintenance (for example, cable or GBIC pulls) or after an accidental quiescence of a path to an array LUN occurs.It is not always necessary to run this command after quiescing a path. For example, ONTAP can discover a newly mapped array LUN.
+Allows I/O to start flowing again; this is the inverse of quiesce. The `storage path resume` command is used primarily for hardware maintenance (for example, cable or GBIC pulls) or after an accidental quiescence of a path to an array LUN occurs. It is not always necessary to run this command after quiescing a path. For example, ONTAP can discover a newly mapped array LUN.
 
 a|
-storage array show
+`storage array show`
 a|
 Displays information about the storage arrays that are visible to the cluster, for example, name, vendor, model, and failover type.
 a|
-storage disk show
+`storage disk show`
 a|
-Entering storage disk show without parameters shows the following for all disks and array LUNs: the name, usable size, container type, position, aggregate, and owner. Entering storage disk show with a disk name or an array LUN name as a parameter shows details about an individual disk or array LUN, for example, the status (assigned or unassigned), the owner, and the paths for the array LUN. The output is broken into three sections: information about the array LUN, information about the paths to the array LUN, and any errors associated with the array LUN.
+Entering `storage disk show` without parameters shows the following for all disks and array LUNs: the name, usable size, container type, position, aggregate, and owner. Entering `storage disk show` with a disk name or an array LUN name as a parameter shows details about an individual disk or array LUN, for example, the status (assigned or unassigned), the owner, and the paths for the array LUN. The output is broken into three sections: information about the array LUN, information about the paths to the array LUN, and any errors associated with the array LUN.
 
 a|
-storage disk show -errors _**_
+`storage disk show -errors _**_`
 a|
-Entering storage disk show with the -errors parameter provides details of configuration errors at the disk and array LUN levels. Although the command output is similar to that of the storage disk error show command, storage disk show -errors provides additional options to filter the output by parameters such as node, cluster, and bay position.
+Entering `storage disk show` with the ``-errors` parameter provides details of configuration errors at the disk and array LUN levels. Although the command output is similar to that of the `storage disk error show` command, `storage disk show -errors` provides additional options to filter the output by parameters such as node, cluster, and bay position.
 
 a|
-storage disk error show
+`storage disk error show`
 a|
-Provides details about back-end configuration errors at the disk and array LUN levels. Entering storage disk error show with an array LUN name as a parameter shows details about configuration errors related to the specified array LUN. You must fix these errors before configuring ONTAP to work with storage arrays.
+Provides details about back-end configuration errors at the disk and array LUN levels. Entering `storage disk error` show with an array LUN name as a parameter shows details about configuration errors related to the specified array LUN. You must fix these errors before configuring ONTAP to work with storage arrays.
 
 a|
-storage errors show
+`storage errors show`
 a|
-Provides details, at the array LUN level, about back-end configuration errors that prevent the ONTAP system and the storage array from operating together. You must fix errors identified by storage errors show before you configure ONTAP to work with storage arrays.
+Provides details, at the array LUN level, about back-end configuration errors that prevent the ONTAP system and the storage array from operating together. You must fix errors identified by `storage errors show` before you configure ONTAP to work with storage arrays.
 [NOTE]
 ====
-The storage errors show command does not provide information about disk configuration errors. To view information about both disk and array LUN configuration errors, you can use either the storage disk show -errors command or the storage disk error show command.
+The `storage errors show` command does not provide information about disk configuration errors. To view information about both disk and array LUN configuration errors, you can use either the `storage disk show -errors` command or the `storage disk error show` command.
 ====
 
 |===

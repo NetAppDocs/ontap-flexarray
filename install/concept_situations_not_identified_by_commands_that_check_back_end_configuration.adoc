@@ -11,12 +11,12 @@ summary: "There might be situations that you consider to be an issue but are not
 [.lead]
 There might be situations that you consider to be an issue but are not errors from the perspective of ONTAP because the situation does not prevent the system from operating. The ONTAP commands that check the back-end configuration do not identify configurations that do not prevent system operation.
 
-Commands such as storage errors show, storage disk error show, and storage disk show -errors do not alert you to situations such as the following:
+Commands such as `storage errors show`, `storage disk error show`, and `storage disk show -errors` do not alert you to situations such as the following:
 
 * Configurations that do not conform to best practice recommendations; that is, they are not required
 * Conditions that can occur during transitional states
 +
-For example, you might see more LUN groups than you intended in storage array config show output until migration of LUNs from one LUN group to another is complete.
+For example, you might see more LUN groups than you intended in `storage array config show` output until migration of LUNs from one LUN group to another is complete.
 
 * Conditions that do not match the intended configurations
 +

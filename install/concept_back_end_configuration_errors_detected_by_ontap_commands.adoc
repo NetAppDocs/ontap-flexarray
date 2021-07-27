@@ -9,19 +9,19 @@ summary: "The storage errors show command provides details, at the array LUN lev
 :imagesdir: ../media/
 
 [.lead]
-The storage errors show command provides details, at the array LUN level, about common back-end configuration errors. You can also use the storage disk error show and the storage disk show -errors commands to view the errors.
+The `storage errors show` command provides details, at the array LUN level, about common back-end configuration errors. You can also use the `storage disk error show` and the `storage disk show -errors` commands to view the errors.
 
 You must fix the back-end configuration errors identified by these commands before you can configure ONTAP to work with array LUNs.
 [NOTE]
 ====
-While the storage errors show command provides error details pertaining to only array LUNs, the storage disk error show and the storage disk show -errors commands can provide error details related to array LUNs as well as disks.
+While the `storage errors show` command provides error details pertaining to only array LUNs, the `storage disk error show` and the `storage disk show -errors` commands can provide error details related to array LUNs as well as disks.
 ====
 
-When there is a back-end configuration error that would prevent the devices in your configuration from working together, the storage array config show command instructs you to run storage errors show to obtain the details of the error.
+When there is a back-end configuration error that would prevent the devices in your configuration from working together, the `storage array config show` command instructs you to run storage errors show to obtain the details of the error.
 
 == List of back-end configuration errors
 
-The storage errors show, storage disk error show, and storage disk show -errors commands can help identify back-end configuration errors such as the following:
+The `storage errors show`, `storage disk error show`, and `storage disk show -errors` commands can help identify back-end configuration errors such as the following:
 
 * There are fewer than two paths to an array LUN.
 * All paths to an array LUN are to the same storage array controller.
@@ -34,7 +34,7 @@ The storage errors show, storage disk error show, and storage disk show -errors 
 
 == Output examples displaying the back-end configuration errors
 
-The storage errors show output is grouped by storage array (if there is more than one storage array behind the ONTAP system). The name and unique identifier (UID) of an array LUN are shown, when applicable.
+The `storage errors show` output is grouped by storage array (if there is more than one storage array behind the ONTAP system). The name and unique identifier (UID) of an array LUN are shown, when applicable.
 
 The following output example shows one type of error--only one path to an array LUN. This is an error because ONTAP requires two paths to an array LUN.
 
@@ -43,7 +43,7 @@ The following output example shows one type of error--only one path to an array 
 Four paths to an array LUN are supported for clustered configurations.
 ====
 
-The following example shows the errors returned by the storage errors show command because of only a single path configured to an array LUN:
+The following example shows the errors returned by the `storage errors show` command because of only a single path configured to an array LUN:
 
 ----
 
@@ -56,7 +56,7 @@ DGC-1.57         onepath           DGC-1.57 (6006016044d03500ba553e55b09fe311): 
 DGC-1.58         onepath           DGC-1.58 (6006016044d03500bc553e55b09fe311): This array LUN is only available on one path. Proper configuration requires two paths.
 ----
 
-The following example shows similar errors returned by the storage disk show -errors command:
+The following example shows similar errors returned by the `storage disk show -errors` command:
 
 ----
 
