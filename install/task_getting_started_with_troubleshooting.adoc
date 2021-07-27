@@ -1,8 +1,8 @@
 ---
 permalink: install/task_getting_started_with_troubleshooting.html
 sidebar: sidebar
-keywords: 
-summary: 'While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue, and accordingly contact technical support for the solution.'
+keywords: get, started, troubleshoot, ontap, configuration, array, luns
+summary: "While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue, and accordingly contact technical support for the solution."
 ---
 = Getting started with troubleshooting an ONTAP configuration with array LUNs
 :icons: font
@@ -17,19 +17,22 @@ This procedure suggests an order for approaching troubleshooting.
 ====
 As you continue with the troubleshooting steps, you should save any information that you gather about the issue so that you can provide this information to technical support in the case of an escalation.
 ====
-
+.Steps
 . Determine whether the issue is with the front end (an ONTAP issue that affects all the corresponding platforms) or the back end (an issue with the switch or storage array configuration).
 +
 For example, if you are trying to use an ONTAP feature and it is not working as you expected, the issue is likely to be with the front end.
 
 . Take appropriate action to address the issue, depending on its nature:
 +
+[options="header"]
 |===
 | If the ONTAP configuration has a...| Then do this...
 a|
 Front end issue
 a|
-Proceed with troubleshooting the ONTAP feature by following instructions in the ONTAP guides.     https://docs.netapp.com/ontap-9/index.jsp[ONTAP 9 Documentation Center]
+Proceed with troubleshooting the ONTAP feature by following instructions in the ONTAP guides.
+
+https://docs.netapp.com/ontap-9/index.jsp[ONTAP 9 Documentation Center]
 a|
 Back end issue
 a|
@@ -52,7 +55,3 @@ If ONTAP detects a back-end configuration error, you must run the storage errors
  ** https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
  ** https://hwu.netapp.com[NetApp Hardware Universe]
 . If you still need help resolving the issue, contact technical support.
-
-*Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]

@@ -1,8 +1,8 @@
 ---
 permalink: install/task_displaying_target_port_queue_depth_statistics_clustered_data_ontap_8_2_and_later.html
 sidebar: sidebar
-keywords: 
-summary: 'If you suspect that a target queue depth setting is causing performance issues on your storage array, you should check the value that is set for the queue depth and check the state of requests on the FC initiator ports.'
+keywords: display, target, queue, depth, statistics
+summary: "If you suspect that a target queue depth setting is causing performance issues on your storage array, you should check the value that is set for the queue depth and check the state of requests on the FC initiator ports."
 ---
 = Displaying target queue depth statistics
 :icons: font
@@ -13,6 +13,7 @@ If you suspect that a target queue depth setting is causing performance issues o
 
 There are different levels of detail that you can access to determine whether there are problems processing requests on target ports. The following steps describe how to determine the current setting for the target port queue depth, determine whether there are requests waiting on the ports, and display detailed port statistics to help you understand the workload on the port.
 
+.Steps
 . Use the storage array show command with the -instance parameter to show the current value of the target port queue depth.
 +
 ----
