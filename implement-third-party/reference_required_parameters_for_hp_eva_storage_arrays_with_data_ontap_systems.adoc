@@ -16,15 +16,15 @@ System parameter settings are provided in the following table:
 |===
 | Parameter| Setting
 a|
-Redundancy
+`Redundancy`
 a|
 Any RAID level except VRAID0
 a|
-Preferred path/mode
+`Preferred path/mode`
 a|
 No preference (default)
 a|
-Host type
+`Host type`
 a|
 SUN Solaris
 |===

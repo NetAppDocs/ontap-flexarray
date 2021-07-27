@@ -23,7 +23,7 @@ Tasks for ONTAP implementation with storage arrays, including the following:
 * Verifying the installation
 
 a|
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-irrg/home.html[FlexArray virtualization installation requirements and reference]
+https://docs.netapp.com/us-en/ontap-flexarray/install/index.html[FlexArray virtualization installation requirements and reference]
 a|
 ONTAP working with devices, including the following:
 

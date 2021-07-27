@@ -16,27 +16,27 @@ Host configuration parameters that must be set on the storage array are listed i
 |===
 | Parameter| Setting
 a|
-Initiator type
+`Initiator type`
 a|
 CLARiiON/VNX
 a|
-Array Com Path
+`Array Com Path`
 a|
 Enabled
 a|
-Failover mode
+`Failover mode`
 a|
 4
 a|
-Unit serial number
+`Unit serial number`
 a|
 LUN
 a|
-Host name
+`Host name`
 a|
 User-supplied host name and port number
 a|
-IP address
+`IP address`
 a|
 Unique fake IP address You must ensure that you have not entered this IP address anywhere else in the storage array configuration, and that it is not an IP address that is present on the network.
 

@@ -18,23 +18,23 @@ The parameters that must be set are listed in the following table:
 |===
 | Parameter| Setting
 a|
-Mapping mode
+`Mapping mode`
 a|
 Enabled
 a|
-Host group security
+`Host group security`
 a|
 Enabled
 a|
-Mode Setting > Common Setting
+`Mode Setting > Common Setting`
 a|
 Standard Mode
 a|
-Platform
+`Platform`
 a|
 Not specified
 a|
-Middleware
+`Middleware`
 a|
 Not specified
 |===
@@ -46,20 +46,18 @@ The parameters that must be set are listed in the following table:
 |===
 | Parameter| Setting
 a|
-Host mode
+`Host mode`
 a|
 Standard or 00
 a|
-Port security
+`Port security`
 a|
 Enabled
-a|
-+
+2+a|
 [NOTE]
 ====
 A host group that is separate from the default host groups should be created for each initiator-target port pair.
 ====
-
 |===
 The storage array parameters should be set and LUNs should be mapped to the host groups before the switch is zoned to connect the ONTAP system to the Hitachi storage array.
 

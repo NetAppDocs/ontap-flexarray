@@ -18,32 +18,32 @@ The host channel director port configuration parameters that must be set on the 
 |===
 | Parameter (names might differ between GUI and CLI)| Setting
 a|
-Common SN (Common Serial Number or C-bit parameter)
+`Common SN` (Common Serial Number or C-bit parameter)
 a|
 Enable
 a|
-PP (Point-to-Point parameter)
+`PP` (Point-to-Point parameter)
 a|
 Enable
 a|
-SC3 (SCSI-3)
+`SC3` (SCSI-3)
 a|
 Enable
 a|
-SPC-2 (SCS2_Protocol_version, SCSI Primary Command 2 parameter, or Allow inquiry data to be compiled to the standard)
+`SPC-2` (SCS2_Protocol_version, SCSI Primary Command 2 parameter, or `Allow inquiry data to be compiled to the standard)`
 a|
 Enable
 a|
-UWN (Unique Worldwide Name)
+`UWN` (Unique Worldwide Name)
 a|
 Enable
 a|
-Volume Set Addressing
+`Volume Set Addressing`
 a|
 Disable
 |===
-The Volume Set Addressing parameter must be set the same way on all channel director ports to which the LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in storage errors show output and in an EMS message.
+The `Volume Set Addressing` parameter must be set the same way on all channel director ports to which the LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in `storage errors show` output and in an EMS message.
 
 *Related information*
 
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-irrg/home.html[FlexArray virtualization installation requirements and reference]
+https://docs.netapp.com/us-en/ontap-flexarray/install/index.html[FlexArray virtualization installation requirements and reference]
