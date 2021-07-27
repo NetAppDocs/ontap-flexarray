@@ -58,7 +58,7 @@ To fix the problem, the storage array administrator must remap the LUN, using th
 . Review the storage errors show output to identify the array LUN whose LUN IDs do not match.
 +
 When the LUN IDs for the same LDEV do not match, the output identifies the serial number of the LDEV with the problem. For example:
-
++
 ----
 
 mysystem1a::> storage errors show
@@ -70,6 +70,7 @@ HITACHI_DF600F_1
 ----------
 HIT-1.4 (4849544143484920443630303035323430303132): This Array LUN is using multiple LUN IDs.  Only one LUN ID per serial number is supported.
 ----
++
 [NOTE]
 ====
 THE UID in this example is 48495441:43484920:44363030:30353234:30303132:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.

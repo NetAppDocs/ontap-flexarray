@@ -146,7 +146,7 @@ Index Array LUN Name     Model      Vendor    Size    Owner          Checksum  S
    5  switch0:7.183L2    SYMMETRIX  EMC     173.6 GB  local          Block     600604803436313438396431
 Do you want to continue (yes|no)?
 ----
-
++
 [NOTE]
 ====
 Selecting “no” clears the LUN selection.
