@@ -9,7 +9,7 @@ summary: "Each array LUN on the same storage array target port must have a uniqu
 :imagesdir: ../media/
 
 [.lead]
-Each array LUN on the same storage array target port must have a unique LUN ID. The storage errors show output identifies the LUNs that are presented with the same LUN ID on the same target port.
+Each array LUN on the same storage array target port must have a unique LUN ID. The `storage errors show` output identifies the LUNs that are presented with the same LUN ID on the same target port.
 
 == Storage errors show message
 
@@ -22,7 +22,7 @@ NAME (UID), port WWPNx: LUN x occurs more than once.  LUNs cannot be reused on t
 
 The usual cause of duplicate LUN IDs on a target port is a zoning error. An administrator puts the FC initiators of ONTAP systems into different host groups to create multiple LUN groups on a storage array, but then makes a zoning mistake that allows the initiators in the different host groups to access the same target port.
 
-When this type of zoning error is made, storage array config show output shows two LUN groups with the same target ports.
+When this type of zoning error is made, `storage array config show` output shows two LUN groups with the same target ports.
 
 == Problem scenario
 
@@ -116,7 +116,7 @@ image::../media/duplicate_lun_ids_on_a_target_port.gif[This graphic is described
 
 As you can see from the illustration, two LUN groups are created. However, because of the zoning error, LUN group 0 and LUN group 1 are on the same target port pair (1A and 2A), instead of one LUN group being on each target port pair.
 
-The following storage array config show output for this example shows two LUN groups. The problem is that the two LUN groups have the same target ports.
+The following `storage array config show` output for this example shows two LUN groups. The problem is that the two LUN groups have the same target ports.
 
 ----
 
@@ -134,7 +134,7 @@ Node  Group  Count  Array Name   Array Target Ports     Switch Port   Initiator
 Warning: Configuration were errors detected.  Use 'storage errors show' for detailed information.
 ----
 
-The following storage errors show output for this example identifies the LUNs with the problem:
+The following `storage errors show` output for this example identifies the LUNs with the problem:
 
 ----
 
@@ -164,14 +164,14 @@ UID: UID-d
 EMC-1.4 (UID-d), port WWPN2: LUN 2 occurs more than once.  LUNs cannot be reused on the same array target port.
 ----
 
-From this storage errors show example you can see that the UIDs of all four LDEVs are shown, but there are only two unique LUN IDs, LUN 1 and LUN 2. instead of four.
+From this `storage errors show` example you can see that the UIDs of all four LDEVs are shown, but there are only two unique LUN IDs, LUN 1 and LUN 2. instead of four.
 
 == Troubleshooting and problem resolution
 
 The storage array administrator must fix the zoning so that the initiators in different host groups do not have access to the same target port.
 
-. In storage array config output, look for initiators that are talking to the same target port.
-. Enter the following command to view the details of the error: storage errors show
+. In `storage array config` output, look for initiators that are talking to the same target port.
+. Enter the following command to view the details of the error: `storage errors show`
 . Determine the LDEV for which the LUN IDs are duplicated.
 . For each target port on controller 1 that has multiple initiators from the same ONTAP system mapped to it, change the zoning so that the two FC initiators are _not_ talking to the same target port.
 +

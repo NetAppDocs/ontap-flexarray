@@ -9,12 +9,12 @@ summary: "When storage errors show flags an error condition, you need to determi
 :imagesdir: ../media/
 
 [.lead]
-When storage errors show flags an error condition, you need to determine why the error occurred and how to fix it.
+When `storage errors show` flags an error condition, you need to determine why the error occurred and how to fix it.
 
-The following table lists the back-end configuration errors detected by storage errors show and refers you to detailed information about the causes of each error and its resolution.
+The following table lists the back-end configuration errors detected by `storage errors show` and refers you to detailed information about the causes of each error and its resolution.
 [options="header"]
 |===
-| storage errors show message| For more information about this message see...
+| `storage errors show` message| For more information about this message see...
 a|
 NAME (Serial #): All paths to this array LUN are connected to the same fault domain. This is a single point of failure.
 a|

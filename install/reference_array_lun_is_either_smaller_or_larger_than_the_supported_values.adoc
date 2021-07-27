@@ -9,7 +9,7 @@ summary: "When planning array LUN sizes, you must conform to ONTAP minimum and m
 :imagesdir: ../media/
 
 [.lead]
-When planning array LUN sizes, you must conform to ONTAP minimum and maximum array LUN size limits. These limits vary according to ONTAP release. The storage errors show output identifies array LUNs that do not meet size requirements.
+When planning array LUN sizes, you must conform to ONTAP minimum and maximum array LUN size limits. These limits vary according to ONTAP release. The `storage errors show` output identifies array LUNs that do not meet size requirements.
 
 You cannot assign array LUNs with size issues to an ONTAP system.
 
@@ -43,7 +43,7 @@ ONTAP generates an error message about size issues for any array LUN exposed to 
 
 == Troubleshooting and problem resolution
 
-. Review the storage errors show output so that you find out which array LUN has a size problem.
+. Review the `storage errors show` output so that you find out which array LUN has a size problem.
  ** If the array LUN with the size problem is for ONTAP, the storage array administrator must resize the array LUN to meet ONTAP requirements, and then present it again to ONTAP.
  ** If the array LUN with the size problem is for another host, the storage array administrator must mask the array LUN so that it is not exposed to ONTAP.
 . After the problem is fixed, run storage array config show again to confirm that the error does not persist.

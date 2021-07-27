@@ -24,7 +24,7 @@ EMC-1.128 (4849544143484920443630303035323430303132): This Array LUN is using mu
 
 There are a number of configuration errors that can cause the error message. This explanation is about the display of this message when Volume Set Addressing is set inconsistently.
 
-ONTAP explicitly checks for inconsistent setting of the Volume Set Addressing parameter on ports to which a LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in storage errors show output and in EMS messages.
+ONTAP explicitly checks for inconsistent setting of the Volume Set Addressing parameter on ports to which a LUN is mapped. If the settings are different, ONTAP reports this as a LUN ID mismatch in `storage errors show` output and in EMS messages.
 
 [NOTE]
 ====
@@ -33,7 +33,7 @@ ONTAP does not alert you if Volume Set Addressing is not configured as expected;
 
 == Troubleshooting and problem resolution
 
-If the storage errors show command displays the particular error message and your storage array is an EMC Symmetrix, doing one of the following helps you identify whether the problem is due to a Volume Set Addressing inconsistency:
+If the `storage errors show` command displays the particular error message and your storage array is an EMC Symmetrix, doing one of the following helps you identify whether the problem is due to a Volume Set Addressing inconsistency:
 
 * In ONTAP, run `storage disk show -disk` for the identified array LUN.
 +

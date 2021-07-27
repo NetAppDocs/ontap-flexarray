@@ -20,6 +20,6 @@ The following are some checksum type considerations for adding spare array LUNs 
 
 [NOTE]
 ====
-You can check the checksum type of the spare array LUNs by using the storage disk show command. For more information about the command, see the man pages.
+You can check the checksum type of the spare array LUNs by using the `storage disk show` command. For more information about the command, see the man pages.
 
 ====

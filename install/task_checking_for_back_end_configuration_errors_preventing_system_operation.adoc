@@ -9,12 +9,12 @@ summary: "ONTAP requires you to fix common back-end configuration errors that wo
 :imagesdir: ../media/
 
 [.lead]
-ONTAP requires you to fix common back-end configuration errors that would prevent a storage array and an ONTAP system from operating together normally. Using the storage array config show command helps you determine whether there are back-end configuration errors.
+ONTAP requires you to fix common back-end configuration errors that would prevent a storage array and an ONTAP system from operating together normally. Using the `storage array config show` command helps you determine whether there are back-end configuration errors.
 
 .Steps
 . Enter the following command: `storage array config show`
 +
-The first step in installation verification (and troubleshooting) is to run the storage array config show command. If ONTAP detects an error in the back-end configuration, the following message is displayed at the bottom of the storage array config show output:
+The first step in installation verification (and troubleshooting) is to run the `storage array config show` command. If ONTAP detects an error in the back-end configuration, the following message is displayed at the bottom of the `storage array config show` output:
 +
 ----
 Warning: Configuration errors were detected.  Use 'storage errors show' for detailed information.
@@ -26,25 +26,25 @@ Warning: Configuration errors were detected.  Use 'storage errors show' for deta
 |===
 | If...| Then...
 a|
-storage array config show instructs you to run storage errors show
+`storage array config show` instructs you to run `storage errors show`
 a|
 Go to Step 3.
 a|
-storage array config show does NOT instruct you to run storage errors show
+`storage array config show` does NOT instruct you to run `storage errors show`
 a|
-Review the storage array config show output to make sure that the output reflects the configuration you intended. See Verifying if the back-end configuration matches the expected output section. (You do not need to continue with the next steps in this procedure.) xref:task_verifying_if_the_back_end_configuration_matches_the_expected_output.adoc[Verifying if the back-end configuration matches the expected output]
+Review the `storage array config show` output to make sure that the output reflects the configuration you intended. See Verifying if the back-end configuration matches the expected output section. (You do not need to continue with the next steps in this procedure.) xref:task_verifying_if_the_back_end_configuration_matches_the_expected_output.adoc[Verifying if the back-end configuration matches the expected output]
 |===
 
 . Enter the following command: `storage errors show`
 +
-The storage errors show command enables you to see details of the problem at the array LUN level.
+The `storage errors show` command enables you to see details of the problem at the array LUN level.
 
 . Review the error message and fix any errors shown.
 +
-You must fix any errors shown by storage errors show. See The storage errors show messages and their resolution section to learn about the cause of each problem detected by storage errors show and how to fix it. xref:reference_the_storage_errors_show_messages_and_their_resolution.adoc[The storage errors show messages and their resolution]
+You must fix any errors shown by `storage errors show`. See The `storage errors show` messages and their resolution section to learn about the cause of each problem detected by `storage errors show` and how to fix it. xref:reference_the_storage_errors_show_messages_and_their_resolution.adoc[The storage errors show messages and their resolution]
 
-. After fixing the problem, run storage errors show again to confirm that the error was fixed.
+. After fixing the problem, run `storage errors show` again to confirm that the error was fixed.
 +
-If storage errors show continues to show the problem, review the documentation again for more information about what to do, or contact technical support.
+If `storage errors show` continues to show the problem, review the documentation again for more information about what to do, or contact technical support.
 
-. After you resolve the back-end configuration error, run storage array config show again so that you can review the output to ensure that the configuration meets the expected output.
+. After you resolve the back-end configuration error, run `storage array config show` again so that you can review the output to ensure that the configuration meets the expected output.

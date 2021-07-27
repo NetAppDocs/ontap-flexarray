@@ -33,4 +33,4 @@ ONTAP alerts you if you try to assign an array LUN with a redundancy error: for 
 . Enter the following command to see the array LUNs that have not yet been assigned to a node:``storage disk show -container-type unassigned``
 . Enter the following command to assign an array LUN to this node:``storage disk assign -disk arrayLUNname -owner nodename``
 +
-If you want to fix a redundancy error after disk assignment instead of before, you must use the -force parameter with the storage disk assign command.
+If you want to fix a redundancy error after disk assignment instead of before, you must use the `-force` parameter with the `storage disk assign` command.
