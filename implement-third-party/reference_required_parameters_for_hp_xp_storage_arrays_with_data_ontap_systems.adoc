@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_parameters_for_hp_xp_storage_arrays_with_data_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for this storage array to work successfully with ONTAP systems.'
+keywords: required, parameters, hp, xp, storage, arrays, ontap, workaround
+summary: "Certain parameter settings are required on the storage array for this storage array to work successfully with ONTAP systems."
 ---
 = Required parameters for HP XP storage arrays with ONTAP
 :icons: font
@@ -14,7 +14,7 @@ Certain parameter settings are required on the storage array for this storage ar
 == Required system parameters for HP XP storage arrays
 
 The required parameter settings are shown in the following table:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|

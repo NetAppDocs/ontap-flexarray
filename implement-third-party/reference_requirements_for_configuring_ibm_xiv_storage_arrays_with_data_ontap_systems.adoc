@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_requirements_for_configuring_ibm_xiv_storage_arrays_with_data_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: requirements, configuring, ibm xiv, arrays, ontap, systems, parameter, settings
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Requirements for configuring IBM XIV arrays with ONTAP systems
 :icons: font
@@ -14,7 +14,7 @@ Certain parameter settings are required on the storage array for the storage arr
 == System parameter settings
 
 The following table lists the system parameter settings for IBM XIV Gen3 arrays:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|

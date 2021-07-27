@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_parameters_for_hp_eva_storage_arrays_with_data_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: required, parameters, hp, eva, arrays, ontap, systems
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Required parameters for HP EVA arrays with ONTAP systems
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Certain parameter settings are required on the storage array for the s
 Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.
 
 System parameter settings are provided in the following table:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|

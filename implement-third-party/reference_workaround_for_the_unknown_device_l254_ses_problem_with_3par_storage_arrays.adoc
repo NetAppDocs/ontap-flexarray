@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_workaround_for_the_unknown_device_l254_ses_problem_with_3par_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'The host definition, with the host persona specified in the required parameters for 3PAR arrays with ONTAP systems section, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR array LUN as LUN 254 and product type SES, which ONTAP cannot use.'
+keywords: Workaround, unknown device (l254/ses), problem, 3PAR, storage, arrays, aggregates, luns, created, ontap system, not
+summary: "The host definition, with the host persona specified in the required parameters for 3PAR arrays with ONTAP systems section, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR array LUN as LUN 254 and product type SES, which ONTAP cannot use."
 ---
 = Workaround for the unknown device (L254/SES) problem with 3PAR storage arrays
 :icons: font

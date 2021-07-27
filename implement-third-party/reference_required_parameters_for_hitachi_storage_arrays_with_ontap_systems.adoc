@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_parameters_for_hitachi_storage_arrays_with_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: required, parameters, hitachi, storage, arrays, ontap, systems, ams, hus, vsp, hus vm, workaround
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Required parameters for Hitachi storage arrays with ONTAP systems
 :icons: font
@@ -14,7 +14,7 @@ Certain parameter settings are required on the storage array for the storage arr
 == Required system parameters for AMS and HUS storage arrays
 
 The parameters that must be set are listed in the following table:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|
@@ -42,7 +42,7 @@ Not specified
 == Required system parameters for VSP and HUS VM storage arrays
 
 The parameters that must be set are listed in the following table:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|
@@ -54,7 +54,7 @@ Port security
 a|
 Enabled
 a|
-
++
 [NOTE]
 ====
 A host group that is separate from the default host groups should be created for each initiator-target port pair.

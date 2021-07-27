@@ -1,7 +1,7 @@
 ---
 permalink: implement-third-party/reference_workaround_when_luns_are_not_visible_with_hp_xp_storage_arrays.html
 sidebar: sidebar
-keywords: 
+keywords: workaround, luns, not, visible, hp xp, storage, arrays, aggregates, created, ontap, system 
 summary: 'The storage array parameters specified in the Required parameters for HP XP storage arrays with ONTAP systems section should be set and LUNs should be mapped to the host groups before the switch is zoned to connect the ONTAP system that uses array LUNs to an HP XP storage array.'
 ---
 = Workaround when LUNs are not visible with HP XP storage arrays

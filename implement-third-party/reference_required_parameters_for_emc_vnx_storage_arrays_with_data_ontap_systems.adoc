@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_parameters_for_emc_vnx_storage_arrays_with_data_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: required, parameters, emc, vnx, storage, arrays, ontap, systems
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Required parameters for EMC VNX storage arrays with ONTAP systems
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Certain parameter settings are required on the storage array for the s
 Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.
 
 Host configuration parameters that must be set on the storage array are listed in the following table.
-
+[options="header"]
 |===
 | Parameter| Setting
 a|

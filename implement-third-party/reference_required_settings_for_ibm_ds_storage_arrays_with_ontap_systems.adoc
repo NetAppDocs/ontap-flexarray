@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_settings_for_ibm_ds_storage_arrays_with_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: required, settings, ibm ds, storage, arrays, ontap, systems. host type, ds8xxx, configuring, ds8300 9a2 lpar models
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Required settings for IBM DS storage arrays with ONTAP systems
 :icons: font
@@ -14,7 +14,7 @@ Certain parameter settings are required on the storage array for the storage arr
 == Required host type for DS8xxx storage arrays
 
 The required host type setting is shown in the following table:
-
+[options="header"]
 |===
 | Parameter| Setting
 a|
