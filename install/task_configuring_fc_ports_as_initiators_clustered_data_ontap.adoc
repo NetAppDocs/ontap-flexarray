@@ -1,7 +1,7 @@
 ---
 permalink: install/task_configuring_fc_ports_as_initiators_clustered_data_ontap.html
 sidebar: sidebar
-keywords: 
+keywords:  configure, fc ports, initiators
 summary: 'You can configure individual FC ports as initiators on ONTAP systems. The initiator mode enables the ports to connect to storage arrays.'
 ---
 = Configuring FC ports as initiators
@@ -11,7 +11,8 @@ summary: 'You can configure individual FC ports as initiators on ONTAP systems. 
 [.lead]
 You can configure individual FC ports as initiators on ONTAP systems. The initiator mode enables the ports to connect to storage arrays.
 
-. If the adapter port already has LIFs configured, delete all the LIFs by using the network interface delete command.
+.Steps
+. *Optional:*  If the adapter port already has LIFs configured, delete all the LIFs by using the network interface delete command.
 +
 If the LIF is in a port set, you must remove the LIF from port set before you can delete the LIF.
 +

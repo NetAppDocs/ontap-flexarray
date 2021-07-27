@@ -1,8 +1,8 @@
 ---
 permalink: install/task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.html
 sidebar: sidebar
-keywords: 
-summary: 'You can check the number of visible array LUNs on an FC initiator port. The supported number of array LUNs that can be visible on an FC initiator port varies for different ONTAP releases.'
+keywords: check, number, array, luns, visible, fc initiator, port
+summary: "You can check the number of visible array LUNs on an FC initiator port. The supported number of array LUNs that can be visible on an FC initiator port varies for different ONTAP releases."
 ---
 = Checking the number of array LUNs visible on an FC initiator port
 :icons: font
@@ -11,6 +11,7 @@ summary: 'You can check the number of visible array LUNs on an FC initiator port
 [.lead]
 You can check the number of visible array LUNs on an FC initiator port. The supported number of array LUNs that can be visible on an FC initiator port varies for different ONTAP releases.
 
+.Steps
 . Check the visible number on the FC initiator port: `storage array config show -initiator initiator_number`
 +
 `storage array config show -initiator 0a`
@@ -32,9 +33,3 @@ vgv3070f51-01    1    24             HP    50014380025d1508     0a
 vgv3070f51-02    0    24             HP    50014380025d1508     0a
                  2     1    DGC_RAID5_1    200600a0b819e16f     0a
 ----
-
-*Related information*
-
-xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]
-
-xref:concept_example_configuration_shared_fc_initiator_ports.adoc[Example configuration: shared FC initiator ports]

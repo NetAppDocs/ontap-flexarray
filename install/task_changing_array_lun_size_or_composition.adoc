@@ -1,8 +1,8 @@
 ---
 permalink: install/task_changing_array_lun_size_or_composition.html
 sidebar: sidebar
-keywords: 
-summary: 'Reconfiguring the size or composition of an array LUN must be done on the storage array. If an array LUN has already been assigned to an ONTAP system, you must use ONTAP to change the state of the array LUN to unused before the storage array administrator can reconfigure it.'
+keywords: change, array, lun, size, composition
+summary: "Reconfiguring the size or composition of an array LUN must be done on the storage array. If an array LUN has already been assigned to an ONTAP system, you must use ONTAP to change the state of the array LUN to unused before the storage array administrator can reconfigure it."
 ---
 = Changing array LUN size or composition
 :icons: font
@@ -11,8 +11,11 @@ summary: 'Reconfiguring the size or composition of an array LUN must be done on 
 [.lead]
 Reconfiguring the size or composition of an array LUN must be done on the storage array. If an array LUN has already been assigned to an ONTAP system, you must use ONTAP to change the state of the array LUN to unused before the storage array administrator can reconfigure it.
 
+*What you'll need*
+
 The array LUN must be a spare array LUN before you can change its state to unused.
 
+.Steps
 . On the ONTAP system, enter the following command to remove ownership information: `storage disk removeowner  -disk arrayLUNname`
 . On the storage array, complete the following steps:
  .. Unmap (unpresent) the array LUN from the ONTAP systems so that they can no longer see the array LUN.

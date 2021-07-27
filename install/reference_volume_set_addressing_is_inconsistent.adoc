@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_volume_set_addressing_is_inconsistent.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP can detect inconsistent LUN IDs across a path set for storage arrays. For storage arrays on which Volume Set Addressing is set, a mismatch of the settings on the ports to which the LUN is mapped is one problem that causes a mismatch of LUN IDs.'
+keywords: volume, set, address, inconsistent, show, message, troubleshoot, problem, resolution
+summary: "ONTAP can detect inconsistent LUN IDs across a path set for storage arrays. For storage arrays on which Volume Set Addressing is set, a mismatch of the settings on the ports to which the LUN is mapped is one problem that causes a mismatch of LUN IDs."
 ---
 = Volume Set Addressing is inconsistent
 :icons: font
@@ -44,9 +44,5 @@ This command shows all the paths to the array LUN and the LUN ID assigned to eac
 If you determine that the settings are inconsistent, fix the configuration problem on the storage array, making sure that you are setting the parameter on both channel director ports to the setting required by ONTAP.
 
 *Related information*
-
-xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
 
 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]

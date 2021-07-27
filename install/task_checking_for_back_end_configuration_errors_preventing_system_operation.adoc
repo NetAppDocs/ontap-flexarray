@@ -1,8 +1,8 @@
 ---
 permalink: install/task_checking_for_back_end_configuration_errors_preventing_system_operation.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP requires you to fix common back-end configuration errors that would prevent a storage array and an ONTAP system from operating together normally. Using the storage array config show command helps you determine whether there are back-end configuration errors.'
+keywords: check, back-end, configuration, errors, prevent, system, operation
+summary: "ONTAP requires you to fix common back-end configuration errors that would prevent a storage array and an ONTAP system from operating together normally. Using the storage array config show command helps you determine whether there are back-end configuration errors."
 ---
 = Checking for back-end configuration errors preventing system operation
 :icons: font
@@ -11,6 +11,7 @@ summary: 'ONTAP requires you to fix common back-end configuration errors that wo
 [.lead]
 ONTAP requires you to fix common back-end configuration errors that would prevent a storage array and an ONTAP system from operating together normally. Using the storage array config show command helps you determine whether there are back-end configuration errors.
 
+.Steps
 . Enter the following command: `storage array config show`
 +
 The first step in installation verification (and troubleshooting) is to run the storage array config show command. If ONTAP detects an error in the back-end configuration, the following message is displayed at the bottom of the storage array config show output:
@@ -21,6 +22,7 @@ Warning: Configuration errors were detected.  Use 'storage errors show' for deta
 
 . Take the appropriate action, as follows:
 +
+[options="header"]
 |===
 | If...| Then...
 a|
@@ -46,13 +48,3 @@ You must fix any errors shown by storage errors show. See The storage errors sho
 If storage errors show continues to show the problem, review the documentation again for more information about what to do, or contact technical support.
 
 . After you resolve the back-end configuration error, run storage array config show again so that you can review the output to ensure that the configuration meets the expected output.
-
-*Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_back_end_configuration_errors_detected_by_ontap_commands.adoc[Back-end configuration errors detected by ONTAP commands]
-
-xref:concept_situations_not_identified_by_commands_that_check_back_end_configuration.adoc[Situations not identified by commands that check back-end configuration]
-
-xref:task_verifying_if_the_back_end_configuration_matches_the_expected_output.adoc[Verifying that the back-end configuration matches the intended configuration]
