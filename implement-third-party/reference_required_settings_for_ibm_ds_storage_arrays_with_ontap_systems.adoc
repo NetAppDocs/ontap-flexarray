@@ -18,7 +18,7 @@ The required host type setting is shown in the following table:
 |===
 | Parameter| Setting
 a|
-Host type
+`Host type`
 a|
 N series Gateway
 |===

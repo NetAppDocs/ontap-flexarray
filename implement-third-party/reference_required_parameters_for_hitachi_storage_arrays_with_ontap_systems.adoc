@@ -64,9 +64,12 @@ The storage array parameters should be set and LUNs should be mapped to the host
 If ONTAP FC initiator ports are zoned with Hitachi array target ports before the storage array parameters are set and the LUNs are mapped to the host groups, you might not be able to see any LUNs presented to the ONTAP interface.
 
 In this situation, ONTAP generates one of the following EMS messages:
-
-[fci.device.login.reject:info] The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x9 'Invalid R_CTL Field', explanation code 0x29 'Insufficient Resources to Support Login' [fci.device.login.reject:info]: The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x3 'Nx_Port Not Available, Temporary', explanation code 0x29 'Insufficient Resources to Support Login'
-
+----
+[fci.device.login.reject:info] The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x9 'Invalid R_CTL Field', explanation code 0x29 'Insufficient Resources to Support Login'
+----
+----
+[fci.device.login.reject:info]: The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x3 'Nx_Port Not Available, Temporary', explanation code 0x29 'Insufficient Resources to Support Login'
+----
 == Workaround
 
 If zoning was configured prior to setting the parameters and mapping the LUNs to the host groups, you can resolve the problem of LUNs not being visible by performing a path re-initialization to force a rediscovery of the array LUNs that are mapped from the Hitachi storage array. See Workaround when LUNs are not visible with Hitachi storage arrays section for the workaround to this problem.

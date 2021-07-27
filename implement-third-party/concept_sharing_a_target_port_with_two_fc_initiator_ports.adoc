@@ -32,6 +32,6 @@ The initiator ports 0a of controllers vs1 and vs2 are connected to the storage a
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
 
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-irrg/home.html[FlexArray virtualization installation requirements and reference]
+https://docs.netapp.com/us-en/ontap-flexarray/install/index.html[FlexArray virtualization installation requirements and reference]
 
 https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

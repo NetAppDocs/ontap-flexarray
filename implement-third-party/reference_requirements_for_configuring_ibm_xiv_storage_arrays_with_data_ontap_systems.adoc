@@ -18,15 +18,15 @@ The following table lists the system parameter settings for IBM XIV Gen3 arrays:
 |===
 | Parameter| Setting
 a|
-Type
+`Type`
 a|
 Default
 a|
-Host
+`Host`
 a|
 User-supplied host name
 a|
-Cluster
+`Cluster`
 a|
 User-supplied cluster name
 |===
