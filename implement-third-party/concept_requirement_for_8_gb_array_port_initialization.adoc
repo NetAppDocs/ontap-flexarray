@@ -13,6 +13,6 @@ In a typical Fibre Channel (FC) fabric, storage array ports initialize as N-Port
 
 This behavior is caused by topology auto-negotiation issues in the Brocade switch.
 
-To ensure that switch ports always initialize as F-ports, you must run the portcfggport <portnumber> 1 command on Brocade switch ports that are connected to storage arrays. You must run this command when you start configuring the system to avoid this problem, and you must fix the problem if it occurs.
+To ensure that switch ports always initialize as F-ports, you must run the `portcfggport` ``<portnumber> 1` command on Brocade switch ports that are connected to storage arrays. You must run this command when you start configuring the system to avoid this problem, and you must fix the problem if it occurs.
 
 To promote efficiency on the fabric as a whole, you can also use this workaround on any Brocade ports attached to ONTAP initiator ports.
