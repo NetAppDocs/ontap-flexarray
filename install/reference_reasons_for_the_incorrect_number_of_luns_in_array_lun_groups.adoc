@@ -9,11 +9,11 @@ summary: "When validating your configuration, you should check the storage array
 :imagesdir: ../media/
 
 [.lead]
-When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.
+When validating your configuration, you should check the `storage array config show` output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.
 
 == Example of storage array config show output
 
-The number of array LUNs in each LUN group appears in the storage array config show output, as the following example shows:
+The number of array LUNs in each LUN group appears in the `storage array config show` output, as the following example shows:
 
 ----
 mysystem1::> storage array config show
@@ -44,4 +44,4 @@ For example, the host group configuration might be incorrect.
 The process for mapping array LUNs to hosts varies among storage arrays.
 
 . If the array LUN has been mapped to the ONTAP system, check zoning and the host group configuration.
-. After the issue is fixed, run storage array config show again to confirm that the issue is fixed.
+. After the issue is fixed, run `storage array config show` again to confirm that the issue is fixed.

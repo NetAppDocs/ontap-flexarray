@@ -9,7 +9,7 @@ summary: "When validating the back-end configuration, you should check the stora
 :imagesdir: ../media/
 
 [.lead]
-When validating the back-end configuration, you should check the storage array config show output to determine whether LUNs are shown in the LUN groups. When the storage array config show output shows no LUNs in an array LUN group, ONTAP can see the target port on the fabric but the target port is not presenting array LUNs to ONTAP.
+When validating the back-end configuration, you should check the `storage array config show` output to determine whether LUNs are shown in the LUN groups. When the `storage array config show` output shows no LUNs in an array LUN group, ONTAP can see the target port on the fabric but the target port is not presenting array LUNs to ONTAP.
 
 There are a variety of reasons why a target port might not present array LUNs to ONTAP (an open target port). The reasons for an open target port can differ between different storage arrays. In addition, the ways to handle the open target port issues differ with storage arrays. For all storage arrays, troubleshooting the cause of an open target port should include checking the storage array configuration, including the host group configuration.
 
@@ -27,7 +27,7 @@ The empty host group is caused by array LUNs not getting listed in the host grou
 
 image::../media/ldevs_missing_from_host_group.gif[]
 
-The following example shows the storage array config show output for the illustrated situations where the ONTAP system is zoned to the storage array but there are no LUNs in the host group definitions for the storage controller 1A, resulting in an open target port. The controllers 1B and 2B do not have LUNs in their respective host group definitions, resulting in an empty host group.
+The following example shows the `storage array config show` output for the illustrated situations where the ONTAP system is zoned to the storage array but there are no LUNs in the host group definitions for the storage controller 1A, resulting in an open target port. The controllers 1B and 2B do not have LUNs in their respective host group definitions, resulting in an empty host group.
 
 In the output for the illustrated situations, the FC initiators 0a, 0b, and 0d show no LUNs in the LUN count field. For the FC initiator 0c, two LUNs are shown in LUN group1.
 

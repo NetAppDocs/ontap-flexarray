@@ -18,4 +18,4 @@ If the LUN that the storage array administrator no longer wants ONTAP to use is 
 .Step
 . Enter the following command: `storage disk removeowner -disk LUN_name`
 +
-LUN_name is the name of the array LUN.
+_LUN_name_ is the name of the array LUN.

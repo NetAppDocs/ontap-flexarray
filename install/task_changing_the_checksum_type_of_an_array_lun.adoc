@@ -23,11 +23,11 @@ You can also contact your Sales Engineer for details about using checksums.
 .Steps
 . Enter the following command to change the checksum type: `storage disk assign -disk disk name -owner owner -c new_checksum_type`
 +
-disk name is the array LUN whose checksum type you want to change.
+_disk name_ is the array LUN whose checksum type you want to change.
 +
-owner is the node to which the array LUN is assigned.
+_owner_ is the node to which the array LUN is assigned.
 +
-new_checksum_type can be blockor zoned.
+_new_checksum_type_ can be block or zoned.
 +
 `storage disk assign -disk EMC-1.1 -owner system147b -c block`
 +
@@ -35,6 +35,6 @@ The checksum type of the array LUN is changed to the new checksum type you speci
 
 . Enter the following command to access the nodeshell: `system node run -node node_name`
 +
-node_name is the name of this system.
+_node_name_ is the name of this system.
 
 . Enter the following command to exit the nodeshell: `exit`

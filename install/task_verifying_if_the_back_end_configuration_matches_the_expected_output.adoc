@@ -9,12 +9,12 @@ summary: "After resolving the back-end configuration errors detected by storage 
 :imagesdir: ../media/
 
 [.lead]
-After resolving the back-end configuration errors detected by storage errors show, you must check whether the existing back-end configuration matches the configuration you intended, and fix issues arising out of any mismatch.
+After resolving the back-end configuration errors detected by `storage errors show`, you must check whether the existing back-end configuration matches the configuration you intended, and fix issues arising out of any mismatch.
 
 .Steps
 . Enter the following command: `storage array config show`
 +
-The storage array config show output groups information about LUN groups, LUN counts, and paths by storage array, as the following example for an HA pair shows:
+The `storage array config show` output groups information about LUN groups, LUN counts, and paths by storage array, as the following example for an HA pair shows:
 +
 ----
 
@@ -33,7 +33,7 @@ mysystem1b    0    10     DGC_RAID5_1      5005076303030124       1a
 8 entries were displayed.
 ----
 
-. Check the storage array config show output for each problem statement in the following table, and refer to the appropriate information for solution.
+. Check the `storage array config show` output for each problem statement in the following table, and refer to the appropriate information for solution.
 +
 [options="header"]
 |===

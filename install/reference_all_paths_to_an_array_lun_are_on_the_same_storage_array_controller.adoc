@@ -9,7 +9,7 @@ summary: "ONTAP does not support configuring all paths to the same storage array
 :imagesdir: ../media/
 
 [.lead]
-ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure (SPOF). The storage errors show command identifies any array LUN whose paths are set up to go to the same storage array controller.
+ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure (SPOF). The `storage errors show` command identifies any array LUN whose paths are set up to go to the same storage array controller.
 
 ONTAP does not allow you to assign array LUNs to an ONTAP system until after you fix this error.
 
@@ -32,9 +32,9 @@ The following illustration shows correct and incorrect storage array port select
 
 image::../media/redundant_array_port_selection.gif[This graphic is described in the surrounding text.]
 
-The storage errors show command shows the array LUN that is in the same fault domain. You can also see this problem in the storage disk show output if you look at the TPGN column (Target port group number). A different TPGN should be shown for each initiator in an initiator port pair. If the TPGN is the same for both initiators in the pair, both initiators are in the same fault domain.
+The `storage errors show` command shows the array LUN that is in the same fault domain. You can also see this problem in the `storage disk show` output if you look at the TPGN column (Target port group number). A different TPGN should be shown for each initiator in an initiator port pair. If the TPGN is the same for both initiators in the pair, both initiators are in the same fault domain.
 
-The following storage disk show example shows TPGN 1 for LUN 30, which is accessed over initiators 0a and 0c. If the paths are redundant, each initiator shows a different TPGN.
+The following `storage disk show` example shows TPGN 1 for LUN 30, which is accessed over initiators 0a and 0c. If the paths are redundant, each initiator shows a different TPGN.
 
 ----
 

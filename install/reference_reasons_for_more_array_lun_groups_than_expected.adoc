@@ -9,7 +9,7 @@ summary: "When validating your configuration, you should check the storage array
 :imagesdir: ../media/
 
 [.lead]
-When validating your configuration, you should check the storage array config show output to ensure that the number of LUN groups is what you intended. The most common reason for extra array LUN groups is that the LDEV is spanning target port pairs.
+When validating your configuration, you should check the `storage array config show` output to ensure that the number of LUN groups is what you intended. The most common reason for extra array LUN groups is that the LDEV is spanning target port pairs.
 
 == Explanation
 
@@ -60,21 +60,21 @@ You can infer from the information in the Array Target Ports column for Groups 0
 
 However, the information in the Array Target Ports column for Group 2 suggests that the paths are not redundant. One path goes to target port 1A and the other goes to target port 2B. This is not a redundant target port pair; the array LUN is spanning LUN groups. The array LUN should have been mapped to either 1A and 2A or 1B and 2B.
 
-Because the ONTAP system can run with an LDEV spanning path pairs, the message instructing you to run storage errors show does not appear after you run the storage array config show command. However, this is not a best practice configuration.
+Because the ONTAP system can run with an LDEV spanning path pairs, the message instructing you to run `storage errors show` does not appear after you run the `storage array config show` command. However, this is not a best practice configuration.
 
 == Resolving the issue
 
-. Wait for one minute, then run storage array config show again to see whether the extra LUN group is still shown in the storage array config show output.
+. Wait for one minute, then run `storage array config show` again to see whether the extra LUN group is still shown in the `storage array config show` output.
  ** If the extra LUN group is no longer in the output, you can conclude that the issue was transitional.
  ** If the extra LUN group still appears in the output, the storage array administrator must remap the LDEV, as documented in the next steps.
 +
 You need to maintain redundancy while fixing this problem. This procedure instructs you to map the LDEV to the correct target port _before_ removing the mapping to the incorrect target port. Redundancy is maintained in this case because you are increasing the number of paths to three, temporarily, instead of decreasing the number of paths to one while you are fixing the problem.
 . Decide which of the inconsistent target ports should be remapped.
 . On the storage array, map the LDEV to the new (correct) target port.
-. In ONTAP, run storage array config show to confirm that three paths are shown.
+. In ONTAP, run `storage array config show` to confirm that three paths are shown.
 . Remove the incorrect mapping.
 . Wait for one minute while ONTAP discovers the LUN.
-. In ONTAP, run storage array config show again to make sure that the extra LUN group is gone.
+. In ONTAP, run `storage array config show` again to make sure that the extra LUN group is gone.
 
 *Related information*
 

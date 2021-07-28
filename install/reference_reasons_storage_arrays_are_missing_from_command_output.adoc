@@ -9,7 +9,7 @@ summary: "A storage array that is not connected to the ONTAP system does not app
 :imagesdir: ../media/
 
 [.lead]
-A storage array that is not connected to the ONTAP system does not appear in the storage array config show output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices.
+A storage array that is not connected to the ONTAP system does not appear in the `storage array config show` output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices.
 
 == Resolving the issue
 
@@ -17,4 +17,4 @@ A storage array that is not connected to the ONTAP system does not appear in the
  ** Check that cables are connected.
  ** Check that the WWPNs for the FC initiators on the ONTAP systems are in the host group.
  ** Check that both the storage array and the FC initiator are in the same zone.
-. After the problem is fixed, run storage array config show in ONTAP to confirm that the issue was fixed.
+. After the problem is fixed, run `storage array config show` in ONTAP to confirm that the issue was fixed.
