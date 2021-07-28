@@ -11,20 +11,20 @@ summary: "ONTAP can detect events of resource contention, such as I/O queue bein
 [.lead]
 ONTAP can detect events of resource contention, such as I/O queue being full, commands being timed out or HBA resource getting exhausted, on a target port.
 
-You can set the target port utilization policies by using the storage array port modify command if you detect such events on a given array target port.
+You can set the target port utilization policies by using the `storage array port modify` command if you detect such events on a given array target port.
 
 The following table describes the two utilization policies associated with a target port:
 [options="header"]
 |===
 | Policy| Description
 a|
-normal
+*normal*
 a|
-When ONTAP detects target port resource contention on a given array target port, it reduces the targets port's queue depth and throttles I/O to the target port. In this mode, the reduction of the target port queue depth is lesser than the defer policy for each target port resource contention event. The subsequent rise in the target port queue depth is faster than the defer policy. normal is the default policy.
+When ONTAP detects target port resource contention on a given array target port, it reduces the targets port's queue depth and throttles I/O to the target port. In this mode, the reduction of the target port queue depth is lesser than the *defer* policy for each target port resource contention event. The subsequent rise in the target port queue depth is faster than the *defer* policy. *normal* is the default policy.
 a|
-defer
+*defer*
 a|
-When ONTAP detects target port resource contention on a given array target port, it reduces the target port's queue depth and throttles I/O to the target port. In this mode, the reduction of the target port queue depth is greater than the normal policy for each target port resource contention event. The subsequent rise in the target port queue depth is slower than the normal utilization policy.
+When ONTAP detects target port resource contention on a given array target port, it reduces the target port's queue depth and throttles I/O to the target port. In this mode, the reduction of the target port queue depth is greater than the *normal* policy for each target port resource contention event. The subsequent rise in the target port queue depth is slower than the *normal* utilization policy.
 |===
 
 == Output examples to view and modify array target port utilization policies
@@ -48,7 +48,7 @@ Node              Initiator  Count   IOPS    KB/s    %busy    %waiting   Errs
      vgv3170f54b         0a      2      350  15366      100          40     0
 ----
 
-By default, the I/O policy for a given array target port is normal. You can modify the I/O policy associated with the port by running the following command:
+By default, the I/O policy for a given array target port is *normal*. You can modify the I/O policy associated with the port by running the following command:
 
 ----
 vgv3070f50ab::> storage array port modify -wwpn 50014380025d1509 -utilization-policy ?

@@ -58,7 +58,7 @@ parity set, RAID set
 a|
 3PAR
 a|
-A group of parity-protected chunklets. (A chunklet is a 256-MB block of contiguous space on a physical disk.)
+A group of parity-protected _chunklets_. (A chunklet is a 256-MB block of contiguous space on a physical disk.)
 a|
 
 a|||
@@ -104,7 +104,7 @@ LUN
 a|
 Many storage arrays
 a|
-A grouping of one or more disks or disk partitions into one span of disk storage space. In the ONTAP documentation, this is referred to as array LUN.
+A grouping of one or more disks or disk partitions into one span of disk storage space. In the ONTAP documentation, this is referred to as _array LUN_.
 a|
 LDEV
 a|
@@ -120,13 +120,13 @@ LUN, virtual disk
 a|
 HP EVA
 a|
-A virtual disk (called a Vdisk in the user interface) is a simulated disk drive created in a disk group. You can assign a combination of characteristics to a virtual disk, such as a name, redundancy level, and size. Presenting a virtual disk offers its storage to a host.
+A virtual disk (called a _Vdisk_ in the user interface) is a simulated disk drive created in a disk group. You can assign a combination of characteristics to a virtual disk, such as a name, redundancy level, and size. Presenting a virtual disk offers its storage to a host.
 a|
 array LUN
 a|
 ONTAP documentation, ONTAP storage management tools
 a|
-The ONTAP documentation uses the term array LUN to distinguish LUNs on the storage arrays from front-end LUNs ( ONTAP LUNs).
+The ONTAP documentation uses the term _array LUN_ to distinguish LUNs on the storage arrays from front-end LUNs ( ONTAP LUNs).
 a|
 vLUN
 a|
