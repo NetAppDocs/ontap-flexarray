@@ -48,11 +48,11 @@ EMC_SYMMETRIX_1 50060480000001b0 50060480000001b0 -
 EMC_SYMMETRIX_1 50060480000001b1 50060480000001b1 256
 ----
 +
-A value of "`-`"for `Max Queue Depth` indicates that the port does not have a specific max queue depth setting and is using the value set at the storage array level.
+A value of "`-` for `Max Queue Depth` indicates that the port does not have a specific max queue depth setting and is using the value set at the storage array level.
 
 . Use the `storage array port show` command to display performance information about storage array target ports.
 +
-The results of this command help you determine whether there are performance problems related to the ports. The ``%busy` and `%waiting` values provide a high-level view of the performance on a port. If these values show a high percentage of requests waiting to be processed or show that the port is busy for a great percentage of time, then you might want to investigate further into the state of the port.
+The results of this command help you determine whether there are performance problems related to the ports. The `%busy` and `%waiting` values provide a high-level view of the performance on a port. If these values show a high percentage of requests waiting to be processed or show that the port is busy for a great percentage of time, then you might want to investigate further into the state of the port.
 +
 ----
 
