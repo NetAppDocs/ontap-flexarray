@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_when_to_check_for_redundant_paths_to_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'You need to check for redundant paths to an array LUN after installation and during fabric maintenance activities.'
+keywords: when, check, redundant, paths, array, luns
+summary: "You need to check for redundant paths to an array LUN after installation and during fabric maintenance activities."
 ---
 = When to check for redundant paths to array LUNs
 :icons: font

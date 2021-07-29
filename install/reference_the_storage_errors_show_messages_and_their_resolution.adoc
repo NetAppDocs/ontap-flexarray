@@ -1,20 +1,20 @@
 ---
 permalink: install/reference_the_storage_errors_show_messages_and_their_resolution.html
 sidebar: sidebar
-keywords: 
-summary: 'When storage errors show flags an error condition, you need to determine why the error occurred and how to fix it.'
+keywords: storage, errors, show, messages, resolution
+summary: "When storage errors show flags an error condition, you need to determine why the error occurred and how to fix it."
 ---
 = The storage errors show messages and their resolution
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When storage errors show flags an error condition, you need to determine why the error occurred and how to fix it.
+When `storage errors show` flags an error condition, you need to determine why the error occurred and how to fix it.
 
-The following table lists the back-end configuration errors detected by storage errors show and refers you to detailed information about the causes of each error and its resolution.
-
+The following table lists the back-end configuration errors detected by `storage errors show` and refers you to detailed information about the causes of each error and its resolution.
+[options="header"]
 |===
-| storage errors show message| For more information about this message see...
+| `storage errors show` message| For more information about this message see...
 a|
 NAME (Serial #): All paths to this array LUN are connected to the same fault domain. This is a single point of failure.
 a|
@@ -46,7 +46,9 @@ xref:reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.a
 a|
 NAME (Serial #): This Array LUN is using multiple LUN IDs. Only one LUN ID per serial number is supported.
 a|
-xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match] Volume Set Addressing is inconsistent
+xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match]
+
+Volume Set Addressing is inconsistent
 
 a|
 NAME (Serial #): This array LUN is marked foreign and has a reservation.

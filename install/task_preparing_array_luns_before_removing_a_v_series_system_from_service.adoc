@@ -1,8 +1,8 @@
 ---
 permalink: install/task_preparing_array_luns_before_removing_a_v_series_system_from_service.html
 sidebar: sidebar
-keywords: 
-summary: 'You must release the persistent reservations on all array LUNs assigned to an ONTAP system before removing the system from service.'
+keywords: prepare, array, luns, before, remove, ontap, system, service
+summary: "You must release the persistent reservations on all array LUNs assigned to an ONTAP system before removing the system from service."
 ---
 = Preparing array LUNs before removing an ONTAP system from service
 :icons: font

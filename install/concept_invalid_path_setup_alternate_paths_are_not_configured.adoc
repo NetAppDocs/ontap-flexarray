@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_invalid_path_setup_alternate_paths_are_not_configured.html
 sidebar: sidebar
-keywords: 
-summary: 'It is important to set up alternate paths to all array LUNs from both FC initiators on the ONTAP system, thereby avoiding a single point of failure \(SPOF\).'
+keywords: invalid, path, setup, alternate, paths, configured
+summary: "It is important to set up alternate paths to all array LUNs from both FC initiators on the ONTAP system, thereby avoiding a single point of failure (SPOF)."
 ---
 = Invalid path setup: alternate paths are not configured
 :icons: font
@@ -33,7 +33,3 @@ To make this a valid configuration, the following changes must be made:
 * Appropriate zoning must be configured.
 +
 If you are using multiple ports on a storage array that supports configuring a specific set of LUNs on a selected set of ports, a given FC initiator port must be able to see all array LUNs presented on the fabric.
-
-*Related information*
-
-xref:concept_requirement_for_redundant_setup_of_components_in_a_path.adoc[Requirements for redundant setup of components in a path]

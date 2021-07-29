@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_implementation_requirements_for_a_multiple_lun_group_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'You can improve the system performance by implementing a multiple LUN group configuration in your storage environment. Certain setup tasks must be performed on the ONTAP systems and the storage arrays for implementing this configuration.'
+keywords: implementation, requirements, multiple, lun, group, configuration
+summary: "You can improve the system performance by implementing a multiple LUN group configuration in your storage environment. Certain setup tasks must be performed on the ONTAP systems and the storage arrays for implementing this configuration."
 ---
 = Implementation requirements for a multiple LUN group configuration
 :icons: font
@@ -33,11 +33,5 @@ You must set up the following on the _switch_ to implement a multiple LUN group 
 * Configure switch zoning to define which target ports the FC initiator ports on the ONTAP system should use to access each array LUN group.
 
 *Related information*
-
-xref:concept_example_of_a_configuration_with_multiple_lun_groups.adoc[Example of a configuration with multiple LUN groups]
-
-xref:reference_reasons_for_fewer_array_lun_groups_than_expected.adoc[Reasons for fewer array LUN groups than expected]
-
-xref:reference_reasons_for_more_array_lun_groups_than_expected.adoc[Reasons for more array LUN groups than expected]
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

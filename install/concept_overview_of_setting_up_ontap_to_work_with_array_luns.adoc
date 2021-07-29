@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_overview_of_setting_up_ontap_to_work_with_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'The process of setting up an ONTAP system to work with array LUNs differs on the basis of whether ONTAP systems are ordered with or without disks.'
+keywords: set, up, ontap, work, array, luns
+summary: "The process of setting up an ONTAP system to work with array LUNs differs on the basis of whether ONTAP systems are ordered with or without disks."
 ---
 = Setting up ONTAP to work with array LUNs
 :icons: font

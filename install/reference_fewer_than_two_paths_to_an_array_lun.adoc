@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_fewer_than_two_paths_to_an_array_lun.html
 sidebar: sidebar
-keywords: 
-summary: 'Common reasons for fewer than two paths to an array LUN are a mapping error, a zoning error, or a cable dropping out. The storage errors show output identifies array LUNs with only a single path.'
+keywords: fewer, two, paths, array, lun
+summary: "Common reasons for fewer than two paths to an array LUN are a mapping error, a zoning error, or a cable dropping out. The storage errors show output identifies array LUNs with only a single path."
 ---
 = Fewer than two paths to an array LUN
 :icons: font
@@ -78,6 +78,7 @@ Looking at both the storage array config show output and the storage errors show
 . Review the storage errors show output to obtain the serial number of the array LUN that is available on only one path.
 . Review the storage array config show output to try to isolate the cause of the problem.
 +
+[options="header"]
 |===
 | If the storage array config show output shows...| The cause is most likely...
 a|
@@ -93,13 +94,3 @@ A cabling error, zoning error, or hardware issue
 . If the cause is a mapping error, have the storage array administrator map the identified array LUN to two redundant storage array ports.
 . If the cause seems to be a problem other than mapping, check zoning, host group mapping, cabling, and connectivity.
 . After you fix the problem, run storage array config show again to confirm that the error is fixed.
-
-*Related information*
-
-xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
-
-xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]

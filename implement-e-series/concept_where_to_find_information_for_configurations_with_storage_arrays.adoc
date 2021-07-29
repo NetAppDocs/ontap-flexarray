@@ -1,8 +1,8 @@
 ---
 permalink: implement-e-series/concept_where_to_find_information_for_configurations_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'When planning your configuration for using ONTAP systems with storage arrays, you should check various sources for information about array LUN configuration in addition to the product documentation.'
+keywords: Where, find, information, configurations, storage, arrays
+summary: "When planning your configuration for using ONTAP systems with storage arrays, you should check various sources for information about array LUN configuration in addition to the product documentation."
 ---
 = Where to find information for configurations with storage arrays
 :icons: font

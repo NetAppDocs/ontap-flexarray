@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_stages_of_implementation_for_a_system_using_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'Implementing a configuration in which your system uses LUNs from a storage array has two stages: a back-end implementation and a front-end implementation. It is helpful when planning your configuration to understand the high-level tasks in each stage.'
+keywords: stages, implementation, system, use, array, luns, back end, front end
+summary: "Implementing a configuration in which your system uses LUNs from a storage array has two stages: a back-end implementation and a front-end implementation. It is helpful when planning your configuration to understand the high-level tasks in each stage."
 ---
 = Stages of implementation for a system using array LUNs
 :icons: font

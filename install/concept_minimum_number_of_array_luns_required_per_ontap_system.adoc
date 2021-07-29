@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_minimum_number_of_array_luns_required_per_ontap_system.html
 sidebar: sidebar
-keywords: 
-summary: 'The number of array LUNs that you need per ONTAP system depends on the location of the root volume.'
+keywords: minimum, number, array, luns, required, ontap, system
+summary: "The number of array LUNs that you need per ONTAP system depends on the location of the root volume."
 ---
 = Minimum number of array LUNs required per ONTAP system
 :icons: font
@@ -14,7 +14,3 @@ The number of array LUNs that you need per ONTAP system depends on the location 
 The root volume can be either on a disk or on array LUNs. The location of the root volume then determines the minimum number of array LUNs you need. If the root volume is on a storage array, each stand-alone ONTAP system and each node in an HA pair must own at least one array LUN. If the root volume is on a native disk, the only array LUNs needed are those for data storage.
 
 For a MetroCluster configuration that is using array LUNs, two array LUNs are required (one LUN from each site) if the root volume is on a storage array. The two LUNs are necessary so that the root volume can be mirrored.
-
-*Related information*
-
-xref:concept_location_of_the_root_volume.adoc[Location of the root volume]

@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_32xx_configuration_restrictions.html
 sidebar: sidebar
-keywords: 
-summary: 'There are some restrictions for 32xx systems that do not apply to other models. You must be aware of these while configuring the systems.'
+keywords: 32xx, system, configuration, restrictions
+summary: "There are some restrictions for 32xx systems that do not apply to other models. You must be aware of these while configuring the systems."
 ---
 = 32xx system configuration restrictions
 :icons: font

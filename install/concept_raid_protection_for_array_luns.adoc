@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_raid_protection_for_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'Storage arrays provide RAID protection for the array LUNs that they make available to ONTAP. ONTAP does not provide RAID protection.'
+keywords: raid, protection, array, luns
+summary: "Storage arrays provide RAID protection for the array LUNs that they make available to ONTAP. ONTAP does not provide RAID protection."
 ---
 = RAID protection for array LUNs
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_factors_impacting_the_required_number_of_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'While planning for ONTAP use of array LUNs, you must consider factors such as array LUN size, ONTAP overhead, and checksum type that impact the number of array LUNs required in your ONTAP environment.'
+keywords: factors, impact, required, number, array, luns
+summary: "While planning for ONTAP use of array LUNs, you must consider factors such as array LUN size, ONTAP overhead, and checksum type that impact the number of array LUNs required in your ONTAP environment."
 ---
 = Factors impacting the required number of array LUNs
 :icons: font

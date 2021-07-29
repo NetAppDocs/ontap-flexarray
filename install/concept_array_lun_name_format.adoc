@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_array_lun_name_format.html
 sidebar: sidebar
-keywords: 
-summary: 'The name assigned to an array LUN has a new format to ensure that the name is unique across a cluster.'
+keywords:  array, lun, name, format
+summary: "The name assigned to an array LUN has a new format to ensure that the name is unique across a cluster."
 ---
 = Array LUN name format
 :icons: font

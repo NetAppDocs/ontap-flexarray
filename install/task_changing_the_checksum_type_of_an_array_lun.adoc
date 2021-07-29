@@ -1,8 +1,8 @@
 ---
 permalink: install/task_changing_the_checksum_type_of_an_array_lun.html
 sidebar: sidebar
-keywords: 
-summary: 'You must change the checksum type of an array LUN if you want to add it to an aggregate that has a different checksum type than the checksum type of the LUN.'
+keywords: change, checksum, type, array, lun
+summary: "You must change the checksum type of an array LUN if you want to add it to an aggregate that has a different checksum type than the checksum type of the LUN."
 ---
 = Changing the checksum type of an array LUN
 :icons: font
@@ -11,6 +11,8 @@ summary: 'You must change the checksum type of an array LUN if you want to add i
 [.lead]
 You must change the checksum type of an array LUN if you want to add it to an aggregate that has a different checksum type than the checksum type of the LUN.
 
+*What you'll need*
+
 You must have reviewed the tradeoffs between performance in certain types of workloads and storage capacity utilization of each checksum type.
 
 You can also contact your Sales Engineer for details about using checksums.
@@ -18,13 +20,14 @@ You can also contact your Sales Engineer for details about using checksums.
 * You must assign a zoned checksum type to an array LUN that you plan to add to an advanced zoned checksum (AZCS) aggregate. When a zoned checksum array LUN is added to an AZCS aggregate, it becomes an advanced zoned checksum array LUN. Similarly, when a zoned checksum array LUN is added to a zoned aggregate, it is a zoned checksum type.
 * You cannot modify the checksum of array LUNs while assigning ownership. You can modify the checksum only on already assigned array LUNs.
 
+.Steps
 . Enter the following command to change the checksum type: `storage disk assign -disk disk name -owner owner -c new_checksum_type`
 +
-disk name is the array LUN whose checksum type you want to change.
+_disk name_ is the array LUN whose checksum type you want to change.
 +
-owner is the node to which the array LUN is assigned.
+_owner_ is the node to which the array LUN is assigned.
 +
-new_checksum_type can be blockor zoned.
+_new_checksum_type_ can be block or zoned.
 +
 `storage disk assign -disk EMC-1.1 -owner system147b -c block`
 +
@@ -32,6 +35,6 @@ The checksum type of the array LUN is changed to the new checksum type you speci
 
 . Enter the following command to access the nodeshell: `system node run -node node_name`
 +
-node_name is the name of this system.
+_node_name_ is the name of this system.
 
 . Enter the following command to exit the nodeshell: `exit`

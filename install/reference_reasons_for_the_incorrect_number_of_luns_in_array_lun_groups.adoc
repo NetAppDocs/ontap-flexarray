@@ -1,19 +1,19 @@
 ---
 permalink: install/reference_reasons_for_the_incorrect_number_of_luns_in_array_lun_groups.html
 sidebar: sidebar
-keywords: 
-summary: 'When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.'
+keywords: reasons, incorrect, number, luns, array, groups, issue, resolve
+summary: "When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system."
 ---
 = Reasons for the incorrect number of LUNs in array LUN groups
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.
+When validating your configuration, you should check the `storage array config show` output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.
 
 == Example of storage array config show output
 
-The number of array LUNs in each LUN group appears in the storage array config show output, as the following example shows:
+The number of array LUNs in each LUN group appears in the `storage array config show` output, as the following example shows:
 
 ----
 mysystem1::> storage array config show
@@ -44,14 +44,4 @@ For example, the host group configuration might be incorrect.
 The process for mapping array LUNs to hosts varies among storage arrays.
 
 . If the array LUN has been mapped to the ONTAP system, check zoning and the host group configuration.
-. After the issue is fixed, run storage array config show again to confirm that the issue is fixed.
-
-*Related information*
-
-xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
-
-xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
+. After the issue is fixed, run `storage array config show` again to confirm that the issue is fixed.

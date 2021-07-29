@@ -1,30 +1,12 @@
 ---
 permalink: install/concept_planning_a_port_to_port_connectivity_scheme.html
 sidebar: sidebar
-keywords: 
-summary: 'Planning connectivity between the FC initiator ports on ONTAP systemsand storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN.'
+keywords: plan, port to port, connectivity, scheme
+summary: "Planning connectivity between the FC initiator ports on ONTAP systems and storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN."
 ---
 = Planning a port-to-port connectivity scheme
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Planning connectivity between the FC initiator ports on ONTAP systemsand storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN.
-
-*Related information*
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_how_fc_initiator_ports_are_labeled.adoc[How FC initiator ports are labeled]
-
-xref:concept_requirements_for_v_series_fc_initiator_port_usage.adoc[Requirements for using FC initiator ports]
-
-xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]
-
-xref:concept_example_configuration_shared_fc_initiator_ports.adoc[Example configuration: shared FC initiator ports]
-
-xref:task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.adoc[Checking the number of array LUNs visible on an FC initiator port]
-
-xref:concept_guidelines_for_connecting_a_v_series_system_to_native_disk_shelves.adoc[Guidelines for connecting a V-Series system to native disk shelves]
-
-xref:concept_zoning_recommendation_for_a_configuration_with_storage_arrays.adoc[Zoning recommendation for a configuration with storage arrays]
+Planning connectivity between the FC initiator ports on ONTAP systems and storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN.

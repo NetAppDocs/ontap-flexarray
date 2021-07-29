@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_for_raid_implementation.html
 sidebar: sidebar
-keywords: 
-summary: 'You need to plan the size of and number of LUNs in the storage array RAID groups and decide whether you want to share the RAID group among hosts.'
+keywords: plan, raid, implementation
+summary: "You need to plan the size of and number of LUNs in the storage array RAID groups and decide whether you want to share the RAID group among hosts."
 ---
 = Planning for RAID implementation
 :icons: font

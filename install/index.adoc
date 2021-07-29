@@ -1,11 +1,9 @@
 ---
 permalink: install/index.html
 sidebar: sidebar
-keywords: 
-summary: ''
+keywords: flexarray, virtualization, installation, requirements, reference
+summary: "Welcome to the ONTAP FlexArray Information Library. Here you will find information about how to set up clusters to work with storage arrays."
 ---
 = FlexArray® Virtualization Installation Requirements and Reference
 :icons: font
 :imagesdir: ../media/
-
-

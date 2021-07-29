@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_zoning_for_a_configuration_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'Zoning enables a storage administrator to restrict the array LUNs that a particular ONTAP system can access. ONTAP requires that an array LUN be visible on only one target port for each initiator port.'
+keywords:  zone, configuration, storage, arrays
+summary: "Zoning enables a storage administrator to restrict the array LUNs that a particular ONTAP system can access. ONTAP requires that an array LUN be visible on only one target port for each initiator port."
 ---
 = Zoning in a configuration with storage arrays
 :icons: font

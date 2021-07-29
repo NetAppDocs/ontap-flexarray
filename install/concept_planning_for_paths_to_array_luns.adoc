@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_for_paths_to_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'Paths are the physical connections between the ONTAP system and the storage array. Redundant paths are required to eliminate any single point of failure \(SPOF\) between the ONTAP system and the storage array.'
+keywords: plan, paths, array, luns
+summary: "Paths are the physical connections between the ONTAP system and the storage array. Redundant paths are required to eliminate any single point of failure (SPOF) between the ONTAP system and the storage array."
 ---
 = Planning for paths to array LUNs
 :icons: font

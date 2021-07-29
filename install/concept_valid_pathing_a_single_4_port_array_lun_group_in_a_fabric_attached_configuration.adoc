@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_valid_pathing_a_single_4_port_array_lun_group_in_a_fabric_attached_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'A single 4-port array LUN group configuration works with all storage arrays for all ONTAP releases.'
+keywords: valid, path, single, 4, port, array, lun, group, fabric attached, configuration
+summary: "A single 4-port array LUN group configuration works with all storage arrays for all ONTAP releases."
 ---
 = Valid pathing: a single 4-port array LUN group in a fabric-attached configuration
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_troubleshooting.html
 sidebar: sidebar
-keywords: 
-summary: 'You should validate your configuration during initial installation so you can resolve issues before your configuration is put into a production environment.'
+keywords: troubleshoot, configurations, storage, arrays
+summary: "You should validate your configuration during initial installation so you can resolve issues before your configuration is put into a production environment."
 ---
 = Troubleshooting configurations with storage arrays
 :icons: font

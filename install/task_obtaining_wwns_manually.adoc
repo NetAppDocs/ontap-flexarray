@@ -1,8 +1,8 @@
 ---
 permalink: install/task_obtaining_wwns_manually.html
 sidebar: sidebar
-keywords: 
-summary: 'If the ONTAP system is not connected to the SAN switch, you need to obtain the World Wide Port Names \(WWPNs\) of the system’s FC initiator ports that will be used to connect the system to the switch.'
+keywords: obtain, wwpns, manually
+summary: "If the ONTAP system is not connected to the SAN switch, you need to obtain the World Wide Port Names (WWPNs) of the system’s FC initiator ports that will be used to connect the system to the switch."
 ---
 = Obtaining WWPNs manually
 :icons: font
@@ -13,6 +13,7 @@ If the ONTAP system is not connected to the SAN switch, you need to obtain the W
 
 Having the switch automatically discover WWPNs is the preferred method of obtaining WWPNs because you can avoid potential errors resulting from typing the WWPNs into the switch configuration.
 
+.Steps
 . Connect the system's console connection to a laptop computer.
 . Power on your system.
 +
@@ -28,9 +29,3 @@ Press CTRL-C for boot menu
 To list a specific adapter WWPN, add the adapter name, for example, storage show adapter 0a.
 
 . Record the WWPNs that will be used and exit the Maintenance mode.
-
-*Related information*
-
-xref:task_connecting_an_ontap_system_to_a_storage_array.adoc[Connecting an ONTAP system to a storage array]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
