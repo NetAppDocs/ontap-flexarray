@@ -1,0 +1,53 @@
+---
+permalink: install/reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.html
+sidebar: sidebar
+keywords: array, lun, size, smaller, larger, supported, values, show, message, storage, errors
+summary: "When planning array LUN sizes, you must conform to ONTAP minimum and maximum array LUN size limits. These limits vary according to ONTAP release. The storage errors show output identifies array LUNs that do not meet size requirements."
+---
+= Array LUN size is either smaller or larger than the supported values
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning array LUN sizes, you must conform to ONTAP minimum and maximum array LUN size limits. These limits vary according to ONTAP release. The `storage errors show` output identifies array LUNs that do not meet size requirements.
+
+You cannot assign array LUNs with size issues to an ONTAP system.
+
+== Storage errors show message
+
+----
+NAME (Serial #): This array LUN is too large and is not usable. The maximum array LUN size supported is xTB
+----
+
+OR
+
+----
+NAME (Serial #): This array LUN is too small and is not usable. The minimum array LUN size supported is xGB.
+----
+
+== Explanation
+
+This message is generated when the array LUN is smaller than the minimum array LUN size supported by ONTAP or exceeds the maximum supported size. Primary reasons for array LUN sizes to be larger or smaller than the supported values might be the following:
+
+* The storage array administrator did not convert the ONTAP array LUN size limits into the equivalent limits according to the vendor's definition of units of measure.
++
+Some vendors calculate array LUN size limits differently from ONTAP to determine the minimum and maximum array LUN size limits.
++
+The _Hardware Universe_ lists the values of the supported maximum and minimum array LUN size limits.
+
+* The array LUNs are for another host whose size limits are different from ONTAP limits.
++
+In an open SAN, ONTAP is exposed to array LUNs intended for other hosts if those array LUNs have not been masked.
++
+ONTAP generates an error message about size issues for any array LUN exposed to it.
+
+== Troubleshooting and problem resolution
+
+. Review the `storage errors show` output so that you find out which array LUN has a size problem.
+ ** If the array LUN with the size problem is for ONTAP, the storage array administrator must resize the array LUN to meet ONTAP requirements, and then present it again to ONTAP.
+ ** If the array LUN with the size problem is for another host, the storage array administrator must mask the array LUN so that it is not exposed to ONTAP.
+. After the problem is fixed, run storage array config show again to confirm that the error does not persist.
+
+*Related information*
+
+https://hwu.netapp.com[NetApp Hardware Universe]

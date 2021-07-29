@@ -1,0 +1,12 @@
+---
+permalink: implement-e-series/reference_requirements_for_configuring_e_series_storage_arrays.html
+sidebar: sidebar
+keywords: requirements, configure, e-series, storage, arrays
+summary: "There are system parameters that you must set and considerations to keep in mind when configuring a storage array to work with an ONTAP system."
+---
+= Requirements for configuring E-Series storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+There are system parameters that you must set and considerations to keep in mind when configuring a storage array to work with an ONTAP system.

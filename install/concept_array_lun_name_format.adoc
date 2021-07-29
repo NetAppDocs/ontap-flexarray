@@ -1,0 +1,28 @@
+---
+permalink: install/concept_array_lun_name_format.html
+sidebar: sidebar
+keywords:  array, lun, name, format
+summary: "The name assigned to an array LUN has a new format to ensure that the name is unique across a cluster."
+---
+= Array LUN name format
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The name assigned to an array LUN has a new format to ensure that the name is unique across a cluster.
+
+The array LUN name consists of two components and looks like the following:
+
+<array_prefix>.<offset>, for example EMC-1.1.
+
+* The array_prefix is a unique prefix that ONTAP assigns by default to each storage array.
++
+This field is composed of <array_name-array_instance> (EMC-1 in this case).
++
+array_name can be denoted by the first three letters of the name of the vendor.
++
+If there is more than one array from the same vendor, the value of array_instance proceeds in an ascending order.
+
+* The offset is the ascending virtual disk number that ONTAP assigns to each LUN. It is independent of the LUN ID of the host.
+
+You can modify the <array_prefix> field by using the storage array modify -name -prefix command.

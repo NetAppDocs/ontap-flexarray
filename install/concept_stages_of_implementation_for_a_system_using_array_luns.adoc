@@ -1,0 +1,39 @@
+---
+permalink: install/concept_stages_of_implementation_for_a_system_using_array_luns.html
+sidebar: sidebar
+keywords: stages, implementation, system, use, array, luns, back end, front end
+summary: "Implementing a configuration in which your system uses LUNs from a storage array has two stages: a back-end implementation and a front-end implementation. It is helpful when planning your configuration to understand the high-level tasks in each stage."
+---
+= Stages of implementation for a system using array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Implementing a configuration in which your system uses LUNs from a storage array has two stages: a back-end implementation and a front-end implementation. It is helpful when planning your configuration to understand the high-level tasks in each stage.
+
+== Stage 1: back-end implementation
+
+Setting up the back-end implementation includes all tasks that are required to set up the ONTAP system with a storage array, up to the point where you can install ONTAP software.
+
+Tasks to set up the back-end implementation include the following:
+
+. Creating and formatting array LUNs
+. Assigning ports
+. Cabling
+. Zoning switches (if applicable)
+. In ONTAP, assigning specific array LUNs to an ONTAP system
+. In ONTAP, providing information to set up an ONTAP system on the network
+. Installing ONTAP software
+
+If an ONTAP system is ordered with disk shelves, the ONTAP software is installed by the factory. In such a configuration, you do not need to create the root volume and install licenses and ONTAP software.
+
+If an ONTAP system is ordered without disk shelves, you need to configure ONTAP before setting up the cluster.
+
+== Stage 2: front-end implementation
+
+Tasks to set up the front-end implementation are the same as for a system using disks, including the following:
+
+* Configuring the ONTAP system for all protocols (NAS, FC, or both)
+* Configuring ONTAP features such as SnapVault, SnapMirror, SnapValidator, and Snapshot copies
+* Creating volumes and aggregates
+* Setting up data protection, including NDMP dumps to tapes

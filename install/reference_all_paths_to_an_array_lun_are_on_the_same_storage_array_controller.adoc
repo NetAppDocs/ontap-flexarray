@@ -1,0 +1,85 @@
+---
+permalink: install/reference_all_paths_to_an_array_lun_are_on_the_same_storage_array_controller.html
+sidebar: sidebar
+keywords: all, paths, array, lun, same, storage, array, controller, errors, message
+summary: "ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure (SPOF). The storage errors show command identifies any array LUN whose paths are set up to go to the same storage array controller."
+---
+= All paths to an array LUN are on the same storage array controller
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP does not support configuring all paths to the same storage array controller because doing so sets up a configuration with a single point of failure (SPOF). The `storage errors show` command identifies any array LUN whose paths are set up to go to the same storage array controller.
+
+ONTAP does not allow you to assign array LUNs to an ONTAP system until after you fix this error.
+
+== Storage errors show message
+
+----
+NAME (UID): All paths to this array LUN are connected to the same fault domain. This is a single point of failure
+----
+
+== Explanation
+
+This error occurs because the paths to an array LUN are set up to go to the same storage array controller or FRU.
+
+[NOTE]
+====
+Using four paths to an array LUN, a storage array with FRUs with multiple directors (such as an EMC Symmetrix or HDS USP), or a storage array with dual controllers (such as an EMC CX, or HP EVA) are good methods for achieving redundancy. However, if you set up the paths to go through a single storage array controller or FRU, you are setting up your configuration with a SPOF, even with such features. On an active-active storage array, the entire FRU is considered to be one fault domain. An EMC Symmetrix storage array, for example, has multiple channel directors on the same FEBE board. A FEBE board is considered to be one fault domain because if all paths go through the same FEBE board, you lose all paths if you must replace the board.
+====
+
+The following illustration shows correct and incorrect storage array port selection for setting up redundant paths to an array LUN so that you do not have a single fault domain. The path setup in the example on the left is correct because the paths to the array LUN are redundant--each connection is to a port on a different controller on the storage array. In the example on the right, both paths to the array LUN go to the same controller, which sets up a SPOF.
+
+image::../media/redundant_array_port_selection.gif[This graphic is described in the surrounding text.]
+
+The `storage errors show` command shows the array LUN that is in the same fault domain. You can also see this problem in the `storage disk show` output if you look at the TPGN column (Target port group number). A different TPGN should be shown for each initiator in an initiator port pair. If the TPGN is the same for both initiators in the pair, both initiators are in the same fault domain.
+
+The following `storage disk show` example shows TPGN 1 for LUN 30, which is accessed over initiators 0a and 0c. If the paths are redundant, each initiator shows a different TPGN.
+
+----
+
+mysystem1::> storage disk show mysystem1:vgbr300s70:9.126L30
+                  Disk: HP-1.15
+        Container Type: unassigned
+            Owner/Home: -  / -
+               DR Home: -
+                 Array: HP_HSV450_1
+                Vendor: HP
+                 Model: HSV450
+         Serial Number: 600508B4000B63140000800001660000
+                   UID: 600508B4:000B6314:00008000:01660000:00000000:...
+                   BPS: 512
+         Physical Size: -
+              Position: present
+Checksum Compatibility: block
+             Aggregate: -
+                  Plex: -
+Paths:
+                     LUN Initiator Side   Target Side
+Controller Initiator ID  Switch Port      Switch Port     Acc Use  Target Port      TPGN...
+---------- --------- --- ---------------- --------------- --- ---  ---------------- -----
+mysystem1    0c      30  vgci9148s75:1-12 vgci9148s75:1-9 AO  RDY  50014380025d1509   1
+mysystem1    0a      30  vgbr300s70:12    vgbr300s70:9    AO  INU  50014380025d1508   1
+
+Errors:
+HP-1.15 (600508b4000b63140000800001660000): All paths to this array LUN are connected to the same fault domain. This is a single point of failure.
+----
+
+[NOTE]
+====
+The full UID in this example is 600508B4:000B6314:00008000:01660000:00000000:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.
+====
+
+== Troubleshooting and problem resolution
+
+The paths to the array LUN must be reconfigured so that they go to redundant storage array controllers or FRUs.
+
+. Add a cable to the redundant target port on the other controller.
++
+You should maintain redundancy while fixing this problem by adding a cable to the alternate controller _before_ you remove a cable from the controller with the SPOF. Redundancy is maintained in this case because you are increasing the number of paths to three paths temporarily instead of decreasing the number of paths to one while you are fixing the problem.
+
+. Remove one cable from the controller that was set up with the SPOF.
++
+You now have two redundant paths to the array LUN.
+
+. From the ONTAP command line, enter the following command again and confirm that the error has been fixed: `storage errors show`

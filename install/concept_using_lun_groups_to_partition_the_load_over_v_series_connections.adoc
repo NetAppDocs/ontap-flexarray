@@ -1,0 +1,31 @@
+---
+permalink: install/concept_using_lun_groups_to_partition_the_load_over_v_series_connections.html
+sidebar: sidebar
+keywords: benefits, use, multiple, lun, groups
+summary: "You can use multiple LUN groups in your storage configuration for additional capacity and for improving the system performance by spreading the workload across more target ports."
+---
+= Benefits of using multiple LUN groups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use multiple LUN groups in your storage configuration for additional capacity and for improving the system performance by spreading the workload across more target ports.
+
+A LUN group is set of logical devices on the storage array that an ONTAP system accesses over the same paths. The storage array administrator configures a set of logical devices as a group to define which host WWPNs can access them. ONTAP refers to this set of devices as a LUN group.
+
+Benefits of using multiple LUN groups are as follows:
+
+* There are limits on the number of LUNs that a given FC initiator port pair can support.
++
+For large storage arrays in particular, the required capacity might exceed what a single LUN group can provide. Therefore, using multiple LUN groups can be beneficial.
+
+* You can partition the load of array LUNs over the FC initiator port pairs.
+
+[NOTE]
+====
+Using multiple LUN groups is not supported for all storage arrays. See the _Interoperability Matrix_ to determine whether a configuration using multiple LUN groups is supported for your storage array.
+====
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

@@ -1,0 +1,158 @@
+---
+permalink: install/concept_valid_pathing_eight_port_array_lun_group_configuration.html
+sidebar: sidebar
+keywords: valid, path, eight-port, array, lun, group, configuration, variation, back-end, connections, crossed, fc initiator, maximum
+summary: "You can use an eight-port LUN group configuration to connect storage arrays with ONTAP systems in large clustered deployments that require greater path redundancy and load balancing than possible with fewer ports per LUN group."
+---
+= Valid pathing: eight-port array LUN group configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use an eight-port LUN group configuration to connect storage arrays with ONTAP systems in large clustered deployments that require greater path redundancy and load balancing than possible with fewer ports per LUN group.
+
+You can set up this configuration with the back-end connections crossed or uncrossed.
+
+== Variation in which back-end connections are crossed
+
+In a configuration with the back-end connections crossed, the FC connections from the same storage array controller go to both fabric switches (redundant).
+
+This connection scheme makes better use of both switch ports and storage array ports than if the back-end connections are not crossed, which reduces the impact of a switch or storage array controller failure.
+
+For storage arrays with only two controllers, a crossed eight-port LUN group configuration is preferred over an eight-port array LUN group configuration that is not crossed.
+
+You can only cross the eight-port array LUN group when there are dedicated paths from each node (one FC initiator-to-one-target-port zoning per path).
+
+image::../media/eight_port_array_lun_group_configuration_crossed.gif[]
+
+In this illustration of crossed back-end connections, note how the ONTAP systems are attached to the switches and to the storage array. Vs1 uses switch 1 when attaching to the storage array Controller 1 port 1A and Controller 2 port 2C, and uses switch 2 when attaching to storage array Controller 2 ports 2A and Controller 1 port 1C.
+
+The following table summarizes the zoning for an eight-port array LUN group with crossed back-end connections. Single-initiator zoning is the recommended zoning strategy.
+
+[options="header"]
+|===
+| Zone| FC initiator port on the ONTAP system| Storage array
+3+a|
+Switch 1
+a|
+z1
+a|
+vs1, Port 0a
+a|
+Controller 1, Port 1A
+a|
+z2
+a|
+vs2, Port 0a
+a|
+Controller 1, Port 1B
+a|
+z3
+a|
+vs1, Port 0b
+a|
+Controller 2, Port 2C
+a|
+z4
+a|
+vs2, Port 0b
+a|
+Controller 2, Port 2D
+3+a|
+Switch 2
+a|
+z5
+a|
+vs1, Port 0c
+a|
+Controller 2, Port 2A
+a|
+z6
+a|
+vs2, Port 0c
+a|
+Controller 2, Port 2B
+a|
+z7
+a|
+vs1, Port 0d
+a|
+Controller 1, Port 1C
+a|
+z8
+a|
+vs2, Port 0d
+a|
+Controller 1, Port 1D
+|===
+
+== Variation in which back-end connections are _not_ crossed
+
+In a configuration in which the back-end connections are not crossed, the FC connections from the same storage array controller go to only one fabric switch.
+
+The following illustration shows pathing in a configuration with an eight-port array LUN group in which the back-end connections are not crossed:
+
+image::../media/eight_port_array_lun_group_configuration.gif[]
+
+The following table summarizes the zoning for an eight-port array LUN group when the back-end connections are not crossed. Single-initiator zoning is the recommended zoning strategy.
+
+[options="header"]
+|===
+| Zone| FC initiator port on the ONTAP system| Storage array
+3+a|
+Switch 1
+a|
+z1
+a|
+vs1, Port 0a
+a|
+Controller 1, Port 1A
+a|
+z2
+a|
+vs2, Port 0a
+a|
+Controller 1, Port 1B
+a|
+z3
+a|
+vs1, Port 0b
+a|
+Controller 1, Port 1C
+a|
+z4
+a|
+vs2, Port 0b
+a|
+Controller 1, Port 1D
+3+a|
+Switch 2
+a|
+z5
+a|
+vs1, Port 0c
+a|
+Controller 2, Port 2A
+a|
+z6
+a|
+vs2, Port 0c
+a|
+Controller 2, Port 2B
+a|
+z7
+a|
+vs1, Port 0d
+a|
+Controller 2, Port 2C
+a|
+z8
+a|
+vs2, Port 0d
+a|
+Controller 2, Port 2D
+|===
+
+== Considerations for maximum number of array LUNs per FC initiator
+
+When setting up a configuration with an eight-port array LUN group, you cannot exceed the number of array LUNs that ONTAP supports per FC initiator port.

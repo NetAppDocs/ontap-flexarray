@@ -1,0 +1,34 @@
+---
+permalink: install/task_modifying_assignment_of_spare_array_luns.html
+sidebar: sidebar
+keywords: modify, assignment, spare, array, luns
+summary: "You can change the ownership of a spare array LUN to another node. You might want to do this for load balancing over the nodes."
+---
+= Modifying assignment of spare array LUNs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can change the ownership of a _spare_ array LUN to another node. You might want to do this for load balancing over the nodes.
+
+.Steps
+
+. At the console of the node that owns the array LUN you want to reassign, enter the following command to see a list of spare array LUNs on the node: `storage disk show -owner local`
++
+The array LUNs owned by the node, both spares and LUNs in aggregates, are listed.
+
+. Confirm that the LUN you want to reassign to another node is a spare LUN.
+. Enter the following command to assign ownership of the array LUN to another node: `storage disk assign arrayLUNname -owner new_owner_name -force`
++
+[NOTE]
+====
+The array LUN ownership is not changed if the -force option is not used or if the array LUN was already added to an aggregate.
+====
+
+. Enter the following command to verify that the ownership of the spare array LUN was changed to the other node: `storage disk show -owner local`
++
+The spare array LUN that you changed to the new owner should no longer appear in the list of spares. If the array LUN still appears, repeat the command to change ownership.
+
+. On the destination node, enter the following command to verify that the spare array LUN whose ownership you changed is listed as a spare owned by the destination node: `storage disk show -owner local`
+
+You must add the array LUN to an aggregate before it can be used for storage.

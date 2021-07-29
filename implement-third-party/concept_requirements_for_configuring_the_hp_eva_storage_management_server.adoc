@@ -1,0 +1,16 @@
+---
+permalink: implement-third-party/concept_requirements_for_configuring_the_hp_eva_storage_management_server.html
+sidebar: sidebar
+keywords: requirements, configuring, hp, eva, storage, management, server
+summary: "Sharing FC initiator ports present on an ONTAP system and initiator ports present on an HP EVA Storage Management Server with common EVA target ports causes compatibility issues."
+---
+= Requirements for configuring the HP EVA Storage Management Server
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Sharing FC initiator ports present on an ONTAP system and initiator ports present on an HP EVA Storage Management Server with common EVA target ports causes compatibility issues.
+
+The compatibility issues result from the different host settings for the FC initiator ports present on an ONTAP system and the EVA Storage Management Server initiator ports.
+
+HP recommends that any HP EVA Storage Management Server that resides in a fabric be configured in a zone that is separate from all operating systems.

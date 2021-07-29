@@ -1,0 +1,41 @@
+---
+permalink: install/reference_an_access_control_lun_is_presented_to_ontap.html
+sidebar: sidebar
+keywords: access, control, lun, presented, ontap
+summary: "ONTAP does not support access control array LUNs. The storage errors show output alerts you if an access control LUN is being presented."
+---
+= An access control LUN is presented to ONTAP
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP does not support access control array LUNs. The `storage errors show` output alerts you if an access control LUN is being presented.
+
+== Storage errors show message
+
+----
+
+NAME (UID): This array LUN is an access control LUN. It is not supported and should be masked off or disabled.
+----
+
+== Explanation
+
+ONTAP supports only storage array LUNs. When an array LUN, for example, an E-Series access control LUN is presented to ONTAP, the `storage array config show` output looks normal; it shows the access control LUN in a LUN group, as the following example shows. The warning message at the bottom of the screen indicates the problem. You need to run `storage errors show` to find out that the problem is that an access control LUN was presented and which LUN it is.
+
+----
+
+mysystem1::> storage array config show
+
+          LUN     LUN
+Node      Group   Count  Array Name    Array Target Port       Initiator
+------    ------  -----  ------------ ------------------       --------
+mysystem1   0       1    NETAPP_INF_1  20:1A:00:a0:b8:0f:ee:04   0a
+                                       20:2A:00:a0:b8:0f:ee:04   0c
+
+Warning: Configuration errors were detected.  Use 'storage errors show' for detailed information.
+----
+
+== Troubleshooting and problem resolution
+
+. On the storage array, mask off the access control LUN.
+. In ONTAP, run `storage errors show` again to confirm that the access control LUN is no longer being presented to ONTAP.

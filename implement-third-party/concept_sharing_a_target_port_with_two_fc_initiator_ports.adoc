@@ -1,0 +1,37 @@
+---
+permalink: implement-third-party/concept_sharing_a_target_port_with_two_fc_initiator_ports.html
+sidebar: sidebar
+keywords: share, target, port, two fc initiator, ports
+summary: "A maximum of two ONTAP FC initiator ports across nodes can be attached to a single target port on the storage array. This configuration is supported with MetroCluster configurations in ONTAP."
+---
+= Sharing a target port with two FC initiator ports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A maximum of two ONTAP FC initiator ports across nodes can be attached to a single target port on the storage array. This configuration is supported with MetroCluster configurations in ONTAP.
+
+This configuration is supported for use with all storage arrays listed in the Interoperability Matrix as supported for the release of ONTAP running on your system.
+
+The following illustration shows a shared target port configuration with an HA pair. Sharing a target port with two FC initiator ports is supported with both stand-alone systems and HA pairs.
+
+[NOTE]
+====
+For details about sharing an FC initiator port with multiple target ports and zoning, see the _FlexArray Virtualization Installation Requirements and Reference_
+====
+
+== Shared target port attached to FC initiator ports
+
+The following example shows an HA pair in which a single target port connects to two FC initiator ports:
+
+image::../media/shared_target_ports.gif[This graphic is described in the surrounding text]
+
+The initiator ports 0a of controllers vs1 and vs2 are connected to the storage array port 1A and ports 0c of the controllers are connected to the storage array port 2A.
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
+
+https://docs.netapp.com/us-en/ontap-flexarray/install/index.html[FlexArray virtualization installation requirements and reference]
+
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

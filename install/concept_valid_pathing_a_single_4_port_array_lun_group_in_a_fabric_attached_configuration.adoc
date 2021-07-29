@@ -1,0 +1,33 @@
+---
+permalink: install/concept_valid_pathing_a_single_4_port_array_lun_group_in_a_fabric_attached_configuration.html
+sidebar: sidebar
+keywords: valid, path, single, 4, port, array, lun, group, fabric attached, configuration
+summary: "A single 4-port array LUN group configuration works with all storage arrays for all ONTAP releases."
+---
+= Valid pathing: a single 4-port array LUN group in a fabric-attached configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A single 4-port array LUN group configuration works with all storage arrays for all ONTAP releases.
+
+The following illustration shows pathing in a configuration with a single 4-port array LUN group:
+
+image::../media/one_4_port_array_lun_gp.gif[This graphic is described by the surrounding text.]
+
+In this configuration with a single 4-port LUN group, array LUNs are mapped to four ports on the storage array. The array LUN group is presented to both nodes in the HA pair on different array target ports. However, each node can see an array LUN, end-to-end, through only two paths. Zoning is configured so that each FC initiator port on a node can access only a single target array port.
+
+It is helpful to compare your output against valid storage array config show output when you are checking that the number of LUN groups you expected were set up. The following storage array config show output example shows the expected output for this configuration--a single array LUN group:
+
+----
+vs::> storage array config show
+             LUN   LUN
+Node         Group Count  Array Name     Array Target Port     Initiator
+------------ ----- ----- ------------- ----------------------- ---------
+vs1            1    10   DGC_RAID5_1      50050763030301241A     0a
+                                          50050763031301242A     0c
+vs2            1    10   DGC_RAID5_1      50050763030881241B     0a
+                                          50050763031881242B     0c
+
+4 entries were displayed.
+----

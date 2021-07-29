@@ -1,0 +1,22 @@
+---
+permalink: install/concept_how_fc_initiator_ports_are_labeled.html
+sidebar: sidebar
+keywords: how, fc initiator, ports, labeled
+summary: "All FC initiator ports on ONTAP systems are identified by a number and a letter. Labeling differs depending on whether the ports are on the motherboard or cards in expansion slots."
+---
+= How FC initiator ports are labeled
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+All FC initiator ports on ONTAP systems are identified by a number and a letter. Labeling differs depending on whether the ports are on the motherboard or cards in expansion slots.
+
+* Port numbering on the motherboard
++
+Ports are numbered 0a, 0b, 0c, 0d...
+
+* Port numbering on expansion cards
++
+Ports are numbered according to the slot in which the expansion card is installed. A card in slot 3 yields ports 3A and 3B.
++
+The FC initiator ports are labeled 1 and 2. However, the software refers to them as A and B. You see these labels in the user interface and system messages displayed on the console.

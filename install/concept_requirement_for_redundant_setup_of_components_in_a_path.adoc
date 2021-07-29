@@ -1,0 +1,29 @@
+---
+permalink: install/concept_requirement_for_redundant_setup_of_components_in_a_path.html
+sidebar: sidebar
+keywords: requirements, redundant, setup, components, path, fc switch, ontap, systems, storage, array
+summary: "ONTAP systems must connect to the storage array through a redundant Fibre Channel (FC) network. Two FC networks are required to protect against a connection failing and so that fabric ports or switches can be taken offline for upgrades and replacements without impacting the ONTAP systems."
+---
+= Requirements for redundant setup of components in a path
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP systems must connect to the storage array through a redundant Fibre Channel (FC) network. Two FC networks are required to protect against a connection failing and so that fabric ports or switches can be taken offline for upgrades and replacements without impacting the ONTAP systems.
+
+== ONTAP systems redundancy requirements
+
+* You must attach each connection to a different FC initiator port in the port pair on the ONTAP systems.
+* Each FC initiator port in the same FC initiator port pair must be on a different bus.
+
+== FC switch redundancy requirements
+
+* You must use redundant switches.
+
+== Storage array redundancy requirements
+
+Be sure that the ports on the storage array that you select to access a given LUN are from different components, so as to avoid a single point of failure, for example, from alternate controllers, clusters, or enclosures. The reason is that you do not want all access to an array LUN to be lost if one component fails.
+
+The following illustration shows correct and incorrect storage array port selection for redundancy. The path setup in the example on the left is correct because the paths to the array LUN are redundant--each connection is to a port on a different controller on the storage array.
+
+image::../media/redundant_array_port_selection.gif[Paths to an array LUN must be redundant. It is incorrect for both paths to go to the same storage array controller.]

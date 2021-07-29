@@ -1,0 +1,24 @@
+---
+permalink: install/concept_requirements_for_connecting_to_storage_arrays.html
+sidebar: sidebar
+keywords: requirements, connect, storage, arrays
+summary: "When planning how to connect your ONTAP system to a storage array, your port-to-port connectivity plan must address redundancy, pathing, and other guidelines."
+---
+= Requirements for connecting to storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning how to connect your ONTAP system to a storage array, your port-to-port connectivity plan must address redundancy, pathing, and other guidelines.
+
+The requirements to set up connections are as follows:
+
+* Each connection in a redundant port pair on the storage array must be attached to a different FC initiator port on the ONTAP system.
+* The ports used on the FC switches must be redundant.
+* Connectivity must be set up to avoid a SPOF.
++
+Be sure that the ports on the storage array that you select to access a given LUN are from different components, so as to avoid a single point of failure, for example, from alternate controllers, clusters, or enclosures. The reason is that you do not want all access to an array LUN to be lost if one component fails.
+
+* The number of paths cannot exceed the number of paths supported for your ONTAP release.
+* If you want to set up a configuration where an FC initiator port is shared with multiple target ports or a target port is shared with multiple FC initiator ports, you must follow the appropriate rules.
+* If your storage array supports fewer LUNs per host group per port than the number of LUNs that the ONTAP systems is using, then you need to add additional cables between the ONTAP system and the storage array.

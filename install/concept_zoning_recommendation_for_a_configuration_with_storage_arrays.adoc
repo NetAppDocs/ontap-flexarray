@@ -1,0 +1,17 @@
+---
+permalink: install/concept_zoning_recommendation_for_a_configuration_with_storage_arrays.html
+sidebar: sidebar
+keywords: zone, recommendation, configuration, storage, arrays
+summary: "The recommended type of zoning for a configuration with storage arrays is 1:1 zoning. With 1:1 zoning, each zone contains a single FC initiator port and a single storage array target port."
+---
+= Zoning recommendation for a configuration with storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The recommended type of zoning for a configuration with storage arrays is 1:1 zoning. With 1:1 zoning, each zone contains a single FC initiator port and a single storage array target port.
+
+The benefits of creating 1:1 zoning are as follows:
+
+* You limit the number of ports over which a specific array LUN can be accessed.
+* There are discovery and boot time improvements because the FC initiators ONTAP systems do not attempt to discover each other.

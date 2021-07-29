@@ -1,0 +1,25 @@
+---
+permalink: install/concept_how_array_luns_become_available_for_ontap_storage_use.html
+sidebar: sidebar
+keywords: how, array, luns, available, ontap, storage, use
+summary: "An ONTAP system cannot use an array LUN presented to it until ONTAP has been configured to use the array LUN."
+---
+= How array LUNs become available for ONTAP storage use
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+An ONTAP system cannot use an array LUN presented to it until ONTAP has been configured to use the array LUN.
+
+Although the storage array administrator makes an array LUN accessible to ONTAP, ONTAP cannot use the array LUN for storage until both of the following tasks are completed:
+
+. One ONTAP system (licensed to use array LUNs) must be assigned to be the _owner_ of the array LUN.
+. The array LUN must be added to an aggregate.
+
+When you assign an array LUN to an ONTAP system, ONTAP writes data to the array LUN to identify the assigned system as the owner of the array LUN. This logical relationship is referred to as disk ownership.
+
+When you assign an array LUN to an ONTAP system, it becomes a spare LUN owned by that system and it is no longer available to any other ONTAP system.
+
+A spare array LUN cannot be used for storage until you add it to an aggregate. Thereafter, ONTAP ensures that only the owner of the array LUN can write data to and read data from the LUN.
+
+In an HA pair, both nodes must be able to see the same storage, but only one node in the pair is the owner of the array LUN. The partner node takes over read/write access to an array LUN in case of a failure of the owning node. The original owning node resumes ownership after the problem that caused unavailability of the node is fixed.

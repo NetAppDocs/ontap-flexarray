@@ -1,0 +1,26 @@
+---
+permalink: implement-third-party/concept_ibm_ds_storage_array_families.html
+sidebar: sidebar
+keywords: ibm ds, storage, array, families
+summary: "ONTAP does not support mixing some types of storage in aggregates. To help you determine the array LUNs that can be mixed in an aggregate, the storage arrays from each vendor are grouped into families. When you create aggregates, you cannot mix array LUNs from different vendors and from different storage array families in the same aggregate."
+---
+= IBM DS storage array families
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP does not support mixing some types of storage in aggregates. To help you determine the array LUNs that can be mixed in an aggregate, the storage arrays from each vendor are grouped into families. When you create aggregates, you cannot mix array LUNs from different vendors and from different storage array families in the same aggregate.
+
+Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
+
+The following list shows arrays organized by family:
+
+* Family 1
+ ** DS8300
+ ** DS8100
+* Family 2
+ ** DS8800
+ ** DS8700
+ ** DS8870
+
+The Interoperability Matrix is the final authority for information about the storage arrays supported for each vendor.

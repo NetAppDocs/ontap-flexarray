@@ -1,0 +1,12 @@
+---
+permalink: install/concept_invalid_path_setup_examples.html
+sidebar: sidebar
+keywords: invalid, path, setup, examples
+summary: "Path setup can be invalid because paths to an array LUN are not redundant or the number of paths to an array LUN does not meet ONTAP requirements."
+---
+= Invalid path setup examples
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Path setup can be invalid because paths to an array LUN are not redundant or the number of paths to an array LUN does not meet ONTAP requirements.

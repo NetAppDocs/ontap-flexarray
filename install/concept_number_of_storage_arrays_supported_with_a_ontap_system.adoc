@@ -1,0 +1,35 @@
+---
+permalink: install/concept_number_of_storage_arrays_supported_with_a_ontap_system.html
+sidebar: sidebar
+keywords: considerations, connect, multiple, storage, arrays, ontap, system
+summary: "Depending on the storage array models supported with ONTAP systems, you can connect either multiple storage arrays or a single storage array to the ONTAP system."
+---
+= Considerations when connecting multiple storage arrays to an ONTAP system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Depending on the storage array models supported with ONTAP systems, you can connect either multiple storage arrays or a single storage array to the ONTAP system.
+
+[NOTE]
+====
+The Interoperability Matrix identifies any storage array model for which only one storage array is supported with an ONTAP system.
+====
+
+Consider the following when connecting multiple storage arrays to an ONTAP system:
+
+* If you can connect multiple arrays of the same supported storage array model to the ONTAP system, there is no limit on the number of storage arrays that you can deploy.
+* The storage arrays can either be from the same supported vendor or from different vendors.
++
+If the storage arrays are from the same vendor, then they can be all from the same family or from different families.
+
+[NOTE]
+====
+Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
+====
+
+*Related information*
+
+https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

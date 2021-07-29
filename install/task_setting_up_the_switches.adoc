@@ -1,0 +1,55 @@
+---
+permalink: install/task_setting_up_the_switches.html
+sidebar: sidebar
+keywords: set, up, switches
+summary: "Switch configuration is typically done by the storage or SAN administrator. The switches have to be zoned so that the ONTAP systems and the storage arrays can see each other. You must use single-initiator zoning as the zoning strategy."
+---
+= Setting up the switches
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Switch configuration is typically done by the storage or SAN administrator. The switches have to be zoned so that the ONTAP systems and the storage arrays can see each other. You must use single-initiator zoning as the zoning strategy.
+
+.Steps
+. Log in to the storage array and obtain the WWPNs of the FC adapters of the storage array.
+. Use the Fibre Channel switch commands to zone each switch so that the storage array and the ONTAP system see each other's WWPNs.
++
+Consider the following example of ONTAP systems in an HA pair:
++
+image::../media/one_4_port_array_lun_gp.gif[This graphic is described by the surrounding text.]
++
+In the example configuration, the zones are as follows:
++
+[options="header"]
+|===
+| Zone| ONTAP system and port| Storage array controller and port
+3+a|
+Switch 1
+a|
+z1
+a|
+vs1, 0a
+a|
+Controller 1, 1A
+a|
+z2
+a|
+vs2, 0a
+a|
+Controller 1, 1B
+3+a|
+Switch 2
+a|
+z3
+a|
+vs1, 0c
+a|
+Controller 2, 2A
+a|
+z4
+a|
+vs2, 0c
+a|
+Controller 2, 2B
+|===

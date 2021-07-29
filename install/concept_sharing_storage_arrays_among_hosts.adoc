@@ -1,0 +1,18 @@
+---
+permalink: install/concept_sharing_storage_arrays_among_hosts.html
+sidebar: sidebar
+keywords: share, storage, arrays, hosts
+summary: "A typical storage array provides storage for hosts from different vendors. However, ONTAP requires some storage arrays to be dedicated to ONTAP systems."
+---
+= Sharing storage arrays among hosts
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A typical storage array provides storage for hosts from different vendors. However, ONTAP requires some storage arrays to be dedicated to ONTAP systems.
+
+To determine whether your vendor's storage array must be dedicated to ONTAP systems, see the _Interoperability Matrix_.
+
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

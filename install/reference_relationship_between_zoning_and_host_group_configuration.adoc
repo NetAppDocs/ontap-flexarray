@@ -1,0 +1,12 @@
+---
+permalink: install/reference_relationship_between_zoning_and_host_group_configuration.html
+sidebar: sidebar
+keywords: relationship, between, zone, host, group, configuration
+summary: "When you fix zoning configuration errors you sometimes have to change host group configuration also, and the reverse."
+---
+= Relationship between zoning and host group configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you fix zoning configuration errors you sometimes have to change host group configuration also, and the reverse.

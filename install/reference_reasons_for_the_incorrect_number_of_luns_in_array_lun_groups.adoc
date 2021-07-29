@@ -1,0 +1,47 @@
+---
+permalink: install/reference_reasons_for_the_incorrect_number_of_luns_in_array_lun_groups.html
+sidebar: sidebar
+keywords: reasons, incorrect, number, luns, array, groups, issue, resolve
+summary: "When validating your configuration, you should check the storage array config show output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system."
+---
+= Reasons for the incorrect number of LUNs in array LUN groups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When validating your configuration, you should check the `storage array config show` output to ensure that the number of LUNs in each LUN group is what you intended. The most likely cause for the incorrect number of LUNs in a LUN group is that the array LUN is not mapped to an ONTAP system.
+
+== Example of storage array config show output
+
+The number of array LUNs in each LUN group appears in the `storage array config show` output, as the following example shows:
+
+----
+mysystem1::> storage array config show
+
+               LUN     LUN
+Node           Group   Count Array Name     Array Target Port  Initiator
+------         ------ ----- -------------- -------------------- ----------
+mysystem1        0      50   DGC_RAID5_1     201A00a0b80fee04     0a
+                                             202A00a0b80fee04     0c
+----
+
+== Explanation
+
+The most likely reasons that an array LUN you expected to be in a LUN group is missing are as follows:
+
+* The array LUN is not mapped to the ONTAP system.
+* A mapping error is made that resulted in the array LUN being in the wrong LUN group.
++
+For example, the host group configuration might be incorrect.
+
+* The storage array is still in the process of initializing and making the array LUNs available (transitional state).
+* The ONTAP LUN scanner has not yet discovered the LUNs (transitional state).
+
+== Resolving the issue
+
+. If the array LUN has not been mapped to the ONTAP system, the storage array administrator has to map it.
++
+The process for mapping array LUNs to hosts varies among storage arrays.
+
+. If the array LUN has been mapped to the ONTAP system, check zoning and the host group configuration.
+. After the issue is fixed, run `storage array config show` again to confirm that the issue is fixed.

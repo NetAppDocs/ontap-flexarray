@@ -1,0 +1,77 @@
+---
+permalink: implement-third-party/reference_required_parameters_for_hitachi_storage_arrays_with_ontap_systems.html
+sidebar: sidebar
+keywords: required, parameters, hitachi, storage, arrays, ontap, systems, ams, hus, vsp, hus vm, workaround
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
+---
+= Required parameters for Hitachi storage arrays with ONTAP systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.
+
+== Required system parameters for AMS and HUS storage arrays
+
+The parameters that must be set are listed in the following table:
+[options="header"]
+|===
+| Parameter| Setting
+a|
+`Mapping mode`
+a|
+Enabled
+a|
+`Host group security`
+a|
+Enabled
+a|
+`Mode Setting > Common Setting`
+a|
+Standard Mode
+a|
+`Platform`
+a|
+Not specified
+a|
+`Middleware`
+a|
+Not specified
+|===
+
+== Required system parameters for VSP and HUS VM storage arrays
+
+The parameters that must be set are listed in the following table:
+[options="header"]
+|===
+| Parameter| Setting
+a|
+`Host mode`
+a|
+Standard or 00
+a|
+`Port security`
+a|
+Enabled
+2+a|
+[NOTE]
+====
+A host group that is separate from the default host groups should be created for each initiator-target port pair.
+====
+|===
+The storage array parameters should be set and LUNs should be mapped to the host groups before the switch is zoned to connect the ONTAP system to the Hitachi storage array.
+
+If ONTAP FC initiator ports are zoned with Hitachi array target ports before the storage array parameters are set and the LUNs are mapped to the host groups, you might not be able to see any LUNs presented to the ONTAP interface.
+
+In this situation, ONTAP generates one of the following EMS messages:
+----
+[fci.device.login.reject:info] The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x9 'Invalid R_CTL Field', explanation code 0x29 'Insufficient Resources to Support Login'
+----
+----
+[fci.device.login.reject:info]: The PLOGI transmitted by port XX was rejected by port_id 0xYYYY with reason code 0x3 'Nx_Port Not Available, Temporary', explanation code 0x29 'Insufficient Resources to Support Login'
+----
+== Workaround
+
+If zoning was configured prior to setting the parameters and mapping the LUNs to the host groups, you can resolve the problem of LUNs not being visible by performing a path re-initialization to force a rediscovery of the array LUNs that are mapped from the Hitachi storage array. See Workaround when LUNs are not visible with Hitachi storage arrays section for the workaround to this problem.
+
+xref:reference_workaround_when_luns_are_not_visible_with_hitachi_storage_arrays.adoc[Workaround when LUNs are not visible with Hitachi storage arrays]

@@ -1,0 +1,78 @@
+---
+permalink: install/concept_guidelines_for_connecting_a_v_series_system_to_native_disk_shelves.html
+sidebar: sidebar
+keywords:  guidelines, connect, v-series, system, native, disk, shelves, fc initiator, ports
+summary: "When planning how to connect your V-Series system to native disk shelves, your port-to-port connectivity plan should address redundancy and other guidelines."
+---
+= Guidelines for connecting a V-Series system to native disk shelves
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning how to connect your V-Series system to native disk shelves, your port-to-port connectivity plan should address redundancy and other guidelines.
+
+== Number of FC initiator ports needed for disks
+
+The number of FC initiator ports required to connect a V-Series system to a disk shelf depends on whether your V-Series system is a stand-alone system or in an HA pair
+
+[cols="2*",options="header"]
+|===
+| Configuration| Number of FC initiator ports
+a|
+Stand-alone system
+a|
+
+* If you are using one loop: one FC initiator port.
+* If you are connecting two loops: two FC initiator ports, one for each loop.
+
+a|
+In an HA pair
+a|
+
+* If you are using Multipath Storage, two FC initiator ports for each loop.
+* If you are not using Multipath Storage, one FC initiator port for each controller for each loop in the configuration.
+
+|===
+
+== Connections between a V-Series system and disks
+
+You follow the same processes to cable a V-Series system to a native disk shelf as you would to cable a FAS system to a native disk shelf. When creating your port-to-port connectivity scheme, this guide and the ONTAP and hardware guides in the following table provide information about setup and management of disks and disk shelves.
+
+[cols="2*",options="header"]
+|===
+| For information about...| See...
+a|
+Disk support, including supported disk speeds, and disk capacity
+a|
+https://mysupport.netapp.com/site/global/dashboard[NetApp Support]
+
+a|
+Installing a V-Series system in a rack or system cabinet
+a|
+On new systems, this task is typically performed by the factory. If you need instructions, see the guide for your cabinet.
+a|
+Connecting a disk shelf to a stand-alone V-Series system
+a|
+The Installation and Setup Instructions for your platform.
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP1213632[Installation and Setup Instructions 32xx Systems]
+* https://library.netapp.com/ecm/ecm_download_file/ECMP1147995[Installation and Setup Instructions 62xx Systems]
+
+a|
+Connecting an HA pair to a disk shelf
+a|
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html[High-availability configuration]
+
+a|
+Adding a disk shelf
+a|
+The appropriate guide for your disk shelf type.
+a|
+Moving a disk shelf
+a|
+The appropriate guide for your disk shelf type.
+a|
+Disk management
+a|
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html[Disk and aggregate management]
+|===

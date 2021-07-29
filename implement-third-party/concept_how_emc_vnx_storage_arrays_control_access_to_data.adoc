@@ -1,0 +1,21 @@
+---
+permalink: implement-third-party/concept_how_emc_vnx_storage_arrays_control_access_to_data.html
+sidebar: sidebar
+keywords: emc, vnx, storage, array, control, access, data
+summary: "EMC VNX array use Storage Groups to control access to data. A Storage Group is one or more LUNs within the storage array that can be accessed only by the host or hosts that you associate with the array LUNs. A host cannot access or modify data in any array LUNs that are not part of its Storage Group."
+---
+= How EMC VNX storage array control access to data
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+EMC VNX array use Storage Groups to control access to data. A Storage Group is one or more LUNs within the storage array that can be accessed only by the host or hosts that you associate with the array LUNs. A host cannot access or modify data in any array LUNs that are not part of its Storage Group.
+
+ONTAP supports multiple Storage Groups if these rules are followed:
+
+* Switch zoning must define which target ports the FC initiator ports on the ONTAP system use to access each array LUN group.
+* LUN masking must be used to restrict host access to array LUNs.
+* Storage Groups must define which array LUN groups are presented to each FC initiator port.
+* One FC initiator port pair on each ONTAP system is required for each array LUN group.
+
+If array LUN neighborhoods are used, the V-Series systemsin the same neighborhood must be in the same Storage Group.

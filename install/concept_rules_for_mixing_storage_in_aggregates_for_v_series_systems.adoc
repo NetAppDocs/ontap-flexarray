@@ -1,0 +1,25 @@
+---
+permalink: install/concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.html
+sidebar: sidebar
+keywords:  rules, mix, storage, array, lun, aggregates
+summary: "When planning for aggregates, you must consider the rules for mixing storage in aggregates. You cannot mix different storage types or array LUNs from different vendors or vendor families in the same aggregate."
+---
+= Rules for mixing storage in array LUN aggregates
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When planning for aggregates, you must consider the rules for mixing storage in aggregates. You cannot mix different storage types or array LUNs from different vendors or vendor families in the same aggregate.
+
+Adding the following to the same aggregate is not supported:
+
+* Array LUNs and disks
+* Array LUNs with different checksum types
+* Array LUNs from different drive types (for example, FC and SATA) or different speeds
+* Array LUNs from different storage array vendors
+* Array LUNs from different storage array model families
+
+[NOTE]
+====
+Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
+====

@@ -1,0 +1,18 @@
+---
+permalink: install/task_preparing_array_luns_before_removing_a_v_series_system_from_service.html
+sidebar: sidebar
+keywords: prepare, array, luns, before, remove, ontap, system, service
+summary: "You must release the persistent reservations on all array LUNs assigned to an ONTAP system before removing the system from service."
+---
+= Preparing array LUNs before removing an ONTAP system from service
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must release the persistent reservations on all array LUNs assigned to an ONTAP system before removing the system from service.
+
+When you assign ONTAP ownership of an array LUN, ONTAP places persistent reservations (ownership locks) on that array LUN to identify which ONTAP system owns the LUN. If you want the array LUNs to be available for use by other types of hosts, you must remove the persistent reservations that ONTAP put on those array LUNs; some arrays do not allow you to destroy a reserved LUN if you do not remove the ownership and persistent reservations that ONTAP wrote to that LUN.
+
+For example, the Hitachi USP storage array does not have a user command for removing persistent reservations from LUNs. If you do not remove persistent reservations through ONTAP before removing the ONTAP system from service, you must call Hitachi technical support to remove the reservations.
+
+Contact technical support for instructions about how to remove persistent reservations from LUNs before removing an ONTAP system from service.

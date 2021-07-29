@@ -1,0 +1,51 @@
+---
+permalink: install/reference_array_lun_is_marked_foreign_and_has_a_reservation_data_ontap_8_3_and_later.html
+sidebar: sidebar
+keywords: array, lun, marked, foreign, reservation, show, message, troubleshoot, resolution, problem
+summary: "You can import data hosted on array LUNs in their native format to ONTAP. The process of importing the contents of such an array LUN that is marked foreign might be impacted if the array LUN has external host reservations during import."
+---
+= Array LUN is marked foreign and has a reservation
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can import data hosted on array LUNs in their native format to ONTAP. The process of importing the contents of such an array LUN that is marked *foreign* might be impacted if the array LUN has external host reservations during import.
+
+== Storage errors show message
+
+----
+
+EMC-1.3 (600000e00d1000000010000e00030000): This array LUN is marked foreign and has a reservation.
+----
+
+== Explanation
+
+This error condition occurs when the reservations created by external host applications on the LUN are not cleared before the ONTAP administrator initiates the import process. The import operation fails and the message is displayed as the output of the `storage errors show` command.
+
+The reservations must be cleared for the import operation to succeed.
+
+== Troubleshooting and problem resolution
+
+To fix the problem, the storage array administrator must remove the persistent reservation from the array LUN.
+
+You can remove the persistent reservation either from the external host that accesses the array LUN data in its native format or by using ONTAP commands. You can use the following ONTAP commands to remove the reservation:
+
+. Review the `storage errors show` output to identify the array LUN with reservations, as shown in the following example:
++
+----
+
+system1a::> storage errors show
+EMC_SYMMETRIX_1
+--------------------------------------
+EMC-1.3 (600000e00d1000000010000e00030000): This array LUN is marked foreign and has a reservation.
+----
+
+. Run the `set -privilege advanced` command to switch to the advanced mode, because you cannot import the array LUN contents in the admin mode.
+. Use the `storage disk -remove-reservation` command to remove the persistent reservation from the identified array LUN.
++
+----
+
+system1a::>* storage disk remove-reservation -disk EMC-1.3
+----
+
+. Use the `lun import start` command to initiate the import process of the array LUN contents to ONTAP.

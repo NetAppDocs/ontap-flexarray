@@ -1,0 +1,79 @@
+---
+permalink: install/task_connecting_an_ontap_system_to_a_storage_array.html
+sidebar: sidebar
+keywords: connect, ontap, system, storage, array
+summary: "Connecting your ONTAP system to a storage array involves cabling the ONTAP system, switches, and storage arrays together and connecting additional devices, such as tape backup devices."
+---
+= Connecting an ONTAP system to a storage array
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Connecting your ONTAP system to a storage array involves cabling the ONTAP system, switches, and storage arrays together and connecting additional devices, such as tape backup devices.
+
+*What you'll need*
+
+* You must have identified the onboard ports and expansion adapter ports for your ONTAP system for connecting to the storage array.
+* You must have located the ports on the storage array that you want to use to connect to the ONTAP system.
+
+This procedure describes how to connect an ONTAP system to a storage array through two paths, with each initiator dedicated to one target port.
+
+.Steps
+. Connect the ONTAP system to the switches as shown in the following table:
++
+[options="header"]
+|===
+| For...| Follow these steps...
+a|
+A stand-alone system
+a|
+
+ .. Connect one cable from one FC initiator port on the ONTAP system to a port on Switch 1.
+ .. Connect another cable from a redundant FC initiator port to a port on Switch 2.
+
+a|
+An HA pair
+a|
+
+ .. On the first node in the HA pair, connect one cable from one FC initiator port to a port on Switch 1.
+ .. Connect another cable from a redundant FC initiator port on the same node to a port on Switch 2.
+ .. On the second node in the HA pair, connect one cable from one FC initiator port to a port on Switch 1.
+ .. Connect another cable from a redundant FC initiator port on the same node to a port on Switch 2.
+
++
+|===
+
+. Connect the switches to the storage array by using the instructions in the following table and, for an HA pair, the illustration following the table:
++
+[options="header"]
+|===
+| For a stand-alone system...| For an HA pair...
+a|
+
+ .. Connect Switch 1 to the storage array controller 1, port 1A.
+ .. Connect Switch 2 to the storage array controller 2, port 2A.
+
+a|
+
+ .. Connect Switch 1 to the storage array controller 1, port 1A.
+ .. Connect Switch 2 to the storage array controller 2, port 2A.
+ .. Connect Switch 1 to the storage array controller 1, port 1B.
+ .. Connect Switch 2 to the storage array controller 2, port 2B.
+
++
+|===
+The following illustration shows the connections for an HA pair.
++
+image::../media/one_4_port_array_lun_gp.gif[Connections from vs1 0a and vs2 0a go to storage array controller 1, ports 1A and 1B. Connections from vs1 0c and vs2 0c go to storage array controller 2, ports 2A and 2B.]
+
+. *Optional:* Connect the ONTAP system to a tape backup device through a separate FC initiator port or SCSI tape adapter.
+. Verify that the storage array is configured and connected properly, and that it is powered on.
++
+Your configured and connected storage array must be powered on before you power on your ONTAP system. See your storage array documentation for how to power on the storage array.
+
+. If your deployment includes switches, ensure that all switch IDs are set, and then turn them on at 10-minute intervals.
+. *Optional:*  If applicable, turn on any tape backup devices.
+. Power on the ONTAP system and perform the initial network setup and configuration.
+. If the storage array does not automatically discover the ONTAP system WWNs after you connect the ONTAP system to the storage array, you must obtain the WWNs manually.
+
+You must continue with the appropriate setup of ONTAP management features to work with the storage arrays.

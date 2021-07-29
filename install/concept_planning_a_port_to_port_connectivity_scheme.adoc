@@ -1,0 +1,12 @@
+---
+permalink: install/concept_planning_a_port_to_port_connectivity_scheme.html
+sidebar: sidebar
+keywords: plan, port to port, connectivity, scheme
+summary: "Planning connectivity between the FC initiator ports on ONTAP systems and storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN."
+---
+= Planning a port-to-port connectivity scheme
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Planning connectivity between the FC initiator ports on ONTAP systems and storage array ports includes determining how to achieve redundancy and meeting requirements for the number of paths to an array LUN.

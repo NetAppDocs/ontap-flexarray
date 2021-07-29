@@ -1,0 +1,25 @@
+---
+permalink: install/concept_rules_for_sharing_a_target_port_with_multiple_fc_initiator_ports.html
+sidebar: sidebar
+keywords: rules, share, target, port, multiple, fc initiator
+summary: "Connecting a maximum of two ONTAP FC initiator ports to a single target port on the storage array is supported. Each target port is zoned into two FC initiator ports, one from each cluster node. Sharing a target port connected to ONTAP systems with any other host is not supported."
+---
+= Rules for sharing a target port with multiple FC initiator ports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Connecting a maximum of two ONTAP FC initiator ports to a single target port on the storage array is supported. Each target port is zoned into two FC initiator ports, one from each cluster node. Sharing a target port connected to ONTAP systems with any other host is not supported.
+
+Sharing a target port with multiple initiators helps in optimizing the use of storage array ports for connectivity with ONTAP systems.
+
+The rules for this configuration are as follows:
+
+* When the ONTAP systems are in an HA pair, each node can share at the most one FC initiator port with the same target port.
+* All storage arrays must be from the same vendor and model family.
+* Connecting a single target port to multiple FC initiator ports is supported for MetroCluster configurations.
+* The best practice for zoning is to have each FC initiator-target port pair in a separate zone (1:1).
+
+*Related information*
+
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]

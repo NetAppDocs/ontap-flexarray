@@ -1,0 +1,44 @@
+---
+permalink: install/concept_planning_summary_for_a_v_series_system_using_native_disks.html
+sidebar: sidebar
+keywords: plan, summary, v-series, system, native, disks, additional, considerations, setup, array, luns
+summary: "You can install native disk shelves on new or existing V-Series systems. However, you must consider a few additional factors if you plan to install native disk shelves on V-Series systems, compared to installing the disk shelves on FAS systems."
+---
+= Planning summary for a V-Series system using native disks
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can install native disk shelves on new or existing V-Series systems. However, you must consider a few additional factors if you plan to install native disk shelves on V-Series systems, compared to installing the disk shelves on FAS systems.
+
+== Additional planning considerations for basic setup on V-Series systems with disks
+
+You must consider the following when determining basic setup and installation requirements for your V-Series system that uses native disks:
+
+* If the V-Series system is ordered with disk shelves, the factory configures the root volume and installs licenses and ONTAP software (just as it does for FAS systems).
+* If the V-Series system is not ordered with disk shelves, you must plan to install the ONTAP software and appropriate licenses.
+* ONTAP automatically assigns ownership to native disks attached to the V-Series system.
+
+== Additional planning considerations if the V-Series system uses both disks and array LUNs
+
+The following table summarizes additional planning considerations and the location of information to help you with each task.
+[options="header"]
+|===
+| Planning consideration| Where to find guidelines
+a|
+Location of the root volume
+a|
+xref:concept_location_of_the_root_volume.adoc[Location of the root volume]
+a|
+How many disks and array LUNs combined can be assigned without exceeding the supported maximum limit for the V-Series system
+a|
+https://hwu.netapp.com[NetApp Hardware Universe]
+a|
+FC initiator port usage
+a|
+xref:concept_requirements_for_v_series_fc_initiator_port_usage.adoc[Requirements for FC initiator port usage]
+a|
+The type of data that should reside on disks and the type of data that should reside on array LUNs
+a|
+You must evaluate the type of data that needs to be managed, and then decide whether the data can reside on native disks or array LUNs.
+|===

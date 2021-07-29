@@ -1,0 +1,13 @@
+---
+layout: astra
+sidebar: sidebar
+permalink: index.html
+summary: ONTAP FlexArray Documentation
+---
+
+= ONTAP FlexArray Documentation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/

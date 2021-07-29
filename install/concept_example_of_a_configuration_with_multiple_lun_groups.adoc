@@ -1,0 +1,67 @@
+---
+permalink: install/concept_example_of_a_configuration_with_multiple_lun_groups.html
+sidebar: sidebar
+keywords: example, configuration, multiple, lun, groups
+summary: "You can use a multiple LUN group configuration to improve system performance by spreading the workload over multiple target ports."
+---
+= Example of a configuration with multiple LUN groups
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use a multiple LUN group configuration to improve system performance by spreading the workload over multiple target ports.
+
+A multiple LUN group configuration is supported for most storage arrays. See the _Interoperability Matrix_ to confirm this configuration is supported with your storage array.
+
+The following illustration shows how one FC initiator port pair (0c and 0f) on an ONTAP system accesses one LUN group over one storage array port pair, and a second FC initiator port pair (0a and 0h) accesses a second LUN group on the same storage array over a different storage array port pair.
+
+This configuration is referred to as stand-alone with two 2-port array LUN groups. A multiple LUN group configuration could have an HA pair instead of a stand-alone system.
+
+image::../media/multiple_lun_groups_with_stand_alone_6xxx_array_controller.gif[This graphic is described by the surrounding text.]
+
+This multiple LUN group configuration enables you to spread the I/O across the RAID groups (parity groups) on the storage array. You set up your configuration so that different FC initiator port pairs access different groups of LUNs on the storage array. The ONTAP system sees any given array LUN over only two paths, because a given LDEV (logical device) is mapped to only two redundant ports on the storage array. Each LUN group is accessed through a different target port pair.
+
+Each LDEV is identified externally by a LUN ID. The LDEV must be mapped to the same LUN ID on all storage array ports over which it will be visible to ONTAP systems.
+
+[NOTE]
+====
+The same LUN ID cannot refer to two different LDEVs, even if the LUNs using the same ID are in different host groups on a target port. Although LUN ID reuse is not supported on the same target port, LUN ID reuse is supported on a storage array if the LUNs are mapped to different storage array ports.
+====
+
+The following table summarizes the zoning for this example. Single-initiator zoning is the recommended zoning strategy.
+
+[options="header"]
+|===
+| Zone| FC initiator port on the ONTAP system| Storage array
+3+a|
+Switch 1
+a|
+z1
+a|
+Port 0a
+a|
+Controller 1 Port B
+a|
+z2
+a|
+Port 0c
+a|
+Controller 1 Port A
+3+a|
+Switch 2
+a|
+z3
+a|
+Port 0f
+a|
+Controller 2 Port A
+a|
+z4
+a|
+Port 0h
+a|
+Controller 2 Port B
+|===
+*Related information*
+
+https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

@@ -1,0 +1,35 @@
+---
+permalink: install/concept_invalid_path_setup_alternate_paths_are_not_configured.html
+sidebar: sidebar
+keywords: invalid, path, setup, alternate, paths, configured
+summary: "It is important to set up alternate paths to all array LUNs from both FC initiators on the ONTAP system, thereby avoiding a single point of failure (SPOF)."
+---
+= Invalid path setup: alternate paths are not configured
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+It is important to set up alternate paths to all array LUNs from both FC initiators on the ONTAP system, thereby avoiding a single point of failure (SPOF).
+
+The following configuration is invalid because it does not provide alternate paths from each FC initiator port on the ONTAP systems to each LUN on the storage array. Both FC initiator ports from the same ONTAP system are connected to the storage array through the same switch.
+
+image::../media/invalid_config_no_alternate_paths.gif[This graphic is described in the surrounding text.]
+
+Assume that the following zoning is in place in this invalid example:
+
+* For vs1:
+ ** 0a is zoned to see Controller 1 Port A.
+ ** 0c is zoned to see Controller 1 Port B.
+* For vs2:
+ ** 0a is zoned to see Controller 2 Port A.
+ ** 0c is zoned to see Controller 2 Port B.
+
+In this sample configuration, each switch becomes a SPOF.
+
+To make this a valid configuration, the following changes must be made:
+
+* vs1's FC initiator port 0c must be connected to Switch 2.
+* vs2's FC initiator port 0a must be connected to Switch 1.
+* Appropriate zoning must be configured.
++
+If you are using multiple ports on a storage array that supports configuring a specific set of LUNs on a selected set of ports, a given FC initiator port must be able to see all array LUNs presented on the fabric.

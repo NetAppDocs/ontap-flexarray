@@ -1,0 +1,112 @@
+---
+permalink: install/reference_array_luns_are_configured_with_conflicting_failover_modes_clustered_data_ontap_8_2_and_later.html
+sidebar: sidebar
+keywords: array, luns, configured, conflict, failover, modes
+summary: "ONTAP requires that array LUNs that are visible to a particular ONTAP system be configured with the same failover mode. On some storage arrays, it is possible to configure inconsistent failover modes on different paths to an array LUN."
+---
+= Array LUNs are configured with conflicting failover modes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP requires that array LUNs that are visible to a particular ONTAP system be configured with the same failover mode. On some storage arrays, it is possible to configure inconsistent failover modes on different paths to an array LUN.
+
+== Storage errors show message
+
+----
+NAME(UID): This array LUN is configured with conflicting failover modes. Each path to this LUN must use the same mode.
+----
+
+== Explanation
+
+On some storage arrays, for example EMC CLARiiON storage arrays, the failover mode can be set by FC initiator port. On such storage arrays, it is possible to set inconsistent failover modes for array LUNs visible to the FC initiators on the same ONTAP system. ONTAP does not support inconsistent failover modes for paths to an array LUN from a particular ONTAP system.
+
+If your storage array allows setting the failover mode for an array LUN by FC initiator, part of your installation validation process should include checking to ensure that there are no problems with the failover mode settings for the array LUNs visible to the ONTAP system. The `storage errors show` command alerts you about inconsistent failover mode settings for array LUNs and generates an EMS message.
+
+Although your system can operate with inconsistent array LUN failover mode settings, you need to fix this problem as soon as possible. Otherwise, if a path fails, the ONTAP system might not operate properly, failover might not occur, or the system might panic.
+
+[NOTE]
+====
+ONTAP supports different failover mode settings between nodes running ONTAP. For example, node A can use Active/Passive mode for the paths to an array LUN and node B can use ALUA for the paths to the same array LUN.
+====
+
+== Troubleshooting and problem resolution
+
+The failover mode of the first path that ONTAP discovers during LUN initialization is the failover mode that ONTAP expects for all paths to the LUN from a particular ONTAP system. If the failover mode of subsequent discovered paths does not match the failover mode of the first path, ONTAP issues an error message.
+
+In the following `storage errors show` example, ONTAP tells you that the failover mode for the LUN EMC-1.128, which is visible over mysystem1 FC initiator 0a, is _Proprietary_, and that the failover mode is different from the failover mode that ONTAP discovered on the first path for that array LUN.
+
+----
+
+mysystem1::> storage errors show
+EMC-1.128 (60060160e1b0220008071baf6046e211): hba 0a port 500601603ce014de mode Proprietary: This array LUN is configured with conflicting failover modes. Each path to this LUN must use the same mode.
+
+Disk: EMC-1.128
+UID: 60060160:E1B02200:1C65EB20:BFF7E111:00000000:00000000:00000000:...
+----
+
+You need to fix the failover mismatch problem on the storage array. However, the entire procedure for fixing the mismatch depends on whether the failover mode that ONTAP detected on the first path is the failover mode that you want to be used for all paths on that ONTAP system to the array LUN.
+
+. Enter `storage errors show` if you have not done so already as part of your installation verification process.
++
+[NOTE]
+====
+The storage array config command tells you to run storage error show if there is a problem that you need to fix.
+====
+. Review the `storage errors show` output to determine the failover mode setting for the array LUN that is not consistent with the failover mode that ONTAP is expecting.
++
+[options="header"]
+|===
+| If the failover mode that the system detected on the first path is...| Example| You need to...
+a|
+What you want
+a|
+You want a failover mode of ALUA and ALUA is the failover mode that ONTAP detected for the first path.
+a|
+Change, on the storage array, the failover mode for the initiator that ONTAP identified in the error message. Go to Step 3.
+a|
+Not what you want
+a|
+You want a failover mode of Active/Passive but ALUA is the failover mode that ONTAP detected for the first path.
+a|
+Remove the array LUN from the view of the ONTAP system. Go to Step 4.
+|===
+
+. If you need to change the failover mode for the initiator, proceed as follows to fix the mismatch.
++
+You would use this step if the failover mode that the system detected on the first path _is_ what you want.
+
+ .. In ONTAP, take the second path offline.
+ .. On the storage array, change the failover mode for the initiator that ONTAP identified in the error message.
+ .. In ONTAP, bring the second path back online.
+
+. If you need to remove the array LUN from the view of the ONTAP system to fix the mismatch, select one of the following methods, depending on whether the array LUNs are spares or in an aggregate.
++
+You would use one of these methods if the failover mode that the system detected on the first path _is not_ what you want.
++
+[options="header"]
+|===
+| Method 1: Affected array LUNs are spares (not part of an aggregate)| Method 2: Affected LUNs are in an aggregate
+a|
+With this method, the ONTAP system does not have to be rebooted.
+
+ .. In ONTAP, run the following command for each affected spare LUN: `disk remove_ownership LUNfullname`
+ .. On the storage array, mask each affected array LUN on all paths to the ONTAP system.
+ .. Wait for about a minute, then confirm that the array LUNs are no longer visible to the ONTAP system.
+ .. Set the same failover mode for each of the FC initiators on the ONTAP system.
+ .. Present all the affected array LUNs to the ONTAP system again.
++
+ONTAP should discover the LUNs when it next runs LUN discovery
+
+ .. Run `storage errors show` to confirm that there is no longer a failover mode error.
+
+a|
+With this method, the ONTAP system must be rebooted.
+
+ .. Reboot the ONTAP system and hold it at the LOADER prompt.
+ .. On the storage array, review the failover mode settings on the FC initiators for this system and update them as necessary to the failover mode you want.
+ .. Reboot the ONTAP system.
+ .. Run `storage errors show` to confirm that there is no longer a failover mode error.
+
++
+|===

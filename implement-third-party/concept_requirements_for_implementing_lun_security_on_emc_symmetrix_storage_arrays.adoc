@@ -1,0 +1,27 @@
+---
+permalink: implement-third-party/concept_requirements_for_implementing_lun_security_on_emc_symmetrix_storage_arrays.html
+sidebar: sidebar
+keywords: requirements, implementing, lun, security, emc, symmetrix, storage, arrays
+summary: "You use LUN security to eliminate the possibility of a host writing data to a LUN that is not owned by that host."
+---
+= Requirements for implementing LUN security on EMC Symmetrix storage arrays
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You use LUN security to eliminate the possibility of a host writing data to a LUN that is not owned by that host.
+
+To eliminate the possibility of a non-ONTAP host overwriting EMC Symmetrix array LUNs owned by an ONTAP system or vice versa, you must present the Symmetrix logical devices through the host (channel) director ports in one of the following ways:
+
+* Present only the Symmetrix logical devices for ONTAP on specific Symmetrix host (channel) director ports that are dedicated to ONTAP use.
++
+If ports cannot be dedicated to ONTAP, you should confirm that all other hosts using those ports are compatible with ONTAP requirements. This is because each host connected to the Symmetrix array has requirements for different port attribute settings. Sharing ports between multiple hosts that are connected to the Symmetrix storage array might result in an impossible-to-implement configuration.
+
+* For VMAX storage arrays, create masking views for required mapping and masking by creating port groups, Storage Groups, and initiator groups.
++
+To achieve this, you must first enable the ACLX port attribute on the VMAX storage array ports.
+
+[NOTE]
+====
+Do not present the VCMDB LUN to all hosts by default. Configure the global setting to restrict visibility to the VCMDB unless it has been specifically made visible to a particular host.
+====

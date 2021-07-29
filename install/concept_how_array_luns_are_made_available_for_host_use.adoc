@@ -1,0 +1,31 @@
+---
+permalink: install/concept_how_array_luns_are_made_available_for_host_use.html
+sidebar: sidebar
+keywords: how, array, luns, available, host, use
+summary: "A storage array administrator must create array LUNs and make them available to specified FC initiator ports of ONTAP systems."
+---
+= How array LUNs are made available for host use
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A storage array administrator must create array LUNs and make them available to specified FC initiator ports of ONTAP systems.
+
+The process to make LUNs available to hosts and the terminology to describe it varies among storage array vendors. The basic process that the storage array administrator follows to make LUNs available for host use is as follows:
+
+. Creates logical devices (LDEVs).
++
+[NOTE]
+====
+LDEV is a term used by some vendors and this guide to describe a piece of logical RAID storage configured from disks.
+====
+. Creates a host group (or vendor equivalent).
++
+The host group includes the WWPNs of the initiator ports of the hosts that are allowed to see the LDEV.
++
+[NOTE]
+====
+To simplify management, most storage arrays enable you to define one or more host groups. You can define specific WWPNs (ports) and WWNs (hosts) to be members of the same group. You then associate specific array LUNs with a host group. Hosts in the host group can access the LUNs associated with the host group; hosts that are not in that host group cannot access those LUNs. Different vendors use different terms to describe this concept. The process of creating a host group differs among vendors.
+====
+
+. Maps the LDEVs to host groups as LUNs.

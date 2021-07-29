@@ -1,0 +1,17 @@
+---
+permalink: install/task_setting_the_target_queue_depth_clustered_data_ontap_prior_to_8_2.html
+sidebar: sidebar
+keywords: set, target, queue, depth, ontap, 8.2
+summary: "The default target queue depth is acceptable for most implementations, but you can change the default value if required."
+---
+= Setting the target queue depth (ONTAP prior to 8.2)
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The default target queue depth is acceptable for most implementations, but you can change the default value if required.
+
+This setting is per ONTAP system, and it applies to all target ports on all storage arrays. For ONTAP systems running version prior to 8.2, you can use this option.
+
+.Step
+. Use the following option to set the target queue depth: `options disk.target_port.cmd_queue_depth value`
