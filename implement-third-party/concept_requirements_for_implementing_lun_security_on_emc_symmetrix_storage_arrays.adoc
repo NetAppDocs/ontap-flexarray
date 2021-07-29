@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirements_for_implementing_lun_security_on_emc_symmetrix_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You use LUN security to eliminate the possibility of a host writing data to a LUN that is not owned by that host.'
+keywords: requirements, implementing, lun, security, emc, symmetrix, storage, arrays
+summary: "You use LUN security to eliminate the possibility of a host writing data to a LUN that is not owned by that host."
 ---
 = Requirements for implementing LUN security on EMC Symmetrix storage arrays
 :icons: font

@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_stand_alone_system_with_two_2_port_array_lun_groups.html
 sidebar: sidebar
-keywords: 
-summary: 'In a stand-alone ONTAP system that is in a fabric-attached simple configuration, each FC initiator port pair present on the ONTAP system accesses a separate array LUN group.'
+keywords: stand-alone, system, two, 2-port, array, lun, groups
+summary: "In a stand-alone ONTAP system that is in a fabric-attached simple configuration, each FC initiator port pair present on the ONTAP system accesses a separate array LUN group."
 ---
 = Stand-alone system with two 2-port array LUN groups
 :icons: font

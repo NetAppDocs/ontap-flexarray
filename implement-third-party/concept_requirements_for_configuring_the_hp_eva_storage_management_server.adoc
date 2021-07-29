@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_requirements_for_configuring_the_hp_eva_storage_management_server.html
 sidebar: sidebar
-keywords: 
-summary: 'Sharing FC initiator ports present on an ONTAP system and initiator ports present on an HP EVA Storage Management Server with common EVA target ports causes compatibility issues.'
+keywords: requirements, configuring, hp, eva, storage, management, server
+summary: "Sharing FC initiator ports present on an ONTAP system and initiator ports present on an HP EVA Storage Management Server with common EVA target ports causes compatibility issues."
 ---
 = Requirements for configuring the HP EVA Storage Management Server
 :icons: font

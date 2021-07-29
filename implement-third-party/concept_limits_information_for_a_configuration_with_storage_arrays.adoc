@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_limits_information_for_a_configuration_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You must consider certain storage array limits when planning for an ONTAP configuration.'
+keywords: limit, types, configurations, storage, arrays
+summary: "You must consider certain storage array limits when planning for an ONTAP configuration."
 ---
 = Limit types for configurations with storage arrays
 :icons: font

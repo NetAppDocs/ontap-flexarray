@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_stand_alone_basic_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'The stand-alone basic configuration of an ONTAP system that uses array LUNs is a simple, fabric-attached configuration with a single FC initiator port pair accessing a single LUN group.'
+keywords: stand-alone, basic, configuration
+summary: "The stand-alone basic configuration of an ONTAP system that uses array LUNs is a simple, fabric-attached configuration with a single FC initiator port pair accessing a single LUN group."
 ---
 = Stand-alone basic configuration
 :icons: font

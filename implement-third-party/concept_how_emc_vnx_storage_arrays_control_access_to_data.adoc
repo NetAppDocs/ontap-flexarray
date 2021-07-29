@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_how_emc_vnx_storage_arrays_control_access_to_data.html
 sidebar: sidebar
-keywords: 
-summary: 'EMC VNX array use Storage Groups to control access to data. A Storage Group is one or more LUNs within the storage array that can be accessed only by the host or hosts that you associate with the array LUNs. A host cannot access or modify data in any array LUNs that are not part of its Storage Group.'
+keywords: emc, vnx, storage, array, control, access, data
+summary: "EMC VNX array use Storage Groups to control access to data. A Storage Group is one or more LUNs within the storage array that can be accessed only by the host or hosts that you associate with the array LUNs. A host cannot access or modify data in any array LUNs that are not part of its Storage Group."
 ---
 = How EMC VNX storage array control access to data
 :icons: font

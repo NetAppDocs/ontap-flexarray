@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_guidelines_for_configuring_ports_on_hp_xp_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You should follow certain guidelines when configuring ports on HP XP storage arrays.'
+keywords: guidelines, configuring, ports, hp xp, storage, arrays
+summary: "You should follow certain guidelines when configuring ports on HP XP storage arrays."
 ---
 = Guidelines for configuring ports on HP XP storage arrays
 :icons: font

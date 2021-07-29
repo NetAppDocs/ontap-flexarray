@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'Various fabric-attached configurations are supported for all the storage array vendors unless mentioned otherwise.'
+keywords: support, fabric-attached, configurations
+summary: "Various fabric-attached configurations are supported for all the storage array vendors unless mentioned otherwise."
 ---
 = Supported fabric-attached configurations
 :icons: font

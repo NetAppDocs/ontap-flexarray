@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_required_parameters_for_3par_arrays_with_data_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems.'
+keywords: required, parameters, 3par, arrays, ontap, systems, host, persona, settings, port,
+summary: "Certain parameter settings are required on the storage array for the storage array to work successfully with ONTAP systems."
 ---
 = Required parameters for 3PAR arrays with ONTAP systems
 :icons: font
@@ -14,7 +14,7 @@ Certain parameter settings are required on the storage array for the storage arr
 == Host persona settings
 
 For 3PAR arrays with firmware 2.3.1 and later, the required host persona values must be set as shown in the following table:
-
+[options="header"]
 |===
 | Connection type| Host persona
 a|
@@ -26,8 +26,10 @@ Fabric attached
 a|
 10
 |===
-The host definition, with the required host persona, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR LUN as LUN 254 and product type SES, which ONTAP cannot use. The result is that newly mapped 3PAR LUNs cannot be assigned to ONTAP system and some 3PAR LUNs that might have already been added to an aggregate cannot be used because ONTAP sees a LUN 254 instead of a 3PAR LUN. If this problem occurs, ONTAP generates the following EMS message: mlm.array.unknown:warning - Array LUN XXXXXXXX.126L254 [S/N 'XXXXXXX' vendor '3PARdata' product 'SES'] is unknown and is not supported in this version of Data ONTAP.
-
+The host definition, with the required host persona, should be created on a 3PAR storage array before the switch is zoned to connect the ONTAP system to a 3PAR storage array. If zoning is configured before the host definition, ONTAP discovers a 3PAR LUN as LUN 254 and product type SES, which ONTAP cannot use. The result is that newly mapped 3PAR LUNs cannot be assigned to ONTAP system and some 3PAR LUNs that might have already been added to an aggregate cannot be used because ONTAP sees a LUN 254 instead of a 3PAR LUN. If this problem occurs, ONTAP generates the following EMS message:
+----
+mlm.array.unknown:warning - Array LUN XXXXXXXX.126L254 [S/N 'XXXXXXX' vendor '3PARdata' product 'SES'] is unknown and is not supported in this version of Data ONTAP.
+----
 If zoning was configured prior to the host definition, you can resolve the problem by doing path re-initialization to force a rediscovery of the array LUNs that are mapped from the 3PAR storage array. See the Workaround for the unknown device (L254/SES) problem with 3PAR storage arrays section for the workaround for this problem.
 
 xref:reference_workaround_for_the_unknown_device_l254_ses_problem_with_3par_storage_arrays.adoc[Workaround for the unknown device (L254/SES) problem with 3PAR storage arrays]
@@ -35,7 +37,7 @@ xref:reference_workaround_for_the_unknown_device_l254_ses_problem_with_3par_stor
 == Port persona settings
 
 For 3PAR arrays with firmware 2.2.x, the required port persona values must be set as shown in the following table:
-
+[options="header"]
 |===
 | Connection type| Port persona
 a|
