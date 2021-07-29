@@ -1,15 +1,15 @@
 ---
 permalink: install/reference_lun_ids_for_the_same_ldev_do_not_match.html
 sidebar: sidebar
-keywords: 
-summary: 'A logical device \(LDEV\) must be mapped to the same LUN ID on all storage array ports over which it must be visible to ONTAP systems. The storage errors show output identifies the LDEVs whose LUN IDs do not match.'
+keywords: lun, ids, same, ldev, not, match
+summary: "A logical device (LDEV) must be mapped to the same LUN ID on all storage array ports over which it must be visible to ONTAP systems. The storage errors show output identifies the LDEVs whose LUN IDs do not match."
 ---
 = LUN IDs for the same LDEV do not match
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-A logical device (LDEV) must be mapped to the same LUN ID on all storage array ports over which it must be visible to ONTAP systems. The storage errors show output identifies the LDEVs whose LUN IDs do not match.
+A logical device (LDEV) must be mapped to the same LUN ID on all storage array ports over which it must be visible to ONTAP systems. The `storage errors show` output identifies the LDEVs whose LUN IDs do not match.
 
 ONTAP does not allow you to assign array LUNs to an ONTAP system if the LUN IDs do not match.
 
@@ -30,6 +30,7 @@ One of the following errors was made during storage array configuration:
 In this case, an error is reported for each array LUN.
 
 * Different LUN IDs for the same LDEV are used when mapping the LDEV to storage array ports that are presenting the LDEV to the ONTAP system.
+
 [NOTE]
 ====
 This error is more likely to occur on storage arrays on which each port is configured separately, for example, on Hitachi storage arrays. On some storage arrays, for example IBM storage arrays, ports are not configured separately.
@@ -54,7 +55,7 @@ To fix this problem, the same LUN ID must be assigned to an LDEV on all ports to
 
 To fix the problem, the storage array administrator must remap the LUN, using the correct LUN ID. You can use ONTAP commands to obtain the details that you need to provide information about the problem to the storage administrator.
 
-. Review the storage errors show output to identify the array LUN whose LUN IDs do not match.
+. Review the `storage errors show` output to identify the array LUN whose LUN IDs do not match.
 +
 When the LUN IDs for the same LDEV do not match, the output identifies the serial number of the LDEV with the problem. For example:
 +
@@ -69,15 +70,15 @@ HITACHI_DF600F_1
 ----------
 HIT-1.4 (4849544143484920443630303035323430303132): This Array LUN is using multiple LUN IDs.  Only one LUN ID per serial number is supported.
 ----
-
- [NOTE]
- ====
- THE UID in this example is 48495441:43484920:44363030:30353234:30303132:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.
- ====
++
+[NOTE]
+====
+THE UID in this example is 48495441:43484920:44363030:30353234:30303132:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.
+====
 
 . Obtain details about which LUN IDs are being used for the same LDEV by entering the following command: `storage disk show arrayLUNname`
 +
-The storage disk show output for this example shows the following:
+The `storage disk show` output for this example shows the following:
 +
 ----
 
@@ -110,27 +111,27 @@ Errors:
 HIT-1.4 (4849544143484920443630303035323430303132): This Array LUN is using multiple LUN IDs.  Only one LUN ID per serial number is supported.
 ----
 
- [NOTE]
- ====
- THE UID in this example is 48495441:43484920:44363030:30353234:30303132:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.
- ====
-+
+[NOTE]
+====
+THE UID in this example is 48495441:43484920:44363030:30353234:30303132:00000000:00000000:00000000:00000000:00000000. It is truncated in the example because of space.
+====
+
 By looking at the LUN IDs in the Paths section of the storage disk show output, you can see that LUN IDs 3 and 4 are both being used for this LDEV.
 
 . Determine which LUN ID is not correct for the LDEV.
 +
 LUN ID 4 is the incorrect LUN ID in this example.
 
-. In ONTAP, use the storage path quiesce command to quiesce the incorrect path for the array LUN.
+. In ONTAP, use the `storage path quiesce` command to quiesce the incorrect path for the array LUN.
 +
-The following example shows the options to add to the storage path quiesce command for the path that is being quiesced--LUN ID 4 on initiator 0c.
+The following example shows the options to add to the `storage path quiesce` command for the path that is being quiesced--LUN ID 4 on initiator 0c.
 +
 ----
 
 storage path quiesce -node mysystem1a -initiator 0c -target-wwpn 50060e80004291c1 -lun-number 4
 ----
 +
-The storage path quiesce command temporarily suspends I/O to a specific array LUN on a specific path. Some storage arrays require ceasing I/O for a period of time when an array LUN is to be removed or moved.
+The `storage path quiesce` command temporarily suspends I/O to a specific array LUN on a specific path. Some storage arrays require ceasing I/O for a period of time when an array LUN is to be removed or moved.
 +
 After the path is quiesced, ONTAP can no longer see that LUN.
 
@@ -142,4 +143,4 @@ Although not all storage arrays require ceasing I/O for a period of time, it is 
 +
 The next time the ONTAP discovery process runs, it discovers the new array LUN. Discovery runs every minute.
 
-. After ONTAP discovery is complete, run storage array config show in ONTAP again to confirm that there is no longer an error.
+. After ONTAP discovery is complete, run `storage array config show` in ONTAP again to confirm that there is no longer an error.

@@ -1,8 +1,8 @@
 ---
 permalink: install/reference_requirements_for_zoning_in_a_configuration_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You must follow the zoning requirements in your ONTAP configuration with storage arrays to ensure that the ONTAP system can access the correct set of LUNs.'
+keywords: requirements, zone, configuration, storage, arrays
+summary: "You must follow the zoning requirements in your ONTAP configuration with storage arrays to ensure that the ONTAP system can access the correct set of LUNs."
 ---
 = Requirements for zoning in a configuration with storage arrays
 :icons: font

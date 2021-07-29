@@ -1,8 +1,8 @@
 ---
 permalink: install/task_assigning_ownership_of_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'On an ONTAP system where the root volume resides on disk shelves, you must assign the ownership of array LUNs to a node before adding them to an aggregate for using them as storage.'
+keywords: assign, ownership, array, luns
+summary: "On an ONTAP system where the root volume resides on disk shelves, you must assign the ownership of array LUNs to a node before adding them to an aggregate for using them as storage."
 ---
 = Assigning ownership of array LUNs
 :icons: font
@@ -10,6 +10,8 @@ summary: 'On an ONTAP system where the root volume resides on disk shelves, you 
 
 [.lead]
 On an ONTAP system where the root volume resides on disk shelves, you must assign the ownership of array LUNs to a node before adding them to an aggregate for using them as storage.
+
+*What you'll need*
 
 * Back-end configuration testing (testing of the connectivity and configuration of devices behind the ONTAP systems) must be completed.
 * Array LUNs that you want to assign must be presented to the ONTAP systems.
@@ -27,11 +29,8 @@ ONTAP issues an error message if you try to assign ownership of an array LUN wit
 
 ONTAP alerts you if you try to assign an array LUN with a redundancy error: for example, all paths to this array LUN are connected to the same controller or only one path to the array LUN. You can fix a redundancy error before or after assigning ownership of the LUN.
 
+.Steps
 . Enter the following command to see the array LUNs that have not yet been assigned to a node:``storage disk show -container-type unassigned``
 . Enter the following command to assign an array LUN to this node:``storage disk assign -disk arrayLUNname -owner nodename``
 +
-If you want to fix a redundancy error after disk assignment instead of before, you must use the -force parameter with the storage disk assign command.
-
-*Related information*
-
-xref:concept_planning_for_ontap_use_of_array_luns.adoc[Planning for ONTAP use of array LUNs]
+If you want to fix a redundancy error after disk assignment instead of before, you must use the `-force` parameter with the `storage disk assign` command.

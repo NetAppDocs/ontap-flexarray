@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_summary_for_a_ontap_system_using_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.'
+keywords: plan, summary, ontap, systems, array, luns
+summary: "When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems."
 ---
 = Planning summary for ONTAP systems using array LUNs
 :icons: font
@@ -12,15 +12,15 @@ summary: 'When you plan to use array LUNs with ONTAP systems, you must communica
 When you plan to use array LUNs with ONTAP systems, you must communicate with the storage array and switch administrators so that the back-end devices are configured to work with ONTAP systems.
 
 The following table summarizes the major planning tasks and the location of information to help you with each task.
-
+[options="header"]
 |===
 | Planning task| Where to find information
 a|
 Determining requirements for setting up your storage array to work with ONTAP
 a|
 
-* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
-* https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+* https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
+* https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/index.html[FlexArray virtualization implementation for NetApp E-Series storage]
 * https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
 
 a|

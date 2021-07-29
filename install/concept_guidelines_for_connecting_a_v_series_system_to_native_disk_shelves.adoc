@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_guidelines_for_connecting_a_v_series_system_to_native_disk_shelves.html
 sidebar: sidebar
-keywords: 
-summary: 'When planning how to connect your V-Series system to native disk shelves, your port-to-port connectivity plan should address redundancy and other guidelines.'
+keywords:  guidelines, connect, v-series, system, native, disk, shelves, fc initiator, ports
+summary: "When planning how to connect your V-Series system to native disk shelves, your port-to-port connectivity plan should address redundancy and other guidelines."
 ---
 = Guidelines for connecting a V-Series system to native disk shelves
 :icons: font
@@ -15,6 +15,7 @@ When planning how to connect your V-Series system to native disk shelves, your p
 
 The number of FC initiator ports required to connect a V-Series system to a disk shelf depends on whether your V-Series system is a stand-alone system or in an HA pair
 
+[cols="2*",options="header"]
 |===
 | Configuration| Number of FC initiator ports
 a|
@@ -37,6 +38,7 @@ a|
 
 You follow the same processes to cable a V-Series system to a native disk shelf as you would to cable a FAS system to a native disk shelf. When creating your port-to-port connectivity scheme, this guide and the ONTAP and hardware guides in the following table provide information about setup and management of disks and disk shelves.
 
+[cols="2*",options="header"]
 |===
 | For information about...| See...
 a|

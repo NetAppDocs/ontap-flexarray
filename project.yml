@@ -8,8 +8,30 @@ sidebar:
 
 homepage:
   tiles:
-  - title: This is the title of a tile
+  - title: Implementing E-Serioes storage
     links:
-    - title: This is the title of a link
-      summary: This is the description of the link target
-      url: install/index.html
+    - title: Requirements for configuring E-Series storage arrays
+      summary: System parameters that you must set and considerations to keep in mind when configuring a storage array to work with an ONTAP system.
+      url: /implement-e-series/reference_requirements_for_configuring_e_series_storage_arrays.html
+    - title: Supported fabric-attached configurations for E-Series storage arrays
+      summary: You can connect only certain E-Series storage arrays in fabric-attached configurations with ONTAP systems
+      url: /implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html
+    - title: Supported direct-attached configurations with E-Series storage arrays
+      summary: You can connect ONTAP systems in direct-attached configurations with E-Series storage arrays.
+      url: /implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html
+  - title: Implementating Third-Party Storage
+    links:
+    - title: Configuration guidelines for all storage arrays
+      summary: There are certain configuration guidelines that you must follow for any of the storage arrays supported by ONTAP.
+      url: /implement-third-party/concept_general_configuration_guidelines_for_all_storage_arrays.html
+    - title: Supported fabric-attached configurations
+      summary: Various fabric-attached configurations are supported for all the storage array vendors.
+      url: /implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html
+  - title: Installing FlexArray
+    links:
+    - title: Planning a configuration with array LUNs
+      summary: Verify if the storage array is supported for a particular ONTAP release and ensure that all the systems meet the requirements for a configuration with array LUNs.
+      url: /install/concept_planning_a_configuration_with_array_luns.html
+    - title: Preparing a storage array for use with ONTAP systems
+      summary: repare the storage for use with ONTAP.
+      url: /install/task_preparing_a_storage_array_for_use_with_ontap_systems.html

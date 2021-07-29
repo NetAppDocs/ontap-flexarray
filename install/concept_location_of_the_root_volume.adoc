@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_location_of_the_root_volume.html
 sidebar: sidebar
-keywords: 
-summary: 'The location of the root volume depends on whether the ONTAP system is pre-ordered with native disks or whether you are adding disks to an ONTAP system that is configured for array LUNs.'
+keywords: location, root, volume
+summary: "The location of the root volume depends on whether the ONTAP system is pre-ordered with native disks or whether you are adding disks to an ONTAP system that is configured for array LUNs."
 ---
 = Location of the root volume
 :icons: font
@@ -23,9 +23,3 @@ If you order your storage system with disks, the factory installs the root volum
 * For MetroCluster configurations with both disks and array LUNs, you should create the root volume on a disk if you are setting up a new configuration.
 +
 If you are adding disks to an existing MetroCluster configuration with array LUNs, you can leave the root volume on an array LUN.
-
-*Related information*
-
-xref:concept_minimum_array_lun_size_for_the_root_volume.adoc[Array LUN size required for the root volume]
-
-xref:concept_minimum_number_of_array_luns_required_per_ontap_system.adoc[Minimum number of array LUNs required per ONTAP system]

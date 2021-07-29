@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_support_for_metrocluster_configurations_that_can_use_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you set up a MetroCluster configuration with array LUNs, you must ensure that the ONTAP systems and the storage used in the configuration follow basic supportability requirements.'
+keywords: requirements, metrocluster, configurations, array, luns
+summary: "Before you set up a MetroCluster configuration with array LUNs, you must ensure that the ONTAP systems and the storage used in the configuration follow basic supportability requirements."
 ---
 = Requirements for MetroCluster configurations with array LUNs
 :icons: font
@@ -25,6 +25,6 @@ However you must ensure that all the ONTAP systems used in a MetroCluster config
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
 
-link:Fabric-attached MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html[Fabric-attached MetroCluster installation and configuration]
 
-link:Stretch MetroCluster installation and configurationhttps://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html[Stretch MetroCluster installation and configuration]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html[Stretch MetroCluster installation and configuration]

@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_elements_that_reduce_the_usable_space_in_an_array_lun.html
 sidebar: sidebar
-keywords: 
-summary: 'Several factors impact the usable space in an array LUN. When planning for the required number and size of the array LUNs, you must consider the usable space in the array LUN according to the checksum type you are using, and the elements you might configure.'
+keywords: elements, reduce, usable, space, array, lun
+summary: "Several factors impact the usable space in an array LUN. When planning for the required number and size of the array LUNs, you must consider the usable space in the array LUN according to the checksum type you are using, and the elements you might configure."
 ---
 = Elements that reduce the usable space in an array LUN
 :icons: font
@@ -20,11 +20,3 @@ When calculating the usable space in an array LUN, you must consider the followi
 * Checksum type (you assign one type):
  ** Block checksum (BCS)
  ** Advanced Zoned checksum (AZCS)
-
-*Related information*
-
-xref:concept_characteristics_of_checksum_types_that_ontap_supports.adoc[Characteristics of checksum types that ONTAP supports]
-
-xref:concept_considering_checksum_type_when_planning_array_lun_size_and_number.adoc[Considering checksum type when planning array LUN size and number]
-
-xref:concept_formulas_for_calculating_array_lun_size_considering_checksum_type.adoc[Formulas for calculating array LUN size based on checksum type]

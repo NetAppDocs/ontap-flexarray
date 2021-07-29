@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_target_queue_depth_customization.html
 sidebar: sidebar
-keywords: 
-summary: 'The target queue depth defines the number of ONTAP commands that can be queued \(outstanding\) on a storage array target port. ONTAP supplies a default value. For most deployments, the default target queue depth is appropriate; however, you can change it to correct performance issues.'
+keywords: target, queue, depth, customization
+summary: "The target queue depth defines the number of ONTAP commands that can be queued (outstanding) on a storage array target port. ONTAP supplies a default value. For most deployments, the default target queue depth is appropriate; however, you can change it to correct performance issues."
 ---
 = Target queue depth customization
 :icons: font

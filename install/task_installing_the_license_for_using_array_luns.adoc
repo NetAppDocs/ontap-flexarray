@@ -1,8 +1,8 @@
 ---
 permalink: install/task_installing_the_license_for_using_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'The V_StorageAttach license must be installed on each ONTAP node that you want to use with array LUNs. It is not a single license for the cluster. Array LUNs cannot be used in aggregates until a license is installed.'
+keywords: install, license, use, array, luns
+summary: "The V_StorageAttach license must be installed on each ONTAP node that you want to use with array LUNs. It is not a single license for the cluster. Array LUNs cannot be used in aggregates until a license is installed."
 ---
 = Installing the license for using array LUNs
 :icons: font
@@ -11,6 +11,8 @@ summary: 'The V_StorageAttach license must be installed on each ONTAP node that 
 [.lead]
 The V_StorageAttach license must be installed on each ONTAP node that you want to use with array LUNs. It is _not_ a single license for the cluster. Array LUNs cannot be used in aggregates until a license is installed.
 
+*What you'll need*
+
 * The cluster must be installed.
 * You must have the license key for the V_StorageAttach license.
 +
@@ -18,6 +20,7 @@ https://mysupport.netapp.com/site/global/dashboard[NetApp Support]
 
 You need not perform this procedure if the license key for the V_StorageAttach package is already installed. If the ONTAP system is ordered with disks, the factory typically installs the license package for you. Alternatively, many customers install all necessary licenses early in the installation process.
 
+.Steps
 . For each ONTAP node in the cluster for use with array LUNs, enter the following command on the node: `system license add license key`
 +
 ----

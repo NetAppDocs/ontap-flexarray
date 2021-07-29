@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_valid_pathing_eight_port_array_lun_group_configuration.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use an eight-port LUN group configuration to connect storage arrays with ONTAP systems in large clustered deployments that require greater path redundancy and load balancing than possible with fewer ports per LUN group.'
+keywords: valid, path, eight-port, array, lun, group, configuration, variation, back-end, connections, crossed, fc initiator, maximum
+summary: "You can use an eight-port LUN group configuration to connect storage arrays with ONTAP systems in large clustered deployments that require greater path redundancy and load balancing than possible with fewer ports per LUN group."
 ---
 = Valid pathing: eight-port array LUN group configuration
 :icons: font
@@ -29,9 +29,10 @@ In this illustration of crossed back-end connections, note how the ONTAP systems
 
 The following table summarizes the zoning for an eight-port array LUN group with crossed back-end connections. Single-initiator zoning is the recommended zoning strategy.
 
+[options="header"]
 |===
 | Zone| FC initiator port on the ONTAP system| Storage array
-a|
+3+a|
 Switch 1
 a|
 z1
@@ -57,7 +58,7 @@ a|
 vs2, Port 0b
 a|
 Controller 2, Port 2D
-a|
+3+a|
 Switch 2
 a|
 z5
@@ -95,9 +96,10 @@ image::../media/eight_port_array_lun_group_configuration.gif[]
 
 The following table summarizes the zoning for an eight-port array LUN group when the back-end connections are not crossed. Single-initiator zoning is the recommended zoning strategy.
 
+[options="header"]
 |===
 | Zone| FC initiator port on the ONTAP system| Storage array
-a|
+3+a|
 Switch 1
 a|
 z1
@@ -123,7 +125,7 @@ a|
 vs2, Port 0b
 a|
 Controller 1, Port 1D
-a|
+3+a|
 Switch 2
 a|
 z5

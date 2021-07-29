@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_managing_array_luns_using_data_ontap.html
 sidebar: sidebar
-keywords: 
-summary: 'If the storage array administrator wants to make configuration changes to an array LUN after it is assigned to a node, for example to resize it, you might need to perform some activities in ONTAP before it is possible to reconfigure the LUN on the storage array.'
+keywords: manage, array, luns, ontap
+summary: "If the storage array administrator wants to make configuration changes to an array LUN after it is assigned to a node, for example to resize it, you might need to perform some activities in ONTAP before it is possible to reconfigure the LUN on the storage array."
 ---
 = Managing array LUNs using ONTAP
 :icons: font

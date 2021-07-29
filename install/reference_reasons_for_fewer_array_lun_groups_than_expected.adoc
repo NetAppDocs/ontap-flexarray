@@ -1,21 +1,21 @@
 ---
 permalink: install/reference_reasons_for_fewer_array_lun_groups_than_expected.html
 sidebar: sidebar
-keywords: 
-summary: 'When validating the back-end configuration, you need to check the storage array config show output to determine whether the number of array LUN groups in the output is what you intended.'
+keywords: reasons, fewer, array, lun, groups, expected, resolve, issue
+summary: "When validating the back-end configuration, you need to check the storage array config show output to determine whether the number of array LUN groups in the output is what you intended."
 ---
 = Reasons for fewer array LUN groups than expected
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When validating the back-end configuration, you need to check the storage array config show output to determine whether the number of array LUN groups in the output is what you intended.
+When validating the back-end configuration, you need to check the `storage array config show` output to determine whether the number of array LUN groups in the output is what you intended.
 
 == Explanation
 
-The most likely cause for fewer LUN groups than expected is that the LDEV-to-LUN mapping is the same for both FC initiator port pairs on the ONTAP system. If the LDEV-to-LUN mapping is the same for both FC initiator port pairs, the storage array config show output shows one less LUN group than expected.
+The most likely cause for fewer LUN groups than expected is that the LDEV-to-LUN mapping is the same for both FC initiator port pairs on the ONTAP system. If the LDEV-to-LUN mapping is the same for both FC initiator port pairs, the `storage array config show` output shows one less LUN group than expected.
 
-The following storage array config show output shows only one array LUN group due to both FC initiator port pairs being mapped to the same target port pair:
+The following `storage array config show` output shows only one array LUN group due to both FC initiator port pairs being mapped to the same target port pair:
 
 ----
 
@@ -43,4 +43,4 @@ ONTAP does not flag this as an error because an ONTAP system can operate when th
 If you want to fix this issue, do the following:
 
 . On the storage array, fix the mapping so that the FC initiator port pair mapping is no longer the same for both FC initiator port pairs on the ONTAP system.
-. On the ONTAP system, run storage array config show again and confirm that the number of LUN groups that you expected are shown and that FC initiator port pairs are not accessing the same target ports.
+. On the ONTAP system, run `storage array config show` again and confirm that the number of LUN groups that you expected are shown and that FC initiator port pairs are not accessing the same target ports.

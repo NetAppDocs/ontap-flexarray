@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_guidelines_for_enabling_alua_on_emc_vnx_storrage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'Support has been added for Asymmetric Logical Unit Access \(ALUA\) with CLARiiON and VNX arrays.'
+keywords: guidelines, enabling, alua, emc, vnx, storage arrays
+summary: "Support has been added for Asymmetric Logical Unit Access (ALUA) with CLARiiON and VNX arrays."
 ---
 = Guidelines for enabling ALUA on EMC VNX storage arrays
 :icons: font

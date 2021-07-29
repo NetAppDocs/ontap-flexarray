@@ -1,15 +1,15 @@
 ---
 permalink: install/reference_reasons_storage_arrays_are_missing_from_command_output.html
 sidebar: sidebar
-keywords: 
-summary: 'A storage array that is not connected to the ONTAP system does not appear in the storage array config show output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices.'
+keywords: reasons, storage, arrays, miss, command, output
+summary: "A storage array that is not connected to the ONTAP system does not appear in the storage array config show output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices."
 ---
 = Reasons storage arrays are missing from command output
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-A storage array that is not connected to the ONTAP system does not appear in the storage array config show output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices.
+A storage array that is not connected to the ONTAP system does not appear in the `storage array config show` output. Problems with cabling, zoning, and host group configuration can prevent a connection between the two devices.
 
 == Resolving the issue
 
@@ -17,14 +17,4 @@ A storage array that is not connected to the ONTAP system does not appear in the
  ** Check that cables are connected.
  ** Check that the WWPNs for the FC initiators on the ONTAP systems are in the host group.
  ** Check that both the storage array and the FC initiator are in the same zone.
-. After the problem is fixed, run storage array config show in ONTAP to confirm that the issue was fixed.
-
-*Related information*
-
-xref:reference_relationship_between_zoning_and_host_group_configuration.adoc[Relationship between zoning and host group configuration]
-
-xref:concept_dependency_between_zone_and_host_group_definitions.adoc[Dependency between zone and host group definitions]
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
-
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
+. After the problem is fixed, run `storage array config show` in ONTAP to confirm that the issue was fixed.

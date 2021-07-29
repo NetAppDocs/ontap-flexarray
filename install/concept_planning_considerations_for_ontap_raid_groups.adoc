@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_planning_considerations_for_ontap_raid_groups.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you set up ONTAP RAID groups for array LUNs, you must plan the size of aggregates, the number and size of RAID groups, and the size of array LUNs. RAID groups that best meet your data requirements ensure adequate protection on the array for data and its availability.'
+keywords: plan, considerations, ontap, raid, groups
+summary: "Before you set up ONTAP RAID groups for array LUNs, you must plan the size of aggregates, the number and size of RAID groups, and the size of array LUNs. RAID groups that best meet your data requirements ensure adequate protection on the array for data and its availability."
 ---
 = Planning considerations for ONTAP RAID groups
 :icons: font
@@ -25,7 +25,5 @@ The array LUNs should be optimized for performance according to the instructions
 For more recommendations about setting up ONTAP RAID groups for use with storage arrays, see the https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html[_Disks and Aggregates Power Guide_].
 
 *Related information*
-
-xref:concept_determining_the_array_luns_for_specific_aggregates.adoc[Determining the array LUNs for specific aggregates]
 
 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html[Disk and aggregate management]

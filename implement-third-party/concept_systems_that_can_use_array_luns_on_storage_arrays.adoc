@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/concept_systems_that_can_use_array_luns_on_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You can use supported FAS and V-Series systems with array LUNs.'
+keywords: ontap, systems, use, array, luns, storage, arrays
+summary: "You can use supported FAS and V-Series systems with array LUNs."
 ---
 = ONTAP systems that can use array LUNs on storage arrays
 :icons: font

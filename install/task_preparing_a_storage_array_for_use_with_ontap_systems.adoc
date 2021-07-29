@@ -1,8 +1,8 @@
 ---
 permalink: install/task_preparing_a_storage_array_for_use_with_ontap_systems.html
 sidebar: sidebar
-keywords: 
-summary: 'Before you can begin setting up ONTAP systems in a configuration with array LUNs, the storage array administrator must prepare the storage for use with ONTAP.'
+keywords: prepare, storage, array, use, ontap, systems
+summary: "Before you can begin setting up ONTAP systems in a configuration with array LUNs, the storage array administrator must prepare the storage for use with ONTAP."
 ---
 = Preparing a storage array for use with ONTAP systems
 :icons: font
@@ -10,6 +10,8 @@ summary: 'Before you can begin setting up ONTAP systems in a configuration with 
 
 [.lead]
 Before you can begin setting up ONTAP systems in a configuration with array LUNs, the storage array administrator must prepare the storage for use with ONTAP.
+
+*What you'll need*
 
 The storage arrays, firmware, and switches that you plan to use in the configuration must be supported by the specific ONTAP version.
 
@@ -21,10 +23,11 @@ In the IMT, you can use the Storage Solution field to select your MetroCluster s
 
 You must coordinate with the storage array administrator to perform this task on the storage array.
 
+.Steps
 . Create at least four LUNs on the storage array for the ONTAP systems to use.
 +
 Each node in the HA pair requires an array LUN for the root volume and an array LUN for core dumps.
 
 . Configure parameters on the storage array that are required to work with ONTAP.
- ** https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
- ** https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-es/home.html[FlexArray virtualization implementation for NetApp E-Series storage]
+ ** https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
+ ** https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/index.html[FlexArray virtualization implementation for NetApp E-Series storage]

@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_pre_cluster_array_lun_name_format.html
 sidebar: sidebar
-keywords: 
-summary: 'Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the pre-cluster format.'
+keywords: pre cluster, array, lun, name, format, ontap, systems
+summary: "Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the pre-cluster format."
 ---
 = Pre-cluster array LUN name format
 :icons: font
@@ -16,7 +16,7 @@ In this format, the array LUN name is a path-based name that includes the device
 On an ONTAP system that supports array LUNs, each array LUN can have multiple names because there are multiple paths to each LUN.
 
 == Array LUN name format for ONTAP systems
-
+[options="header"]
 |===
 | Configuration| Array LUN name format| Component descriptions
 a|
@@ -48,6 +48,3 @@ lun-id is the array LUN number that the storage array presents to hosts.
 Example: node1:brocade3:6.126L1
 
 |===
-*Related information*
-
-xref:concept_how_the_array_lun_name_is_displayed_in_ontap.adoc[How the array LUN name is displayed in ONTAP]

@@ -1,8 +1,8 @@
 ---
 permalink: install/task_configuring_lun_security.html
 sidebar: sidebar
-keywords: 
-summary: 'The storage array administrator must configure the storage array and create host groups so that other hosts cannot access the array LUNs intended for use by ONTAP.'
+keywords: configure, lun, security
+summary: "The storage array administrator must configure the storage array and create host groups so that other hosts cannot access the array LUNs intended for use by ONTAP."
 ---
 = Configuring LUN security
 :icons: font
@@ -13,6 +13,7 @@ The storage array administrator must configure the storage array and create host
 
 The concept of LUN security is similar to zoning except that LUN security is set up on the storage array. LUN security keeps different servers from using each other's storage on the SAN. LUN security might also be referred to as LUN masking.
 
+.Steps
 . Set up LUN security on the storage array.
 +
 Refer to the storage array documentation for information about setting up the LUN security.
@@ -25,6 +26,4 @@ The term host group is used on some storage arrays to describe a configuration p
 
 *Related information*
 
-xref:concept_available_lun_security_methods.adoc[Available LUN security methods]
-
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]

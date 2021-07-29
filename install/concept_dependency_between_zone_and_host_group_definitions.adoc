@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_dependency_between_zone_and_host_group_definitions.html
 sidebar: sidebar
-keywords: 
-summary: 'Errors made in zone definitions can require reconfiguration of host group definitions and the reverse.'
+keywords: dependency, between, zone, host, group, definitions, common, errors, cascading, effect
+summary: "Errors made in zone definitions can require reconfiguration of host group definitions and the reverse."
 ---
 = Dependency between zone and host group definitions
 :icons: font
@@ -24,7 +24,7 @@ However, host groups are sometimes configured before zone definitions, which req
 == Common errors
 
 In ONTAP output, the FC initiator ports on the ONTAP system are identified by adapter number--for example, 0a, 0b, 0c, 0d, and so on for models with onboard ports. WWPNs are shown in the switch GUI and the storage array GUI. Because WWPNs are long and in hexadecimal format, the following errors are common:
-
+[cols="2*",options="header"]
 |===
 | How WWPNs are specified| Common error
 a|
@@ -49,11 +49,11 @@ An obvious first step when troubleshooting problems with a fabric-attached confi
 If the switch is automatically discovering WWPNs and zone definitions are configured first, the WWPNs of the FC initiator ports that will be used to access LUNs on the storage array are automatically propagated to the host group configuration picklists in the storage array GUI. Therefore, any zoning errors are also propagated to the storage array host group picklists. The picklists show the long, hexadecimal WWPNs instead of the short FC initiator port labels that are visible on the ONTAP system (for example, 0a, 0b, and so on). Therefore, it is not easy to see that the WWPN you expected to be listed is not there.
 
 The following table shows the effects of certain errors:
-
+[cols="3*",options="header"]
 |===
 | Zone definition on the switch| Host group configuration on the storage array| Symptom in ONTAP output
 a|
-The FC initiator port in the zone definition is incorrect.This caused the incorrect FC initiator port WWPN to be propagated to the host group configuration.
+The FC initiator port in the zone definition is incorrect. This caused the incorrect FC initiator port WWPN to be propagated to the host group configuration.
 
 a|
 The WWPN of the FC initiator port shown in the picklist was selected, not the WWPN you intended.
@@ -66,10 +66,5 @@ The WWPN in the host group definition is incorrect because of either of the foll
 
 * The wrong WWPN was selected.
 * Host groups were configured manually before the zone definition was configured and a typing error was made when typing in the WWPN of the FC initiator port.
-
+a|
 |===
-*Related information*
-
-xref:concept_example_of_cascading_zoning_and_host_group_configuration_errors.adoc[Example of cascading zoning and host group configuration errors]
-
-xref:concept_zoning_for_a_configuration_with_storage_arrays.adoc[Zoning in a configuration with storage arrays]

@@ -1,8 +1,8 @@
 ---
 permalink: install/task_configuring_ontap_on_a_system_that_uses_only_array_luns.html
 sidebar: sidebar
-keywords: 
-summary: 'If you want to configure ONTAP for use with array LUNs, you must configure the root aggregate and root volume, reserve space for diagnostics and recovery operations, and set up the cluster.'
+keywords: configure, ontap, system, use, array, luns
+summary: "If you want to configure ONTAP for use with array LUNs, you must configure the root aggregate and root volume, reserve space for diagnostics and recovery operations, and set up the cluster."
 ---
 = Configuring ONTAP on a system that uses only array LUNs
 :icons: font
@@ -11,12 +11,15 @@ summary: 'If you want to configure ONTAP for use with array LUNs, you must confi
 [.lead]
 If you want to configure ONTAP for use with array LUNs, you must configure the root aggregate and root volume, reserve space for diagnostics and recovery operations, and set up the cluster.
 
+*What you'll need*
+
 * The ONTAP system must be connected to the storage array.
 * The storage array administrator must have created LUNs and presented them to ONTAP.
 * The storage array administrator must have configured the LUN security.
 
 You must configure each node that you want to use with array LUNs. If the node is in an HA pair, then you must complete the configuration process on one node before proceeding with the configuration on the partner node.
 
+.Steps
 . Power on the primary node and interrupt the boot process by pressing Ctrl-C when you see the following message on the console: Press CTRL-C for special boot menu.
 . Select option 4 (Clean configuration and initialize all disks) on the boot menu.
 +
@@ -143,11 +146,11 @@ Index Array LUN Name     Model      Vendor    Size    Owner          Checksum  S
    5  switch0:7.183L2    SYMMETRIX  EMC     173.6 GB  local          Block     600604803436313438396431
 Do you want to continue (yes|no)?
 ----
-
- [NOTE]
- ====
- Selecting “no” clears the LUN selection.
- ====
++
+[NOTE]
+====
+Selecting “no” clears the LUN selection.
+====
 
 . Enter `y` when prompted by the system to continue with the installation process.
 +

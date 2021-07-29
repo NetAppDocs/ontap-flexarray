@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_sharing_storage_arrays_among_hosts.html
 sidebar: sidebar
-keywords: 
-summary: 'A typical storage array provides storage for hosts from different vendors. However, ONTAP requires some storage arrays to be dedicated to ONTAP systems.'
+keywords: share, storage, arrays, hosts
+summary: "A typical storage array provides storage for hosts from different vendors. However, ONTAP requires some storage arrays to be dedicated to ONTAP systems."
 ---
 = Sharing storage arrays among hosts
 :icons: font

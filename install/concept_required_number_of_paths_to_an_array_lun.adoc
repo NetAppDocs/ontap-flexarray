@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_required_number_of_paths_to_an_array_lun.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP supports either four or two paths to array LUNs.'
+keywords: required, number, paths, array, lun
+summary: "ONTAP supports either four or two paths to array LUNs."
 ---
 = Required number of paths to an array LUN
 :icons: font
@@ -14,7 +14,3 @@ ONTAP supports either four or two paths to array LUNs.
 ONTAP expects and requires that a storage array provide access to a specific array LUN on at least two redundant storage array ports; that is, through a minimum two redundant paths.
 
 Be sure that the ports on the storage array that you select to access a given LUN are from different components, so as to avoid a single point of failure, for example, from alternate controllers, clusters, or enclosures. The reason is that you do not want all access to an array LUN to be lost if one component fails.
-
-*Related information*
-
-xref:concept_advantages_of_four_paths_to_an_array_lun_clustered_data_ontap_8_1_and_later.adoc[Advantages of four paths to an array LUN]

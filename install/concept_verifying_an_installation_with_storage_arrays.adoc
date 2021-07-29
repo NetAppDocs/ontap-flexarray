@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_verifying_an_installation_with_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'It is important to detect and resolve any back-end configuration errors before you deploy your system in a production environment.'
+keywords: verify, installation, storage, arrays
+summary: "It is important to detect and resolve any back-end configuration errors before you deploy your system in a production environment."
 ---
 = Verifying installation with storage arrays
 :icons: font
@@ -15,11 +15,11 @@ The two stages for verifying back-end configuration are as follows:
 
 . Checking for any back-end configuration errors that prevent ONTAP from operating with the storage array.
 +
-These are the errors that are flagged by storage errors show. You must fix these errors.
+These are the errors that are flagged by `storage errors show`. You must fix these errors.
 
 . Checking to ensure that the configuration is as you intended.
 +
-There are a number of situations that are not errors from the system perspective but might not be what you intended. For example, the storage array config show output shows two LUN groups but you only intended one LUN group. This document refers to such situations as situations that do not meet your "`intentions`".
+There are a number of situations that are not errors from the system perspective but might not be what you intended. For example, the `storage array config show` output shows two LUN groups but you only intended one LUN group. This document refers to such situations as situations that do not meet your "`intentions`".
 
 The following illustration shows the workflow in which you first verify that there are no configuration errors from the system perspective and then you verify that installation is as you intended.
 

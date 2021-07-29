@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_guidelines_for_specifying_the_appropriate_target_queue_depth.html
 sidebar: sidebar
-keywords: 
-summary: 'You need to consider the impact of all the initiators accessing the storage array port when you are planning the configuration for a specific ONTAP system or a specific host that does not run ONTAP.'
+keywords: guidelines, specify, appropriate, target, queue, depth
+summary: "You need to consider the impact of all the initiators accessing the storage array port when you are planning the configuration for a specific ONTAP system or a specific host that does not run ONTAP."
 ---
 = Guidelines for specifying the appropriate target queue depth
 :icons: font
@@ -25,7 +25,3 @@ You could then configure higher values for initiators likely to send a greater n
 
 * Configure hosts that do not run ONTAP according to the guidelines provided for those hosts.
 * Consider setting the target queue depth on a per-target-port basis when workloads differ across ports.
-
-*Related information*
-
-xref:task_setting_the_target_queue_depth_clustered_data_ontap_8_2_and_later.adoc[Setting the target queue depth]

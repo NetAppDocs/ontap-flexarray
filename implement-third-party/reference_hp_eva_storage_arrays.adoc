@@ -1,8 +1,8 @@
 ---
 permalink: implement-third-party/reference_hp_eva_storage_arrays.html
 sidebar: sidebar
-keywords: 
-summary: 'You must meet certain requirements when configuring storage arrays to work with ONTAP systems. These requirements include setting configuration parameters on storage arrays and deploying only supported configurations.'
+keywords: hp, eva, storage, arrays
+summary: "You must meet certain requirements when configuring storage arrays to work with ONTAP systems. These requirements include setting configuration parameters on storage arrays and deploying only supported configurations."
 ---
 = HP EVA storage arrays
 :icons: font

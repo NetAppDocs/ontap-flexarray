@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_number_of_storage_arrays_supported_with_a_ontap_system.html
 sidebar: sidebar
-keywords: 
-summary: 'Depending on the storage array models supported with ONTAP systems, you can connect either multiple storage arrays or a single storage array to the ONTAP system.'
+keywords: considerations, connect, multiple, storage, arrays, ontap, system
+summary: "Depending on the storage array models supported with ONTAP systems, you can connect either multiple storage arrays or a single storage array to the ONTAP system."
 ---
 = Considerations when connecting multiple storage arrays to an ONTAP system
 :icons: font
@@ -23,19 +23,13 @@ Consider the following when connecting multiple storage arrays to an ONTAP syste
 +
 If the storage arrays are from the same vendor, then they can be all from the same family or from different families.
 
- [NOTE]
- ====
- Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
- ====
+[NOTE]
+====
+Storage arrays in the same family share the same performance and failover characteristics. For example, members of the same family all perform active-active failover, or they all perform active-passive failover. More than one factor might be used to determine storage array families. For example, storage arrays with different architectures would be in different families even though other characteristics might be the same.
+====
 
 *Related information*
 
-xref:concept_systems_that_can_use_array_luns_on_storage_arrays.adoc[ONTAP systems that can use array LUNs on storage arrays]
-
-xref:concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.adoc[Rules for sharing an FC initiator port with multiple target ports]
-
-xref:concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.adoc[Rules for mixing storage in array LUN aggregates]
-
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.vs-ig-third/home.html[FlexArray virtualization implementation for third-party storage]
+https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
 
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]

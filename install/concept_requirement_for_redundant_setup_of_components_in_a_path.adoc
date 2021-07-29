@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_requirement_for_redundant_setup_of_components_in_a_path.html
 sidebar: sidebar
-keywords: 
-summary: 'ONTAP systems must connect to the storage array through a redundant Fibre Channel \(FC\) network. Two FC networks are required to protect against a connection failing and so that fabric ports or switches can be taken offline for upgrades and replacements without impacting the ONTAP systems.'
+keywords: requirements, redundant, setup, components, path, fc switch, ontap, systems, storage, array
+summary: "ONTAP systems must connect to the storage array through a redundant Fibre Channel (FC) network. Two FC networks are required to protect against a connection failing and so that fabric ports or switches can be taken offline for upgrades and replacements without impacting the ONTAP systems."
 ---
 = Requirements for redundant setup of components in a path
 :icons: font

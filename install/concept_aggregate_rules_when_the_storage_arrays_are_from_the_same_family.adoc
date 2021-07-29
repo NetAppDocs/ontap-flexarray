@@ -1,8 +1,8 @@
 ---
 permalink: install/concept_aggregate_rules_when_the_storage_arrays_are_from_the_same_family.html
 sidebar: sidebar
-keywords: 
-summary: 'Specific rules apply to how you can lay out array LUNs in aggregates when the storage arrays are from the same storage array vendor and model family.'
+keywords: aggregate, rules, storage, arrays, same, family, add, luns, single, multiple, distribute
+summary: "Specific rules apply to how you can lay out array LUNs in aggregates when the storage arrays are from the same storage array vendor and model family."
 ---
 = Aggregate rules when the storage arrays are from the same family
 :icons: font
@@ -38,9 +38,3 @@ image:../media/luns_from_same_family_mixed_in_multiple_aggrs.gif[]
 ====
 This example is not supported if you have storage arrays of the same model and one has Fibre Channel drives and the other storage array has SATA drives. In that case, those storage arrays are not considered to be in the same family.
 ====
-
-*Related information*
-
-xref:concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.adoc[Rules for mixing storage in array LUN aggregates]
-
-xref:concept_aggregate_rules_when_the_storage_arrays_are_from_different_vendor_or_family.adoc[Aggregate rules when the storage arrays are from different vendors or families]
