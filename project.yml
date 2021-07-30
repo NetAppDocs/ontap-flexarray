@@ -1,6 +1,6 @@
 sidebar:
   entries:
-    - title: Home
+    - title: ONTAP FlexArray Docs
       url: "/index.html"
     - section: implement-e-series
     - section: implement-third-party
