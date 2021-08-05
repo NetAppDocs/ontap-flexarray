@@ -17,7 +17,7 @@ Common reasons why you would see more LUN groups than expected are as follows:
 
 * An LDEV is not mapped to a redundant target port pair.
 +
-The most common cause of an extra LUN group is that the LDEV is spanning path pairs. An LDEV is said to be spanning path pairs if matching LUN IDs for the LDEV are not presented to a redundant target port pair on the storage array.
+The most common cause of an extra LUN group is that the LDEV is spanning path pairs. An LDEV is said to be _spanning path pairs_ if matching LUN IDs for the LDEV are not presented to a redundant target port pair on the storage array.
 
 [NOTE]
 ====

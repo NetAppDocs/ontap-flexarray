@@ -40,7 +40,7 @@ EMC_SYMMETRIX_1
 EMC-1.3 (600000e00d1000000010000e00030000): This array LUN is marked foreign and has a reservation.
 ----
 
-. Run the `set -privilege advanced` command to switch to the advanced mode, because you cannot import the array LUN contents in the admin mode.
+. Run the `set -privilege advanced` command to switch to the _advanced_ mode, because you cannot import the array LUN contents in the _admin_ mode.
 . Use the `storage disk -remove-reservation` command to remove the persistent reservation from the identified array LUN.
 +
 ----
