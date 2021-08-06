@@ -21,7 +21,7 @@ You must use redundant FC initiator port pairs while connecting an ONTAP system 
 a|
 Port setting for HBAs
 a|
-You must set all the HBAs used to access disks or array LUNs as initiator ports.
+You must set all the HBAs used to access disks or array LUNs as _initiator_ ports.
 a|
 Connecting to storage array target ports
 a|

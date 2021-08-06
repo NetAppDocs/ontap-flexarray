@@ -15,7 +15,7 @@ You can detect such non-optimized usage of a given target port in the output dis
 
 == Output example displaying errors on detecting non-optimized usage of a target port
 
-The following example shows the error returned by the storage array show command on detecting non-optimized usage of a given target port:
+The following example shows the error returned by the `storage array show` command on detecting non-optimized usage of a given target port:
 
 ----
 vgv3070f50ab::> storage array show -name HP_HSV450_2
