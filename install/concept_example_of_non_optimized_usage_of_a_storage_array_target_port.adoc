@@ -11,7 +11,7 @@ summary: "When the number of I/O requests queued on a given storage array target
 [.lead]
 When the number of I/O requests queued on a given storage array target port exceeds the number of requests that the port can handle, it results in non-optimized usage of the target port.
 
-You can detect such non-optimized usage of a given target port in the output display of the storage array show command.
+You can detect such non-optimized usage of a given target port in the output display of the `storage array show` command.
 
 == Output example displaying errors on detecting non-optimized usage of a target port
 

@@ -9,7 +9,7 @@ summary: "The ONTAP software provides a unified storage software platform that s
 :imagesdir: ../media/
 
 [.lead]
-The ONTAP software provides a unified storage software platform that simplifies managing both native disk shelves and LUNs on storage arrays. You can add storage when and where you require it, without disruption. This functionality is provided by FlexArray Virtualization Software, formerly known as V-Series.
+The ONTAP software provides a unified storage software platform that simplifies managing both native disk shelves and LUNs on storage arrays. You can add storage when and where you require it, without disruption. This functionality is provided by _FlexArray Virtualization Software_, formerly known as V-Series.
 
 The following illustration shows a configuration in which ONTAP systems that are licensed to attach to storage arrays are pooling LUNs from the storage arrays and presenting that storage to clients.
 

@@ -9,4 +9,4 @@ summary: "You can change assignment of a spare array LUN from one ONTAP system t
 :imagesdir: ../media/
 
 [.lead]
-You can change assignment of a spare array LUN from one ONTAP system to another. You might want to change ownership for load balancing over nodes.
+You can change assignment of a _spare_ array LUN from one ONTAP system to another. You might want to change ownership for load balancing over nodes.

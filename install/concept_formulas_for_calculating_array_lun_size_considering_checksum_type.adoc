@@ -11,7 +11,7 @@ summary: "A number of elements, including checksum type, impact the usable capac
 [.lead]
 A number of elements, including checksum type, impact the usable capacity of an array LUN. You can use a formula to calculate how much usable capacity there would be in a given size array LUN, or to calculate how large an array LUN has to be to provide the amount of storage that you want.
 
-A number of elements, including checksum type, impact the size of the array LUN you require for the amount of usable capacity. Usable capacity is the amount of space that is available for storage.
+A number of elements, including checksum type, impact the size of the array LUN you require for the amount of _usable capacity_. Usable capacity is the amount of space that is available for storage.
 
 The following table shows the ways of calculating the array LUN size you require:
 

@@ -11,7 +11,7 @@ summary: "You can map only storage array LUNs to ONTAP. You can map LUN 0 to ONT
 [.lead]
 You can map only storage array LUNs to ONTAP. You can map LUN 0 to ONTAP if it is a storage type LUN.
 
-Some storage arrays have a nonstorage command LUN. You cannot map a command type LUN to an ONTAP system.
+Some storage arrays have a nonstorage _command_ LUN. You cannot map a command type LUN to an ONTAP system.
 
 *Related information*
 
