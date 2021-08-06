@@ -18,7 +18,7 @@ You must work with the storage array administrator to set up the following on th
 * Use as many ports as possible, to provide access to the array LUNs allocated for the ONTAP system.
 * Use host groups (or your vendor's equivalent) to define which array LUN groups are presented to each FC initiator port on an ONTAP system.
 
-You can set up the following on the ONTAP system** to implement a multiple LUN group configuration:
+You can set up the following on the ONTAP system to implement a multiple LUN group configuration:
 
 * Use one FC initiator port pair for each array LUN group.
 +
