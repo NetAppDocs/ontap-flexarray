@@ -15,13 +15,13 @@ The following table provides a mapping between some common vendor terms:
 [options="header"]
 |===
 | Term| Vendor| Definition
-a|
+.2+a|
 host group
 a|
 Hitachi
 a|
 A configuration entity that enables you to specify host access to ports on the storage array. You identify the FC initiator port WWNs for the ONTAP system that you want to access the LUNs; the process differs according to vendor and sometimes differs for different storage array models of the same vendor.
-a||
+a|
 HP XP
 a||
 Storage Group
@@ -37,7 +37,7 @@ a|
 3PAR, HP EVA, HP XP, Hitachi
 a|
 
-a||||
+3+a||
 parity group
 a|
 Hitachi, HP XP

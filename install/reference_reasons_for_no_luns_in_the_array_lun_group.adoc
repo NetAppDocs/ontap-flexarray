@@ -11,7 +11,7 @@ summary: "When validating the back-end configuration, you should check the stora
 [.lead]
 When validating the back-end configuration, you should check the `storage array config show` output to determine whether LUNs are shown in the LUN groups. When the `storage array config show` output shows no LUNs in an array LUN group, ONTAP can see the target port on the fabric but the target port is not presenting array LUNs to ONTAP.
 
-There are a variety of reasons why a target port might not present array LUNs to ONTAP (an open target port). The reasons for an open target port can differ between different storage arrays. In addition, the ways to handle the open target port issues differ with storage arrays. For all storage arrays, troubleshooting the cause of an open target port should include checking the storage array configuration, including the host group configuration.
+There are a variety of reasons why a target port might not present array LUNs to ONTAP (an _open target port_). The reasons for an open target port can differ between different storage arrays. In addition, the ways to handle the open target port issues differ with storage arrays. For all storage arrays, troubleshooting the cause of an open target port should include checking the storage array configuration, including the host group configuration.
 
 For example, the cause could be an _empty host group_, which presents itself to ONTAP as an open target port. With an empty host group, the host group defines the FC initiator and target ports, but it does not list any array LUNs (that is, the host group is empty).
 [NOTE]

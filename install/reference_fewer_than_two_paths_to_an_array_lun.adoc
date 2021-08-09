@@ -80,7 +80,7 @@ Looking at both the `storage array config show` output and the storage errors sh
 +
 [options="header"]
 |===
-| If the storage array config show output shows...| The cause is most likely...
+| If the `storage array config show` output shows...| The cause is most likely...
 a|
 Other array LUNs
 a|
