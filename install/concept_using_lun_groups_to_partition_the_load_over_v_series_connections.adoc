@@ -11,7 +11,7 @@ summary: "You can use multiple LUN groups in your storage configuration for addi
 [.lead]
 You can use multiple LUN groups in your storage configuration for additional capacity and for improving the system performance by spreading the workload across more target ports.
 
-A LUN group is set of logical devices on the storage array that an ONTAP system accesses over the same paths. The storage array administrator configures a set of logical devices as a group to define which host WWPNs can access them. ONTAP refers to this set of devices as a LUN group.
+A _LUN group_ is set of logical devices on the storage array that an ONTAP system accesses over the same paths. The storage array administrator configures a set of logical devices as a group to define which host WWPNs can access them. ONTAP refers to this set of devices as a _LUN group_.
 
 Benefits of using multiple LUN groups are as follows:
 

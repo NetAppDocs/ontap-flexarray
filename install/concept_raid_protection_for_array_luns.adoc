@@ -13,12 +13,12 @@ Storage arrays provide RAID protection for the array LUNs that they make availab
 
 ONTAP uses RAID0 (striping) for array LUNs. ONTAP supports a variety of RAID types on the storage arrays, except RAID0 because RAID0 does not provide storage protection.
 
-When creating RAID groups on storage arrays, you need to follow the best practices of the storage array vendor to ensure that there is an adequate level of protection on the storage array so that disk failure does not result in loss of data or loss of access to data.
+When creating _RAID groups_ on storage arrays, you need to follow the best practices of the storage array vendor to ensure that there is an adequate level of protection on the storage array so that disk failure does not result in loss of data or loss of access to data.
 
 [NOTE]
 ====
 
-* A RAID group on a storage array is the arrangement of disks that together form the defined RAID level.
+* A _RAID group_ on a storage array is the arrangement of disks that together form the defined RAID level.
 +
 Each RAID group supports only one RAID type. The number of disks that you select for a RAID group determines the RAID type that a particular RAID group supports. Different storage array vendors use different terms to describe this entity--RAID groups, parity groups, disk groups, Parity RAID groups, and other terms.
 

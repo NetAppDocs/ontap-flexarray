@@ -16,42 +16,42 @@ The following table lists the back-end configuration errors detected by `storage
 |===
 | `storage errors show` message| For more information about this message see...
 a|
-NAME (Serial #): All paths to this array LUN are connected to the same fault domain. This is a single point of failure.
+`NAME (Serial #): All paths to this array LUN are connected to the same fault domain. This is a single point of failure``.
 a|
 xref:reference_all_paths_to_an_array_lun_are_on_the_same_storage_array_controller.adoc[All paths to an array LUN are on the same storage array controller]
 a|
-NAME (Serial #), port WWPN1: LUN 1 occurs more than once. LUNs cannot be reused on the same array target port.
+`NAME (Serial #), port WWPN1: LUN 1 occurs more than once. LUNs cannot be reused on the same array target port`.
 a|
 xref:reference_duplicate_lun_ids_on_a_target_port.adoc[Duplicated LUN IDs on a target port]
 a|
-NAME (Serial #): This array LUN is an access control LUN. It is not supported and should be masked off or disabled.
+`NAME (Serial #): This array LUN is an access control LUN. It is not supported and should be masked off or disabled``.
 a|
 xref:reference_an_access_control_lun_is_presented_to_ontap.adoc[Access control LUN was presented]
 a|
-NAME (Serial #) This array LUN is configured with conflicting failover modes. Each path to this LUN must use the same mode.
+`NAME (Serial #) This array LUN is configured with conflicting failover modes. Each path to this LUN must use the same mode`.
 a|
 xref:reference_array_luns_are_configured_with_conflicting_failover_modes_clustered_data_ontap_8_2_and_later.adoc[Array LUNs are configured with conflicting failover modes]
 a|
-NAME (Serial #): This Array LUN is only available on one path. Proper configuration requires two paths.
+`NAME (Serial #): This Array LUN is only available on one path. Proper configuration requires two paths`.
 a|
 xref:reference_fewer_than_two_paths_to_an_array_lun.adoc[Fewer than two paths to an array LUN]
 a|
-NAME (Serial #): This array LUN is too large and is not usable. The maximum array LUN size supported is xTB.
+`NAME (Serial #): This array LUN is too large and is not usable. The maximum array LUN size supported is xTB`.
 a|
 xref:reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.adoc[Array LUN is too small or too large]
 a|
-NAME (Serial #): This array LUN is too small and is not usable. The minimum array LUN size supported is 1GB.
+`NAME (Serial #): This array LUN is too small and is not usable. The minimum array LUN size supported is 1GB`.
 a|
 xref:reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.adoc[Array LUN is too small or too large]
 a|
-NAME (Serial #): This Array LUN is using multiple LUN IDs. Only one LUN ID per serial number is supported.
+`NAME (Serial #): This Array LUN is using multiple LUN IDs. Only one LUN ID per serial number is supported`.
 a|
 xref:reference_lun_ids_for_the_same_ldev_do_not_match.adoc[LUN IDs for the same LDEV do not match]
 
 Volume Set Addressing is inconsistent
 
 a|
-NAME (Serial #): This array LUN is marked foreign and has a reservation.
+`NAME (Serial #): This array LUN is marked foreign and has a reservation`.
 a|
 xref:reference_array_lun_is_marked_foreign_and_has_a_reservation_data_ontap_8_3_and_later.adoc[Array LUN is marked foreign and has a reservation]
 |===

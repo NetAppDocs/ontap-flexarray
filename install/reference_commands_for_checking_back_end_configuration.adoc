@@ -11,7 +11,7 @@ summary: "Several ONTAP commands provide information about the storage array con
 [.lead]
 Several ONTAP commands provide information about the storage array configuration, including back-end configuration errors. These commands are particularly useful during installation verification and troubleshooting.
 
-The storage array config show command is the first command to use during installation verification. It is also the first command to use if you notice that your system is not working as you expect, or if you receive an error message.
+The `storage array config show` command is the first command to use during installation verification. It is also the first command to use if you notice that your system is not working as you expect, or if you receive an error message.
 
 Commands that are particularly useful for installation verification and troubleshooting are shown in the following table:
 [options="header"]

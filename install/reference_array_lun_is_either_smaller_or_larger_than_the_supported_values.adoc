@@ -46,7 +46,7 @@ ONTAP generates an error message about size issues for any array LUN exposed to 
 . Review the `storage errors show` output so that you find out which array LUN has a size problem.
  ** If the array LUN with the size problem is for ONTAP, the storage array administrator must resize the array LUN to meet ONTAP requirements, and then present it again to ONTAP.
  ** If the array LUN with the size problem is for another host, the storage array administrator must mask the array LUN so that it is not exposed to ONTAP.
-. After the problem is fixed, run storage array config show again to confirm that the error does not persist.
+. After the problem is fixed, run `storage array config show` again to confirm that the error does not persist.
 
 *Related information*
 

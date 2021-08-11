@@ -61,7 +61,7 @@ The Installation and Setup Instructions for your platform.
 a|
 Connecting an HA pair to a disk shelf
 a|
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html[High-availability configuration]
+https://docs.netapp.com/us-en/ontap/high-availability/index.html[High-availability configuration]
 
 a|
 Adding a disk shelf

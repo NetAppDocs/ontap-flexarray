@@ -11,7 +11,7 @@ summary: "A cluster-wide unique name is assigned to each array LUN, even though 
 [.lead]
 A cluster-wide unique name is assigned to each array LUN, even though there are multiple paths to the array LUN. This is unlike in earlier releases, where each array LUN had multiple names based on the path accessing the LUN at a given time.
 
-You can view the old names mapped to each array LUN by running the storage disk show --disk <disk name> -fields diskpathnames command.
+You can view the old names mapped to each array LUN by running the `storage disk show --disk <disk name> -fields diskpathnames` command.
 
 == Output example for the storage disk show --disk <disk name> -fields diskpathnames command
 

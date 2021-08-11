@@ -13,7 +13,7 @@ You must set the appropriate host type option for the E-Series storage array to 
 
 For a given ONTAP release, you can set the required host type based on the version of the storage array firmware.
 
-If your firmware version is 08.10.15.00 and later, then set the host type to Data ONTAP (ALUA).
+If your firmware version is 08.10.15.00 and later, then set the host type to _Data ONTAP (ALUA)_.
 [NOTE]
 ====
 The minimum supported version of SANtricity Storage Manager for firmware version 08.10.15.00 and later is 11.10.0G00.0026.

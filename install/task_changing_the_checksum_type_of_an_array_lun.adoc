@@ -17,7 +17,7 @@ You must have reviewed the tradeoffs between performance in certain types of wor
 
 You can also contact your Sales Engineer for details about using checksums.
 
-* You must assign a zoned checksum type to an array LUN that you plan to add to an advanced zoned checksum (AZCS) aggregate. When a zoned checksum array LUN is added to an AZCS aggregate, it becomes an advanced zoned checksum array LUN. Similarly, when a zoned checksum array LUN is added to a zoned aggregate, it is a zoned checksum type.
+* You must assign a *zoned* checksum type to an array LUN that you plan to add to an advanced zoned checksum (AZCS) aggregate. When a zoned checksum array LUN is added to an AZCS aggregate, it becomes an advanced zoned checksum array LUN. Similarly, when a zoned checksum array LUN is added to a zoned aggregate, it is a zoned checksum type.
 * You cannot modify the checksum of array LUNs while assigning ownership. You can modify the checksum only on already assigned array LUNs.
 
 .Steps

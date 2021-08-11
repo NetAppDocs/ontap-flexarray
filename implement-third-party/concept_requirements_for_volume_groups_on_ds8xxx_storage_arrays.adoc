@@ -14,5 +14,5 @@ You must be aware of limitations on the number of volume groups that you can use
 You must use a single volume group for each LUN group on a DS8xxx storage array to guarantee that the DS8xxx array LUNs are consistently presented to all the FC initiators (that are on the ONTAP system) that access them.
 [NOTE]
 ====
-*Attention*: If array LUNs are not presented consistently, there is a potential for data corruption.
+If array LUNs are not presented consistently, there is a potential for data corruption.
 ====

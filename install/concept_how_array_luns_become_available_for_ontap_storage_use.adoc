@@ -16,7 +16,7 @@ Although the storage array administrator makes an array LUN accessible to ONTAP,
 . One ONTAP system (licensed to use array LUNs) must be assigned to be the _owner_ of the array LUN.
 . The array LUN must be added to an aggregate.
 
-When you assign an array LUN to an ONTAP system, ONTAP writes data to the array LUN to identify the assigned system as the owner of the array LUN. This logical relationship is referred to as disk ownership.
+When you assign an array LUN to an ONTAP system, ONTAP writes data to the array LUN to identify the assigned system as the owner of the array LUN. This logical relationship is referred to as _disk ownership_.
 
 When you assign an array LUN to an ONTAP system, it becomes a spare LUN owned by that system and it is no longer available to any other ONTAP system.
 

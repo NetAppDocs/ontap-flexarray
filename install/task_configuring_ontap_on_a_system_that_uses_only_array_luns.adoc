@@ -20,8 +20,8 @@ If you want to configure ONTAP for use with array LUNs, you must configure the r
 You must configure each node that you want to use with array LUNs. If the node is in an HA pair, then you must complete the configuration process on one node before proceeding with the configuration on the partner node.
 
 .Steps
-. Power on the primary node and interrupt the boot process by pressing Ctrl-C when you see the following message on the console: Press CTRL-C for special boot menu.
-. Select option 4 (Clean configuration and initialize all disks) on the boot menu.
+. Power on the primary node and interrupt the boot process by pressing Ctrl-C when you see the following message on the console: `Press CTRL-C for special boot menu`.
+. Select option 4 (`Clean configuration and initialize all disks`) on the boot menu.
 +
 The list of array LUNs made available to ONTAP is displayed. In addition, the array LUN size required for root volume creation is also specified. The size required for root volume creation differs from one ONTAP system to another.
 
@@ -57,9 +57,9 @@ Errors:
 -
 ----
 
- ** If array LUNs were previously assigned, for example, through the maintenance mode, they are either marked local or partner in the list of the available array LUNs, depending on whether the array LUNs were selected from the node on which you are installing ONTAP or its HA partner:
+ ** If array LUNs were previously assigned, for example, through the maintenance mode, they are either marked `local` or `partner` in the list of the available array LUNs, depending on whether the array LUNs were selected from the node on which you are installing ONTAP or its HA partner:
 +
-In this example, array LUNs with index numbers 3 and 6 are marked local because they had been previously assigned from this particular node:
+In this example, array LUNs with index numbers 3 and 6 are marked `local` because they had been previously assigned from this particular node:
 +
 ----
 
@@ -104,7 +104,7 @@ Index  Array LUN Name           Model   Vendor    Size    Owner   Checksum  Seri
 +
 The array LUN must be of sufficient size to create the root volume.
 +
-The array LUN selected for root volume creation is marked local (root).
+The array LUN selected for root volume creation is marked ``local (root)``.
 +
 In the following example, the array LUN with index number 3 is marked for root volume creation:
 +

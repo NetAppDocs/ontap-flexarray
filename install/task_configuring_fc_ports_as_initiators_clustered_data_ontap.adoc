@@ -12,22 +12,22 @@ summary: 'You can configure individual FC ports as initiators on ONTAP systems. 
 You can configure individual FC ports as initiators on ONTAP systems. The initiator mode enables the ports to connect to storage arrays.
 
 .Steps
-. *Optional:*  If the adapter port already has LIFs configured, delete all the LIFs by using the network interface delete command.
+. *Optional:*  If the adapter port already has LIFs configured, delete all the LIFs by using the `network interface delete` command.
 +
 If the LIF is in a port set, you must remove the LIF from port set before you can delete the LIF.
 +
 The following example shows how you can delete LIFs on an SVM vs3: `network interface delete -vserver vs3 -lif lif2,lif0`
 
-. Take the port offline by using the network fcp adapter modify command.
+. Take the port offline by using the `network fcp adapter modify` command.
 +
 The following example shows how you can take the port 0c offline for the node sysnode: `network fcp adapter modify -node sysnode1 -adapter 0c -state down`
 
-. Use the system hardware unified-connect modify command to change the offline port from target to initiator.
+. Use the `system hardware unified-connect modify` command to change the offline port from target to initiator.
 +
 The following example shows how you can change the port type for 0c from target to initiator: `system node hardware unified-connect modify -node sysnode1 -adapter 0c -type initiator`
 
 . Reboot the node hosting the adapter you changed.
-. Use the system hardware unified-connect show command to verify that the FC ports are configured correctly for your configuration.
+. Use the `system hardware unified-connect show` command to verify that the FC ports are configured correctly for your configuration.
 +
 The following example shows the change in port type for 0c:
 +
@@ -45,6 +45,6 @@ sysnode1      0c       fc       initiator  -        -          offline
 sysnode1      0d       fc       target     -        -          online
 ----
 
-. Use the storage enable adapter command to bring the offline port back online.
+. Use the `storage enable adapter` command to bring the offline port back online.
 +
 The following example shows how you can make the port 0c online: `node run -node sysnode1 -command storage enable adapter -e 0c`
