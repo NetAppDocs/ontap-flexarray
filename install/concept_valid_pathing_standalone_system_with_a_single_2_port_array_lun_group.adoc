@@ -22,7 +22,7 @@ image::../media/one_standalone_2_port_array_lun_group_array_port_labels.gif[In a
 
 When validating your installation, it is helpful to check your command output against command output in this guide to verify that the number of LUN groups is what you intended and that there are redundant paths.
 
-The following example shows the expected storage array config show output for the illustrated configuration--a single LUN group (LUN group 0) with two redundant paths to each array LUN. (The redundant paths in the output that match the illustration are shown in the array target port names 20**1A**00a0b80fee04 and 20**2A**00a0b80fee0420.)
+The following example shows the expected `storage array config show` output for the illustrated configuration--a single LUN group (LUN group 0) with two redundant paths to each array LUN. (The redundant paths in the output that match the illustration are shown in the array target port names 20**1A**00a0b80fee04 and 20**2A**00a0b80fee0420.)
 
 ----
 

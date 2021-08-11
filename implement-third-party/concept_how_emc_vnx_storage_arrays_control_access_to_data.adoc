@@ -18,4 +18,4 @@ ONTAP supports multiple Storage Groups if these rules are followed:
 * Storage Groups must define which array LUN groups are presented to each FC initiator port.
 * One FC initiator port pair on each ONTAP system is required for each array LUN group.
 
-If array LUN neighborhoods are used, the V-Series systemsin the same neighborhood must be in the same Storage Group.
+If array LUN neighborhoods are used, the V-Series systems in the same neighborhood must be in the same Storage Group.

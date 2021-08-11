@@ -9,7 +9,7 @@ summary: "For the VCMDB (Volume Configuration Management Database) to be enabled
 :imagesdir: ../media/
 
 [.lead]
-For the VCMDB (Volume Configuration Management Database) to be enabled, the VCMDB LUN must exist. The VCMDB LUN is a command type LUN, not a storage LUN. The VCMDB is typically mapped to LUN 0, but can be mapped to an array LUN other than LUN 0.
+For the VCMDB (Volume Configuration Management Database) to be enabled, the VCMDB LUN must exist. The VCMDB LUN is a `command` type LUN, not a storage LUN. The VCMDB is typically mapped to LUN 0, but can be mapped to an array LUN other than LUN 0.
 
 If the VCMDB LUN is mapped to an ONTAP system, ONTAP periodically logs a message that the VCMDB LUN is less than the minimum size required, and it marks the VCMDB LUN as failed. The ONTAP system continues to function normally after logging this error message, but it cannot use the LUN.
 

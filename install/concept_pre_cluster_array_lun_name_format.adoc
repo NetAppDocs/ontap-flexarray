@@ -9,7 +9,7 @@ summary: "Before a node joins to a cluster or when the system is in the maintena
 :imagesdir: ../media/
 
 [.lead]
-Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the pre-cluster format.
+Before a node joins to a cluster or when the system is in the maintenance mode, the array LUN name follows a format used before Data ONTAP 8.3, the _pre-cluster_ format.
 
 In this format, the array LUN name is a path-based name that includes the devices in the path between the ONTAP system and the storage array, ports used, and the SCSI LUN ID on the path that the storage array presents externally for mapping to hosts.
 
@@ -22,29 +22,29 @@ On an ONTAP system that supports array LUNs, each array LUN can have multiple na
 a|
 Direct-attached
 a|
-node-name.adapter.idlun-id
+`node-name.adapter.idlun-id`
 a|
-node-name is the name of the clustered node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. adapter is the adapter number on the ONTAP system.
+`node-name` is the name of the clustered node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. adapter is the adapter number on the ONTAP system.
 
-id is the channel adapter port on the storage array.
+`id` is the channel adapter port on the storage array.
 
-lun-id is the array LUN number that the storage array presents to hosts.
+`lun-id` is the array LUN number that the storage array presents to hosts.
 
-Example: node1.0a.0L1
+Example: `node1.0a.0L1`
 
 a|
 Fabric-attached
 a|
-node-name:switch-name:port.idlun-id
+`node-name:switch-name:port.idlun-id`
 a|
-node-name is the name of the node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. switch-name is the name of the switch.
+`node-name` is the name of the node. With ONTAP, the node name is prepended to the LUN name so that the path-based name is unique within the cluster. `switch-name` is the name of the switch.
 
-port is the switch port that is connected to the target port (the end point).
+`port` is the switch port that is connected to the target port (the end point).
 
-id is the device ID.
+`id` is the device ID.
 
-lun-id is the array LUN number that the storage array presents to hosts.
+`lun-id` is the array LUN number that the storage array presents to hosts.
 
-Example: node1:brocade3:6.126L1
+Example: `node1:brocade3:6.126L1`
 
 |===

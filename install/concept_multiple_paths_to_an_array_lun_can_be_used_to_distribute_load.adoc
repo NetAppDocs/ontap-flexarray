@@ -22,6 +22,6 @@ For example, on an active-active array, I/O requests for a given LUN can be dist
 
 You can run the following commands to view the distribution of load for a given LUN across multiple paths:
 
-* storage disk show -disk <LUN name> displays the distribution of I/O load across the available paths for a given array LUN.
-* storage path show-by-initiator -array-name <array name> displays the distribution of I/O load across all the initiator ports on the ONTAP system that is connected to a given storage array.
-* storage path show -by-target -array-name <array name> displays the distribution of I/O load across all the target ports on a given storage array.
+* ``storage disk show -disk <LUN name>`` displays the distribution of I/O load across the available paths for a given array LUN.
+* ``storage path show-by-initiator -array-name <array name>`` displays the distribution of I/O load across all the initiator ports on the ONTAP system that is connected to a given storage array.
+* ``storage path show -by-target -array-name <array name>`` displays the distribution of I/O load across all the target ports on a given storage array.

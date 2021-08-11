@@ -11,7 +11,7 @@ summary: "If you are using your ONTAP system with storage arrays, you must use a
 [.lead]
 If you are using your ONTAP system with storage arrays, you must use a LUN security method to eliminate the possibility of a non-ONTAP system overwriting array LUNs owned by an ONTAP system, or vice versa.
 
-LUN security is a method for isolating the hosts that can access particular array LUNs. LUN security is similar to switch zoning in concept, but it is performed on the storage array. LUN security and LUN masking are equivalent terms to describe this functionality.
+LUN security is a method for isolating the hosts that can access particular array LUNs. LUN security is similar to switch zoning in concept, but it is performed on the storage array. _LUN security_ and _LUN masking_ are equivalent terms to describe this functionality.
 
 [NOTE]
 ====

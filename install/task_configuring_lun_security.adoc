@@ -11,7 +11,7 @@ summary: "The storage array administrator must configure the storage array and c
 [.lead]
 The storage array administrator must configure the storage array and create host groups so that other hosts cannot access the array LUNs intended for use by ONTAP.
 
-The concept of LUN security is similar to zoning except that LUN security is set up on the storage array. LUN security keeps different servers from using each other's storage on the SAN. LUN security might also be referred to as LUN masking.
+The concept of LUN security is similar to zoning except that LUN security is set up on the storage array. LUN security keeps different servers from using each other's storage on the SAN. LUN security might also be referred to as _LUN masking_.
 
 .Steps
 . Set up LUN security on the storage array.
@@ -22,7 +22,7 @@ You should also see the _FlexArray Virtualization Implementation Guide for Third
 
 . Create host groups, or the equivalent, for the ONTAP system.
 +
-The term host group is used on some storage arrays to describe a configuration parameter that enables you to specify host access to specific ports on the storage array. Different storage arrays use different terms to describe this configuration parameter. Each storage array vendor has its own process for creating a host group or the equivalent.
+The term _host group_ is used on some storage arrays to describe a configuration parameter that enables you to specify host access to specific ports on the storage array. Different storage arrays use different terms to describe this configuration parameter. Each storage array vendor has its own process for creating a host group or the equivalent.
 
 *Related information*
 
