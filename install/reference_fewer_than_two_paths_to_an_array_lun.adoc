@@ -9,7 +9,7 @@ summary: "Common reasons for fewer than two paths to an array LUN are a mapping 
 :imagesdir: ../media/
 
 [.lead]
-Common reasons for fewer than two paths to an array LUN are a mapping error, a zoning error, or a cable dropping out. The storage errors show output identifies array LUNs with only a single path.
+Common reasons for fewer than two paths to an array LUN are a mapping error, a zoning error, or a cable dropping out. The `storage errors show` output identifies array LUNs with only a single path.
 
 ONTAP requires redundant paths to an array LUN so that access to the LUN is maintained if a device fails. Two paths must exist to each array LUN.
 
@@ -42,7 +42,7 @@ For this example of a mapping error, assume that the storage administrator creat
 
 image::../media/ldev_mapped_on_only_one_array_port.gif[This graphic is described in the surrounding text.]
 
-When this error is made, the storage array config show output shows only one path to the LUN, as the following example shows.
+When this error is made, the `storage array config show` output shows only one path to the LUN, as the following example shows.
 
 ----
 
@@ -55,7 +55,7 @@ mysystem1a    0      1    DGC_RAID5_1  20:1A:00:a0:b8:0f:ee:04  vnbr20es25:5   0
 Warning: Configuration errors were detected.  Use 'storage errors show' for detailed information.
 ----
 
-The storage errors show command provides the details you need to determine which LUN has fewer than two paths.
+The `storage errors show` command provides the details you need to determine which LUN has fewer than two paths.
 
 ----
 
@@ -73,14 +73,14 @@ The UID for this example is 600508B4:000B6314:00008000:00200000:00000000:0000000
 
 == Troubleshooting and problem resolution
 
-Looking at both the storage array config show output and the storage errors show output is helpful when troubleshooting fewer than two paths to an array LUN.
+Looking at both the `storage array config show` output and the storage errors show output is helpful when troubleshooting fewer than two paths to an array LUN.
 
-. Review the storage errors show output to obtain the serial number of the array LUN that is available on only one path.
-. Review the storage array config show output to try to isolate the cause of the problem.
+. Review the `storage errors show` output to obtain the serial number of the array LUN that is available on only one path.
+. Review the `storage array config show` output to try to isolate the cause of the problem.
 +
 [options="header"]
 |===
-| If the storage array config show output shows...| The cause is most likely...
+| If the `storage array config show` output shows...| The cause is most likely...
 a|
 Other array LUNs
 a|
@@ -93,4 +93,4 @@ A cabling error, zoning error, or hardware issue
 
 . If the cause is a mapping error, have the storage array administrator map the identified array LUN to two redundant storage array ports.
 . If the cause seems to be a problem other than mapping, check zoning, host group mapping, cabling, and connectivity.
-. After you fix the problem, run storage array config show again to confirm that the error is fixed.
+. After you fix the problem, run `storage array config show` again to confirm that the error is fixed.

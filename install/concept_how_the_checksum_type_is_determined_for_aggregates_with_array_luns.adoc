@@ -13,8 +13,8 @@ Each ONTAP aggregate has a checksum type associated with it. The aggregate check
 
 The checksum type of an aggregate is determined by the checksum type of the first array LUN that is added to the aggregate. The checksum type applies to an entire aggregate (that is, to all volumes in the aggregate). Mixing array LUNs of different checksum types in an aggregate is not supported.
 
-* An array LUN of type block must be used with block checksum type aggregates.
-* An array LUN of type zoned must be used with advanced zoned checksum (AZCS or advanced_zoned) type aggregates.
+* An array LUN of type _block_ must be used with block checksum type aggregates.
+* An array LUN of type _zoned_ must be used with advanced zoned checksum (AZCS or advanced_zoned) type aggregates.
 
 Before you add array LUNs to an aggregate, you must know the checksum type of the LUNs you want to add, for the following reasons:
 

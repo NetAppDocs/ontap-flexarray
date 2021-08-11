@@ -15,7 +15,7 @@ A multiple LUN group configuration is supported for most storage arrays. See the
 
 The following illustration shows how one FC initiator port pair (0c and 0f) on an ONTAP system accesses one LUN group over one storage array port pair, and a second FC initiator port pair (0a and 0h) accesses a second LUN group on the same storage array over a different storage array port pair.
 
-This configuration is referred to as stand-alone with two 2-port array LUN groups. A multiple LUN group configuration could have an HA pair instead of a stand-alone system.
+This configuration is referred to as _stand-alone with two 2-port array LUN groups_. A multiple LUN group configuration could have an HA pair instead of a stand-alone system.
 
 image::../media/multiple_lun_groups_with_stand_alone_6xxx_array_controller.gif[This graphic is described by the surrounding text.]
 

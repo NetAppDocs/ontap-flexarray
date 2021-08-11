@@ -17,7 +17,7 @@ The process to make LUNs available to hosts and the terminology to describe it v
 +
 [NOTE]
 ====
-LDEV is a term used by some vendors and this guide to describe a piece of logical RAID storage configured from disks.
+_LDEV_ is a term used by some vendors and this guide to describe a piece of logical RAID storage configured from disks.
 ====
 . Creates a host group (or vendor equivalent).
 +

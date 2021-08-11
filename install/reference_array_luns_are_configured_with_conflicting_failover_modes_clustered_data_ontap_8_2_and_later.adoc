@@ -51,7 +51,7 @@ You need to fix the failover mismatch problem on the storage array. However, the
 +
 [NOTE]
 ====
-The storage array config command tells you to run storage error show if there is a problem that you need to fix.
+The `storage array config` command tells you to run `storage error show` if there is a problem that you need to fix.
 ====
 . Review the `storage errors show` output to determine the failover mode setting for the array LUN that is not consistent with the failover mode that ONTAP is expecting.
 +

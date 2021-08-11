@@ -18,7 +18,7 @@ This procedure suggests an order for approaching troubleshooting.
 As you continue with the troubleshooting steps, you should save any information that you gather about the issue so that you can provide this information to technical support in the case of an escalation.
 ====
 .Steps
-. Determine whether the issue is with the front end (an ONTAP issue that affects all the corresponding platforms) or the back end (an issue with the switch or storage array configuration).
+. Determine whether the issue is with the _front end_ (an ONTAP issue that affects all the corresponding platforms) or the _back end_ (an issue with the switch or storage array configuration).
 +
 For example, if you are trying to use an ONTAP feature and it is not working as you expected, the issue is likely to be with the front end.
 
@@ -41,9 +41,9 @@ a|
 +
 https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool]
 
- .. Use the storage array config show command to check whether there are any common back-end configuration errors that the system can detect.
+ .. Use the `storage array config show` command to check whether there are any common back-end configuration errors that the system can detect.
 +
-If ONTAP detects a back-end configuration error, you must run the storage errors show command to obtain details about the error.
+If ONTAP detects a back-end configuration error, you must run the `storage errors show` command to obtain details about the error.
 
 +
 |===
