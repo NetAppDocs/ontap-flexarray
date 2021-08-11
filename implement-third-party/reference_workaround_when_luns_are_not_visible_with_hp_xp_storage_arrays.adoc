@@ -1,7 +1,7 @@
 ---
 permalink: implement-third-party/reference_workaround_when_luns_are_not_visible_with_hp_xp_storage_arrays.html
 sidebar: sidebar
-keywords: workaround, luns, not, visible, hp xp, storage, arrays, aggregates, created, ontap, system 
+keywords: workaround, luns, not, visible, hp xp, storage, arrays, aggregates, created, ontap, system
 summary: 'The storage array parameters specified in the Required parameters for HP XP storage arrays with ONTAP systems section should be set and LUNs should be mapped to the host groups before the switch is zoned to connect the ONTAP system that uses array LUNs to an HP XP storage array.'
 ---
 = Workaround when LUNs are not visible with HP XP storage arrays
@@ -19,7 +19,7 @@ The procedure you use depends on whether aggregates with HP XP array LUNs have a
 
 == If aggregates with HP XP array LUNs are already created on an ONTAP system that uses array LUNs
 
-. Run the following command to ensure that HA configuration is enabled on your ONTAP systems: `cluster ha show`
+. Run the following command to ensure that HA configuration is enabled on your ONTAP systems: *`cluster ha show`*
 +
 The following output is displayed:
 +
@@ -28,7 +28,7 @@ The following output is displayed:
 High Availability Configured: true
 ----
 
-. Run the following command to ensure that storage failover is configured on your ONTAP systems: `storage failover show`
+. Run the following command to ensure that storage failover is configured on your ONTAP systems: *`storage failover show`*
 +
 The following output is displayed:
 +
@@ -41,8 +41,8 @@ Node-2    Node-1    true     Connected to Node-1
 2 entries were displayed.
 ----
 
-. Perform a takeover operation on Node-1 by running the following command: `storage failover takeover -ofnode Node-1`
-. Run the following command again to verify that Node-2 is ready for a giveback operation: `storage failover show`
+. Perform a takeover operation on Node-1 by running the following command: *`storage failover takeover -ofnode Node-1`*
+. Run the following command again to verify that Node-2 is ready for a giveback operation: *`storage failover show`*
 +
 The following output is displayed:
 +
@@ -56,19 +56,19 @@ Node-1    Node-2    -        Waiting for giveback (HA mailboxes)
 2 entries were displayed.
 ----
 
-. Perform a giveback operation on Node-1 by running the following command: `storage failover giveback -ofnode Node-1 -require-partner-waiting true`
+. Perform a giveback operation on Node-1 by running the following command: *`storage failover giveback -ofnode Node-1 -require-partner-waiting true`*
 . From other nodes in the cluster, repeat Step 3 through Step 5.
 
 == If aggregates with HP XP array LUNs have not been created on an ONTAP systems that uses array LUNs
 
-. Run the following command to list all the ONTAP FC initiator ports that are connected to the HP XP storage array: `system node run -node <node name> -command "sysconfig -v"`
+. Run the following command to list all the ONTAP FC initiator ports that are connected to the HP XP storage array: *`system node run -node <node name> -command "sysconfig -v"`*
 +
-For example: `system node run -node Node-1 -command "sysconfig -v"`
+For example: *`system node run -node Node-1 -command "sysconfig -v"`*
 
-. Run the following command to take all the listed ports offline: `system node run -node <node name> -command "priv set advanced;fcadmin offline <adapter>"`
+. Run the following command to take all the listed ports offline: *`system node run -node <node name> -command "priv set advanced;fcadmin offline <adapter>"`*
 +
-For example: `system node run -node Node-1 -command "priv set advanced;fcadmin offline 0a"`
+For example: *`system node run -node Node-1 -command "priv set advanced;fcadmin offline 0a"`*
 
-. Run the following command to bring all the listed ports online: `system node run -node <node name> -command "priv set advanced;fcadmin online <adapter>"`
+. Run the following command to bring all the listed ports online: *`system node run -node <node name> -command "priv set advanced;fcadmin online <adapter>"`*
 +
-For example: `system node run -node Node-1 -command "priv set advanced;fcadmin online 0a"`
+For example: *`system node run -node Node-1 -command "priv set advanced;fcadmin online 0a"`*

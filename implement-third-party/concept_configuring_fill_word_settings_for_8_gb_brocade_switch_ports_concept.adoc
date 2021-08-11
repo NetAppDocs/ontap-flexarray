@@ -18,15 +18,11 @@ For storage arrays, you must set the fill word according to the following recomm
 |===
 | Storage array| Fill word value on the Brocade switch ports
 a|
-Hitachi
+Hitachi| 2
 a|
-2
+HP XP|
 a|
-HP XP
-a|
-All other storage arrays supported with Data ONTAP systems
-a|
-3
+All other storage arrays supported with Data ONTAP systems| 3
 |===
 *Related information*
 

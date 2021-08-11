@@ -19,7 +19,7 @@ The procedure you use depends on whether aggregates with Hitachi array LUNs have
 
 == If aggregates with Hitachi array LUNs are already created on an ONTAP system that uses array LUNs
 
-. Run the following command to ensure that HA configuration is enabled on your ONTAP systems: `cluster ha show`
+. Run the following command to ensure that HA configuration is enabled on your ONTAP systems: *`cluster ha show`*
 +
 The following output is displayed:
 +
@@ -28,7 +28,7 @@ The following output is displayed:
 High Availability Configured: true
 ----
 
-. Run the following command to ensure that storage failover is configured on your ONTAP system: `storage failover show`
+. Run the following command to ensure that storage failover is configured on your ONTAP system: *`storage failover show`*
 +
 The following output is displayed:
 +
@@ -41,8 +41,10 @@ Node-2    Node-1    true     Connected to Node-1
 2 entries were displayed.
 ----
 
-. Run the following command to perform a takeover operation on Node-1: `storage failover takeover -ofnode Node-1`
-. Run the following command again to verify that Node-2 is ready for a giveback operation: `storage failover show`
+. Run the following command to perform a takeover operation on Node-1:
+ *`storage failover takeover -ofnode Node-1`*
+. Run the following command again to verify that Node-2 is ready for a giveback operation:
+*`storage failover show`*
 +
 The following output is displayed:
 +
@@ -56,19 +58,20 @@ Node-1    Node-2    -        Waiting for giveback (HA mailboxes)
 2 entries were displayed.
 ----
 
-. Run the following command to perform a giveback operation on Node-1: `storage failover giveback -ofnode Node-1 -require-partner-waiting true`
+. Run the following command to perform a giveback operation on Node-1:
+*`storage failover giveback -ofnode Node-1 -require-partner-waiting true`*
 . From other nodes in the cluster, repeat Step 3 through Step 5.
 
 == If aggregates with Hitachi array LUNs have not been created on an ONTAP system that uses array LUNs
 
-. Run the following command to list all the ONTAP FC initiator ports that are connected to the Hitachi storage array: `system node run -node <node name> -command "sysconfig -v"`
+. Run the following command to list all the ONTAP FC initiator ports that are connected to the Hitachi storage array: *`system node run -node <node name> -command "sysconfig -v"`*
 +
-For example: `system node run -node Node-1 -command "sysconfig -v"`
+For example: *`system node run -node Node-1 -command "sysconfig -v"`*
 
-. Run the following command to take all the listed ports offline: `system node run -node <node name> -command "priv set advanced;fcadmin offline <adapter>"`
+. Run the following command to take all the listed ports offline: *`system node run -node <node name> -command "priv set advanced;fcadmin offline <adapter>"`*
 +
-For example: `system node run -node Node-1 -command "priv set advanced;fcadmin offline 0a"`
+For example: *`system node run -node Node-1 -command "priv set advanced;fcadmin offline 0a"`*
 
-. Run the following command to bring all the listed ports online: `system node run -node <node name> -command "priv set advanced;fcadmin online <adapter>"`
+. Run the following command to bring all the listed ports online: *`system node run -node <node name> -command "priv set advanced;fcadmin online <adapter>"`*
 +
-For example: `system node run -node Node-1 -command "priv set advanced;fcadmin online 0a"`
+For example: *`system node run -node Node-1 -command "priv set advanced;fcadmin online 0a"`*

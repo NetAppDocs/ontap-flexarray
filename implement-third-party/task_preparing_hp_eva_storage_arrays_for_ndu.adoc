@@ -21,10 +21,10 @@ During the firmware upgrade, both HP EVA controllers are rebooted.
 This procedure instructs you to use ONTAP commands that increase ONTAP resiliency throughout the firmware upgrade. After the firmware upgrade is complete, you use the ONTAP commands again to return the ports to their normal operating mode.
 
 .Steps
-. On the ONTAP system, set the privilege level of the command session to advanced: `set -privilege advanced`
-. Set the `is-upgrade-pending` parameter to *true* for the HP EVA storage array that is undergoing a firmware upgrade: `storage array modify -name array_name -is-upgrade-pending true`
+. On the ONTAP system, set the privilege level of the command session to advanced: *`set -privilege advanced`*
+. Set the `is-upgrade-pending` parameter to *true* for the HP EVA storage array that is undergoing a firmware upgrade: *`storage array modify -name array_name -is-upgrade-pending true`*
 . On the storage array, start the firmware upgrade.
-. After the firmware upgrade is complete, set the privilege level to advanced again, if necessary, and then on the ONTAP system, set the `is-upgrade-pending` parameter to *false* to return the storage array ports to normal operation: `storage array modify -name array_name -is-upgrade-pending false`
+. After the firmware upgrade is complete, set the privilege level to advanced again, if necessary, and then on the ONTAP system, set the `is-upgrade-pending` parameter to *false* to return the storage array ports to normal operation: *`storage array modify -name array_name -is-upgrade-pending false`*
 +
 If you did not exit advanced mode in Step 2 you do not need to access it again.
 +
