@@ -1,3 +1,10 @@
+---
+settings:
+  name: ONTAP FlexArray
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
 sidebar:
   entries:
     - title: ONTAP FlexArray Docs
