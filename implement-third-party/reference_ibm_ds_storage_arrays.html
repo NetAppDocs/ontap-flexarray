@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>IBM DS storage arrays</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="IBM DS storage arrays" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_ibm_ds_storage_arrays.html" />
+	<meta property="og:description" content="You must meet certain requirements when configuring storage arrays to work with ONTAP systems that use array LUNs. These requirements include setting configu..." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-flexarray/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="You must meet certain requirements when configuring storage arrays to work with ONTAP systems that use array LUNs. These requirements include setting configu...">
+  <meta name="keywords" content=" ibm, ds, storage, arrays">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/ontap-flexarray/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-flexarray/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-flexarray/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-flexarray/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap-flexarray/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/ontap-flexarray/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/ontap-flexarray/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-flexarray/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-flexarray/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/us-en/ontap-flexarray/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/us-en/ontap-flexarray/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/us-en/ontap-flexarray/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/ontap-flexarray/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/ontap-flexarray/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/ontap-flexarray/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap-flexarray/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/ontap-flexarray/js/na-utility.js'></script>
+  <script src='/us-en/ontap-flexarray/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/ontap-flexarray/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/ontap-flexarray/js/toc.js'></script>
+  <script src='/us-en/ontap-flexarray/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/us-en/ontap-flexarray/js/product-family.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/us-en/ontap-flexarray/search.html"
+          data-type="widget" 
+          data-placeholder="Search Documentation" 
+          data-no-results-found="No results were found for {query}" 
+          data-did-you-mean="Search for {suggestion}." 
+          data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" 
+          data-results-found="{hitCount} results found"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/ontap-flexarray/">ONTAP&nbsp;FlexArray</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          IBM DS storage arrays
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">Site</span>
+    </div>
+    <li>
+      <a target="_blank" href="/us-en/ontap-flexarray/pdfs/fullsite-sidebar/ONTAP_FlexArray_Documentation.pdf" >
+        <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+        ONTAP FlexArray Documentation
+      </a>
+    </li>
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Implementing_E_Series_storage.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Implementing E-Series storage
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Where to find information for configurations with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Requirements_for_configuring_E_Series_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Requirements for configuring E-Series storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Supported_fabric_attached_configurations_for_E_Series_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Supported fabric-attached configurations for E-Series storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Implementing_third_party_storage.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Implementing third-party storage
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Where to find information for configurations with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/General_configuration_guidelines_for_all_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            General configuration guidelines for all storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/EMC_VNX_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            EMC VNX storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/EMC_Symmetrix_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            EMC Symmetrix storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Hitachi_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Hitachi storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/HP_EVA_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            HP EVA storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/HP_XP_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            HP XP storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/IBM_DS_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            IBM DS storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+            <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/ontap-flexarray/pdfs/pages/implement-third-party/reference_ibm_ds_storage_arrays.pdf" >
+    <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+    IBM DS storage arrays
+  </a>
+</li>
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/IBM_XIV_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            IBM XIV storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/3PAR_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            3PAR storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Required_parameters_for_3PAR_arrays_with_ONTAP_systems.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Required parameters for 3PAR arrays with ONTAP systems
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Supported_fabric_attached_configurations.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Supported fabric-attached configurations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Installing_FlexArray.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Installing FlexArray
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/FlexArray_Virtualization_technology_overview__8212___8203_using_array_LUNs_for_storage.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            FlexArray Virtualization technology overview&#8212;&#8203;using array LUNs for storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Zoning_in_a_configuration_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Zoning in a configuration with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_a_configuration_with_array_LUNs.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning a configuration with array LUNs
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Where to find information for configurations with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_RAID_implementation.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning for RAID implementation
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_ONTAP_use_of_array_LUNs.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning for ONTAP use of array LUNs
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/How_array_LUNs_become_available_for_ONTAP_storage_use.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            How array LUNs become available for ONTAP storage use
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Factors_that_impact_the_number_and_size_of_array_LUNs_you_need.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Factors that impact the number and size of array LUNs you need
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Considering_checksum_type_when_planning_array_LUN_size_and_number.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Considering checksum type when planning array LUN size and number
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_LUN_security_on_the_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning for LUN security on the storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_paths_to_array_LUNs.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning for paths to array LUNs
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Requirements_for_redundant_setup_of_components_in_a_path.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Requirements for redundant setup of components in a path
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Required_number_of_paths_to_an_array_LUN.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Required number of paths to an array LUN
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Benefits_of_using_multiple_LUN_groups.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Benefits of using multiple LUN groups
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_a_port_to_port_connectivity_scheme.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Planning a port-to-port connectivity scheme
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Determining_the_array_LUNs_for_specific_aggregates.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Determining the array LUNs for specific aggregates
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Setting_up_ONTAP_to_work_with_array_LUNs.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Setting up ONTAP to work with array LUNs
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Commands_for_checking_back_end_configuration.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Commands for checking back-end configuration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Verifying_installation_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Verifying installation with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Checking_for_back_end_configuration_errors_preventing_system_operation.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Checking for back-end configuration errors preventing system operation
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Verifying_that_the_back_end_configuration_matches_the_intended_configuration.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Verifying that the back-end configuration matches the intended configuration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Managing_array_LUNs_using_ONTAP.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Managing array LUNs using ONTAP
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Troubleshooting_configurations_with_storage_arrays.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Troubleshooting configurations with storage arrays
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Invalid_path_setup_examples.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Invalid path setup examples
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Relationship_between_zoning_and_host_group_configuration.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Relationship between zoning and host group configuration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/us-en/ontap-flexarray/pdfs/sidebar/Target_queue_depth_customization.pdf" 
+            
+          >
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            Target queue depth customization
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/index.html">
+        ONTAP FlexArray Docs
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-e-series/index.html">
+        <div class="na-navbar-padding"> Implementing E-Series storage</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_for_configurations_with_storage_arrays.html">
+        <div class="na-navbar-padding"> Where to find information for configurations with storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_about_support_for_storage_arrays.html">
+        Where to find information about ONTAP support for storage arrays
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_systems_that_can_use_array_luns_on_storage_arrays.html">
+        ONTAP systems that can use array LUNs on storage arrays
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-e-series/reference_requirements_for_configuring_e_series_storage_arrays.html">
+        <div class="na-navbar-padding"> Requirements for configuring E-Series storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/reference_required_host_type_for_e_series_storage_arrays_reference.html">
+        Required host type for E-Series storage arrays
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html">
+        <div class="na-navbar-padding"> Supported fabric-attached configurations for E-Series storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_basic_configuration.html">
+        Stand-alone basic configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_system_with_two_2_port_array_lun_groups.html">
+        Stand-alone system with two 2-port array LUN groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_single_4_port_array_lun_group_configuration.html">
+        Single 4-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_two_4_port_array_lun_group_configuration.html">
+        Two 4-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_eight_port_array_lun_group_configuration.html">
+        Eight-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html">
+        Attaching FC initiator port to multiple targets ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/concept_sharing_a_target_port_with_two_fc_initiator_ports.html">
+        Sharing a target port with two FC initiator ports
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html">
+        Supported direct-attached configurations with E-Series storage arrays
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/index.html">
+        <div class="na-navbar-padding"> Implementing third-party storage</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/concept_where_to_find_information_for_configurations_with_storage_arrays.html">
+        <div class="na-navbar-padding"> Where to find information for configurations with storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_where_to_find_information_about_support_for_storage_arrays.html">
+        Where to find information about ONTAP support for storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_limits_information_for_a_configuration_with_storage_arrays.html">
+        Limit types for configurations with storage arrays
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_use_of_storage_array_advanced_features.html">
+        Support for advanced features of storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_systems_that_can_use_array_luns_on_storage_arrays.html">
+        ONTAP systems that can use array LUNs on storage arrays
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/concept_general_configuration_guidelines_for_all_storage_arrays.html">
+        <div class="na-navbar-padding"> General configuration guidelines for all storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirement_for_8_gb_array_port_initialization.html">
+        Requirement for 8-Gb array port initialization
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_configuring_fill_word_settings_for_8_gb_brocade_switch_ports_concept.html">
+        Required fill word settings for 8 Gb Brocade switch ports
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_emc_vnx_storage_arrays.html">
+        <div class="na-navbar-padding"> EMC VNX storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_emc_vnx_storage_arrays_with_data_ontap_systems.html">
+        Required parameters for EMC VNX storage arrays with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_how_emc_vnx_storage_arrays_control_access_to_data.html">
+        How EMC VNX storage array control access to data
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_limitation_on_array_lun_numbering_with_emc_and_vnx_arrays.html">
+        Limitation on array LUN numbering with EMC VNX array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_guidelines_for_enabling_alua_on_emc_vnx_storrage_arrays.html">
+        Guidelines for enabling ALUA on EMC VNX storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_alua_behavior_of_vnx2_storage_arrays.html">
+        ALUA behavior of VNX2 storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_emc_vnx_storage_array_families.html">
+        EMC VNX storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_emc_symmetrix_storage_arrays.html">
+        <div class="na-navbar-padding"> EMC Symmetrix storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_emc_symmetrix_storage_arrays_with_data_ontap_systems.html">
+        Required Parameter settings on the storage array for ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_implementing_lun_security_on_emc_symmetrix_storage_arrays.html">
+        Requirements for implementing LUN security on EMC Symmetrix storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_caution_about_using_the_vcmdb_lun.html">
+        Caution about using the VCMDB LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_caution_about_using_the_aclx_lun.html">
+        Caution about using the ACLX LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_restriction_on_using_a_gatekeeper_lun.html">
+        Restriction on using gatekeeper LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_emc_symmetrix_storage_array_families.html">
+        EMC Symmetrix storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_hitachi_storage_arrays.html">
+        <div class="na-navbar-padding"> Hitachi storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_hitachi_storage_arrays_with_ontap_systems.html">
+        Required parameters for Hitachi storage arrays with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_workaround_when_luns_are_not_visible_with_hitachi_storage_arrays.html">
+        Workaround when LUNs are not visible with Hitachi storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_creating_luns_in_dynamic_pools.html">
+        Requirements for creating LUNs in dynamic pools
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_formatting_array_luns.html">
+        Requirements for formatting array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_using_disks_external_to_the_storage_array.html">
+        Requirements for using disks external to the storage array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_guidelines_for_configuring_ports_on_hitachi_storage_arrays.html">
+        Guidelines for configuring ports on Hitachi storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_hitachi_storage_array_families.html">
+        Hitachi storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_hp_eva_storage_arrays.html">
+        <div class="na-navbar-padding"> HP EVA storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_hp_eva_storage_arrays_with_data_ontap_systems.html">
+        Required parameters for HP EVA arrays with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_configuring_the_hp_eva_storage_management_server.html">
+        Requirements for configuring the HP EVA Storage Management Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/task_preparing_hp_eva_storage_arrays_for_ndu.html">
+        Preparing HP EVA storage arrays for NDU
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_alua_support_for_hp_eva_storage_arrays.html">
+        ALUA support for HP EVA storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_hp_eva_storage_array_families.html">
+        HP EVA storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html">
+        <div class="na-navbar-padding"> HP XP storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_hp_xp_storage_arrays_with_data_ontap_systems.html">
+        Required parameters for HP XP storage arrays with ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_workaround_when_luns_are_not_visible_with_hp_xp_storage_arrays.html">
+        Workaround when LUNs are not visible with HP XP storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_creating_luns_in_dynamic_pools.html">
+        Requirements for creating LUNs in dynamic pools
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_formatting_array_luns.html">
+        Requirements for formatting array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_using_disks_external_to_the_storage_array.html">
+        Requirements for using disks external to the storage array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_guidelines_for_configuring_ports_on_hp_xp_storage_arrays.html">
+        Guidelines for configuring ports on HP XP storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_hp_xp_storage_array_families.html">
+        HP XP storage array families
+      </a></li></ul></li><li class="subfolders  active "><a href="/us-en/ontap-flexarray/implement-third-party/reference_ibm_ds_storage_arrays.html">
+        <div class="na-navbar-padding"> IBM DS storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_required_settings_for_ibm_ds_storage_arrays_with_ontap_systems.html">
+        Required settings for IBM DS storage arrays with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_requirements_for_volume_groups_on_ds8xxx_storage_arrays.html">
+        Requirements for volume groups on DS8xxx storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_ibm_ds_storage_array_families.html">
+        IBM DS storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_ibm_xiv_storage_arrays.html">
+        <div class="na-navbar-padding"> IBM XIV storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_requirements_for_configuring_ibm_xiv_storage_arrays_with_data_ontap_systems.html">
+        Requirements for configuring IBM XIV arrays with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_ibm_xiv_storage_array_families.html">
+        IBM XIV storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_3par_storage_arrays.html">
+        <div class="na-navbar-padding"> 3PAR storage arrays</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_required_parameters_for_3par_arrays_with_data_ontap_systems.html">
+        <div class="na-navbar-padding"> Required parameters for 3PAR arrays with ONTAP systems</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/reference_workaround_for_the_unknown_device_l254_ses_problem_with_3par_storage_arrays.html">
+        Workaround for the unknown device (L254/SES) problem with 3PAR storage arrays
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_3par_storage_array_families.html">
+        3PAR storage array families
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html">
+        <div class="na-navbar-padding"> Supported fabric-attached configurations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_stand_alone_basic_configuration.html">
+        Stand-alone basic configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_stand_alone_system_with_two_2_port_array_lun_groups.html">
+        Stand-alone system with two 2-port array LUN groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_single_4_port_array_lun_group_configuration.html">
+        Single 4-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_two_4_port_array_lun_group_configuration.html">
+        Two 4-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_eight_port_array_lun_group_configuration.html">
+        Eight-port array LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html">
+        Attaching FC initiator port to multiple targets ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/implement-third-party/concept_sharing_a_target_port_with_two_fc_initiator_ports.html">
+        Sharing a target port with two FC initiator ports
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/index.html">
+        <div class="na-navbar-padding"> Installing FlexArray</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_flexarray_virtualization_technology_overview_using_array_luns_for_storage.html">
+        <div class="na-navbar-padding"> FlexArray Virtualization technology overview&#8212;&#8203;using array LUNs for storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_systems_that_can_use_array_luns_on_storage_arrays.html">
+        ONTAP systems that can use array LUNs on storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_number_of_storage_arrays_supported_with_a_ontap_system.html">
+        Considerations when connecting multiple storage arrays to an ONTAP system
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_supported_methods_for_connecting_a_v_series_system_to_a_storage_array.html">
+        Supported methods for connecting an ONTAP system to a storage array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_sharing_storage_arrays_among_hosts.html">
+        Sharing storage arrays among hosts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_support_for_metrocluster_configurations_that_can_use_array_luns.html">
+        Requirements for MetroCluster configurations with array LUNs
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_zoning_for_a_configuration_with_storage_arrays.html">
+        <div class="na-navbar-padding"> Zoning in a configuration with storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_requirements_for_zoning_in_a_configuration_with_storage_arrays.html">
+        Requirements for zoning in a configuration with storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_zoning_recommendation_for_a_configuration_with_storage_arrays.html">
+        Zoning recommendation for a configuration with storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_of_zoning_in_a_configuration_with_storage_arrays.html">
+        Example of zoning in a configuration with storage arrays
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_a_configuration_with_array_luns.html">
+        <div class="na-navbar-padding"> Planning a configuration with array LUNs</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_where_to_find_information_for_configurations_with_storage_arrays.html">
+        <div class="na-navbar-padding"> Where to find information for configurations with storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_limits_information_for_a_configuration_with_storage_arrays.html">
+        Limit types for configurations with storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_where_to_find_information_about_support_for_storage_arrays.html">
+        Where to find information about ONTAP support for storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_32xx_configuration_restrictions.html">
+        32xx system configuration restrictions
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_stages_of_implementation_for_a_system_using_array_luns.html">
+        Stages of implementation for a system using array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_planning_summary_for_a_v_series_system_using_native_disks.html">
+        Planning summary for a V-Series system using native disks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_planning_summary_for_a_ontap_system_using_array_luns.html">
+        Planning summary for ONTAP systems using array LUNs
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_for_raid_implementation.html">
+        <div class="na-navbar-padding"> Planning for RAID implementation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_raid_protection_for_array_luns.html">
+        RAID protection for array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_planning_considerations_for_ontap_raid_groups.html">
+        Planning considerations for ONTAP RAID groups
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_for_ontap_use_of_array_luns.html">
+        <div class="na-navbar-padding"> Planning for ONTAP use of array LUNs</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_how_array_luns_are_made_available_for_host_use.html">
+        How array LUNs are made available for host use
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_how_array_luns_become_available_for_ontap_storage_use.html">
+        <div class="na-navbar-padding"> How array LUNs become available for ONTAP storage use</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_considerations_when_planning_for_disk_ownership.html">
+        Considerations when planning for disk ownership
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_array_lun_assignment_changes.html">
+        Array LUN assignment changes
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_array_lun_types_supported_by_ontap.html">
+        Array LUN type supported by ONTAP
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_factors_that_impact_the_number_and_size_of_array_luns_you_need.html">
+        <div class="na-navbar-padding"> Factors that impact the number and size of array LUNs you need</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_factors_impacting_the_required_number_of_array_luns.html">
+        Factors impacting the required number of array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_minimum_number_of_array_luns_required_per_ontap_system.html">
+        Minimum number of array LUNs required per ONTAP system
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_spare_core_array_lun_requirement_for_core_dumps.html">
+        Spare array LUN requirement for core dumps
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_minimum_and_maximum_array_lun_sizes_supported_by_ontap.html">
+        Minimum and maximum array LUN sizes supported for ONTAP configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_minimum_array_lun_size_for_the_root_volume.html">
+        Array LUN size required for the root volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_elements_that_reduce_the_usable_space_in_an_array_lun.html">
+        Elements that reduce the usable space in an array LUN
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_considering_checksum_type_when_planning_array_lun_size_and_number.html">
+        <div class="na-navbar-padding"> Considering checksum type when planning array LUN size and number</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_characteristics_of_checksum_types_that_ontap_supports.html">
+        Characteristics of checksum types that ONTAP supports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_formulas_for_calculating_array_lun_size_considering_checksum_type.html">
+        Formulas for calculating array LUN size based on checksum type
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_location_of_the_root_volume.html">
+        Location of the root volume
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_for_lun_security_on_storage_arrays.html">
+        <div class="na-navbar-padding"> Planning for LUN security on the storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_available_lun_security_methods.html">
+        Available LUN security methods
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_for_paths_to_array_luns.html">
+        <div class="na-navbar-padding"> Planning for paths to array LUNs</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_requirement_for_redundant_setup_of_components_in_a_path.html">
+        <div class="na-navbar-padding"> Requirements for redundant setup of components in a path</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_when_to_check_for_redundant_paths_to_array_luns.html">
+        When to check for redundant paths to array LUNs
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_required_number_of_paths_to_an_array_lun.html">
+        <div class="na-navbar-padding"> Required number of paths to an array LUN</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_advantages_of_four_paths_to_an_array_lun_clustered_data_ontap_8_1_and_later.html">
+        Advantages of four paths to an array LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_multiple_paths_to_an_array_lun_can_be_used_to_distribute_load.html">
+        Multiple paths to an array LUN can be used to distribute load
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_using_lun_groups_to_partition_the_load_over_v_series_connections.html">
+        <div class="na-navbar-padding"> Benefits of using multiple LUN groups</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_implementation_requirements_for_a_multiple_lun_group_configuration.html">
+        Implementation requirements for a multiple LUN group configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_of_a_configuration_with_multiple_lun_groups.html">
+        Example of a configuration with multiple LUN groups
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_array_lun_name_format.html">
+        Array LUN name format
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_pre_cluster_array_lun_name_format.html">
+        Pre-cluster array LUN name format
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_how_the_array_lun_name_is_displayed_in_ontap.html">
+        How the array LUN name is displayed in ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_valid_pathing_standalone_system_with_a_single_2_port_array_lun_group.html">
+        Valid pathing: stand-alone system with a single 2-port array LUN group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_valid_pathing_a_single_4_port_array_lun_group_in_a_fabric_attached_configuration.html">
+        Valid pathing: a single 4-port array LUN group in a fabric-attached configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_valid_pathing_eight_port_array_lun_group_configuration.html">
+        Valid pathing: eight-port array LUN group configuration
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_planning_a_port_to_port_connectivity_scheme.html">
+        <div class="na-navbar-padding"> Planning a port-to-port connectivity scheme</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_requirements_for_v_series_fc_initiator_port_usage.html">
+        Requirements for using FC initiator ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_how_fc_initiator_ports_are_labeled.html">
+        How FC initiator ports are labeled
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_configuring_fc_ports_as_initiators_clustered_data_ontap.html">
+        Configuring FC ports as initiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_rules_for_sharing_an_fc_initiator_port_with_multiple_target_ports.html">
+        Rules for sharing an FC initiator port with multiple target ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_configuration_shared_fc_initiator_ports.html">
+        Example configuration: shared FC initiator ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_rules_for_sharing_a_target_port_with_multiple_fc_initiator_ports.html">
+        Rules for sharing a target port with multiple FC initiator ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_configuration_shared_target_ports.html">
+        Example configuration: shared target ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_checking_the_number_of_array_luns_visible_on_an_fc_initiator_port.html">
+        Checking the number of array LUNs visible on an FC initiator port
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_requirements_for_connecting_to_storage_arrays.html">
+        Requirements for connecting to storage arrays
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_guidelines_for_connecting_a_v_series_system_to_native_disk_shelves.html">
+        Guidelines for connecting a V-Series system to native disk shelves
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_fc_initiator_ports_required_for_connection_with_disks.html">
+        FC initiator ports required for connection to native disks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_of_non_optimized_usage_of_a_storage_array_target_port.html">
+        Example of non-optimized usage of a storage array target port
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_determining_the_array_luns_for_specific_aggregates.html">
+        <div class="na-navbar-padding"> Determining the array LUNs for specific aggregates</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_rules_for_mixing_storage_in_aggregates_for_v_series_systems.html">
+        Rules for mixing storage in array LUN aggregates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_how_the_checksum_type_is_determined_for_aggregates_with_array_luns.html">
+        How the checksum type is determined for array LUN aggregates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_considerations_for_checking_the_checksum_type_of_spare_array_luns.html">
+        Checksum type considerations for adding spare array LUNs to aggregates
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_aggregate_rules_when_the_storage_arrays_are_from_the_same_family.html">
+        Aggregate rules when the storage arrays are from the same family
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_aggregate_rules_when_the_storage_arrays_are_from_different_vendor_or_family.html">
+        Aggregate rules when the storage arrays are from different vendors or families
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_preparing_a_storage_array_for_use_with_ontap_systems.html">
+        Preparing a storage array for use with ONTAP systems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_connecting_an_ontap_system_to_a_storage_array.html">
+        Connecting an ONTAP system to a storage array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_setting_up_the_switches.html">
+        Setting up the switches
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_configuring_lun_security.html">
+        Configuring LUN security
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_overview_of_setting_up_ontap_to_work_with_array_luns.html">
+        <div class="na-navbar-padding"> Setting up ONTAP to work with array LUNs</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_configuring_ontap_on_a_system_that_uses_only_array_luns.html">
+        Configuring ONTAP on a system that uses only array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_installing_the_license_for_using_array_luns.html">
+        Installing the license for using array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_assigning_ownership_of_array_luns.html">
+        Assigning ownership of array LUNs
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/reference_commands_for_checking_back_end_configuration.html">
+        <div class="na-navbar-padding"> Commands for checking back-end configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_back_end_configuration_errors_detected_by_ontap_commands.html">
+        Back-end configuration errors detected by ONTAP commands
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_situations_not_identified_by_commands_that_check_back_end_configuration.html">
+        Situations not identified by commands that check back-end configuration
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_verifying_an_installation_with_storage_arrays.html">
+        <div class="na-navbar-padding"> Verifying installation with storage arrays</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap-flexarray/install/task_checking_for_back_end_configuration_errors_preventing_system_operation.html">
+        <div class="na-navbar-padding"> Checking for back-end configuration errors preventing system operation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_the_storage_errors_show_messages_and_their_resolution.html">
+        The storage errors show messages and their resolution
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_array_lun_is_either_smaller_or_larger_than_the_supported_values.html">
+        Array LUN size is either smaller or larger than the supported values
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_lun_ids_for_the_same_ldev_do_not_match.html">
+        LUN IDs for the same LDEV do not match
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_volume_set_addressing_is_inconsistent.html">
+        Volume Set Addressing is inconsistent
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_duplicate_lun_ids_on_a_target_port.html">
+        Duplicate LUN IDs on a target port
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_fewer_than_two_paths_to_an_array_lun.html">
+        Fewer than two paths to an array LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_an_access_control_lun_is_presented_to_ontap.html">
+        An access control LUN is presented to ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_all_paths_to_an_array_lun_are_on_the_same_storage_array_controller.html">
+        All paths to an array LUN are on the same storage array controller
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_array_luns_are_configured_with_conflicting_failover_modes_clustered_data_ontap_8_2_and_later.html">
+        Array LUNs are configured with conflicting failover modes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_array_lun_is_marked_foreign_and_has_a_reservation_data_ontap_8_3_and_later.html">
+        Array LUN is marked foreign and has a reservation
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/task_verifying_if_the_back_end_configuration_matches_the_expected_output.html">
+        <div class="na-navbar-padding"> Verifying that the back-end configuration matches the intended configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_for_no_luns_in_the_array_lun_group.html">
+        Reasons for no LUNs in the array LUN group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_for_fewer_array_lun_groups_than_expected.html">
+        Reasons for fewer array LUN groups than expected
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_for_more_array_lun_groups_than_expected.html">
+        Reasons for more array LUN groups than expected
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_for_more_paths_to_an_array_lun_than_expected.html">
+        Reasons for more paths to an array LUN than expected
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_for_the_incorrect_number_of_luns_in_array_lun_groups.html">
+        Reasons for the incorrect number of LUNs in array LUN groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_reasons_storage_arrays_are_missing_from_command_output.html">
+        Reasons storage arrays are missing from command output
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_managing_array_luns_using_data_ontap.html">
+        <div class="na-navbar-padding"> Managing array LUNs using ONTAP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_modifying_assignment_of_spare_array_luns.html">
+        Modifying assignment of spare array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_checking_the_checksum_type_of_spare_array_luns.html">
+        Checking the checksum type of spare array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_changing_the_checksum_type_of_an_array_lun.html">
+        Changing the checksum type of an array LUN
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_prerequisites_to_reconfiguring_an_array_lun_on_the_storage_array.html">
+        Prerequisites to reconfiguring an array LUN on the storage array
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_changing_array_lun_size_or_composition.html">
+        Changing array LUN size or composition
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_removing_one_array_lun_from_use_by_data_ontap.html">
+        Removing one array LUN from use by ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_preparing_array_luns_before_removing_a_v_series_system_from_service.html">
+        Preparing array LUNs before removing an ONTAP system from service
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_troubleshooting.html">
+        <div class="na-navbar-padding"> Troubleshooting configurations with storage arrays</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_getting_started_with_troubleshooting.html">
+        Getting started with troubleshooting an ONTAP configuration with array LUNs
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_invalid_path_setup_examples.html">
+        <div class="na-navbar-padding"> Invalid path setup examples</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_invalid_path_setup_alternate_paths_are_not_configured.html">
+        Invalid path setup: alternate paths are not configured
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_what_happens_when_a_link_failure_occurs.html">
+        What happens when a link failure occurs
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/reference_relationship_between_zoning_and_host_group_configuration.html">
+        <div class="na-navbar-padding"> Relationship between zoning and host group configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_dependency_between_zone_and_host_group_definitions.html">
+        Dependency between zone and host group definitions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_example_of_cascading_zoning_and_host_group_configuration_errors.html">
+        Example of cascading zoning and host group configuration errors
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_additional_tasks_after_installing_and_testing_a_ontap_configuration_with_array_luns.html">
+        Additional tasks after installing and testing an ONTAP configuration with array LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_obtaining_wwns_manually.html">
+        Obtaining WWPNs manually
+      </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/install/concept_target_queue_depth_customization.html">
+        <div class="na-navbar-padding"> Target queue depth customization</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_guidelines_for_specifying_the_appropriate_target_queue_depth.html">
+        Guidelines for specifying the appropriate target queue depth
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_setting_the_target_queue_depth_clustered_data_ontap_prior_to_8_2.html">
+        Setting the target queue depth (ONTAP prior to 8.2)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_setting_the_target_queue_depth_clustered_data_ontap_8_2_and_later.html">
+        Setting the target queue depth
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/task_displaying_target_port_queue_depth_statistics_clustered_data_ontap_8_2_and_later.html">
+        Displaying target queue depth statistics
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/concept_target_port_utilization_policy_settings.html">
+        Target port utilization policy settings
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_terminology_comparison_between_storage_array_vendors.html">
+        Terminology comparison between storage array vendors
+      </a></li></ul></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">IBM DS storage arrays</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-07-27 06:44:25 +0000">07/27/2021</time>
+    
+  
+
+<span>Contributors
+</span>
+
+
+  <span>
+    <a target="_blank" href="/us-en/ontap-flexarray/pdfs/pages/implement-third-party/reference_ibm_ds_storage_arrays.pdf" role="button">
+      <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
+  </span>
+
+
+</p>
+
+
+<div class="paragraph lead">
+<p>You must meet certain requirements when configuring storage arrays to work with ONTAP systems that use array LUNs. These requirements include setting configuration parameters on storage arrays and deploying only supported configurations.</p>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/blob/main/implement-third-party/reference_ibm_ds_storage_arrays.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-flexarray/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/issues/new?body=Page%3A%20[IBM DS storage arrays](https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_ibm_ds_storage_arrays.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-flexarray/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/ontap-flexarray/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/ontap-flexarray/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/ontap-flexarray/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/ontap-flexarray/js/www-ntap.js'></script>
+    <script src='/us-en/ontap-flexarray/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
