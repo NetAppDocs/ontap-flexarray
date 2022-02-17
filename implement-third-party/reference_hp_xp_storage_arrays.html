@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/us-en/ontap-flexarray/js/version-dropdown.js'></script>
   <script src='/us-en/ontap-flexarray/js/product-family.js'></script>
+  <script src='/us-en/ontap-flexarray/js/FileSaver.min.js'></script>
+  <script src='/us-en/ontap-flexarray/js/jszip-utils.min.js'></script>
+  <script src='/us-en/ontap-flexarray/js/jszip.min.js'></script>
+  <script src='/us-en/ontap-flexarray/js/pdf-ux.js'></script>
 </head>
 
 
@@ -261,7 +266,34 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><!-- End Language Selector -->
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">English</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap-flexarray/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
   </div>
@@ -295,99 +327,57 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">Home</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">Documentation</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/us-en/ontap-flexarray/">ONTAP&nbsp;FlexArray</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          HP XP storage arrays
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>Available PDFs<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">Site</span>
-    </div>
-    <li>
-      <a target="_blank" href="/us-en/ontap-flexarray/pdfs/fullsite-sidebar/ONTAP_FlexArray_Documentation.pdf" >
-        <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
-        ONTAP FlexArray Documentation
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/us-en/ontap-flexarray/pdfs/fullsite-sidebar/ONTAP_FlexArray_Documentation.pdf" >
+          <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>PDF of this doc site</a>
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Implementing_E_Series_storage.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Implementing E-Series storage
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Where to find information for configurations with storage arrays
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -397,27 +387,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Requirements_for_configuring_E_Series_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Requirements for configuring E-Series storage arrays
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -425,39 +411,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Supported_fabric_attached_configurations_for_E_Series_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Supported fabric-attached configurations for E-Series storage arrays
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -466,10 +448,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -477,51 +458,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Implementing_third_party_storage.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Implementing third-party storage
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Where to find information for configurations with storage arrays
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -533,29 +501,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/General_configuration_guidelines_for_all_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             General configuration guidelines for all storage arrays
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -563,37 +527,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/EMC_VNX_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             EMC VNX storage arrays
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -601,37 +561,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/EMC_Symmetrix_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             EMC Symmetrix storage arrays
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -639,39 +595,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Hitachi_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Hitachi storage arrays
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -679,35 +631,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/HP_EVA_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             HP EVA storage arrays
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -715,19 +663,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/HP_XP_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             HP XP storage arrays
           </a>
-        </li>
-        <span>
           
 
 
@@ -744,23 +689,18 @@
 
 
 
-
           
-            <div class="n-pdf-section">
-  <span class="n-pdf-section-title">This page</span>
-</div>
-
-<li class="active">
+            <li class="active pdf-hide">
   <a target="_blank" href="/us-en/ontap-flexarray/pdfs/pages/implement-third-party/reference_hp_xp_storage_arrays.pdf" >
-    <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
-    HP XP storage arrays
+    <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -768,31 +708,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/IBM_DS_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             IBM DS storage arrays
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -800,29 +736,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/IBM_XIV_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             IBM XIV storage arrays
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -830,43 +762,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/3PAR_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             3PAR storage arrays
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Required_parameters_for_3PAR_arrays_with_ONTAP_systems.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Required parameters for 3PAR arrays with ONTAP systems
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -875,10 +800,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -886,49 +810,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Supported_fabric_attached_configurations.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Supported fabric-attached configurations
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -936,57 +855,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              Sections
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Installing_FlexArray.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Installing FlexArray
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/FlexArray_Virtualization_technology_overview__8212___8203_using_array_LUNs_for_storage.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             FlexArray Virtualization technology overview&#8212;&#8203;using array LUNs for storage
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -994,31 +900,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Zoning_in_a_configuration_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Zoning in a configuration with storage arrays
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1026,47 +928,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_a_configuration_with_array_LUNs.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning a configuration with array LUNs
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Where_to_find_information_for_configurations_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Where to find information for configurations with storage arrays
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1079,10 +974,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1090,29 +984,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_RAID_implementation.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning for RAID implementation
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1120,47 +1010,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_ONTAP_use_of_array_LUNs.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning for ONTAP use of array LUNs
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/How_array_LUNs_become_available_for_ONTAP_storage_use.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             How array LUNs become available for ONTAP storage use
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1170,19 +1053,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Factors_that_impact_the_number_and_size_of_array_LUNs_you_need.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Factors that impact the number and size of array LUNs you need
           </a>
-        </li>
-        <span>
           
 
 
@@ -1198,39 +1078,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Considering_checksum_type_when_planning_array_LUN_size_and_number.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Considering checksum type when planning array LUN size and number
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1239,10 +1114,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1250,27 +1124,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_LUN_security_on_the_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning for LUN security on the storage arrays
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1278,43 +1148,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_for_paths_to_array_LUNs.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning for paths to array LUNs
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Requirements_for_redundant_setup_of_components_in_a_path.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Requirements for redundant setup of components in a path
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1322,29 +1185,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Required_number_of_paths_to_an_array_LUN.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Required number of paths to an array LUN
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1352,29 +1211,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Benefits_of_using_multiple_LUN_groups.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Benefits of using multiple LUN groups
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1393,10 +1248,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1404,49 +1258,45 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Planning_a_port_to_port_connectivity_scheme.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Planning a port-to-port connectivity scheme
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1454,35 +1304,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Determining_the_array_LUNs_for_specific_aggregates.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Determining the array LUNs for specific aggregates
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1498,31 +1344,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Setting_up_ONTAP_to_work_with_array_LUNs.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Setting up ONTAP to work with array LUNs
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1530,29 +1372,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Commands_for_checking_back_end_configuration.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Commands for checking back-end configuration
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1560,61 +1398,54 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Verifying_installation_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Verifying installation with storage arrays
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Checking_for_back_end_configuration_errors_preventing_system_operation.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Checking for back-end configuration errors preventing system operation
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1622,47 +1453,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Verifying_that_the_back_end_configuration_matches_the_intended_configuration.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Verifying that the back-end configuration matches the intended configuration
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1670,39 +1496,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Managing_array_LUNs_using_ONTAP.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Managing array LUNs using ONTAP
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1710,45 +1532,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Troubleshooting_configurations_with_storage_arrays.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Troubleshooting configurations with storage arrays
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Invalid_path_setup_examples.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Invalid path setup examples
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1758,39 +1573,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Relationship_between_zoning_and_host_group_configuration.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Relationship between zoning and host group configuration
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1802,35 +1612,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/us-en/ontap-flexarray/pdfs/sidebar/Target_queue_depth_customization.pdf" 
             
           >
-            <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>
+            <img src="/us-en/ontap-flexarray/images/pdf.png" width="16" height="16"/>
             Target queue depth customization
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1839,24 +1645,52 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/us-en/ontap-flexarray/images/pdf-zip.png" width="16" height="16"/>
+      <pre>Collection of separate PDF docs<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/index.html">
         ONTAP FlexArray Docs
       </a></li><li class="subfolders "><a href="/us-en/ontap-flexarray/implement-e-series/index.html">
         <div class="na-navbar-padding"> Implementing E-Series storage</div>
@@ -2321,7 +2155,14 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap-flexarray/install/reference_terminology_comparison_between_storage_array_vendors.html">
         Terminology comparison between storage array vendors
       </a></li></ul></li></ul>
-
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -2331,6 +2172,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/ontap-flexarray/">ONTAP&nbsp;FlexArray</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          HP XP storage arrays
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="n-doc__component-detail-heading-wrap">
   <h1 class="n-doc__component-detail-heading">HP XP storage arrays</h1>
 </div>
@@ -2339,18 +2204,20 @@
 <p class="page-details">
   
     
-    <time datetime="2021-07-26 10:14:49 +0000">07/26/2021</time>
+    <time datetime="2022-02-17 07:00:24 +0000">02/17/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" href="https://github.com/netapp-chikkusu">
+    <img  class="avatar avatar-small"
+          alt="netapp-chikkusu"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/79514046?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
-
-
-  <span>
-    <a target="_blank" href="/us-en/ontap-flexarray/pdfs/pages/implement-third-party/reference_hp_xp_storage_arrays.pdf" role="button">
-      <img src="/us-en/ontap-flexarray/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
-  </span>
 
 
 </p>
@@ -2367,11 +2234,11 @@
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/blob/main/implement-third-party/reference_hp_xp_storage_arrays.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-flexarray/images/github.png" class="github-icon" />Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/issues/new?body=Page%3A%20[HP XP storage arrays](https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-flexarray/images/github.png" class="github-icon" />Request doc changes</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/issues/new?body=Page%3A%20[HP XP storage arrays](https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_hp_xp_storage_arrays.html)" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-flexarray/images/discuss-sm.svg" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-flexarray/blob/main/implement-third-party/reference_hp_xp_storage_arrays.adoc" class="page-nav-contribute-link" role="button"><img src="/us-en/ontap-flexarray/images/edit-sm.svg" class="github-icon" />Edit this page</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/us-en/ontap-flexarray/images/article-sm.svg" class="github-icon" />Learn how to contribute</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -2396,7 +2263,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>
