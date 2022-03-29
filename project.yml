@@ -12,6 +12,8 @@ sidebar:
     - section: implement-e-series
     - section: implement-third-party
     - section: install
+    - title: Legal Notices
+      url: /reference_legal_notices.html
 
 homepage:
   tiles:
