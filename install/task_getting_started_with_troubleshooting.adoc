@@ -2,14 +2,14 @@
 permalink: install/task_getting_started_with_troubleshooting.html
 sidebar: sidebar
 keywords: get, started, troubleshoot, ontap, configuration, array, luns
-summary: "While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue, and accordingly contact technical support for the solution."
+summary: "While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue.."
 ---
 = Getting started with troubleshooting an ONTAP configuration with array LUNs
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue, and accordingly contact technical support for the solution.
+While troubleshooting an ONTAP configuration with array LUNs, you should follow a systematic approach to determine the cause of the issue.
 
 This procedure suggests an order for approaching troubleshooting.
 
@@ -32,7 +32,7 @@ Front end issue
 a|
 Proceed with troubleshooting the ONTAP feature by following instructions in the ONTAP guides.
 
-https://docs.netapp.com/ontap-9/index.jsp[ONTAP 9 Documentation Center]
+https://docs.netapp.com/us-en/ontap/index.html[ONTAP 9 Documentation^]
 a|
 Back end issue
 a|

@@ -15,4 +15,6 @@ When you assign ONTAP ownership of an array LUN, ONTAP places persistent reserva
 
 For example, the Hitachi USP storage array does not have a user command for removing persistent reservations from LUNs. If you do not remove persistent reservations through ONTAP before removing the ONTAP system from service, you must call Hitachi technical support to remove the reservations.
 
-Contact technical support for instructions about how to remove persistent reservations from LUNs before removing an ONTAP system from service.
+See the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/What_are_SCSI_Reservations_and_SCSI_Persistent_Reservations[What are SCSI Reservations and SCSI Persistent Reservations^]
+
+// 2022-06-16, Jira KDA-1542
