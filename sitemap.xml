@@ -90,16 +90,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html</loc>
       
-      <lastmod>2021-07-27T11:55:09+00:00</lastmod>
+      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_attaching_fc_initiator_port_to_multiple_targets_ports.html</loc>
       
-      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
+      <lastmod>2021-07-27T11:55:09+00:00</lastmod>
       
     </url>
   
@@ -181,16 +181,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_eight_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_eight_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-21T11:40:28+00:00</lastmod>
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_eight_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_eight_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
+      <lastmod>2021-07-21T11:40:28+00:00</lastmod>
       
     </url>
   
@@ -685,16 +685,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_sharing_a_target_port_with_two_fc_initiator_ports.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_sharing_a_target_port_with_two_fc_initiator_ports.html</loc>
       
-      <lastmod>2021-07-27T12:24:05+00:00</lastmod>
+      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_sharing_a_target_port_with_two_fc_initiator_ports.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_sharing_a_target_port_with_two_fc_initiator_ports.html</loc>
       
-      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
+      <lastmod>2021-07-27T12:24:05+00:00</lastmod>
       
     </url>
   
@@ -706,16 +706,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_single_4_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_single_4_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-26T06:57:57+00:00</lastmod>
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_single_4_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_single_4_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
+      <lastmod>2021-07-26T06:57:57+00:00</lastmod>
       
     </url>
   
@@ -741,6 +741,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_basic_configuration.html</loc>
+      
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_stand_alone_basic_configuration.html</loc>
       
       <lastmod>2021-07-26T06:57:57+00:00</lastmod>
@@ -748,7 +755,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_basic_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_system_with_two_2_port_array_lun_groups.html</loc>
       
       <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
@@ -758,13 +765,6 @@
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_stand_alone_system_with_two_2_port_array_lun_groups.html</loc>
       
       <lastmod>2021-07-26T10:14:49+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_stand_alone_system_with_two_2_port_array_lun_groups.html</loc>
-      
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
@@ -783,6 +783,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_systems_that_can_use_array_luns_on_storage_arrays.html</loc>
+      
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/install/concept_systems_that_can_use_array_luns_on_storage_arrays.html</loc>
       
       <lastmod>2021-07-26T07:03:37+00:00</lastmod>
@@ -793,13 +800,6 @@
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_systems_that_can_use_array_luns_on_storage_arrays.html</loc>
       
       <lastmod>2021-08-06T13:07:02+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_systems_that_can_use_array_luns_on_storage_arrays.html</loc>
-      
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
@@ -825,16 +825,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_two_4_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_two_4_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-26T10:14:49+00:00</lastmod>
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_two_4_port_array_lun_group_configuration.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/concept_two_4_port_array_lun_group_configuration.html</loc>
       
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
+      <lastmod>2021-07-26T10:14:49+00:00</lastmod>
       
     </url>
   
@@ -895,6 +895,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_about_support_for_storage_arrays.html</loc>
+      
+      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/install/concept_where_to_find_information_about_support_for_storage_arrays.html</loc>
       
       <lastmod>2021-07-27T10:13:48+00:00</lastmod>
@@ -909,9 +916,9 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_about_support_for_storage_arrays.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_for_configurations_with_storage_arrays.html</loc>
       
-      <lastmod>2021-07-27T11:05:16+00:00</lastmod>
+      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
       
     </url>
   
@@ -930,13 +937,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/concept_where_to_find_information_for_configurations_with_storage_arrays.html</loc>
-      
-      <lastmod>2021-07-21T12:20:35+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/install/concept_zoning_for_a_configuration_with_storage_arrays.html</loc>
       
       <lastmod>2021-07-26T07:03:37+00:00</lastmod>
@@ -951,6 +951,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/</loc>
+      
+      <lastmod>2021-07-21T12:38:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/install/</loc>
       
       <lastmod>2021-07-22T06:57:21+00:00</lastmod>
@@ -961,13 +968,6 @@
       <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/</loc>
       
       <lastmod>2021-07-26T07:34:30+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/</loc>
-      
-      <lastmod>2021-07-21T12:38:54+00:00</lastmod>
       
     </url>
   
@@ -1252,16 +1252,16 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html</loc>
       
-      <lastmod>2021-07-27T06:44:25+00:00</lastmod>
+      <lastmod>2021-07-21T12:38:54+00:00</lastmod>
       
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html</loc>
+      <loc>https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html</loc>
       
-      <lastmod>2021-07-21T12:38:54+00:00</lastmod>
+      <lastmod>2021-07-27T06:44:25+00:00</lastmod>
       
     </url>
   
@@ -1310,7 +1310,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-flexarray//search.html</loc>
       
-      <lastmod>2022-06-17T15:30:36+00:00</lastmod>
+      <lastmod>2022-07-12T09:31:26+00:00</lastmod>
       
     </url>
   
