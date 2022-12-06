@@ -18,7 +18,7 @@ The concept of LUN security is similar to zoning except that LUN security is set
 +
 Refer to the storage array documentation for information about setting up the LUN security.
 +
-You should also see the _FlexArray Virtualization Implementation Guide for Third-Party Storage_ for any additional details regarding LUN security for your vendor's storage arrays. Some storage arrays must be dedicated for use by ONTAP systems.
+You should also see https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage] for any additional details regarding LUN security for your vendor's storage arrays. Some storage arrays must be dedicated for use by ONTAP systems.
 
 . Create host groups, or the equivalent, for the ONTAP system.
 +
@@ -26,4 +26,4 @@ The term _host group_ is used on some storage arrays to describe a configuration
 
 *Related information*
 
-https://docs.netapp.com/us-en/ontap-flexarray/implement-third-party/index.html[FlexArray virtualization implementation for third-party storage]
+// 2022 Dec 05, ONTAPDOC-717
