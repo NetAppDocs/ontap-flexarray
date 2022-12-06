@@ -1,9 +1,11 @@
 ---
 permalink: implement-e-series/index.html
 sidebar: sidebar
-keywords: flexarray, virtualization, implementation, guide, NetApp, e-series, storage
+keywords: flexarray, virtualization, implementation, NetApp, e-series, storage
 summary: "Welcome to the ONTAP FlexArray Information Library. Here you will find information about how to use E-Series storage arrays as back-end storage for clusters."
 ---
-= FlexArray® Virtualization Implementation Guide for NetApp® E-Series Storage
+= FlexArray® Virtualization Implementation for NetApp® E-Series Storage
 :icons: font
 :imagesdir: ../media/
+
+// 2022 Dec 05, ONTAPDOC-717
