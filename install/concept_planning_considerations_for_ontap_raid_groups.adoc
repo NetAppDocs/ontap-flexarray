@@ -22,6 +22,6 @@ Planning for ONTAP RAID groups involves the following tasks:
 +
 The array LUNs should be optimized for performance according to the instructions in the storage array vendor documentation.
 
-For more recommendations about setting up ONTAP RAID groups for use with storage arrays, see the https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html[_Disks and Aggregates management_].
+For more recommendations about setting up ONTAP RAID groups for use with storage arrays, see https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html[_Disks and Aggregates management_].
 
 //2022 Dec 05, Jira 717
