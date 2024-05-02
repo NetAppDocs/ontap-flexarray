@@ -1,0 +1,26 @@
+indexpage:
+  title: ONTAP FlexArray Documentation
+  lead: ONTAP FlexArray Documentation
+  summary:  ONTAP FlexArray Documentation
+  keywords: flexarray, ontap, array
+  tiles:
+    - title: Implementing E-Series storage
+      links:
+        - title: Requirements for configuring E-Series storage arrays
+          url: /implement-e-series/reference_requirements_for_configuring_e_series_storage_arrays.html
+        - title: Supported fabric-attached configurations for E-Series storage arrays
+          url: /implement-e-series/reference_supported_fabric_attached_configurations_for_storage_arrays.html
+        - title: Supported direct-attached configurations with E-Series storage arrays
+          url: /implement-e-series/reference_supported_direct_attached_configurations_for_e_series_storage_arrays.html
+    - title: Implementing Third-Party Storage
+      links:
+        - title: Configuration guidelines for all storage arrays
+          url: /implement-third-party/concept_general_configuration_guidelines_for_all_storage_arrays.html
+        - title: Supported fabric-attached configurations
+          url: /implement-third-party/reference_supported_fabric_attached_configurations_for_storage_arrays.html
+    - title: Installing FlexArray
+      links:
+        - title: Planning a configuration with array LUNs
+          url: /install/concept_planning_a_configuration_with_array_luns.html
+        - title: Preparing a storage array for use with ONTAP systems
+          url: /install/task_preparing_a_storage_array_for_use_with_ontap_systems.html
