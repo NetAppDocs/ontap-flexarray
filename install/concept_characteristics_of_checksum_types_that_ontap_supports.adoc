@@ -31,4 +31,4 @@ The guidelines for checksum types differ according to disk size and type. See _T
 
 *Related information*
 
-http://www.netapp.com/us/media/tr-3838.pdf[NetApp Technical Report 3838: Storage Subsystem Configuration Guide]
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf[NetApp Technical Report 3838: Storage Subsystem Configuration Guide^]
